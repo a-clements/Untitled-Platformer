@@ -43,3 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee0bc2ac1958d545a5ce88b0f344191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Height: 1
+  Width: 60
+  Distance: 0
+  SpacerMinimum: 6
+  SpacerMaximum: 12
+  Dirt: {fileID: 9105796345572399346, guid: 8de3416871d99e44bafeb3a4c3350097, type: 3}
+  Grass: {fileID: 6179062160253286273, guid: a9aff427a71a78f4480f1c62227b8fab, type: 3}
+  Stone: {fileID: 7941079469212602654, guid: dcf33943a4fbe9b4db0b0b0fdecf9962, type: 3}
+  HeightPoint: 0
+  HeightPoint2: 0
