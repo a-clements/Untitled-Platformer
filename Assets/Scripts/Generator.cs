@@ -14,9 +14,6 @@ public class Generator : MonoBehaviour
     [SerializeField] private GameObject Grass;
     [SerializeField] private GameObject Stone;
 
-    [SerializeField] private float HeightPoint;
-    [SerializeField] private float HeightPoint2;
-
     private int LowPoint;
     private int HighPoint;
     private int Spacer;
