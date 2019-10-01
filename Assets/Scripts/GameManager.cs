@@ -10,9 +10,14 @@ public class GameManager : MonoBehaviour
 
     SpVoice Voice = new SpVoice();
 
+    private void Awake()
+    {
+        //this function is executed first
+    }
+
     private void OnEnable()
     {
-        
+        //this function is executed second
     }
 
     private void OnDisable()
@@ -20,19 +25,14 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private void Awake()
-    {
-        
-    }
-
     void Start()
     {
-        
+        //this function is executed third
     }
 
     public void Speak(string text)
     {
-
+        Voice.Speak(text);
     }
 
 }
