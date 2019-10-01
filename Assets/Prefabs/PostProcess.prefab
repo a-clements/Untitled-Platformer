@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4072923454028994748}
   - component: {fileID: 4072923454028994749}
+  - component: {fileID: 6171781640964614123}
   m_Layer: 8
   m_Name: PostProcess
   m_TagString: Untagged
@@ -48,3 +49,23 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!114 &6171781640964614123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4072923454028994750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec2c620ee28c3a44b92753c28ee580f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PostProcess: {fileID: 0}
+  HueShift: 0
+  Saturation: 0
+  Contrast: 0
+  Exposure: 0
+  RedChannel: 100
+  GreenChannel: 100
+  BlueChannel: 100

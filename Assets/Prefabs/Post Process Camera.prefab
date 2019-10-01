@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7151443723851990693}
   - component: {fileID: 7151443723851990695}
   - component: {fileID: 7151443723851990692}
-  - component: {fileID: 8909520645339062707}
   m_Layer: 0
   m_Name: Post Process Camera
   m_TagString: MainCamera
@@ -145,23 +144,3 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &8909520645339062707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7151443723851990694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eec2c620ee28c3a44b92753c28ee580f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PostProcess: {fileID: 0}
-  HueShift: 0
-  Saturation: 0
-  Contrast: 0
-  Exposure: 0
-  RedChannel: 100
-  GreenChannel: 100
-  BlueChannel: 100
