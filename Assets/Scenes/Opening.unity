@@ -586,8 +586,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OpeningImage: {fileID: 1312951660}
-  Sprites: []
-  Timer: 0
+  Sprites:
+  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  FadeTimer: 1
+  WaitTimer: 1.5
 --- !u!114 &2124928073
 MonoBehaviour:
   m_ObjectHideFlags: 0

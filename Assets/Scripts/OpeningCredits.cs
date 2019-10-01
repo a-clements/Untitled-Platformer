@@ -8,7 +8,8 @@ public class OpeningCredits : MonoBehaviour
 {
     public Image OpeningImage;
     public Sprite[] Sprites;
-    public float Timer;
+    public float FadeTimer;
+    public float WaitTimer;
 
     // Use this for initialization
     void Start()
@@ -22,18 +23,18 @@ public class OpeningCredits : MonoBehaviour
     {
         for (int i = 0; i < Sprites.Length; i++)
         {
-            yield return new WaitForSeconds(Timer);
+            yield return new WaitForSeconds(WaitTimer);
 
-            OpeningImage.CrossFadeAlpha(1, 2.0f, true);
+            OpeningImage.CrossFadeAlpha(1, FadeTimer, true);
 
-            yield return new WaitForSeconds(Timer);
+            yield return new WaitForSeconds(WaitTimer);
 
-            OpeningImage.CrossFadeAlpha(0, 2.0f, true);
+            OpeningImage.CrossFadeAlpha(0, FadeTimer, true);
 
             OpeningImage.sprite = Sprites[i];
         }
 
-        yield return new WaitForSeconds(Timer);
+        yield return new WaitForSeconds(WaitTimer);
 
         SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
 
