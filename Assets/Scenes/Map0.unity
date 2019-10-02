@@ -324,8 +324,78 @@ PrefabInstance:
     - target: {fileID: 7361069511873417914, guid: fbb86113e9baeb24bb15f5a02294dd08,
         type: 3}
       propertyPath: Height
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7361069511873417914, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: MethodOneHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361069511873417914, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: MethodOneWidth
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613736197482263888, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: MethodChange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890701124500499473, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: MethodChange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358490455805940718, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: MethodChange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358490455805940718, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: DirtPrefab
+      value: 
+      objectReference: {fileID: 9105796345572399346, guid: 8de3416871d99e44bafeb3a4c3350097,
+        type: 3}
+    - target: {fileID: 6358490455805940718, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: GrassPrefab
+      value: 
+      objectReference: {fileID: 6179062160253286273, guid: a9aff427a71a78f4480f1c62227b8fab,
+        type: 3}
+    - target: {fileID: 6358490455805940718, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: StonePrefab
+      value: 
+      objectReference: {fileID: 7941079469212602654, guid: dcf33943a4fbe9b4db0b0b0fdecf9962,
+        type: 3}
+    - target: {fileID: 5132853473417476069, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: MethodChange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824770127947285583, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: MethodOneHeight
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 78189269985042173, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: MethodChange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 78189269985042173, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: HazardPrefab
+      value: 
+      objectReference: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
+        type: 3}
+    - target: {fileID: 78189269985042173, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: BridgePrefab
+      value: 
+      objectReference: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbb86113e9baeb24bb15f5a02294dd08, type: 3}
 --- !u!1 &1142091855
