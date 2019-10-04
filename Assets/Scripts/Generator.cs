@@ -82,7 +82,7 @@ public class Generator : MonoBehaviour
             {
                 if (Random.value < ChanceofBridge)
                 {
-                    GameObject Platform = Instantiate(BridgePrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
+                    Instantiate(BridgePrefab, new Vector3(w, Distance), Quaternion.identity);
                 }
 
                 else
@@ -105,12 +105,12 @@ public class Generator : MonoBehaviour
 
                     if (Random.value < ChanceofHazard)
                     {
-                        GameObject Platform = Instantiate(HazardPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
+                        Instantiate(HazardPrefab, new Vector3(w, Distance), Quaternion.identity);
                     }
 
                     else
                     {
-                        GameObject Platform = Instantiate(GrassPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
+                        Instantiate(GrassPrefab, new Vector3(w, Distance), Quaternion.identity);
                     }
                 }
 
@@ -193,17 +193,17 @@ public class Generator : MonoBehaviour
         {
             if (Random.value < ChanceofHazard)
             {
-                GameObject Platform = Instantiate(HazardPrefab, new Vector3(w, h), Quaternion.identity) as GameObject;
+                Instantiate(HazardPrefab, new Vector3(w, h), Quaternion.identity);
             }
 
             else if (Random.value < ChanceofBridge)
             {
-                GameObject Platform = Instantiate(BridgePrefab, new Vector3(w, h), Quaternion.identity) as GameObject;
+                Instantiate(BridgePrefab, new Vector3(w, h), Quaternion.identity);
             }
 
             else
             {
-                GameObject Platform = Instantiate(GrassPrefab, new Vector3(w, h), Quaternion.identity) as GameObject;
+                Instantiate(GrassPrefab, new Vector3(w, h), Quaternion.identity);
             }
         }
     }
