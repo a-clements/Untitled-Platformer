@@ -80,35 +80,38 @@ public class Generator : MonoBehaviour
             #region Method One Loop
             for (int w = 1; w < MethodOneWidth; w++)
             {
-                LowPoint = Distance - 1;
-                HighPoint = Distance + 2;
-                Distance = Random.Range(LowPoint, HighPoint);
-                Spacer = Random.Range(SpacerMinimum, SpacerMaximum);
-                TileSpace = Distance - Spacer;
-
-                for (i = 0; i < TileSpace; i++)
-                {
-                    Instantiate(StonePrefab, new Vector3(w, i), Quaternion.identity);
-                }
-
-                for (i = TileSpace; i < Distance; i++)
-                {
-                    Instantiate(DirtPrefab, new Vector3(w, i), Quaternion.identity);
-                }
-
-                if (Random.value < ChanceofHazard)
-                {
-                    GameObject Platform = Instantiate(HazardPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
-                }
-
-                else if (Random.value < ChanceofBridge)
+                if (Random.value < ChanceofBridge)
                 {
                     GameObject Platform = Instantiate(BridgePrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
                 }
 
                 else
                 {
-                    GameObject Platform = Instantiate(GrassPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
+                    LowPoint = Distance - 1;
+                    HighPoint = Distance + 2;
+                    Distance = Random.Range(LowPoint, HighPoint);
+                    Spacer = Random.Range(SpacerMinimum, SpacerMaximum);
+                    TileSpace = Distance - Spacer;
+
+                    for (i = 0; i < TileSpace; i++)
+                    {
+                        Instantiate(StonePrefab, new Vector3(w, i), Quaternion.identity);
+                    }
+
+                    for (i = TileSpace; i < Distance; i++)
+                    {
+                        Instantiate(DirtPrefab, new Vector3(w, i), Quaternion.identity);
+                    }
+
+                    if (Random.value < ChanceofHazard)
+                    {
+                        GameObject Platform = Instantiate(HazardPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
+                    }
+
+                    else
+                    {
+                        GameObject Platform = Instantiate(GrassPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
+                    }
                 }
 
                 if (w < NumerOfPlatforms + 1)
