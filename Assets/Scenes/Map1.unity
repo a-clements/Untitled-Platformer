@@ -441,6 +441,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4460084663314402108, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1133829016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ba6528b5e99a64892af17dff1f28ff, type: 3}
 --- !u!1001 &1133829015
@@ -512,6 +517,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60f5baf1de9288040a03fedc570f7c6f, type: 3}
+--- !u!20 &1133829016 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7151443723851990693, guid: 60f5baf1de9288040a03fedc570f7c6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1133829015}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1767266632
 GameObject:
   m_ObjectHideFlags: 0

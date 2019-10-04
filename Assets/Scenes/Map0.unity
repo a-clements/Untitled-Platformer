@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &71895012 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7151443723851990693, guid: 60f5baf1de9288040a03fedc570f7c6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1365893470}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &89654283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237,6 +243,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4460084663314402108, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 71895012}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ba6528b5e99a64892af17dff1f28ff, type: 3}
 --- !u!1001 &379639031
@@ -396,6 +407,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
+    - target: {fileID: 882494828671942839, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: MethodChange
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbb86113e9baeb24bb15f5a02294dd08, type: 3}
 --- !u!1 &1142091855
