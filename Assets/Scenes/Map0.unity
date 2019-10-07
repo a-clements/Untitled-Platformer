@@ -250,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 71895012}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ba6528b5e99a64892af17dff1f28ff, type: 3}
---- !u!1001 &379639031
+--- !u!1001 &318277069
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -317,99 +317,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7361069511873417914, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: SpacerMinimum
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7361069511873417914, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: SpacerMaximum
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 7361069511873417914, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: Width
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 7361069511873417914, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: Height
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7361069511873417914, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: MethodOneHeight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7361069511873417914, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: MethodOneWidth
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613736197482263888, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: MethodChange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1890701124500499473, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: MethodChange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6358490455805940718, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: MethodChange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6358490455805940718, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: DirtPrefab
-      value: 
-      objectReference: {fileID: 9105796345572399346, guid: 8de3416871d99e44bafeb3a4c3350097,
-        type: 3}
-    - target: {fileID: 6358490455805940718, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: GrassPrefab
-      value: 
-      objectReference: {fileID: 6179062160253286273, guid: a9aff427a71a78f4480f1c62227b8fab,
-        type: 3}
-    - target: {fileID: 6358490455805940718, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: StonePrefab
-      value: 
-      objectReference: {fileID: 7941079469212602654, guid: dcf33943a4fbe9b4db0b0b0fdecf9962,
-        type: 3}
-    - target: {fileID: 5132853473417476069, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: MethodChange
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1824770127947285583, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: MethodOneHeight
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 78189269985042173, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: MethodChange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 78189269985042173, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: HazardPrefab
-      value: 
-      objectReference: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
-        type: 3}
-    - target: {fileID: 78189269985042173, guid: fbb86113e9baeb24bb15f5a02294dd08,
-        type: 3}
-      propertyPath: BridgePrefab
-      value: 
-      objectReference: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
-        type: 3}
     - target: {fileID: 882494828671942839, guid: fbb86113e9baeb24bb15f5a02294dd08,
         type: 3}
-      propertyPath: MethodChange
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 153987913760369486, guid: fbb86113e9baeb24bb15f5a02294dd08,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

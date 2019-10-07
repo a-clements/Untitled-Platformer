@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2626262568936240456}
+  - component: {fileID: 11821719724647977}
   - component: {fileID: 882494828671942839}
+  - component: {fileID: 153987913760369486}
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: Untagged
@@ -31,6 +33,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11821719724647977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2626262568936240463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac947135d1a855c43805dd8552f789c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomNumber: 0
+  GeneratorOne: {fileID: 0}
 --- !u!114 &882494828671942839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,24 +59,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee0bc2ac1958d545a5ce88b0f344191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MethodChange: 0
   DirtPrefab: {fileID: 9105796345572399346, guid: 8de3416871d99e44bafeb3a4c3350097,
     type: 3}
   GrassPrefab: {fileID: 6179062160253286273, guid: a9aff427a71a78f4480f1c62227b8fab,
     type: 3}
   StonePrefab: {fileID: 7941079469212602654, guid: dcf33943a4fbe9b4db0b0b0fdecf9962,
     type: 3}
-  PlatformPrefab: {fileID: 7941079469212602654, guid: dcf33943a4fbe9b4db0b0b0fdecf9962,
+  HazardPrefab: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
+    type: 3}
+  BridgePrefab: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+    type: 3}
+  MethodOneHeight: 30
+  MethodOneWidth: 120
+  SpacerMinimum: 12
+  SpacerMaximum: 24
+  Distance: 0
+  ChanceofHazard: 0.5
+  ChanceofBridge: 0.1
+  NumerOfPlatforms: 100
+--- !u!114 &153987913760369486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2626262568936240463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5d3672068efbe4ab34596b10aeb89f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DirtPrefab: {fileID: 9105796345572399346, guid: 8de3416871d99e44bafeb3a4c3350097,
+    type: 3}
+  GrassPrefab: {fileID: 6179062160253286273, guid: a9aff427a71a78f4480f1c62227b8fab,
+    type: 3}
+  StonePrefab: {fileID: 7941079469212602654, guid: dcf33943a4fbe9b4db0b0b0fdecf9962,
     type: 3}
   HazardPrefab: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
     type: 3}
   BridgePrefab: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
     type: 3}
-  Distance: 0
-  MethodOneHeight: 30
-  MethodOneWidth: 120
-  SpacerMinimum: 12
-  SpacerMaximum: 24
   MethodTwoHeight: 4
   MethodTwoWidth: 120
   MinPlatformSize: 1
