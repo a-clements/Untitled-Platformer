@@ -7,12 +7,14 @@ public class GeneratorPicker : MonoBehaviour
     [SerializeField] private int RandomNumber;
     [SerializeField] private GeneratorOne GeneratorOne;
     [SerializeField] private GeneratorTwo GeneratorTwo;
+    [SerializeField] private GeneratorThree GeneratorThree;
 
     void Awake()
     {
         //executed first
         GeneratorOne = GetComponent<GeneratorOne>();
         GeneratorTwo = GetComponent<GeneratorTwo>();
+        GeneratorThree = GetComponent<GeneratorThree>();
         RandomNumber = Random.Range(0,3);
     }
 
@@ -31,7 +33,7 @@ public class GeneratorPicker : MonoBehaviour
                 break;
 
             case 2:
-                Debug.Log("not yet defined");
+                GeneratorThree.enabled = true;
                 break;
         }
     }
@@ -40,6 +42,7 @@ public class GeneratorPicker : MonoBehaviour
     {
         GeneratorOne.enabled = false;
         GeneratorTwo.enabled = false;
+        GeneratorThree.enabled = false;
     }
 
     private void Start()

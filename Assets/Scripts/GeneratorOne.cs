@@ -12,10 +12,11 @@ public class GeneratorOne : MonoBehaviour
     [SerializeField] private GameObject BridgePrefab;
 
     [Header("Variables")]
-    [SerializeField] private int MethodOneHeight = 30;
-    [SerializeField] private int MethodOneWidth = 120;
+    [SerializeField] private int Height = 30;
+    [SerializeField] private int Width = 120;
     [SerializeField] private int SpacerMinimum = 12;
     [SerializeField] private int SpacerMaximum = 24;
+    [SerializeField] private int MaxHazardSize = 3;
     [SerializeField] private int Distance;
 
     [Range(0.0f, 1.0f)]
@@ -53,7 +54,7 @@ public class GeneratorOne : MonoBehaviour
 
     private void Generate()
     {
-        Distance = MethodOneHeight;
+        Distance = Height;
 
         #region Method One First Block
         LowPoint = Distance - 1;
@@ -79,7 +80,7 @@ public class GeneratorOne : MonoBehaviour
         #endregion
 
         #region Method One Loop
-        for (int w = 1; w < MethodOneWidth; w++)
+        for (int w = 1; w < Width; w++)
         {
             if (Random.value < ChanceofBridge)
             {
@@ -107,7 +108,22 @@ public class GeneratorOne : MonoBehaviour
                     Dirt.transform.SetParent(Map.transform);
                 }
 
-                if (Random.value < ChanceofHazard)
+                if (IsHazard == true)
+                {
+                    IsHazard = false;
+                }
+
+                else if (Random.value < ChanceofHazard)
+                {
+                    IsHazard = true;
+                }
+
+                else
+                {
+                    IsHazard = false;
+                }
+
+                if (IsHazard == true)
                 {
                     Hazard = Instantiate(HazardPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
                     Hazard.transform.SetParent(Map.transform);
@@ -136,17 +152,17 @@ public class GeneratorOne : MonoBehaviour
 
         for (i = 0; i < TileSpace; i++)
         {
-            Stone = Instantiate(StonePrefab, new Vector3(MethodOneWidth, i), Quaternion.identity) as GameObject;
+            Stone = Instantiate(StonePrefab, new Vector3(Width, i), Quaternion.identity) as GameObject;
             Stone.transform.SetParent(Map.transform);
         }
 
         for (i = TileSpace; i < Distance; i++)
         {
-            Dirt = Instantiate(DirtPrefab, new Vector3(MethodOneWidth, i), Quaternion.identity) as GameObject;
+            Dirt = Instantiate(DirtPrefab, new Vector3(Width, i), Quaternion.identity) as GameObject;
             Dirt.transform.SetParent(Map.transform);
         }
 
-        Grass = Instantiate(GrassPrefab, new Vector3(MethodOneWidth, Distance), Quaternion.identity) as GameObject;
+        Grass = Instantiate(GrassPrefab, new Vector3(Width, Distance), Quaternion.identity) as GameObject;
         Grass.transform.SetParent(Map.transform);
         #endregion
     }
@@ -155,7 +171,22 @@ public class GeneratorOne : MonoBehaviour
     {
         if (value < 1)
         {
-            if (Random.value < ChanceofHazard)
+            if (IsHazard == true)
+            {
+                IsHazard = false;
+            }
+
+            else if (Random.value < ChanceofHazard)
+            {
+                IsHazard = true;
+            }
+
+            else
+            {
+                IsHazard = false;
+            }
+
+            if (IsHazard == true)
             {
                 Instantiate(HazardPrefab, new Vector3(w, h), Quaternion.identity);
             }

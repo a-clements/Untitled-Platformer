@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 11821719724647977}
   - component: {fileID: 882494828671942839}
   - component: {fileID: 153987913760369486}
+  - component: {fileID: 5986055053392727796}
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: Untagged
@@ -47,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RandomNumber: 0
   GeneratorOne: {fileID: 0}
+  GeneratorTwo: {fileID: 0}
+  GeneratorThree: {fileID: 0}
 --- !u!114 &882494828671942839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,7 +57,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2626262568936240463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eee0bc2ac1958d545a5ce88b0f344191, type: 3}
   m_Name: 
@@ -69,10 +72,11 @@ MonoBehaviour:
     type: 3}
   BridgePrefab: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
     type: 3}
-  MethodOneHeight: 30
-  MethodOneWidth: 120
+  Height: 30
+  Width: 120
   SpacerMinimum: 12
   SpacerMaximum: 24
+  MaxHazardSize: 3
   Distance: 0
   ChanceofHazard: 0.5
   ChanceofBridge: 0.1
@@ -84,7 +88,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2626262568936240463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb5d3672068efbe4ab34596b10aeb89f, type: 3}
   m_Name: 
@@ -99,11 +103,35 @@ MonoBehaviour:
     type: 3}
   BridgePrefab: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
     type: 3}
-  MethodTwoHeight: 4
-  MethodTwoWidth: 120
-  MinPlatformSize: 1
-  MaxPlatformSize: 10
-  MaxHazards: 3
+  Height: 4
+  Width: 120
+  MaxHazardSize: 3
   ChanceofHazard: 0.5
   ChanceofBridge: 0.1
   NumerOfPlatforms: 100
+--- !u!114 &5986055053392727796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2626262568936240463}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fe63c335c6c984190874b9de563fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrassPrefab: {fileID: 6179062160253286273, guid: a9aff427a71a78f4480f1c62227b8fab,
+    type: 3}
+  HazardPrefab: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
+    type: 3}
+  BridgePrefab: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+    type: 3}
+  MaxHazardSize: 4
+  MinPlatformSize: 1
+  MaxPlatformSize: 10
+  Height: 3
+  Drop: -3
+  ChanceofHazard: 0.5
+  ChanceofBridge: 0.1
+  NumerOfPlatforms: 120

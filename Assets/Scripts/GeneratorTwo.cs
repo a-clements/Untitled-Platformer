@@ -14,7 +14,7 @@ public class GeneratorTwo : MonoBehaviour
     [Header("Variables")]
     [SerializeField] private int Height = 4;
     [SerializeField] private int Width = 120;
-    [SerializeField] private int MaxHazards = 3;
+    [SerializeField] private int MaxHazardSize = 3;
     [Range(0.0f, 1.0f)]
     [SerializeField] private float ChanceofHazard = 0.5f;
     [Range(0.0f, 1.0f)]
@@ -59,7 +59,22 @@ public class GeneratorTwo : MonoBehaviour
                 Instantiate(BridgePrefab, new Vector3(w, 0), Quaternion.identity);
             }
 
+            if (IsHazard == true)
+            {
+                IsHazard = false;
+            }
+
             else if (Random.value < ChanceofHazard)
+            {
+                IsHazard = true;
+            }
+
+            else
+            {
+                IsHazard = false;
+            }
+
+            if (IsHazard == true)
             {
                 Instantiate(StonePrefab, new Vector3(w, -2), Quaternion.identity);
                 Instantiate(DirtPrefab, new Vector3(w, -1), Quaternion.identity);
@@ -91,7 +106,22 @@ public class GeneratorTwo : MonoBehaviour
     {
         if (value < 1)
         {
-            if (Random.value < ChanceofHazard)
+            if (IsHazard == true)
+            {
+                IsHazard = false;
+            }
+
+            else if (Random.value < ChanceofHazard)
+            {
+                IsHazard = true;
+            }
+
+            else
+            {
+                IsHazard = false;
+            }
+
+            if (IsHazard == true)
             {
                 Instantiate(HazardPrefab, new Vector3(w, h), Quaternion.identity);
             }
