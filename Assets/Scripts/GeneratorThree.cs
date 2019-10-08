@@ -17,6 +17,8 @@ public class GeneratorThree : MonoBehaviour
     [SerializeField] private int MaxPlatformSize = 10;
     [SerializeField] private int Height = 3;
     [SerializeField] private int Drop = -3;
+
+    [Header("Chance Sliders")]
     [Range(0.0f, 1.0f)]
     [SerializeField] private float ChanceofHazard = 0.5f;
     [Range(0.0f, 1.0f)]

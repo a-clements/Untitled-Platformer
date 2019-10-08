@@ -15,8 +15,12 @@ public class GeneratorTwo : MonoBehaviour
     [SerializeField] private int Height = 4;
     [SerializeField] private int Width = 120;
     [SerializeField] private int MaxHazardSize = 3;
+
+    [Header("Chance Sliders")]
     [Range(0.0f, 1.0f)]
     [SerializeField] private float ChanceofHazard = 0.5f;
+    [Range(0.0f, 1.0f)]
+    [SerializeField] private float ChanceofTrap = 0.5f;
     [Range(0.0f, 1.0f)]
     [SerializeField] private float ChanceofBridge = 0.1f;
 
@@ -25,6 +29,7 @@ public class GeneratorTwo : MonoBehaviour
 
     private int w = 0;
     private bool IsHazard;
+    private bool IsTrap;
     private GameObject Map;
     private GameObject Stone;
     private GameObject Dirt;
@@ -76,9 +81,27 @@ public class GeneratorTwo : MonoBehaviour
 
             if (IsHazard == true)
             {
-                Instantiate(StonePrefab, new Vector3(w, -2), Quaternion.identity);
-                Instantiate(DirtPrefab, new Vector3(w, -1), Quaternion.identity);
-                Instantiate(HazardPrefab, new Vector3(w, 0), Quaternion.identity);
+                if (IsTrap == true)
+                {
+                    IsTrap = false;
+                }
+
+                else if (Random.value < ChanceofTrap)
+                {
+                    IsTrap = true;
+                }
+
+                else
+                {
+                    IsTrap = false;
+                }
+
+                if(IsTrap == true)
+                {
+                    Instantiate(StonePrefab, new Vector3(w, -2), Quaternion.identity);
+                    Instantiate(DirtPrefab, new Vector3(w, -1), Quaternion.identity);
+                    Instantiate(HazardPrefab, new Vector3(w, 0), Quaternion.identity);
+                }
             }
 
             else
