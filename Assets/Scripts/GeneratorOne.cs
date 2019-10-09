@@ -16,23 +16,34 @@ public class GeneratorOne : MonoBehaviour
     [SerializeField] private int Width = 120;
     [SerializeField] private int SpacerMinimum = 12;
     [SerializeField] private int SpacerMaximum = 24;
-    [SerializeField] private int MaxHazardSize = 3;
-    [SerializeField] private int Distance;
+    [SerializeField] private int MinPlatformSize = 1;
+    [SerializeField] private int MaxPlatformSize = 4;
+    [SerializeField] private int LowLandscapeOffset = 1;
+    [SerializeField] private int HighLandscapeOffset = 2;
+    [SerializeField] private int LowPlatformOffset = 3;
+    [SerializeField] private int HighPlatformOffset = 5;
 
+    [Header("Chance Sliders")]
     [Range(0.0f, 1.0f)]
-    [SerializeField] private float ChanceofHazard = 0.5f;
+    [SerializeField] private float ChanceOfHazard = 0.5f;
     [Range(0.0f, 1.0f)]
-    [SerializeField] private float ChanceofBridge = 0.1f;
+    [SerializeField] private float ChanceOfBridge = 0.1f;
 
     [Header("Number of Platforms")]
     [SerializeField] private int NumerOfPlatforms = 100;
 
     private int i = 0;
-    private int w = 0;
-    private int LowPoint;
-    private int HighPoint;
+    private int w = 1;
+    private int j = 0;
+    private int PlatformSize;
+    private int LandscapeLowPoint;
+    private int LandscapeHighPoint;
+    private int PlatformLowPoint;
+    private int PlatformHighPoint;
     private int Spacer;
     private int TileSpace;
+    private int Distance;
+    private int PlatformPosition;
     private bool IsHazard;
     private GameObject Map;
     private GameObject Stone;
@@ -57,9 +68,9 @@ public class GeneratorOne : MonoBehaviour
         Distance = Height;
 
         #region Method One First Block
-        LowPoint = Distance - 1;
-        HighPoint = Distance + 2;
-        Distance = Random.Range(LowPoint, HighPoint);
+        LandscapeLowPoint = Distance - 1;
+        LandscapeHighPoint = Distance + 2;
+        Distance = Random.Range(LandscapeLowPoint, LandscapeHighPoint);
         Spacer = Random.Range(SpacerMinimum, SpacerMaximum);
         TileSpace = Distance - Spacer;
 
@@ -80,73 +91,85 @@ public class GeneratorOne : MonoBehaviour
         #endregion
 
         #region Method One Loop
-        for (int w = 1; w < Width; w++)
+        while(w < Width)
         {
-            if (Random.value < ChanceofBridge)
+            if (Random.value < ChanceOfBridge)
             {
-                Bridge = Instantiate(BridgePrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
-                Bridge.transform.SetParent(Map.transform);
+                PlatformSize = Mathf.RoundToInt(Random.Range(MinPlatformSize, MaxPlatformSize));
+
+                for(i = 0; i < PlatformSize; i++)
+                {
+                    Bridge = Instantiate(BridgePrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
+                    Bridge.transform.SetParent(Map.transform);
+                    w++;
+                }
             }
 
             else
             {
-                LowPoint = Distance - 1;
-                HighPoint = Distance + 2;
-                Distance = Random.Range(LowPoint, HighPoint);
+                LandscapeLowPoint = Distance - LowLandscapeOffset;
+                LandscapeHighPoint = Distance + HighLandscapeOffset;
+                Distance = Random.Range(LandscapeLowPoint, LandscapeHighPoint);
                 Spacer = Random.Range(SpacerMinimum, SpacerMaximum);
                 TileSpace = Distance - Spacer;
 
-                for (i = 0; i < TileSpace; i++)
-                {
-                    Stone = Instantiate(StonePrefab, new Vector3(w, i), Quaternion.identity) as GameObject;
-                    Stone.transform.SetParent(Map.transform);
-                }
+                PlatformSize = Mathf.RoundToInt(Random.Range(MinPlatformSize, MaxPlatformSize));
 
-                for (i = TileSpace; i < Distance; i++)
+                for(j = 0; j < PlatformSize; j++)
                 {
-                    Dirt = Instantiate(DirtPrefab, new Vector3(w, i), Quaternion.identity) as GameObject;
-                    Dirt.transform.SetParent(Map.transform);
-                }
+                    for (i = 0; i < TileSpace; i++)
+                    {
+                        Stone = Instantiate(StonePrefab, new Vector3(w, i), Quaternion.identity) as GameObject;
+                        Stone.transform.SetParent(Map.transform);
+                    }
 
-                if (IsHazard == true)
-                {
-                    IsHazard = false;
-                }
+                    for (i = TileSpace; i < Distance; i++)
+                    {
+                        Dirt = Instantiate(DirtPrefab, new Vector3(w, i), Quaternion.identity) as GameObject;
+                        Dirt.transform.SetParent(Map.transform);
+                    }
 
-                else if (Random.value < ChanceofHazard)
-                {
-                    IsHazard = true;
-                }
+                    if (IsHazard == true)
+                    {
+                        IsHazard = false;
+                    }
 
-                else
-                {
-                    IsHazard = false;
-                }
+                    else if (Random.value < ChanceOfHazard)
+                    {
+                        IsHazard = true;
+                    }
 
-                if (IsHazard == true)
-                {
-                    Hazard = Instantiate(HazardPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
-                    Hazard.transform.SetParent(Map.transform);
-                }
+                    else
+                    {
+                        IsHazard = false;
+                    }
 
-                else
-                {
-                    Grass = Instantiate(GrassPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
-                    Grass.transform.SetParent(Map.transform);
-                }
-            }
+                    if (IsHazard == true)
+                    {
+                        Hazard = Instantiate(HazardPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
+                        Hazard.transform.SetParent(Map.transform);
+                    }
 
-            if (w < NumerOfPlatforms + 1)
-            {
-                PlacePlatform(Random.Range(0, 2), w, Random.Range(Distance + 3, Distance + 5));
+                    else
+                    {
+                        Grass = Instantiate(GrassPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
+                        Grass.transform.SetParent(Map.transform);
+                    }
+
+                    PlatformLowPoint = Distance + LowPlatformOffset;
+                    PlatformHighPoint = Distance + HighPlatformOffset;
+                    PlatformPosition = Random.Range(PlatformLowPoint, PlatformHighPoint);
+                    PlacePlatform(Random.Range(0, 2), w, PlatformPosition);
+                    w++;
+                }
             }
         }
         #endregion
 
         #region Method One Last Block
-        LowPoint = Distance - 1;
-        HighPoint = Distance + 2;
-        Distance = Random.Range(LowPoint, HighPoint);
+        LandscapeLowPoint = Distance - 1;
+        LandscapeHighPoint = Distance + 2;
+        Distance = Random.Range(LandscapeLowPoint, LandscapeHighPoint);
         Spacer = Random.Range(SpacerMinimum, SpacerMaximum);
         TileSpace = Distance - Spacer;
 
@@ -176,7 +199,7 @@ public class GeneratorOne : MonoBehaviour
                 IsHazard = false;
             }
 
-            else if (Random.value < ChanceofHazard)
+            else if (Random.value < ChanceOfHazard)
             {
                 IsHazard = true;
             }
@@ -191,7 +214,7 @@ public class GeneratorOne : MonoBehaviour
                 Instantiate(HazardPrefab, new Vector3(w, h), Quaternion.identity);
             }
 
-            else if (Random.value < ChanceofBridge)
+            else if (Random.value < ChanceOfBridge)
             {
                 Instantiate(BridgePrefab, new Vector3(w, h), Quaternion.identity);
             }

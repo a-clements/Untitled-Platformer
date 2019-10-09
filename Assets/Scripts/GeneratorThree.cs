@@ -15,14 +15,14 @@ public class GeneratorThree : MonoBehaviour
     [SerializeField] private int MaxHazardSize = 4;
     [SerializeField] private int MinPlatformSize = 1;
     [SerializeField] private int MaxPlatformSize = 10;
-    [SerializeField] private int Height = 3;
-    [SerializeField] private int Drop = -3;
+    [SerializeField] private int LowPlatformOffset = 3;
+    [SerializeField] private int HighPlatformOffset = -3;
 
     [Header("Chance Sliders")]
     [Range(0.0f, 1.0f)]
-    [SerializeField] private float ChanceofHazard = 0.5f;
+    [SerializeField] private float ChanceOfHazard = 0.5f;
     [Range(0.0f, 1.0f)]
-    [SerializeField] private float ChanceofTrap = 0.5f;
+    [SerializeField] private float ChanceOfTrap = 0.5f;
     [Range(0.0f, 1.0f)]
     [SerializeField] private float ChanceofBridge = 0.1f;
 
@@ -69,7 +69,7 @@ public class GeneratorThree : MonoBehaviour
                 IsHazard = false;
             }
 
-            else if(Random.value < ChanceofHazard)
+            else if(Random.value < ChanceOfHazard)
             {
                 IsHazard = true;
             }
@@ -81,7 +81,7 @@ public class GeneratorThree : MonoBehaviour
 
             if(IsHazard == true)
             {
-                if (Random.value < ChanceofTrap)
+                if (Random.value < ChanceOfTrap)
                 {
                     for (i = 0; i < HazardSize; i++)
                     {
@@ -114,7 +114,7 @@ public class GeneratorThree : MonoBehaviour
             else if(Random.value < ChanceofBridge)
             {
                 PlatformSize = Mathf.RoundToInt(Random.Range(MinPlatformSize, MaxPlatformSize));
-                YPosition += Random.Range(Drop, Height);
+                YPosition += Random.Range(LowPlatformOffset, HighPlatformOffset);
 
                 for (i = 0; i < PlatformSize; i++)
                 {
@@ -136,7 +136,7 @@ public class GeneratorThree : MonoBehaviour
             else
             {
                 PlatformSize = Mathf.RoundToInt(Random.Range(MinPlatformSize, MaxPlatformSize));
-                YPosition += Random.Range(Drop, Height);
+                YPosition += Random.Range(LowPlatformOffset, HighPlatformOffset);
 
                 for (i = 0; i < PlatformSize; i++)
                 {
@@ -150,7 +150,7 @@ public class GeneratorThree : MonoBehaviour
         #endregion
 
         #region Method Three Last Block
-        YPosition += Random.Range(Drop, Height);
+        YPosition += Random.Range(LowPlatformOffset, HighPlatformOffset);
         Grass = Instantiate(GrassPrefab, new Vector2(XPosition, YPosition), Quaternion.identity) as GameObject;
         //Grass.transform.SetParent(Map.transform);
         #endregion

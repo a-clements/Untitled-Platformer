@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2626262568936240456}
   - component: {fileID: 11821719724647977}
   - component: {fileID: 8506237749977079979}
-  - component: {fileID: 6596852310506587478}
+  - component: {fileID: 6166181855085007428}
   - component: {fileID: 7563129261860912773}
   m_Layer: 0
   m_Name: MapGenerator
@@ -76,12 +76,16 @@ MonoBehaviour:
   Width: 120
   SpacerMinimum: 12
   SpacerMaximum: 24
-  MaxHazardSize: 3
-  Distance: 0
+  MinPlatformSize: 1
+  MaxPlatformSize: 4
+  LowLandscapeOffset: 1
+  HighLandscapeOffset: 2
+  LowPlatformOffset: 3
+  HighPlatformOffset: 5
   ChanceofHazard: 0.5
   ChanceofBridge: 0.1
   NumerOfPlatforms: 100
---- !u!114 &6596852310506587478
+--- !u!114 &6166181855085007428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,12 +107,13 @@ MonoBehaviour:
     type: 3}
   BridgePrefab: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
     type: 3}
-  Height: 4
   Width: 120
   MinBridgeSize: 1
   MaxBridgeSize: 3
   MinHazardSize: 1
   MaxHazardSize: 3
+  LowPlatformOffset: 2
+  HighPlatformOffset: 5
   ChanceofHazard: 0.5
   ChanceofBridge: 0.1
   NumerOfPlatforms: 100

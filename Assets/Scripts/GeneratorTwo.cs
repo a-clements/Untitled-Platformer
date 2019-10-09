@@ -12,18 +12,19 @@ public class GeneratorTwo : MonoBehaviour
     [SerializeField] private GameObject BridgePrefab;
 
     [Header("Variables")]
-    [SerializeField] private int Height = 4;
     [SerializeField] private int Width = 120;
     [SerializeField] private int MinBridgeSize = 1;
     [SerializeField] private int MaxBridgeSize = 3;
     [SerializeField] private int MinHazardSize = 1;
     [SerializeField] private int MaxHazardSize = 3;
+    [SerializeField] private int LowPlatformOffset = 2;
+    [SerializeField] private int HighPlatformOffset = 5;
 
     [Header("Chance Sliders")]
     [Range(0.0f, 1.0f)]
-    [SerializeField] private float ChanceofHazard = 0.5f;
+    [SerializeField] private float ChanceOfHazard = 0.5f;
     [Range(0.0f, 1.0f)]
-    [SerializeField] private float ChanceofBridge = 0.1f;
+    [SerializeField] private float ChanceOfBridge = 0.1f;
 
     [Header("Number of Platforms")]
     [SerializeField] private int NumerOfPlatforms = 100;
@@ -66,7 +67,7 @@ public class GeneratorTwo : MonoBehaviour
         #region Method Two Loop
         while (w < Width)
         {
-            if (Random.value < ChanceofBridge)
+            if (Random.value < ChanceOfBridge)
             {
                 BridgeSize = Mathf.RoundToInt(Random.Range(MinBridgeSize, MaxBridgeSize));
                 for(i = 0; i < BridgeSize; i++)
@@ -82,7 +83,7 @@ public class GeneratorTwo : MonoBehaviour
                 IsHazard = false;
             }
 
-            else if (Random.value < ChanceofHazard)
+            else if (Random.value < ChanceOfHazard)
             {
                 IsHazard = true;
             }
@@ -129,7 +130,7 @@ public class GeneratorTwo : MonoBehaviour
 
         for(i = 0; i < NumerOfPlatforms; i++)
         {
-            PlacePlatform(Random.Range(0, 2), i, Random.Range(2, Height + 1));
+            PlacePlatform(Random.Range(0, 2), i, Random.Range(LowPlatformOffset, HighPlatformOffset));
         }
         #endregion
 
@@ -153,7 +154,7 @@ public class GeneratorTwo : MonoBehaviour
                 IsHazard = false;
             }
 
-            else if (Random.value < ChanceofHazard)
+            else if (Random.value < ChanceOfHazard)
             {
                 IsHazard = true;
             }
@@ -168,7 +169,7 @@ public class GeneratorTwo : MonoBehaviour
                 Instantiate(HazardPrefab, new Vector3(w, h), Quaternion.identity);
             }
 
-            else if (Random.value < ChanceofBridge)
+            else if (Random.value < ChanceOfBridge)
             {
                 Instantiate(BridgePrefab, new Vector3(w, h), Quaternion.identity);
             }
