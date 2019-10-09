@@ -14,22 +14,25 @@ public class GeneratorTwo : MonoBehaviour
     [Header("Variables")]
     [SerializeField] private int Height = 4;
     [SerializeField] private int Width = 120;
+    [SerializeField] private int MinBridgeSize = 1;
+    [SerializeField] private int MaxBridgeSize = 3;
+    [SerializeField] private int MinHazardSize = 1;
     [SerializeField] private int MaxHazardSize = 3;
 
     [Header("Chance Sliders")]
     [Range(0.0f, 1.0f)]
     [SerializeField] private float ChanceofHazard = 0.5f;
     [Range(0.0f, 1.0f)]
-    [SerializeField] private float ChanceofTrap = 0.5f;
-    [Range(0.0f, 1.0f)]
     [SerializeField] private float ChanceofBridge = 0.1f;
 
     [Header("Number of Platforms")]
     [SerializeField] private int NumerOfPlatforms = 100;
 
-    private int w = 0;
+    private int w = 1;
+    private int i = 0;
     private bool IsHazard;
-    private bool IsTrap;
+    private int BridgeSize;
+    private int HazardSize;
     private GameObject Map;
     private GameObject Stone;
     private GameObject Dirt;
@@ -52,16 +55,26 @@ public class GeneratorTwo : MonoBehaviour
     {
         #region Method Two First Block
         Stone = Instantiate(StonePrefab, new Vector3(0, -2), Quaternion.identity) as GameObject;
-        Instantiate(DirtPrefab, new Vector3(0, -1), Quaternion.identity);
-        Instantiate(GrassPrefab, new Vector3(0, 0), Quaternion.identity);
+        Dirt = Instantiate(DirtPrefab, new Vector3(0, -1), Quaternion.identity) as GameObject;
+        Grass = Instantiate(GrassPrefab, new Vector3(0, 0), Quaternion.identity) as GameObject;
+
+        Stone.transform.SetParent(Map.transform);
+        Dirt.transform.SetParent(Map.transform);
+        Grass.transform.SetParent(Map.transform);
         #endregion
 
         #region Method Two Loop
-        for (int w = 1; w < Width; w++)
+        while (w < Width)
         {
             if (Random.value < ChanceofBridge)
             {
-                Instantiate(BridgePrefab, new Vector3(w, 0), Quaternion.identity);
+                BridgeSize = Mathf.RoundToInt(Random.Range(MinBridgeSize, MaxBridgeSize));
+                for(i = 0; i < BridgeSize; i++)
+                {
+                    Bridge = Instantiate(BridgePrefab, new Vector3(w, 0), Quaternion.identity) as GameObject;
+                    Bridge.transform.SetParent(Map.transform);
+                    w++;
+                }
             }
 
             if (IsHazard == true)
@@ -81,47 +94,53 @@ public class GeneratorTwo : MonoBehaviour
 
             if (IsHazard == true)
             {
-                if (IsTrap == true)
-                {
-                    IsTrap = false;
-                }
+                HazardSize = Mathf.RoundToInt(Random.Range(MinHazardSize, MaxHazardSize));
 
-                else if (Random.value < ChanceofTrap)
+                for(i = 0; i < HazardSize; i++)
                 {
-                    IsTrap = true;
-                }
+                    Stone = Instantiate(StonePrefab, new Vector3(w, -2), Quaternion.identity) as GameObject;
+                    Dirt = Instantiate(DirtPrefab, new Vector3(w, -1), Quaternion.identity) as GameObject;
+                    Hazard = Instantiate(HazardPrefab, new Vector3(w, 0), Quaternion.identity) as GameObject;
 
-                else
-                {
-                    IsTrap = false;
-                }
-
-                if(IsTrap == true)
-                {
-                    Instantiate(StonePrefab, new Vector3(w, -2), Quaternion.identity);
-                    Instantiate(DirtPrefab, new Vector3(w, -1), Quaternion.identity);
-                    Instantiate(HazardPrefab, new Vector3(w, 0), Quaternion.identity);
+                    Stone.transform.SetParent(Map.transform);
+                    Dirt.transform.SetParent(Map.transform);
+                    Hazard.transform.SetParent(Map.transform);
+                    w++;
                 }
             }
 
             else
             {
-                Instantiate(StonePrefab, new Vector3(w, -2), Quaternion.identity);
-                Instantiate(DirtPrefab, new Vector3(w, -1), Quaternion.identity);
-                Instantiate(GrassPrefab, new Vector3(w, 0), Quaternion.identity);
-            }
+                HazardSize = Mathf.RoundToInt(Random.Range(MinHazardSize, MaxHazardSize));
 
-            if (w < NumerOfPlatforms + 1)
-            {
-                PlacePlatform(Random.Range(0, 2), w, Random.Range(2, Height + 1));
+                for (i = 0; i < HazardSize; i++)
+                {
+                    Stone = Instantiate(StonePrefab, new Vector3(w, -2), Quaternion.identity) as GameObject;
+                    Dirt = Instantiate(DirtPrefab, new Vector3(w, -1), Quaternion.identity) as GameObject;
+                    Grass = Instantiate(GrassPrefab, new Vector3(w, 0), Quaternion.identity) as GameObject;
+
+                    Stone.transform.SetParent(Map.transform);
+                    Dirt.transform.SetParent(Map.transform);
+                    Grass.transform.SetParent(Map.transform);
+                    w++;
+                }
             }
+        }
+
+        for(i = 0; i < NumerOfPlatforms; i++)
+        {
+            PlacePlatform(Random.Range(0, 2), i, Random.Range(2, Height + 1));
         }
         #endregion
 
         #region Method Two Last Block
-        Instantiate(StonePrefab, new Vector3(Width, -2), Quaternion.identity);
-        Instantiate(DirtPrefab, new Vector3(Width, -1), Quaternion.identity);
-        Instantiate(GrassPrefab, new Vector3(Width, 0), Quaternion.identity);
+        Stone = Instantiate(StonePrefab, new Vector3(Width, -2), Quaternion.identity) as GameObject;
+        Dirt = Instantiate(DirtPrefab, new Vector3(Width, -1), Quaternion.identity) as GameObject;
+        Grass = Instantiate(GrassPrefab, new Vector3(Width, 0), Quaternion.identity) as GameObject;
+
+        Stone.transform.SetParent(Map.transform);
+        Dirt.transform.SetParent(Map.transform);
+        Grass.transform.SetParent(Map.transform);
         #endregion
     }
 

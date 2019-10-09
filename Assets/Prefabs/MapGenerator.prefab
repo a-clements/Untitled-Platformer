@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2626262568936240456}
   - component: {fileID: 11821719724647977}
-  - component: {fileID: 882494828671942839}
-  - component: {fileID: 153987913760369486}
-  - component: {fileID: 5986055053392727796}
+  - component: {fileID: 8506237749977079979}
+  - component: {fileID: 6596852310506587478}
+  - component: {fileID: 7563129261860912773}
   m_Layer: 0
   m_Name: MapGenerator
   m_TagString: Untagged
@@ -50,7 +50,7 @@ MonoBehaviour:
   GeneratorOne: {fileID: 0}
   GeneratorTwo: {fileID: 0}
   GeneratorThree: {fileID: 0}
---- !u!114 &882494828671942839
+--- !u!114 &8506237749977079979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,7 +81,7 @@ MonoBehaviour:
   ChanceofHazard: 0.5
   ChanceofBridge: 0.1
   NumerOfPlatforms: 100
---- !u!114 &153987913760369486
+--- !u!114 &6596852310506587478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,11 +105,14 @@ MonoBehaviour:
     type: 3}
   Height: 4
   Width: 120
+  MinBridgeSize: 1
+  MaxBridgeSize: 3
+  MinHazardSize: 1
   MaxHazardSize: 3
   ChanceofHazard: 0.5
   ChanceofBridge: 0.1
   NumerOfPlatforms: 100
---- !u!114 &5986055053392727796
+--- !u!114 &7563129261860912773
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,5 +136,6 @@ MonoBehaviour:
   Height: 3
   Drop: -3
   ChanceofHazard: 0.5
+  ChanceofTrap: 0.5
   ChanceofBridge: 0.1
   NumerOfPlatforms: 120
