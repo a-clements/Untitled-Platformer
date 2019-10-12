@@ -5,9 +5,7 @@ using UnityEngine;
 public class GeneratorThree : MonoBehaviour
 {
     [Header("Prefabs")]
-    //[SerializeField] private GameObject DirtPrefab;
     [SerializeField] private GameObject GrassPrefab;
-    //[SerializeField] private GameObject StonePrefab;
     [SerializeField] private GameObject HazardPrefab;
     [SerializeField] private GameObject BridgePrefab;
 
@@ -37,8 +35,6 @@ public class GeneratorThree : MonoBehaviour
     private int XPosition = 1;
     private bool IsHazard;
     private GameObject Map;
-    //private GameObject Stone;
-    //private GameObject Dirt;
     private GameObject Grass;
     private GameObject Bridge;
     private GameObject Hazard;
@@ -98,12 +94,13 @@ public class GeneratorThree : MonoBehaviour
                         if (i == 0 || i == HazardSize - 1)
                         {
                             Grass = Instantiate(GrassPrefab, new Vector2(XPosition, YPosition), Quaternion.identity) as GameObject;
+                            Grass.transform.SetParent(Map.transform);
                         }
 
                         else
                         {
                             Hazard = Instantiate(HazardPrefab, new Vector2(XPosition, YPosition), Quaternion.identity) as GameObject;
-                            //Bridge.transform.SetParent(Map.transform);
+                            Hazard.transform.SetParent(Map.transform);
                         }
 
                         XPosition++;
@@ -121,12 +118,13 @@ public class GeneratorThree : MonoBehaviour
                     if(i == 0 || i == PlatformSize - 1)
                     {
                         Grass = Instantiate(GrassPrefab, new Vector2(XPosition, YPosition), Quaternion.identity) as GameObject;
+                        Grass.transform.SetParent(Map.transform);
                     }
 
                     else
                     {
                         Bridge = Instantiate(BridgePrefab, new Vector2(XPosition, YPosition), Quaternion.identity) as GameObject;
-                        //Bridge.transform.SetParent(Map.transform);
+                        Bridge.transform.SetParent(Map.transform);
                     }
 
                     XPosition++;
@@ -152,7 +150,7 @@ public class GeneratorThree : MonoBehaviour
         #region Method Three Last Block
         YPosition += Random.Range(LowPlatformOffset, HighPlatformOffset);
         Grass = Instantiate(GrassPrefab, new Vector2(XPosition, YPosition), Quaternion.identity) as GameObject;
-        //Grass.transform.SetParent(Map.transform);
+        Grass.transform.SetParent(Map.transform);
         #endregion
     }
 }

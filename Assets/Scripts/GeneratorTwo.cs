@@ -35,6 +35,7 @@ public class GeneratorTwo : MonoBehaviour
     private int BridgeSize;
     private int HazardSize;
     private GameObject Map;
+    private GameObject Platforms;
     private GameObject Stone;
     private GameObject Dirt;
     private GameObject Grass;
@@ -44,12 +45,14 @@ public class GeneratorTwo : MonoBehaviour
     void OnEnable()
     {
         Map = new GameObject("Map");
+        Platforms = new GameObject("Platforms");
         Generate();
     }
 
     private void OnDisable()
     {
         Destroy(Map);
+        Destroy(Platforms);
     }
 
     private void Generate()
@@ -166,17 +169,20 @@ public class GeneratorTwo : MonoBehaviour
 
             if (IsHazard == true)
             {
-                Instantiate(HazardPrefab, new Vector3(w, h), Quaternion.identity);
+                Hazard = Instantiate(HazardPrefab, new Vector3(w, h), Quaternion.identity) as GameObject;
+                Hazard.transform.SetParent(Platforms.transform);
             }
 
             else if (Random.value < ChanceOfBridge)
             {
-                Instantiate(BridgePrefab, new Vector3(w, h), Quaternion.identity);
+                Bridge = Instantiate(BridgePrefab, new Vector3(w, h), Quaternion.identity) as GameObject;
+                Bridge.transform.SetParent(Platforms.transform);
             }
 
             else
             {
-                Instantiate(GrassPrefab, new Vector3(w, h), Quaternion.identity);
+                Grass = Instantiate(GrassPrefab, new Vector3(w, h), Quaternion.identity) as GameObject;
+                Grass.transform.SetParent(Platforms.transform);
             }
         }
     }
