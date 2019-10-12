@@ -515,7 +515,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -618}
-  m_SizeDelta: {x: 1048, y: 247.5}
+  m_SizeDelta: {x: 1048, y: 248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &797112401
 MonoBehaviour:
@@ -872,7 +872,9 @@ MonoBehaviour:
   RightPanel: {fileID: 108875480}
   BottomPanel: {fileID: 797112399}
   SidePanelSpeed: 35
-  BottomPanelSpeed: 20.5
+  BottomPanelSpeed: 20.6
+  SidePanelMultiplier: 1.5
+  BottomPanelMultipler: 1.5
 --- !u!1001 &1636834115
 PrefabInstance:
   m_ObjectHideFlags: 0

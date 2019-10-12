@@ -9,6 +9,9 @@ public class MenuScript : MonoBehaviour
     public GameObject BottomPanel;
     [SerializeField] private float SidePanelSpeed = 1.0f;
     [SerializeField] private float BottomPanelSpeed = 1.0f;
+    [SerializeField] private float SidePanelMultiplier = 1.5f;
+    [SerializeField] private float BottomPanelMultipler = 1.5f;
+    [SerializeField] private float WaitTimer = 0.01f;
 
     void Start()
     {
@@ -27,11 +30,10 @@ public class MenuScript : MonoBehaviour
     {
         float n;
 
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(WaitTimer);
 
         n = LeftPanel.GetComponent<RectTransform>().localPosition.x;
-
-        while (LeftPanel.GetComponent<RectTransform>().localPosition.x < -786)
+        while (LeftPanel.GetComponent<RectTransform>().localPosition.x < -(LeftPanel.GetComponent<RectTransform>().rect.width * SidePanelMultiplier))
         {
             LeftPanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(n, 0);
             n = n + SidePanelSpeed;
@@ -46,11 +48,11 @@ public class MenuScript : MonoBehaviour
     {
         float n;
 
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(WaitTimer);
 
         n = RightPanel.GetComponent<RectTransform>().localPosition.x;
 
-        while (RightPanel.GetComponent<RectTransform>().localPosition.x > 786)
+        while (RightPanel.GetComponent<RectTransform>().localPosition.x > (RightPanel.GetComponent<RectTransform>().rect.width * SidePanelMultiplier))
         {
             RightPanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(n, 0);
             n = n - SidePanelSpeed;
@@ -65,11 +67,11 @@ public class MenuScript : MonoBehaviour
     {
         float n;
 
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(WaitTimer);
 
         n = BottomPanel.GetComponent<RectTransform>().localPosition.y;
 
-        while (BottomPanel.GetComponent<RectTransform>().localPosition.y < -372)
+        while (BottomPanel.GetComponent<RectTransform>().localPosition.y < -(BottomPanel.GetComponent<RectTransform>().rect.height * SidePanelMultiplier))
         {
             BottomPanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, n);
             n = n + BottomPanelSpeed;
