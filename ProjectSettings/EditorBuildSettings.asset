@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 3133b388d1a02334290aeae7cc6af579
   - enabled: 1
-    path: Assets/Scenes/MapSelector.unity
-    guid: b7df0f55736813f4992d5f64fdeccdfe
-  - enabled: 1
     path: Assets/Scenes/Map0.unity
     guid: 93362eae4be1b5d49b56d91b7ca0d357
+  - enabled: 1
+    path: Assets/Scenes/MapSelection.unity
+    guid: ba64460aa6e1a0a4189099b1d44a14f0
   - enabled: 1
     path: Assets/Scenes/Map1.unity
     guid: aa670a2dfa8445441925688573eba6c5
