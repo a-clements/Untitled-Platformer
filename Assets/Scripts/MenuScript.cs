@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
@@ -22,9 +23,33 @@ public class MenuScript : MonoBehaviour
     [Header("Coroutine Timers")]
     [SerializeField] private float WaitTimer = 0.01f;
 
+    private bool Running = true;
+
     void Start()
     {
         StartCoroutine(ScrollIn());
+    }
+
+    public void OnPlayButtonClick()
+    {
+        StartCoroutine(ScrollOut());
+        StartCoroutine(LoadScene());
+    }
+
+    IEnumerator LoadScene()
+    {
+        if(Running == false)
+        {
+            SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+            yield return null;
+        }
+
+        else
+        {
+            yield return new WaitForSeconds(1.0f);
+            yield return null;
+            StartCoroutine(LoadScene());
+        }
     }
 
     #region Panel Enumerators do NOT touch
@@ -83,7 +108,9 @@ public class MenuScript : MonoBehaviour
     {
         StartCoroutine(SidePanelScrollOut());
         StartCoroutine(BottomPanelScrollOut());
-        yield return null;
+        yield return new WaitForSeconds(1.0f);
+        Running = false;
+        yield return new WaitForSeconds(1.0f);
     }
 
     IEnumerator SidePanelScrollOut()
@@ -118,8 +145,6 @@ public class MenuScript : MonoBehaviour
         yield return new WaitForSeconds(WaitTimer);
 
         n = BottomPanel.GetComponent<RectTransform>().localPosition.y;
-
-        Debug.Log(-(BottomPanel.GetComponent<RectTransform>().rect.height * BottomPanelSlideOutMultiplier));
 
         while (BottomPanel.GetComponent<RectTransform>().localPosition.y > -(BottomPanel.GetComponent<RectTransform>().rect.height * BottomPanelSlideOutMultiplier))
         {
