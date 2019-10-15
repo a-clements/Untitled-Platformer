@@ -30,12 +30,31 @@ public class MenuScript : MonoBehaviour
     {
         GetComponent<CanvasScaler>().referenceResolution = new Vector2(Screen.currentResolution.width, Screen.currentResolution.height);
 
-        LeftPanel.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<CanvasScaler>().referenceResolution.x * 0.25f, GetComponent<CanvasScaler>().referenceResolution.y * 0.91f);
-        RightPanel.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<CanvasScaler>().referenceResolution.x * 0.25f, GetComponent<CanvasScaler>().referenceResolution.y * 0.91f);
+        #region Left Panel Resize
+        LeftPanel.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<CanvasScaler>().referenceResolution.x * 0.25f, GetComponent<CanvasScaler>().referenceResolution.y);
+
+        for (int i = 0; i < LeftPanel.transform.childCount; i++)
+        {
+
+            LeftPanel.transform.GetChild(i).GetComponent<RectTransform>().sizeDelta = new Vector2(LeftPanel.GetComponent<RectTransform>().rect.width * 0.5f,
+            LeftPanel.GetComponent<RectTransform>().rect.height / LeftPanel.transform.childCount);
+        }
+        #endregion
+
+        #region Right Panel Resize
+        RightPanel.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<CanvasScaler>().referenceResolution.x * 0.25f, GetComponent<CanvasScaler>().referenceResolution.y);
+
+        for (int i = 0; i < RightPanel.transform.childCount; i++)
+        {
+
+            RightPanel.transform.GetChild(i).GetComponent<RectTransform>().sizeDelta = new Vector2(RightPanel.GetComponent<RectTransform>().rect.width * 0.5f,
+            RightPanel.GetComponent<RectTransform>().rect.height / RightPanel.transform.childCount);
+        }
+        #endregion
 
         #region Bottom Panel Resize
-        BottomPanel.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<CanvasScaler>().referenceResolution.x * 0.6f,
-            GetComponent<CanvasScaler>().referenceResolution.y * 0.26f);
+        BottomPanel.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<CanvasScaler>().referenceResolution.x * 0.5f,
+            GetComponent<CanvasScaler>().referenceResolution.y * 0.25f);
 
         BottomPanel.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(BottomPanel.GetComponent<RectTransform>().rect.width * 0.5f, 
             BottomPanel.GetComponent<RectTransform>().rect.height * 0.5f);
