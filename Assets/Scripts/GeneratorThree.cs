@@ -6,7 +6,7 @@ public class GeneratorThree : MonoBehaviour
 {
     [Header("Prefabs")]
     [SerializeField] private GameObject GrassPrefab;
-    [SerializeField] private GameObject HazardPrefab;
+    [SerializeField] private GameObject[] HazardPrefab;
     [SerializeField] private GameObject BridgePrefab;
 
     [Header("Variables")]
@@ -99,7 +99,7 @@ public class GeneratorThree : MonoBehaviour
 
                         else
                         {
-                            Hazard = Instantiate(HazardPrefab, new Vector2(XPosition, YPosition), Quaternion.identity) as GameObject;
+                            Hazard = Instantiate(HazardPrefab[Random.Range(0, 3)], new Vector2(XPosition, YPosition), Quaternion.identity) as GameObject;
                             Hazard.transform.SetParent(Map.transform);
                         }
 

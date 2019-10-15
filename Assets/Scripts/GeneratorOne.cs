@@ -8,7 +8,7 @@ public class GeneratorOne : MonoBehaviour
     [SerializeField] private GameObject DirtPrefab;
     [SerializeField] private GameObject GrassPrefab;
     [SerializeField] private GameObject StonePrefab;
-    [SerializeField] private GameObject HazardPrefab;
+    [SerializeField] private GameObject[] HazardPrefab;
     [SerializeField] private GameObject BridgePrefab;
 
     [Header("Variables")]
@@ -149,7 +149,7 @@ public class GeneratorOne : MonoBehaviour
 
                     if (IsHazard == true)
                     {
-                        Hazard = Instantiate(HazardPrefab, new Vector3(w, Distance), Quaternion.identity) as GameObject;
+                        Hazard = Instantiate(HazardPrefab[Random.Range(0, 3)], new Vector3(w, Distance), Quaternion.identity) as GameObject;
                         Hazard.transform.SetParent(Map.transform);
                     }
 
@@ -214,7 +214,7 @@ public class GeneratorOne : MonoBehaviour
 
             if (IsHazard == true)
             {
-                Hazard = Instantiate(HazardPrefab, new Vector3(w, h), Quaternion.identity) as GameObject;
+                Hazard = Instantiate(HazardPrefab[Random.Range(0,2)], new Vector3(w, h), Quaternion.identity) as GameObject;
                 Hazard.transform.SetParent(Platforms.transform);
             }
 

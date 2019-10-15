@@ -68,8 +68,10 @@ MonoBehaviour:
     type: 3}
   StonePrefab: {fileID: 7941079469212602654, guid: dcf33943a4fbe9b4db0b0b0fdecf9962,
     type: 3}
-  HazardPrefab: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
-    type: 3}
+  HazardPrefab:
+  - {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3, type: 3}
+  - {fileID: 7941079469212602654, guid: a263145389403fd44b71e332340da41b, type: 3}
+  - {fileID: 7941079469212602654, guid: b891b396300ce144793171b507ce15a5, type: 3}
   BridgePrefab: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
     type: 3}
   Height: 30
@@ -82,8 +84,8 @@ MonoBehaviour:
   HighLandscapeOffset: 2
   LowPlatformOffset: 3
   HighPlatformOffset: 5
-  ChanceofHazard: 0.5
-  ChanceofBridge: 0.1
+  ChanceOfHazard: 0.5
+  ChanceOfBridge: 0.1
   NumerOfPlatforms: 100
 --- !u!114 &6166181855085007428
 MonoBehaviour:
@@ -103,8 +105,10 @@ MonoBehaviour:
     type: 3}
   StonePrefab: {fileID: 7941079469212602654, guid: dcf33943a4fbe9b4db0b0b0fdecf9962,
     type: 3}
-  HazardPrefab: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
-    type: 3}
+  HazardPrefab:
+  - {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3, type: 3}
+  - {fileID: 7941079469212602654, guid: a263145389403fd44b71e332340da41b, type: 3}
+  - {fileID: 7941079469212602654, guid: b891b396300ce144793171b507ce15a5, type: 3}
   BridgePrefab: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
     type: 3}
   Width: 120
@@ -114,8 +118,8 @@ MonoBehaviour:
   MaxHazardSize: 3
   LowPlatformOffset: 2
   HighPlatformOffset: 5
-  ChanceofHazard: 0.5
-  ChanceofBridge: 0.1
+  ChanceOfHazard: 0.5
+  ChanceOfBridge: 0.1
   NumerOfPlatforms: 100
 --- !u!114 &7563129261860912773
 MonoBehaviour:
@@ -131,16 +135,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GrassPrefab: {fileID: 6179062160253286273, guid: a9aff427a71a78f4480f1c62227b8fab,
     type: 3}
-  HazardPrefab: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
-    type: 3}
+  HazardPrefab:
+  - {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3, type: 3}
+  - {fileID: 7941079469212602654, guid: a263145389403fd44b71e332340da41b, type: 3}
+  - {fileID: 7941079469212602654, guid: b891b396300ce144793171b507ce15a5, type: 3}
   BridgePrefab: {fileID: 7941079469212602654, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
     type: 3}
   MaxHazardSize: 4
   MinPlatformSize: 1
   MaxPlatformSize: 10
-  Height: 3
-  Drop: -3
-  ChanceofHazard: 0.5
-  ChanceofTrap: 0.5
+  LowPlatformOffset: 3
+  HighPlatformOffset: -3
+  ChanceOfHazard: 0.5
+  ChanceOfTrap: 0.5
   ChanceofBridge: 0.1
   NumerOfPlatforms: 120
