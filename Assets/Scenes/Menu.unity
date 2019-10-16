@@ -223,7 +223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 647, y: 0}
+  m_AnchoredPosition: {x: 724, y: 0}
   m_SizeDelta: {x: 286, y: 476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108875482
@@ -316,7 +316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -647, y: 0}
+  m_AnchoredPosition: {x: -724, y: 0}
   m_SizeDelta: {x: 286, y: 476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145409218
@@ -1412,8 +1412,8 @@ MonoBehaviour:
   LeftPanel: {fileID: 145409216}
   RightPanel: {fileID: 108875480}
   BottomPanel: {fileID: 797112399}
-  SidePanelSpeed: 7.6
-  BottomPanelSpeed: 7.6
+  SidePanelSpeed: 16.3
+  BottomPanelSpeed: 14.5
   SidePanelSlideInMultiplier: 1.5
   BottomPanelSlideInMultiplier: 1.5
   SidePanelSlideOutMultiplier: 2.5

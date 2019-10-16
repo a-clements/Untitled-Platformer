@@ -52,7 +52,7 @@ public class MenuScript : MonoBehaviour
     public void OnPlayButtonClick()
     {
         StartCoroutine(ScrollOut());
-        //StartCoroutine(LoadScene());
+        StartCoroutine(LoadScene());
     }
 
     IEnumerator LoadScene()
