@@ -26,7 +26,7 @@ public class MenuScript : MonoBehaviour
 
     private bool Running = true;
 
-    void Start()
+    private void OnEnable()
     {
         GetComponent<CanvasScaler>().referenceResolution = new Vector2(Screen.width, Screen.height);
 
@@ -45,7 +45,10 @@ public class MenuScript : MonoBehaviour
             GetComponent<CanvasScaler>().referenceResolution.y * 0.25f);
         BottomPanel.GetComponent<ButtonPositioner>().Positioner();
         #endregion
+    }
 
+    void Start()
+    {
         StartCoroutine(ScrollIn());
     }
 

@@ -280,6 +280,7 @@ MonoBehaviour:
   ButtonHeight: 0
   ButtonWidth: 0
   Position: 0
+  Space: 0
 --- !u!1 &145409216
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +374,7 @@ MonoBehaviour:
   ButtonHeight: 0
   ButtonWidth: 0
   Position: 0
+  Space: 0
 --- !u!1001 &210230181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -811,6 +813,7 @@ MonoBehaviour:
   ButtonHeight: 0
   ButtonWidth: 0
   Position: 0
+  Space: 0
 --- !u!1001 &807874183
 PrefabInstance:
   m_ObjectHideFlags: 0
