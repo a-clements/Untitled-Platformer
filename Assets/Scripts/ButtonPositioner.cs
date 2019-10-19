@@ -6,11 +6,15 @@ using UnityEngine.UI;
 
 public class ButtonPositioner : MonoBehaviour
 {
-    [SerializeField] private Button[] Buttons;
-    [SerializeField] private float ButtonHeight;
-    [SerializeField] private float ButtonWidth;
-    [SerializeField] private float Position;
-    [SerializeField] private float Space;
+    private Button[] Buttons;
+    private float ButtonHeight;
+    private float ButtonWidth;
+    private float Position;
+    private float Space;
+    [SerializeField] private float ButtonPositionMultiplier;
+    /*If Buttons.Length > 3 ButtonPositionMultiplier = 0                      */
+    /*If Buttons.Length = 3 ButtonPositionMultiplier = .3                     */
+    /*If Buttons.Length < 3 ButtonPositionMultiplier = add .55 for each button*/
 
     public void Positioner()
     {
@@ -19,6 +23,12 @@ public class ButtonPositioner : MonoBehaviour
         ButtonHeight = this.GetComponent<RectTransform>().rect.height / (Buttons.Length + 1);
 
         ButtonWidth = this.GetComponent<RectTransform>().rect.width * 0.5f;
+
+        for (int i = 0; i < Buttons.Length; i++)
+        {
+            Buttons[i] = this.transform.GetChild(i).GetComponent<Button>();
+            Buttons[i].GetComponent<RectTransform>().sizeDelta = new Vector2(ButtonWidth, ButtonHeight);
+        }
 
         if (Buttons.Length > 2)
         {
@@ -32,22 +42,18 @@ public class ButtonPositioner : MonoBehaviour
 
         Space = Position / Buttons.Length;
 
-        for (int i = 0; i < this.transform.childCount; i++)
+        if (Buttons.Length > 1)
         {
-            Buttons[i] = this.transform.GetChild(i).GetComponent<Button>();
-            Buttons[i].GetComponent<RectTransform>().sizeDelta = new Vector2(ButtonWidth, ButtonHeight);
-
-            if(Buttons.Length > 1)
+            for (int i = 0; i < Buttons.Length; i++)
             {
-                Buttons[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(0, (Space + Position));
+                Buttons[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(0, ((Space * (Buttons.Length * ButtonPositionMultiplier) + Position)));
+                Position -= (Space + ButtonHeight);
             }
+        }
 
-            else
-            {
-                Buttons[i].GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
-            }
-
-            Position -= (Space + ButtonHeight);
+        else
+        {
+            Buttons[0].GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
         }
     }
 }
