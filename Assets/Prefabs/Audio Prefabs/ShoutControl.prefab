@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 585796027690278991}
   - component: {fileID: 585796027690278961}
   - component: {fileID: 585796027690278990}
+  - component: {fileID: 5666257317738757428}
   m_Layer: 0
-  m_Name: ShoutMetre
+  m_Name: ShoutControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,4 +146,19 @@ MonoBehaviour:
   SampleFrequency: 128
   MicrophoneMixer: {fileID: -1753969119442552121, guid: a081a72b8c1682048a200c010439a999,
     type: 2}
-  MasterMixer: {fileID: 24300002, guid: a081a72b8c1682048a200c010439a999, type: 2}
+--- !u!114 &5666257317738757428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585796027690278960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ce1e389f9e4e34c9f6a571d1fb86d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCamera: {fileID: 0}
+  ShoutMetre: {fileID: 0}
+  ShakeTimer: 1
+  ShakeMagnitude: 1
