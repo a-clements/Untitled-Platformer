@@ -4,20 +4,17 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 
-public class ShoutMetre : MonoBehaviour
+public class ShoutControl : MonoBehaviour
 {
     private AudioSource Source;
     private string Device;
     private float Sensitivity = 25;
-    private float Volume;
-
-    public static float MicLoudness;
+    public static float Volume;
 
     [SerializeField] private int DeviceNumber = 0; //this is the microphone number, 0 is the first microphone found
     [SerializeField] private int SampleLength = 10; //this is the length of a sample, the default is 10 for sampling 10 seconds of audio
     [SerializeField] private int SampleFrequency = 128; //this is how often a sample is taken, the default is 128 samples a second
     [SerializeField] private AudioMixerGroup MicrophoneMixer;
-    [SerializeField] private AudioMixerGroup MasterMixer;
 
     private void OnEnable()
     {
