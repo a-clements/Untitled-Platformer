@@ -587,9 +587,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OpeningImage: {fileID: 1312951660}
   Sprites:
-  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 21300000, guid: ded8a035640a2e14aa39e8779c87cb0a, type: 3}
+  - {fileID: 21300000, guid: 904b3401054a3be4a87d80387ae5be66, type: 3}
   FadeTimer: 1
-  WaitTimer: 1.5
+  WaitTimer: 1
 --- !u!114 &2124928073
 MonoBehaviour:
   m_ObjectHideFlags: 0

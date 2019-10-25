@@ -14,7 +14,6 @@ public class OpeningCredits : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        OpeningImage.sprite = Sprites[0];
         OpeningImage.CrossFadeAlpha(0, 0.0f, true);
         StartCoroutine(Cycle());
     }
@@ -23,6 +22,8 @@ public class OpeningCredits : MonoBehaviour
     {
         for (int i = 0; i < Sprites.Length; i++)
         {
+            OpeningImage.sprite = Sprites[i];
+
             yield return new WaitForSeconds(WaitTimer);
 
             OpeningImage.CrossFadeAlpha(1, FadeTimer, true);
@@ -31,7 +32,7 @@ public class OpeningCredits : MonoBehaviour
 
             OpeningImage.CrossFadeAlpha(0, FadeTimer, true);
 
-            OpeningImage.sprite = Sprites[i];
+            yield return new WaitForSeconds(WaitTimer);
         }
 
         yield return new WaitForSeconds(WaitTimer);
