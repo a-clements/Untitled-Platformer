@@ -143,5 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Manager: {fileID: 0}
-  JumpHeight: 400
+  JumpHeight: 200
   RunSpeed: 2
+  GravityMultiplier: 2
