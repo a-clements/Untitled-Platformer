@@ -5,7 +5,6 @@ using UnityEngine;
 public class HiddenSpikeTrap : MonoBehaviour
 {
     [SerializeField] private GameObject SpikeTrap;
-    [SerializeField] private float WaitTimer = 0.25f;
 
     private void OnEnable()
     {
@@ -17,14 +16,6 @@ public class HiddenSpikeTrap : MonoBehaviour
         if(CollisionInfo.transform.tag == "Player")
         {
             SpikeTrap.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.6f, this.transform.position.z);
-            StartCoroutine(Wait());
         }
-    }
-
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(WaitTimer);
-        SpikeTrap.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - 0.6f, this.transform.position.z);
-        yield return null;
     }
 }
