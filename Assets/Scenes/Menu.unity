@@ -224,7 +224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 724, y: 0}
+  m_AnchoredPosition: {x: 1200, y: 0}
   m_SizeDelta: {x: 286, y: 476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108875482
@@ -317,7 +317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -724, y: 0}
+  m_AnchoredPosition: {x: -1200, y: 0}
   m_SizeDelta: {x: 286, y: 476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145409218
@@ -1480,7 +1480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -362}
+  m_AnchoredPosition: {x: 0, y: -700}
   m_SizeDelta: {x: 504, y: 248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &797112401
@@ -2665,7 +2665,7 @@ MonoBehaviour:
   BottomPanelSlideInMultiplier: 1.5
   SidePanelSlideOutMultiplier: 2.5
   BottomPanelSlideOutMultiplier: 2.45
-  WaitTimer: 0.01
+  WaitTimer: 1
 --- !u!1 &1623588744
 GameObject:
   m_ObjectHideFlags: 0

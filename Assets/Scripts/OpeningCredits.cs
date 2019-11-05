@@ -35,7 +35,7 @@ public class OpeningCredits : MonoBehaviour
             yield return new WaitForSeconds(WaitTimer);
         }
 
-        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
 
         yield return null;
     }
