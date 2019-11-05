@@ -32,17 +32,20 @@ public class MenuScript : MonoBehaviour
 
         #region Left Panel Resize
         LeftPanel.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<CanvasScaler>().referenceResolution.x * 0.25f, GetComponent<CanvasScaler>().referenceResolution.y);
+        LeftPanel.GetComponent<RectTransform>().localPosition = new Vector2(-Screen.width,0);
         LeftPanel.GetComponent<ButtonPositioner>().Positioner();
         #endregion
 
         #region Right Panel Resize
         RightPanel.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<CanvasScaler>().referenceResolution.x * 0.25f, GetComponent<CanvasScaler>().referenceResolution.y);
+        RightPanel.GetComponent<RectTransform>().localPosition = new Vector2(Screen.width, 0);
         RightPanel.GetComponent<ButtonPositioner>().Positioner();
         #endregion
 
         #region Bottom Panel Resize
         BottomPanel.GetComponent<RectTransform>().sizeDelta = new Vector2(GetComponent<CanvasScaler>().referenceResolution.x * 0.5f,
             GetComponent<CanvasScaler>().referenceResolution.y * 0.25f);
+        BottomPanel.GetComponent<RectTransform>().localPosition = new Vector2(0, -Screen.height);
         BottomPanel.GetComponent<ButtonPositioner>().Positioner();
         #endregion
     }
@@ -101,7 +104,7 @@ public class MenuScript : MonoBehaviour
             RightPanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(i, 0);
             i = i - SidePanelSpeed;
 
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForFixedUpdate();
         }
 
         yield return null;
@@ -120,7 +123,7 @@ public class MenuScript : MonoBehaviour
             BottomPanel.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, n);
             n = n + BottomPanelSpeed;
 
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForFixedUpdate();
         }
 
         yield return null;
