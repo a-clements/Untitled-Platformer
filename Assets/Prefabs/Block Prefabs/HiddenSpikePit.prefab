@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1440982961823089794}
   - component: {fileID: 3724462789984291878}
-  - component: {fileID: 4006729615235525479}
   - component: {fileID: 2762336948365644393}
+  - component: {fileID: 3041588169517092029}
   m_Layer: 0
   m_Name: HiddenSpikePit
   m_TagString: Untagged
@@ -72,18 +72,32 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47d1122ae152cdc4ca2756df041b8ad7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b1403a4da9faab42ae58d1492cae638, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4006729615235525479
+--- !u!114 &2762336948365644393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7941079469212602654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ac32afeb19d4b45b0dfcd6a5d21393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpikeTrap: {fileID: 0}
+  WaitTimer: 0.25
+--- !u!61 &3041588169517092029
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,8 +114,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1.5}
-    newSize: {x: 1.5, y: 1.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -109,20 +123,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2762336948365644393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7941079469212602654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0ac32afeb19d4b45b0dfcd6a5d21393, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpikeTrap: {fileID: 0}
-  WaitTimer: 0.25
 --- !u!1001 &5985588744117481903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +130,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1440982961823089794}
     m_Modifications:
+    - target: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
+        type: 3}
+      propertyPath: m_Name
+      value: SpikePit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1440982961823089794, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -184,11 +194,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
-        type: 3}
-      propertyPath: m_Name
-      value: SpikePit
       objectReference: {fileID: 0}
     - target: {fileID: 3724462789984291878, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
         type: 3}
