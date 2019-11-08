@@ -5,25 +5,25 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
     private Transform ThisTransform;
-    private Rigidbody RigidBody;
-    public string Direction;
-    public float Speed;
-    public bool XAxis;
-    public float MaxXDistance = 0.0f;
-    public float MinXDistance = 0.0f;
-    public bool YAxis;
-    public float MaxYDistance = 0.0f;
-    public float MinYDistance = 0.0f;
+    private Rigidbody2D RigidBody;
+    [SerializeField] private string Direction;
+    [SerializeField] private float Speed;
+    [SerializeField] private bool XAxis;
+    [SerializeField] private float MaxXDistance = 0.0f;
+    [SerializeField] private float MinXDistance = 0.0f;
+    [SerializeField] private bool YAxis;
+    [SerializeField] private float MaxYDistance = 0.0f;
+    [SerializeField] private float MinYDistance = 0.0f;
 
 
 
     void Start()
     {
         ThisTransform = transform;
-        RigidBody = GetComponent<Rigidbody>();
+        RigidBody = GetComponent<Rigidbody2D>();
     }
 
-    private void OnCollisionEnter(Collision CollisionInfo)
+    private void OnCollisionEnter2D(Collision2D CollisionInfo)
     {
         if (CollisionInfo.transform.tag == "Ground")
         {
@@ -31,12 +31,11 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(XAxis == true)
+        if (XAxis == true)
         {
-            if(ThisTransform.position.x > MaxXDistance || ThisTransform.position.x < MinXDistance)
+            if (ThisTransform.localPosition.x > MaxXDistance || ThisTransform.localPosition.x < MinXDistance)
             {
                 Speed *= -1.0f;
             }
@@ -45,7 +44,7 @@ public class MovingPlatform : MonoBehaviour
 
         if (YAxis == true)
         {
-            if (ThisTransform.position.y > MaxYDistance || ThisTransform.position.y < MinYDistance)
+            if (ThisTransform.localPosition.y > MaxYDistance || ThisTransform.localPosition.y < MinYDistance)
             {
                 Speed *= -1.0f;
             }

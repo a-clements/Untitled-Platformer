@@ -17,19 +17,19 @@ public class AntiWallClimb : MonoBehaviour
 		
 	}
 
-    private void OnTriggerStay(Collider TriggerInfo)
+    private void OnTriggerStay2D(Collider2D TriggerInfo)
     {
         if (TriggerInfo.tag == "Player")
         {
-            TriggerInfo.GetComponent<Player>().IsGrounded = false;
+            //TriggerInfo.GetComponent<Player>().IsGrounded = false;
         }
     }
 
-    private void OnTriggerExit(Collider TriggerInfo)
+    private void OnTriggerExit2D(Collider2D TriggerInfo)
     {
         if (TriggerInfo.tag == "Player")
         {
-            TriggerInfo.GetComponent<Player>().IsGrounded = true;
+            //TriggerInfo.GetComponent<Player>().IsGrounded = true;
         }
     }
 }
