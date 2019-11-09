@@ -7,7 +7,7 @@ public class ChildOfPlatform : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        this.transform.position = new Vector3(this.transform.parent.position.x, this.transform.parent.position.y + 0.9f, this.transform.parent.position.z);
+        this.transform.position = new Vector3(this.transform.parent.position.x, this.transform.parent.position.y + 0.25f, this.transform.parent.position.z);
         this.transform.localScale = this.transform.parent.localScale;
 	}
 	
@@ -17,7 +17,7 @@ public class ChildOfPlatform : MonoBehaviour
 		
 	}
 
-    private void OnTriggerEnter(Collider TriggerInfo)
+    private void OnTriggerEnter2D(Collider2D TriggerInfo)
     {
         if (TriggerInfo.tag == "Player")
         {
@@ -25,7 +25,7 @@ public class ChildOfPlatform : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider TriggerInfo)
+    private void OnTriggerExit2D(Collider2D TriggerInfo)
     {
         TriggerInfo.transform.parent = null;
     }

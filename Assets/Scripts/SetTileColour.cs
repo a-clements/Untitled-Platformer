@@ -23,12 +23,15 @@ public class SetTileColour : MonoBehaviour
         {
             for (int i = 0; i < transform.childCount; i++)
             {
-                this.transform.GetChild(i).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
-                //PropertyBlock.SetFloat("_Saturation", saturation);
-                //PropertyBlock.SetFloat("_Contrast", contrast);
-                exposure = -1.0f;
-                PropertyBlock.SetFloat("_Exposure", exposure);
-                this.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+                for (int b = 0; b < transform.GetChild(i).childCount; b++)
+                {
+                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+                    //PropertyBlock.SetFloat("_Saturation", saturation);
+                    //PropertyBlock.SetFloat("_Contrast", contrast);
+                    exposure = -1.0f;
+                    PropertyBlock.SetFloat("_Exposure", exposure);
+                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+                }
             }
         }
 
@@ -44,26 +47,51 @@ public class SetTileColour : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D CollisionInfo)
+    //private void OnCollisionEnter2D(Collision2D CollisionInfo)
+    //{
+    //    this.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+    //    //PropertyBlock.SetFloat("_Saturation", saturation);
+    //    //PropertyBlock.SetFloat("_Contrast", contrast);
+    //    exposure = 0.0f;
+    //    PropertyBlock.SetFloat("_Exposure", exposure);
+    //    this.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+    //}
+
+    private void OnTriggerEnter2D(Collider2D TriggerInfo)
     {
-        this.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
-        //PropertyBlock.SetFloat("_Saturation", saturation);
-        //PropertyBlock.SetFloat("_Contrast", contrast);
-        exposure = 0.0f;
-        PropertyBlock.SetFloat("_Exposure", exposure);
-        this.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+        if(TriggerInfo.tag == "Player")
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                for (int b = 0; b < transform.GetChild(i).childCount; b++)
+                {
+                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+                    //PropertyBlock.SetFloat("_Saturation", saturation);
+                    //PropertyBlock.SetFloat("_Contrast", contrast);
+                    exposure = 0.0f;
+                    PropertyBlock.SetFloat("_Exposure", exposure);
+                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+                }
+            }
+        }
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    for (int i = 0; i < transform.childCount; i++)
-    //    {
-    //        this.transform.GetChild(i).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
-    //        //PropertyBlock.SetFloat("_Saturation", saturation);
-    //        //PropertyBlock.SetFloat("_Contrast", contrast);
-    //        exposure = 0.0f;
-    //        PropertyBlock.SetFloat("_Exposure", exposure);
-    //        this.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
-    //    }
-    //}
+    private void OnTriggerExit2D(Collider2D TriggerInfo)
+    {
+        if (TriggerInfo.tag == "Player")
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                for (int b = 0; b < transform.GetChild(i).childCount; b++)
+                {
+                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+                    //PropertyBlock.SetFloat("_Saturation", saturation);
+                    //PropertyBlock.SetFloat("_Contrast", contrast);
+                    exposure = -1.0f;
+                    PropertyBlock.SetFloat("_Exposure", exposure);
+                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+                }
+            }
+        }
+    }
 }
