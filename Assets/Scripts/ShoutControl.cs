@@ -8,7 +8,7 @@ public class ShoutControl : MonoBehaviour
 {
     private AudioSource Source;
     private string Device;
-    private float Sensitivity = 25;
+    private float Sensitivity = 25f;
     public static float Volume;
 
     [SerializeField] private int DeviceNumber = 0; //this is the microphone number, 0 is the first microphone found
