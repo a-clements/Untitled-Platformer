@@ -11,11 +11,11 @@ public class DeathVolume : MonoBehaviour
 		
 	}
 
-    private void OnTriggerEnter(Collider TriggerInfo)
+    private void OnTriggerEnter2D(Collider2D TriggerInfo)
     {
-        if(TriggerInfo.tag == "Player")
+        if (TriggerInfo.tag == "Player")
         {
-            //Player.GameInstance.Dead = true;
+            TriggerInfo.gameObject.SetActive(false);
         }
     }
 }
