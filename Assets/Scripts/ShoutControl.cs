@@ -18,9 +18,10 @@ public class ShoutControl : MonoBehaviour
 
     private void OnEnable()
     {
-        if (Device == "")
+        if (Device == null)
         {
             Device = Microphone.devices[DeviceNumber];
+            Debug.Log(Device);
         }
 
         Source = GetComponent<AudioSource>();
@@ -58,6 +59,7 @@ public class ShoutControl : MonoBehaviour
                 Level = SamplePeak;
             }
         }
+
         Volume = Mathf.Sqrt(Mathf.Sqrt(Level));
     }
 }
