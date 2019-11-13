@@ -10,13 +10,14 @@ public class FallingBridge : MonoBehaviour
     [SerializeField] private float EndPosition = 0.0f;
     [SerializeField] private float FallSpeed = 0.0f;
     [SerializeField] private float RiseSpeed = 0.0f;
-    private string Direction = "";
+    [SerializeField] private string Direction = "";
 
     void Update()
     {
         if (this.transform.localPosition.y > StartPosition)
         {
             Direction = "";
+            this.transform.localPosition = new Vector2(this.transform.localPosition.x, StartPosition);
         }
 
         if(this.transform.localPosition.y < EndPosition)
@@ -51,7 +52,7 @@ public class FallingBridge : MonoBehaviour
 
         yield return new WaitForSeconds(WaitTimer);
 
-        yield return null;
+        //yield return null;
     }
 
     IEnumerator Rise()
