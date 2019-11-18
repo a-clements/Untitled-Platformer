@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 859689941440182673}
   m_Layer: 0
   m_Name: Bridge
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,3 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0421a13a87a4d3440a2834deb77814e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsFallingBridge: 0
+  WaitTimer: 0
+  StartPosition: 0
+  EndPosition: 0
+  FallSpeed: 0
+  RiseSpeed: 0
+  Direction: 

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Checkpoints : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider TriggerInfo)
+    private void OnTriggerEnter2D(Collider2D TriggerInfo)
     {
         if (TriggerInfo.gameObject.tag == "Player")
         {
-            //Player.GameInstance.Checkpoint = this.gameObject.transform;
+            TriggerInfo.GetComponent<PlayerMove>().Checkpoint = this.transform;
         }
     }
 }
