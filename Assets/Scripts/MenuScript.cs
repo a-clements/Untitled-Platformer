@@ -65,7 +65,7 @@ public class MenuScript : MonoBehaviour
     {
         if(Running == false)
         {
-            SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
             yield return null;
         }
 
