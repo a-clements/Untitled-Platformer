@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPickup : MonoBehaviour {
+public class HealthPickup : MonoBehaviour
+{
 
 	// Use this for initialization
 	void Start () {
@@ -14,14 +15,11 @@ public class HealthPickup : MonoBehaviour {
 
     }
 
-    private void OnTriggerEnter(Collider TriggerInfo)
+    private void OnTriggerEnter2D(Collider2D TriggerInfo)
     {
         if (TriggerInfo.gameObject.tag == "Player")
         {
-            //if (Player.GameInstance.LivesRemaining < 3)
-            //{
-            //    Player.GameInstance.LivesRemaining++;
-            //}
+            TriggerInfo.GetComponent<PlayerHealth>().GainLife();
 
             this.gameObject.SetActive(false);
         }
