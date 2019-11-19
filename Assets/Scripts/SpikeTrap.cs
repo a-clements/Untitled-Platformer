@@ -10,6 +10,8 @@ public class SpikeTrap : MonoBehaviour
     {
         if(CollisionInfo.transform.tag == "Player")
         {
+            CollisionInfo.transform.GetComponent<PlayerHealth>().LoseLife();
+
             if (CollisionInfo.transform.GetComponent<SpriteRenderer>().flipX == true)
             {
                 CollisionInfo.transform.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right) * ForceMultiplier, ForceMode2D.Impulse);

@@ -1,14 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using System;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public long HighScore;
-    public long LevelScore;
+    public static long HighScore;
+    public static long LevelScore;
+    [SerializeField] private Text HighScoreText;
+    [SerializeField] private Text LevelScoreText;
 
     BinaryFormatter Formatter = new BinaryFormatter();
 
@@ -34,6 +34,8 @@ public class ScoreManager : MonoBehaviour
         {
             SaveScores();
         }
+
+        HighScoreText.text = "High Score: " + HighScore;
     }
 
     public void SaveScores()
@@ -45,9 +47,15 @@ public class ScoreManager : MonoBehaviour
         stream.Close();
     }
 	
-	// Update is called once per frame
-	void Update ()
+    public void UpdateScores(int Score)
     {
-		
-	}
+        LevelScore += Score;
+        LevelScoreText.text = "Score: " + LevelScore;
+
+        if (LevelScore > HighScore)
+        {
+            HighScore = LevelScore;
+            HighScoreText.text = "High Score: " + HighScore;
+        }
+    }
 }
