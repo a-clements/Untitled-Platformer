@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private Image[] Health;
-    public static int LivesRemaining;
+    [SerializeField] public static int LivesRemaining;
 
     void Start()
     {
