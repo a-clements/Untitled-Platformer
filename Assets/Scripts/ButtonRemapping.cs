@@ -34,7 +34,7 @@ public class ButtonRemapping : MonoBehaviour
 
     private void Start()
     {
-        GameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         Keycode = GameManager.Keys[Index];
 
         if(Keycode != KeyCode.None)
