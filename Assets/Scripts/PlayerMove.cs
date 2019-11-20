@@ -8,8 +8,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float JumpHeight;
     [SerializeField] private float RunSpeed;
     [SerializeField] private float GravityMultiplier;
-    [SerializeField] private int JumpCount = 1;
-    [SerializeField] private bool CanJump = true;
+    public int JumpCount = 1;
+    public bool CanJump = true;
     [SerializeField] private GameObject RockThrower;
     private Rigidbody2D RigidBody;
     private Transform ThisTransform;
@@ -31,14 +31,41 @@ public class PlayerMove : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D CollisionInfo)
-    {
-        if(CollisionInfo.transform.tag == "Ground")
-        {
-            JumpCount = 1;
-            CanJump = true;
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D CollisionInfo)
+    //{
+    //    foreach (ContactPoint2D point2D in CollisionInfo.contacts)
+    //    {
+    //        if (point2D.normal.y <= 0)
+    //        {
+    //            CanJump = true;
+    //            JumpCount = 1;
+    //        }
+
+    //        else
+    //        {
+    //            CanJump = false;
+    //            JumpCount = -1;
+    //        }
+
+    //        //if(point2D.normal.x >= 0)
+    //        //{
+    //        //    CanJump = false;
+    //        //    JumpCount = -1;
+    //        //    ThisTransform.position = new Vector2(ThisTransform.position.x + 0.0125f, ThisTransform.position.y);
+    //        //    CanJump = true;
+    //        //    JumpCount = 1;
+    //        //}
+
+    //        //if (point2D.normal.x <= 0)
+    //        //{
+    //        //    CanJump = false;
+    //        //    JumpCount = -1;
+    //        //    ThisTransform.position = new Vector2(ThisTransform.position.x - 0.0125f, ThisTransform.position.y);
+    //        //    CanJump = true;
+    //        //    JumpCount = 1;
+    //        //}
+    //    }
+    //}
 
     // Update is called once per frame
     void Update()

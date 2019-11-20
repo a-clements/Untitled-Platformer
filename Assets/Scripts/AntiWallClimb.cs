@@ -10,26 +10,39 @@ public class AntiWallClimb : MonoBehaviour
     {
 
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
-    private void OnTriggerStay2D(Collider2D TriggerInfo)
+    private void OnCollisionEnter2D(Collision2D CollisionInfo)
     {
-        if (TriggerInfo.tag == "Player")
+        foreach (ContactPoint2D point2D in CollisionInfo.contacts)
         {
-            //TriggerInfo.GetComponent<Player>().IsGrounded = false;
-        }
-    }
+            if (point2D.normal.y <= 0)
+            {
+                CollisionInfo.transform.GetComponent<PlayerMove>().CanJump = true;
+                CollisionInfo.transform.GetComponent<PlayerMove>().JumpCount = 1;
+            }
 
-    private void OnTriggerExit2D(Collider2D TriggerInfo)
-    {
-        if (TriggerInfo.tag == "Player")
-        {
-            //TriggerInfo.GetComponent<Player>().IsGrounded = true;
+            else
+            {
+                CollisionInfo.transform.GetComponent<PlayerMove>().CanJump = false;
+            }
+
+            if (point2D.normal.x >= 0)
+            {
+                CollisionInfo.transform.GetComponent<PlayerMove>().CanJump = false;
+                CollisionInfo.transform.GetComponent<PlayerMove>().JumpCount = -1;
+                CollisionInfo.transform.position = new Vector2(CollisionInfo.transform.position.x + 0.0125f, CollisionInfo.transform.position.y);
+                CollisionInfo.transform.GetComponent<PlayerMove>().CanJump = true;
+                CollisionInfo.transform.GetComponent<PlayerMove>().JumpCount = 1;
+            }
+
+            if (point2D.normal.x <= 0)
+            {
+                CollisionInfo.transform.GetComponent<PlayerMove>().CanJump = false;
+                CollisionInfo.transform.GetComponent<PlayerMove>().JumpCount = -1;
+                CollisionInfo.transform.position = new Vector2(CollisionInfo.transform.position.x - 0.0125f, CollisionInfo.transform.position.y);
+                CollisionInfo.transform.GetComponent<PlayerMove>().CanJump = true;
+                CollisionInfo.transform.GetComponent<PlayerMove>().JumpCount = 1;
+            }
         }
     }
 }
