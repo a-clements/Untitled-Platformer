@@ -43,7 +43,7 @@ public class RockThrow : MonoBehaviour
             {
                 if (!RockList[i].activeInHierarchy)
                 {
-                    if (this.transform.parent.GetComponent<SpriteRenderer>().flipX == true)
+                    if (this.transform.parent.parent.GetComponent<SpriteRenderer>().flipX == true)
                     {
                         RockList[i].SetActive(true);
 

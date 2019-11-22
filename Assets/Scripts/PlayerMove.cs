@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float GravityMultiplier;
     public int JumpCount = 1;
     public bool CanJump = true;
-    [SerializeField] private GameObject RockThrower;
+    [SerializeField] private GameObject SubObjects;
     private Rigidbody2D RigidBody;
     private Transform ThisTransform;
     public Transform Checkpoint;
@@ -74,8 +74,8 @@ public class PlayerMove : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = true;
 
-            RockThrower.transform.rotation = Quaternion.Euler(RockThrower.transform.rotation.x, 180.0f, RockThrower.transform.rotation.z);
-            RockThrower.transform.localPosition = new Vector2(-0.25f, RockThrower.transform.localPosition.y);
+            SubObjects.transform.rotation = Quaternion.Euler(SubObjects.transform.rotation.x, 180.0f, SubObjects.transform.rotation.z);
+            SubObjects.transform.localPosition = new Vector2(-0.25f, SubObjects.transform.localPosition.y);
 
             ThisTransform.Translate(Vector2.left * Time.deltaTime * RunSpeed, Space.Self);
         }
@@ -84,8 +84,8 @@ public class PlayerMove : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().flipX = false;
 
-            RockThrower.transform.rotation = Quaternion.Euler(RockThrower.transform.rotation.x, 0.0f, RockThrower.transform.rotation.z);
-            RockThrower.transform.localPosition = new Vector2(0.25f, RockThrower.transform.localPosition.y);
+            SubObjects.transform.rotation = Quaternion.Euler(SubObjects.transform.rotation.x, 0.0f, SubObjects.transform.rotation.z);
+            SubObjects.transform.localPosition = new Vector2(0.25f, SubObjects.transform.localPosition.y);
 
             ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
         }
