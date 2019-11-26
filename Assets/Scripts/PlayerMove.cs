@@ -14,6 +14,10 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D RigidBody;
     private Transform ThisTransform;
     public Transform Checkpoint;
+    RaycastHit2D Hit2D = new RaycastHit2D();
+    Collider2D Collider = new Collider2D();
+    ContactFilter2D Filter2D = new ContactFilter2D();
+
 
     private void Awake()
     {
@@ -31,46 +35,23 @@ public class PlayerMove : MonoBehaviour
         
     }
 
-    //private void OnCollisionEnter2D(Collision2D CollisionInfo)
-    //{
-    //    foreach (ContactPoint2D point2D in CollisionInfo.contacts)
-    //    {
-    //        if (point2D.normal.y <= 0)
-    //        {
-    //            CanJump = true;
-    //            JumpCount = 1;
-    //        }
+    private void OnCollisionEnter2D(Collision2D CollisionInfo)
+    {
+        Hit2D = Physics2D.Raycast(ThisTransform.position - new Vector3(0, GetComponent<SpriteRenderer>().bounds.extents.y + 0.01f, 0), Vector2.down, 0.1f);
 
-    //        else
-    //        {
-    //            CanJump = false;
-    //            JumpCount = -1;
-    //        }
-
-    //        //if(point2D.normal.x >= 0)
-    //        //{
-    //        //    CanJump = false;
-    //        //    JumpCount = -1;
-    //        //    ThisTransform.position = new Vector2(ThisTransform.position.x + 0.0125f, ThisTransform.position.y);
-    //        //    CanJump = true;
-    //        //    JumpCount = 1;
-    //        //}
-
-    //        //if (point2D.normal.x <= 0)
-    //        //{
-    //        //    CanJump = false;
-    //        //    JumpCount = -1;
-    //        //    ThisTransform.position = new Vector2(ThisTransform.position.x - 0.0125f, ThisTransform.position.y);
-    //        //    CanJump = true;
-    //        //    JumpCount = 1;
-    //        //}
-    //    }
-    //}
+        if(Hit2D.transform.tag == "Ground")
+        {
+            Debug.Log("stuff");
+            CanJump = true;
+            JumpCount = 1;
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(Manager.Keys[0]))
+        #region Move left
+        if (Input.GetKey(Manager.Keys[0]))
         {
             GetComponent<SpriteRenderer>().flipX = true;
 
@@ -79,7 +60,9 @@ public class PlayerMove : MonoBehaviour
 
             ThisTransform.Translate(Vector2.left * Time.deltaTime * RunSpeed, Space.Self);
         }
+        #endregion
 
+        #region Move Right
         if (Input.GetKey(Manager.Keys[1]))
         {
             GetComponent<SpriteRenderer>().flipX = false;
@@ -89,7 +72,9 @@ public class PlayerMove : MonoBehaviour
 
             ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
         }
+        #endregion
 
+        #region Jump
         if (Input.GetKeyDown(Manager.Keys[6]))
         {
             if (CanJump == true)
@@ -103,7 +88,9 @@ public class PlayerMove : MonoBehaviour
                 }
             }
         }
+        #endregion
 
+        #region Realistic Jump
         if (RigidBody.velocity.y < 0)
         {
             RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - 1.0f) * Time.deltaTime;
@@ -113,5 +100,6 @@ public class PlayerMove : MonoBehaviour
         {
             RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - 1.5f) * Time.deltaTime;
         }
+        #endregion
     }
 }

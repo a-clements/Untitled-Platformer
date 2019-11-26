@@ -21,7 +21,6 @@ public class ShoutControl : MonoBehaviour
         if (Device == null)
         {
             Device = Microphone.devices[DeviceNumber];
-            Debug.Log(Device);
         }
 
         Source = GetComponent<AudioSource>();
