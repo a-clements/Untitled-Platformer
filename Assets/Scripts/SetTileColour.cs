@@ -16,25 +16,32 @@ public class SetTileColour : MonoBehaviour
     [Range(-1, 0)]
     public float exposure = 0.0f;
 
+    [SerializeField] private float LowLight = -1.0f;
+    [SerializeField] private float FullLight = 0.0f;
+
+    [SerializeField] private GameObject Tilemap;
+
 
 
     void Start()
     {
         PropertyBlock = new MaterialPropertyBlock();
-        
-        if(transform.childCount > 0)
+
+        Tilemap.transform.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+        exposure = LowLight;
+        PropertyBlock.SetFloat("_Exposure", exposure);
+        Tilemap.transform.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+
+        if (Tilemap.transform.childCount > 0)
         {
-            for (int i = 0; i < transform.childCount; i++)
+            for (int i = 0; i < Tilemap.transform.childCount; i++)
             {
-                for (int b = 0; b < transform.GetChild(i).childCount; b++)
-                {
-                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
-                    //PropertyBlock.SetFloat("_Saturation", saturation);
-                    //PropertyBlock.SetFloat("_Contrast", contrast);
-                    exposure = -1.0f;
-                    PropertyBlock.SetFloat("_Exposure", exposure);
-                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
-                }
+                Tilemap.transform.GetChild(i).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+                //PropertyBlock.SetFloat("_Saturation", saturation);
+                //PropertyBlock.SetFloat("_Contrast", contrast);
+                exposure = LowLight;
+                PropertyBlock.SetFloat("_Exposure", exposure);
+                Tilemap.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
             }
         }
 
@@ -43,9 +50,9 @@ public class SetTileColour : MonoBehaviour
             this.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
             //PropertyBlock.SetFloat("_Saturation", saturation);
             //PropertyBlock.SetFloat("_Contrast", contrast);
-            exposure = -1.0f;
+            exposure = LowLight;
             PropertyBlock.SetFloat("_Exposure", exposure);
-            this.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+            Tilemap.transform.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
         }
 
     }
@@ -62,39 +69,45 @@ public class SetTileColour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D TriggerInfo)
     {
+        Debug.Log(TriggerInfo.tag);
         if(TriggerInfo.tag == "Player")
         {
-            for (int i = 0; i < transform.childCount; i++)
+            Tilemap.transform.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+            exposure = FullLight;
+            PropertyBlock.SetFloat("_Exposure", exposure);
+            Tilemap.transform.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+
+            if (Tilemap.transform.childCount > 0)
             {
-                for (int b = 0; b < transform.GetChild(i).childCount; b++)
+                for (int i = 0; i < Tilemap.transform.childCount; i++)
                 {
-                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+                    Tilemap.transform.GetChild(i).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
                     //PropertyBlock.SetFloat("_Saturation", saturation);
                     //PropertyBlock.SetFloat("_Contrast", contrast);
-                    exposure = 0.0f;
+                    exposure = FullLight;
                     PropertyBlock.SetFloat("_Exposure", exposure);
-                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+                    Tilemap.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
                 }
             }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D TriggerInfo)
-    {
-        if (TriggerInfo.tag == "Player")
-        {
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                for (int b = 0; b < transform.GetChild(i).childCount; b++)
-                {
-                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
-                    //PropertyBlock.SetFloat("_Saturation", saturation);
-                    //PropertyBlock.SetFloat("_Contrast", contrast);
-                    exposure = -1.0f;
-                    PropertyBlock.SetFloat("_Exposure", exposure);
-                    this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
-                }
-            }
-        }
-    }
+    //private void OnTriggerExit2D(Collider2D TriggerInfo)
+    //{
+    //    if (TriggerInfo.tag == "Player")
+    //    {
+    //        for (int i = 0; i < transform.childCount; i++)
+    //        {
+    //            for (int b = 0; b < transform.GetChild(i).childCount; b++)
+    //            {
+    //                this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+    //                //PropertyBlock.SetFloat("_Saturation", saturation);
+    //                //PropertyBlock.SetFloat("_Contrast", contrast);
+    //                exposure = -1.0f;
+    //                PropertyBlock.SetFloat("_Exposure", exposure);
+    //                this.transform.GetChild(i).GetChild(b).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+    //            }
+    //        }
+    //    }
+    //}
 }
