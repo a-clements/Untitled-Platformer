@@ -12,8 +12,11 @@ public class SetTileColour : MonoBehaviour
     //[Range(1, 10)]
     //public float contrast = 1.0f;
 
+    [HideInInspector]
     [Range(-1, 0)]
     public float exposure = 0.0f;
+
+
 
     void Start()
     {
