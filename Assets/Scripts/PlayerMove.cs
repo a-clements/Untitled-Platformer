@@ -35,16 +35,16 @@ public class PlayerMove : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D CollisionInfo)
-    {
-        Hit2D = Physics2D.Raycast(ThisTransform.position - new Vector3(0, GetComponent<SpriteRenderer>().bounds.extents.y + 0.01f, 0), Vector2.down, 0.1f);
+    //private void OnCollisionEnter2D(Collision2D CollisionInfo)
+    //{
+    //    Hit2D = Physics2D.Raycast(ThisTransform.position - new Vector3(0, GetComponent<SpriteRenderer>().bounds.extents.y + 0.01f, 0), Vector2.down, 0.1f);
 
-        if(Hit2D.transform.tag == "Ground")
-        {
-            CanJump = true;
-            JumpCount = 1;
-        }
-    }
+    //    if(Hit2D.transform.tag == "Ground")
+    //    {
+    //        CanJump = true;
+    //        JumpCount = 1;
+    //    }
+    //}
 
     // Update is called once per frame
     void Update()
