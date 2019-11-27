@@ -12,8 +12,11 @@ public class Exit : MonoBehaviour
 
 	}
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D TriggerInfo)
     {
-        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
+        if(TriggerInfo.tag == "Player")
+        {
+            SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
+        }
     }
 }
