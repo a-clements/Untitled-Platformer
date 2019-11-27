@@ -41,7 +41,6 @@ public class PlayerMove : MonoBehaviour
 
         if(Hit2D.transform.tag == "Ground")
         {
-            Debug.Log("stuff");
             CanJump = true;
             JumpCount = 1;
         }
