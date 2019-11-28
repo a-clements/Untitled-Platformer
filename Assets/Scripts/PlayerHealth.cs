@@ -10,7 +10,6 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        DontDestroyOnLoad(this);
         LivesRemaining = Health.Length - 1;
     }
 
@@ -37,6 +36,9 @@ public class PlayerHealth : MonoBehaviour
 
             this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             this.transform.rotation = Quaternion.identity;
+
+            GetComponent<PlayerMove>().CanJump = true;
+            GetComponent<PlayerMove>().JumpCount = 1;
 
             for(int i = 0; i < Health.Length; i++)
             {

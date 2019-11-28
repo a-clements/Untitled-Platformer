@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79828533625450289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1211305407845736607}
@@ -192,10 +192,14 @@ MonoBehaviour:
   JumpHeight: 200
   RunSpeed: 2
   GravityMultiplier: 2
+  AttachCameraPoint: 0
+  DetachCameraPoint: 0
+  SubObjects: {fileID: 2362764680308833412}
+  Camera: {fileID: 0}
   JumpCount: 1
   CanJump: 1
-  SubObjects: {fileID: 2362764680308833412}
   Checkpoint: {fileID: 0}
+  OriginalCameraPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &5773494915484282218
 MonoBehaviour:
   m_ObjectHideFlags: 0
