@@ -286,21 +286,6 @@
     <Reference Include="Interop.SpeechLib">
       <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Assets/External Libraries/Interop.SpeechLib.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>

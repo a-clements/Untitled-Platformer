@@ -93,7 +93,7 @@ public class PlayerMove : MonoBehaviour
         #endregion
 
         #region Camera
-        if(ThisTransform.position.x >= AttachCameraPoint)
+        if (ThisTransform.position.x >= AttachCameraPoint)
         {
             Camera.transform.SetParent(ThisTransform);
         }
