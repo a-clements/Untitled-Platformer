@@ -10,8 +10,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float GravityMultiplier;
     [SerializeField] private float AttachCameraPoint;
     [SerializeField] private float DetachCameraPoint;
+    [SerializeField] private float CameraYMax;
+    [SerializeField] private float CameraYMin;
     [SerializeField] private GameObject SubObjects;
-    [SerializeField] private GameObject Camera;
+    [SerializeField] private Camera Camera;
     private Rigidbody2D RigidBody;
     private Transform ThisTransform;
     public int JumpCount = 1;
@@ -24,7 +26,7 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        Camera = GameObject.Find("Post Process Camera");
+        Camera = GameObject.Find("Post Process Camera").GetComponent<Camera>();
     }
 
     private void OnEnable()
@@ -93,38 +95,25 @@ public class PlayerMove : MonoBehaviour
         #endregion
 
         #region Camera
-        if (ThisTransform.position.x >= AttachCameraPoint)
-        {
-            Camera.transform.SetParent(ThisTransform);
-        }
-        else
-        {
-            Camera.transform.parent = null;
-            Camera.transform.position = new Vector3(OriginalCameraPosition.x, OriginalCameraPosition.y, -10);
-        }
+        //if (ThisTransform.position.x >= AttachCameraPoint)
+        //{
+        //    Camera.transform.SetParent(ThisTransform);
+        //}
+        //else
+        //{
+        //    Camera.transform.parent = null;
+        //    Camera.transform.position = new Vector3(OriginalCameraPosition.x, OriginalCameraPosition.y, -10);
+        //}
 
-        if (ThisTransform.position.x >= DetachCameraPoint)
-        {
-            Camera.transform.parent = null;
-        }
+        //if (ThisTransform.position.x >= DetachCameraPoint)
+        //{
+        //    Camera.transform.parent = null;
+        //}
 
-        if (Camera.transform.IsChildOf(ThisTransform))
-        {
-            //if (ThisTransform.position.y <= 0)
-            //{
-            //    Camera.transform.position = new Vector3(ThisTransform.position.x, -0.625f, -10);
-            //}
-
-            //else if (ThisTransform.position.y >= 1.5f)
-            //{
-            //    Camera.transform.position = new Vector3(ThisTransform.position.x, 3.5f, -10);
-            //}
-
-            //else
-            //{
-            //    Camera.transform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, -10);
-            //}
-        }
+        //if (Camera.transform.IsChildOf(ThisTransform))
+        //{
+        //    ThisTransform.position = new Vector3(ThisTransform.position.x, Mathf.Clamp(ThisTransform.position.y, CameraYMin, CameraYMax), ThisTransform.position.z);
+        //}
         #endregion
     }
 }

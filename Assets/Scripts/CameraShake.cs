@@ -7,7 +7,10 @@ public class CameraShake : MonoBehaviour
 {
     [SerializeField] private Camera MainCamera;
     [SerializeField] private Image ShoutMetre;
-    [SerializeField] private float ShakeMagnitude = 1.0f;
+    [Range(0, 0.5f)]
+    [SerializeField] private float ShakeMagnitude;
+    [Range(0, 1.0f)]
+    [SerializeField] private float Volume;
 
     private Vector3 OriginalPosition;
     private float XShake;
@@ -21,7 +24,7 @@ public class CameraShake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ShoutControl.Volume > 0.5f && ShoutMetre.fillAmount == 1.0f)
+        if(ShoutControl.Volume > Volume && ShoutMetre.fillAmount == 1.0f)
         {
             StartCoroutine(Shake());
         }
@@ -29,6 +32,8 @@ public class CameraShake : MonoBehaviour
 
     IEnumerator Shake()
     {
+        MainCamera.GetComponent<CameraFollow>().enabled = false;
+
         while(ShoutMetre.fillAmount > 0)
         {
             XShake = Random.Range(-1.0f, 1.0f) * ShakeMagnitude;
@@ -41,5 +46,7 @@ public class CameraShake : MonoBehaviour
         }
 
         MainCamera.transform.localPosition = OriginalPosition;
+
+        MainCamera.GetComponent<CameraFollow>().enabled = true;
     }
 }
