@@ -21,12 +21,15 @@ public class ChildOfPlatform : MonoBehaviour
     {
         if (TriggerInfo.tag == "Player")
         {
-            TriggerInfo.transform.SetParent(this.transform); //.parent = this.transform;
+            TriggerInfo.transform.SetParent(this.transform);
         }
     }
 
     private void OnTriggerExit2D(Collider2D TriggerInfo)
     {
-        TriggerInfo.transform.parent = null;
+        if (TriggerInfo.tag == "Player")
+        {
+            TriggerInfo.transform.parent = null;
+        }
     }
 }

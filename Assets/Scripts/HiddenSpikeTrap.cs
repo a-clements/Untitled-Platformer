@@ -16,7 +16,7 @@ public class HiddenSpikeTrap : MonoBehaviour
     {
         if(CollisionInfo.transform.tag == "Player")
         {
-            SpikeTrap.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.6f, this.transform.position.z);
+            SpikeTrap.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 1.0f, this.transform.position.z);
             StartCoroutine(Wait());
         }
     }
@@ -24,7 +24,7 @@ public class HiddenSpikeTrap : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(WaitTimer);
-        SpikeTrap.transform.position = new Vector3(this.transform.position.x, this.transform.position.y - 0.6f, this.transform.position.z);
+        SpikeTrap.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
         yield return null;
     }
 }

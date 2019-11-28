@@ -8,20 +8,23 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float JumpHeight;
     [SerializeField] private float RunSpeed;
     [SerializeField] private float GravityMultiplier;
-    public int JumpCount = 1;
-    public bool CanJump = true;
+    [SerializeField] private float AttachCameraPoint;
+    [SerializeField] private float DetachCameraPoint;
     [SerializeField] private GameObject SubObjects;
+    [SerializeField] private GameObject Camera;
     private Rigidbody2D RigidBody;
     private Transform ThisTransform;
+    public int JumpCount = 1;
+    public bool CanJump = true;
     public Transform Checkpoint;
+    public Vector2 OriginalCameraPosition;
     RaycastHit2D Hit2D = new RaycastHit2D();
-    Collider2D Collider = new Collider2D();
-    ContactFilter2D Filter2D = new ContactFilter2D();
 
 
     private void Awake()
     {
         Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        Camera = GameObject.Find("Post Process Camera");
     }
 
     private void OnEnable()
@@ -35,18 +38,6 @@ public class PlayerMove : MonoBehaviour
         
     }
 
-    //private void OnCollisionEnter2D(Collision2D CollisionInfo)
-    //{
-    //    Hit2D = Physics2D.Raycast(ThisTransform.position - new Vector3(0, GetComponent<SpriteRenderer>().bounds.extents.y + 0.01f, 0), Vector2.down, 0.1f);
-
-    //    if(Hit2D.transform.tag == "Ground")
-    //    {
-    //        CanJump = true;
-    //        JumpCount = 1;
-    //    }
-    //}
-
-    // Update is called once per frame
     void Update()
     {
         #region Move left
@@ -98,6 +89,41 @@ public class PlayerMove : MonoBehaviour
         else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[6]))
         {
             RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - 1.5f) * Time.deltaTime;
+        }
+        #endregion
+
+        #region Camera
+        if(ThisTransform.position.x >= AttachCameraPoint)
+        {
+            Camera.transform.SetParent(ThisTransform);
+        }
+        else
+        {
+            Camera.transform.parent = null;
+            Camera.transform.position = new Vector3(OriginalCameraPosition.x, OriginalCameraPosition.y, -10);
+        }
+
+        if (ThisTransform.position.x >= DetachCameraPoint)
+        {
+            Camera.transform.parent = null;
+        }
+
+        if (Camera.transform.IsChildOf(ThisTransform))
+        {
+            //if (ThisTransform.position.y <= 0)
+            //{
+            //    Camera.transform.position = new Vector3(ThisTransform.position.x, -0.625f, -10);
+            //}
+
+            //else if (ThisTransform.position.y >= 1.5f)
+            //{
+            //    Camera.transform.position = new Vector3(ThisTransform.position.x, 3.5f, -10);
+            //}
+
+            //else
+            //{
+            //    Camera.transform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, -10);
+            //}
         }
         #endregion
     }
