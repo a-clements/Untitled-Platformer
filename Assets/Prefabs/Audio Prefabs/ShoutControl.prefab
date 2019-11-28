@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b5a8f09c153df4788e6b579030f186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VolumeMetre: {fileID: 0}
+  VolumeText: {fileID: 0}
   DeviceNumber: 0
   SampleLength: 1
   SampleFrequency: 128
@@ -161,4 +163,5 @@ MonoBehaviour:
   MainCamera: {fileID: 0}
   ShoutMetre: {fileID: 0}
   ShakeMagnitude: 0.5
-  Volume: 0.5
+  Volume: 0.45
+  Threshhold: {fileID: 0}

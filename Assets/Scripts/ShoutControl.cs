@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 
 public class ShoutControl : MonoBehaviour
 {
+
     private AudioSource Source;
     private string Device;
-    private float Sensitivity = 25f;
     public static float Volume;
+
+    [SerializeField] private Image VolumeMetre;
+    [SerializeField] private Text VolumeText;
 
     [SerializeField] private int DeviceNumber = 0; //this is the microphone number, 0 is the first microphone found
     [SerializeField] private int SampleLength = 10; //this is the length of a sample, the default is 10 for sampling 10 seconds of audio
@@ -40,7 +44,6 @@ public class ShoutControl : MonoBehaviour
         Source.Play();
     }
 
-
     void Update()
     {
         float Level = 0;
@@ -60,5 +63,8 @@ public class ShoutControl : MonoBehaviour
         }
 
         Volume = Mathf.Sqrt(Mathf.Sqrt(Level));
+
+        VolumeMetre.fillAmount = Volume;
+        VolumeText.text = (System.Math.Round(Volume,2) * 100).ToString();
     }
 }
