@@ -160,5 +160,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
   ShoutMetre: {fileID: 0}
-  ShakeTimer: 1
-  ShakeMagnitude: 1
+  ShakeMagnitude: 0.5
+  Volume: 0.5
