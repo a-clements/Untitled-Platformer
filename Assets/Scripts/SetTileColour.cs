@@ -14,6 +14,7 @@ public class SetTileColour : MonoBehaviour
     [SerializeField] private float FullLight = 0.0f;
 
     [SerializeField] private GameObject Tilemap;
+    [SerializeField] private GameObject Lights;
 
     void Start()
     {
@@ -34,6 +35,8 @@ public class SetTileColour : MonoBehaviour
                 Tilemap.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
             }
         }
+
+        StartCoroutine("LightCycle");
     }
 
     private void OnTriggerEnter2D(Collider2D TriggerInfo)
@@ -54,6 +57,11 @@ public class SetTileColour : MonoBehaviour
                     PropertyBlock.SetFloat("_Exposure", Exposure);
                     Tilemap.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
                 }
+            }
+
+            for(int i = 0; i < Lights.transform.childCount; i++)
+            {
+                Lights.transform.GetChild(i).GetComponent<FlickeringLights>().LightsActive = true;
             }
         }
     }

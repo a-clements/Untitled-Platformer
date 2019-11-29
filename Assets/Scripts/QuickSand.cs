@@ -12,8 +12,6 @@ public class QuickSand : MonoBehaviour
         Player = TriggerInfo.gameObject;
         Debug.Log("oh crap");
         Player.GetComponent<Rigidbody2D>().drag = 175.0f;
-        //StartCoroutine(Sinking(WaitTimer * WaitTimer));
-        //Player.GetComponent<PlayerMove>().enabled = false;
         StartCoroutine(Sinking(WaitTimer));
     }
 
