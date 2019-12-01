@@ -177,17 +177,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightsActive: 0
-  FlickerTimer: 0
+  FlickerTimer: 2
   MinFlickerTime: 0.01
   MaxFlickerTime: 0.05
-  MinOuterRadius: 4
-  MaxOuterRadius: 7
-  MinColourRange: 60
-  MaxColourRange: 121
-  MinIntensity: 0.5
-  MaxIntensity: 2
-  MinAlpha: 128
-  MaxAlpha: 256
+  MinOuterRadius: 2
+  MaxOuterRadius: 4
+  MinColourRange: {r: 1, g: 0.11764706, b: 0, a: 1}
+  MaxColourRange: {r: 1, g: 0.27450982, b: 0, a: 1}
+  MinIntensity: 1
+  MaxIntensity: 3
+  MinAlpha: 0.5
+  MaxAlpha: 1
 --- !u!114 &55539024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4631,17 +4631,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LightsActive: 0
-  FlickerTimer: 0
+  FlickerTimer: 2
   MinFlickerTime: 0.01
   MaxFlickerTime: 0.05
-  MinOuterRadius: 4
-  MaxOuterRadius: 7
-  MinColourRange: 60
-  MaxColourRange: 121
-  MinIntensity: 0.5
-  MaxIntensity: 2
-  MinAlpha: 128
-  MaxAlpha: 256
+  MinOuterRadius: 2
+  MaxOuterRadius: 4
+  MinColourRange: {r: 1, g: 0.11764706, b: 0, a: 1}
+  MaxColourRange: {r: 1, g: 0.27450982, b: 0, a: 1}
+  MinIntensity: 1
+  MaxIntensity: 3
+  MinAlpha: 0.5
+  MaxAlpha: 1
 --- !u!1001 &311667258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5354,8 +5354,8 @@ MonoBehaviour:
   MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
-  MinColourRange: 60
-  MaxColourRange: 121
+  MinColourRange: {r: 0, g: 0, b: 0, a: 0}
+  MaxColourRange: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0.5
   MaxIntensity: 2
   MinAlpha: 128
@@ -5449,8 +5449,8 @@ MonoBehaviour:
   MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
-  MinColourRange: 60
-  MaxColourRange: 121
+  MinColourRange: {r: 0, g: 0, b: 0, a: 0}
+  MaxColourRange: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0.5
   MaxIntensity: 2
   MinAlpha: 128
@@ -8655,8 +8655,8 @@ MonoBehaviour:
   MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
-  MinColourRange: 60
-  MaxColourRange: 121
+  MinColourRange: {r: 0, g: 0, b: 0, a: 0}
+  MaxColourRange: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0.5
   MaxIntensity: 2
   MinAlpha: 128
@@ -15715,8 +15715,8 @@ MonoBehaviour:
   MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
-  MinColourRange: 60
-  MaxColourRange: 121
+  MinColourRange: {r: 0, g: 0, b: 0, a: 0}
+  MaxColourRange: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0.5
   MaxIntensity: 2
   MinAlpha: 128
@@ -16045,8 +16045,8 @@ MonoBehaviour:
   MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
-  MinColourRange: 60
-  MaxColourRange: 121
+  MinColourRange: {r: 0, g: 0, b: 0, a: 0}
+  MaxColourRange: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0.5
   MaxIntensity: 2
   MinAlpha: 128
@@ -21894,8 +21894,8 @@ MonoBehaviour:
   MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
-  MinColourRange: 60
-  MaxColourRange: 121
+  MinColourRange: {r: 0, g: 0, b: 0, a: 0}
+  MaxColourRange: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0.5
   MaxIntensity: 2
   MinAlpha: 128
@@ -23814,8 +23814,8 @@ MonoBehaviour:
   MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
-  MinColourRange: 60
-  MaxColourRange: 121
+  MinColourRange: {r: 0, g: 0, b: 0, a: 0}
+  MaxColourRange: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0.5
   MaxIntensity: 2
   MinAlpha: 128
@@ -29681,8 +29681,8 @@ MonoBehaviour:
   MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
-  MinColourRange: 60
-  MaxColourRange: 121
+  MinColourRange: {r: 0, g: 0, b: 0, a: 0}
+  MaxColourRange: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0.5
   MaxIntensity: 2
   MinAlpha: 128
@@ -30057,8 +30057,8 @@ MonoBehaviour:
   MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
-  MinColourRange: 60
-  MaxColourRange: 121
+  MinColourRange: {r: 0, g: 0, b: 0, a: 0}
+  MaxColourRange: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0.5
   MaxIntensity: 2
   MinAlpha: 128
@@ -30232,8 +30232,8 @@ MonoBehaviour:
   MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
-  MinColourRange: 60
-  MaxColourRange: 121
+  MinColourRange: {r: 0, g: 0, b: 0, a: 0}
+  MaxColourRange: {r: 0, g: 0, b: 0, a: 0}
   MinIntensity: 0.5
   MaxIntensity: 2
   MinAlpha: 128
