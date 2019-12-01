@@ -178,10 +178,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
-  MinOuterRadius: 1
-  MaxOuterRadius: 5
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
+  MinOuterRadius: 4
+  MaxOuterRadius: 7
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &55539024
@@ -202,7 +206,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -4593,7 +4597,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -4628,10 +4632,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
-  MinOuterRadius: 1
-  MaxOuterRadius: 5
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
+  MinOuterRadius: 4
+  MaxOuterRadius: 7
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!1001 &311667258
@@ -5342,10 +5350,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &417824480
@@ -5366,7 +5378,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -5433,10 +5445,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &418429671
@@ -5457,7 +5473,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -8635,10 +8651,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &583419060
@@ -8659,7 +8679,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -15691,10 +15711,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &939535807
@@ -15715,7 +15739,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -16017,10 +16041,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &975577188
@@ -16041,7 +16069,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -21862,10 +21890,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &1267351674
@@ -21886,7 +21918,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -22790,6 +22822,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Post Process Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9052714012261033890, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052714012261033890, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052714012261033890, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.15686275
+      objectReference: {fileID: 0}
     - target: {fileID: 3541237023420044755, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_Sprite
@@ -22831,17 +22878,17 @@ PrefabInstance:
     - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.09424569
+      value: 0.74907154
       objectReference: {fileID: 0}
     - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.007876454
+      value: 0.8867924
       objectReference: {fileID: 0}
     - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.5566038
+      value: 0.15477037
       objectReference: {fileID: 0}
     - target: {fileID: 4460084663314402109, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
@@ -23763,10 +23810,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &1495065613
@@ -23787,7 +23838,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -29626,10 +29677,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &1853022850
@@ -29650,7 +29705,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -29998,10 +30053,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &1906855350
@@ -30022,7 +30081,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -30169,10 +30228,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightsActive: 0
   FlickerTimer: 0
+  MinFlickerTime: 0.01
+  MaxFlickerTime: 0.05
   MinOuterRadius: 1
   MaxOuterRadius: 5
   MinColourRange: 60
   MaxColourRange: 121
+  MinIntensity: 0.5
+  MaxIntensity: 2
   MinAlpha: 128
   MaxAlpha: 256
 --- !u!114 &1916435543
@@ -30193,7 +30256,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.23529412, b: 0, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: bf916b8c
+  m_ApplyToSortingLayers: bf916b8cb9c3f00341ef6b09
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
