@@ -7,7 +7,7 @@ public class ChildOfPlatform : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        this.transform.position = new Vector3(this.transform.parent.position.x, this.transform.parent.position.y + 0.25f, this.transform.parent.position.z);
+        this.transform.position = new Vector3(this.transform.parent.position.x, this.transform.parent.position.y - 0.1f, this.transform.parent.position.z);
         //this.transform.localScale = this.transform.parent.localScale;
 	}
 	
