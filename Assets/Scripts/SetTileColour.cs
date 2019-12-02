@@ -35,8 +35,6 @@ public class SetTileColour : MonoBehaviour
                 Tilemap.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
             }
         }
-
-        StartCoroutine("LightCycle");
     }
 
     private void OnTriggerEnter2D(Collider2D TriggerInfo)
