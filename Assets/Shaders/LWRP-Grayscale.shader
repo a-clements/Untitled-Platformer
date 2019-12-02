@@ -7,7 +7,7 @@ Shader "Lightweight Render Pipeline/2D/LWRP-Grayscale"
 		_NormalMap("Normal Map", 2D) = "bump" {}
 		_Colour("Colour", Color) = (1, 1, 1, 1)
 		_Saturation("Saturation", Range(-100, 100)) = 0.0
-		_Contrast("Contrast", Range(1, 10)) = 1.0
+		_Contrast("Contrast", Range(0, 1)) = 1.0
 		_Exposure("Exposure", Range(-1, 0)) = 0.0
     }
 

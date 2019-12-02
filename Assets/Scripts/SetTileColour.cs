@@ -10,8 +10,15 @@ public class SetTileColour : MonoBehaviour
     [Range(-1, 0)]
     public float Exposure = 0.0f;
 
-    [SerializeField] private float LowLight = -1.0f;
-    [SerializeField] private float FullLight = 0.0f;
+    [HideInInspector]
+    [Range(0, 1)]
+    public float Contrast = 1.0f;
+
+    [SerializeField] private float LowExposure = -1.0f;
+    [SerializeField] private float FullExposure = 0.0f;
+
+    [SerializeField] private float LowContrast = 0.0f;
+    [SerializeField] private float FullContrast = 1.0f;
 
     [SerializeField] private GameObject Tilemap;
     [SerializeField] private GameObject Lights;
@@ -21,8 +28,10 @@ public class SetTileColour : MonoBehaviour
         PropertyBlock = new MaterialPropertyBlock();
 
         Tilemap.transform.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
-        Exposure = LowLight;
+        Exposure = LowExposure;
+        Contrast = LowContrast;
         PropertyBlock.SetFloat("_Exposure", Exposure);
+        PropertyBlock.SetFloat("_Contrast", Contrast);
         Tilemap.transform.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
 
         if (Tilemap.transform.childCount > 0)
@@ -30,8 +39,10 @@ public class SetTileColour : MonoBehaviour
             for (int i = 0; i < Tilemap.transform.childCount; i++)
             {
                 Tilemap.transform.GetChild(i).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
-                Exposure = LowLight;
+                Exposure = LowExposure;
+                Contrast = LowContrast;
                 PropertyBlock.SetFloat("_Exposure", Exposure);
+                PropertyBlock.SetFloat("_Contrast", Contrast);
                 Tilemap.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
             }
         }
@@ -42,8 +53,10 @@ public class SetTileColour : MonoBehaviour
         if(TriggerInfo.tag == "Player")
         {
             Tilemap.transform.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
-            Exposure = FullLight;
+            Exposure = FullExposure;
+            Contrast = FullContrast;
             PropertyBlock.SetFloat("_Exposure", Exposure);
+            PropertyBlock.SetFloat("_Contrast", Contrast);
             Tilemap.transform.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
 
             if (Tilemap.transform.childCount > 0)
@@ -51,8 +64,10 @@ public class SetTileColour : MonoBehaviour
                 for (int i = 0; i < Tilemap.transform.childCount; i++)
                 {
                     Tilemap.transform.GetChild(i).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
-                    Exposure = FullLight;
+                    Exposure = FullExposure;
+                    Contrast = FullContrast;
                     PropertyBlock.SetFloat("_Exposure", Exposure);
+                    PropertyBlock.SetFloat("_Contrast", Contrast);
                     Tilemap.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
                 }
             }
