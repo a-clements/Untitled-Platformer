@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 328131228252690275}
   - component: {fileID: 8628996274503043016}
   m_Layer: 0
-  m_Name: Treasure
+  m_Name: LittleTreasure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 158068545
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300012, guid: ae3918a914038694d852d0bb81f62473, type: 3}
+  m_Sprite: {fileID: 21300010, guid: ae3918a914038694d852d0bb81f62473, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.47916666, y: 0.41666666}
+    oldSize: {x: 0.47916666, y: 0.3125}
     newSize: {x: 0.47916666, y: 0.41666666}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
