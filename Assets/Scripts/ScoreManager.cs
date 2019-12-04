@@ -7,19 +7,15 @@ public class ScoreManager : MonoBehaviour
 {
     public static long HighScore;
     public static long LevelScore;
-    [SerializeField] private Text HighScoreText;
-    [SerializeField] private Text LevelScoreText;
 
-    BinaryFormatter Formatter = new BinaryFormatter();
+    static BinaryFormatter Formatter = new BinaryFormatter();
 
     private void Awake()
     {
-        DontDestroyOnLoad(this);
-
         LoadScores();
     }
 
-    void LoadScores()
+    public static void LoadScores()
     {
         string path = Application.persistentDataPath + "/Score.sav";
 
@@ -34,11 +30,9 @@ public class ScoreManager : MonoBehaviour
         {
             SaveScores();
         }
-
-        HighScoreText.text = "High Score: " + HighScore;
     }
 
-    public void SaveScores()
+    public static void SaveScores()
     {
         string path = Application.persistentDataPath + "/Score.sav";
 
@@ -47,15 +41,15 @@ public class ScoreManager : MonoBehaviour
         stream.Close();
     }
 	
-    public void UpdateScores(int Score)
+    public static void UpdateScores(int Score)
     {
         LevelScore += Score;
-        LevelScoreText.text = "Score: " + LevelScore;
 
         if (LevelScore > HighScore)
         {
             HighScore = LevelScore;
-            HighScoreText.text = "High Score: " + HighScore;
         }
+
+        PlayerScore.ScoreInstance.UpdateScore();
     }
 }
