@@ -20,18 +20,14 @@ public class RockCollision : MonoBehaviour
         //called third
     }
 
-    private void OnTriggerEnter2D(Collider2D TriggerInfo)
-    {
-        if (TriggerInfo.tag == "Enemy")
-        {
-            this.gameObject.SetActive(false);
-            TriggerInfo.gameObject.SetActive(false);
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D CollisionInfo)
     {
-        if(CollisionInfo.transform.tag == "Ground")
+        if (CollisionInfo.transform.tag == "Enemy")
+        {
+            this.gameObject.SetActive(false);
+        }
+
+        if (CollisionInfo.transform.tag == "Ground")
         {
             this.gameObject.SetActive(false);
         }
