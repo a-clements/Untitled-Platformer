@@ -79,6 +79,16 @@ public class Enemy : MonoBehaviour
             if (ThisTransform.localPosition.x > MaxXDistance || ThisTransform.localPosition.x < MinXDistance)
             {
                 Speed *= -1.0f;
+                
+                if(Sprite.flipX == false)
+                {
+                    Sprite.flipX = true;
+                }
+
+                else
+                {
+                    Sprite.flipX = false;
+                }
             }
 
         }
