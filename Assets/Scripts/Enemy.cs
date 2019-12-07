@@ -62,9 +62,6 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        ThisTransform.Translate(new Vector3(Speed, 0, 0) * Time.deltaTime);
-
-
         if(Time.timeScale == 0)
         {
             SFX.Pause();
