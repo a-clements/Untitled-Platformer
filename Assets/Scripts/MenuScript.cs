@@ -71,7 +71,7 @@ public class MenuScript : MonoBehaviour
 
         else
         {
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(WaitTimer);
             yield return null;
             StartCoroutine(LoadScene());
         }
@@ -90,7 +90,7 @@ public class MenuScript : MonoBehaviour
         float n;
         float i;
 
-        yield return new WaitForSeconds(WaitTimer);
+        yield return new WaitForSeconds(WaitTimer * 0.5f);
 
         n = LeftPanel.GetComponent<RectTransform>().localPosition.x;
         i = RightPanel.GetComponent<RectTransform>().localPosition.x;
@@ -114,7 +114,7 @@ public class MenuScript : MonoBehaviour
     {
         float n;
 
-        yield return new WaitForSeconds(WaitTimer);
+        yield return new WaitForSeconds(WaitTimer * 0.5f);
 
         n = BottomPanel.GetComponent<RectTransform>().localPosition.y;
 
@@ -133,9 +133,9 @@ public class MenuScript : MonoBehaviour
     {
         StartCoroutine(SidePanelScrollOut());
         StartCoroutine(BottomPanelScrollOut());
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(WaitTimer * 1.5f);
         Running = false;
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(WaitTimer);
     }
 
     IEnumerator SidePanelScrollOut()
