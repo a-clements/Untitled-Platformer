@@ -16,7 +16,8 @@ public class Exit : MonoBehaviour
     {
         if(TriggerInfo.tag == "Player")
         {
-            SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
+            ScoreManager.SaveScores();
+            SceneManager.LoadSceneAsync(SceneName, LoadSceneMode.Single);
         }
     }
 }
