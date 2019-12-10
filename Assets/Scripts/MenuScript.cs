@@ -24,6 +24,9 @@ public class MenuScript : MonoBehaviour
     [Header("Coroutine Timers")]
     [SerializeField] private float WaitTimer = 0.01f;
 
+    [Header("Scene Name")]
+    [SerializeField] private string SceneName;
+
     private bool Running = true;
 
     private void OnEnable()
@@ -65,7 +68,7 @@ public class MenuScript : MonoBehaviour
     {
         if(Running == false)
         {
-            SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(SceneName, LoadSceneMode.Single);
             yield return null;
         }
 

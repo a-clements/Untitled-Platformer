@@ -32,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
 
         if(LivesRemaining == -1)
         {
+            ScoreManager.SaveScores();
             this.transform.position = this.GetComponent<PlayerMove>().Checkpoint.position;
 
             this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
