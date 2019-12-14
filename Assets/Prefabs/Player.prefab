@@ -197,7 +197,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8914639, y: 0.55}
+    oldSize: {x: 0.87143093, y: 0.51}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -235,7 +235,10 @@ MonoBehaviour:
   JumpHeight: 200
   RunSpeed: 2
   GravityMultiplier: 2
+  JumpModifier: 1
+  FallModifier: 1.5
   SubObjects: {fileID: 2362764680308833412}
+  PlayerAnimator: {fileID: 3434565583055710541}
   JumpCount: 1
   CanJump: 1
   Checkpoint: {fileID: 0}
