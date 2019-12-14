@@ -61,7 +61,7 @@ public class PlayerMove : MonoBehaviour
         #endregion
 
         #region Jump
-        if (Input.GetKeyDown(Manager.Keys[6]))
+        if (Input.GetKeyDown(Manager.Keys[5]))
         {
             if (CanJump == true)
             {
@@ -82,7 +82,7 @@ public class PlayerMove : MonoBehaviour
             RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - 1.0f) * Time.deltaTime;
         }
 
-        else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[6]))
+        else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
         {
             RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - 1.5f) * Time.deltaTime;
         }
