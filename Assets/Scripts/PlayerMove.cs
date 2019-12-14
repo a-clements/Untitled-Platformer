@@ -8,7 +8,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float JumpHeight;
     [SerializeField] private float RunSpeed;
     [SerializeField] private float GravityMultiplier;
+    [SerializeField] private float JumpModifier = 1.0f;
+    [SerializeField] private float FallModifier = 1.5f;
     [SerializeField] private GameObject SubObjects;
+    [SerializeField] private Animator PlayerAnimator;
     private Rigidbody2D RigidBody;
     private Transform ThisTransform;
     public int JumpCount = 1;
@@ -36,28 +39,41 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        #region Move left
-        if (Input.GetKey(Manager.Keys[0]))
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
+        #region Walking
+            #region Walk Left
+            if (Input.GetKey(Manager.Keys[0]))
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
 
-            SubObjects.transform.rotation = Quaternion.Euler(SubObjects.transform.rotation.x, 180.0f, SubObjects.transform.rotation.z);
-            SubObjects.transform.localPosition = new Vector2(-0.25f, SubObjects.transform.localPosition.y);
+                PlayerAnimator.SetBool("IsWalking", true);
 
-            ThisTransform.Translate(Vector2.left * Time.deltaTime * RunSpeed, Space.Self);
-        }
-        #endregion
+                SubObjects.transform.rotation = Quaternion.Euler(SubObjects.transform.rotation.x, 180.0f, SubObjects.transform.rotation.z);
+                SubObjects.transform.localPosition = new Vector2(-0.25f, SubObjects.transform.localPosition.y);
 
-        #region Move Right
-        if (Input.GetKey(Manager.Keys[1]))
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
+                ThisTransform.Translate(Vector2.left * Time.deltaTime * RunSpeed, Space.Self);
+            }
+            #endregion
 
-            SubObjects.transform.rotation = Quaternion.Euler(SubObjects.transform.rotation.x, 0.0f, SubObjects.transform.rotation.z);
-            SubObjects.transform.localPosition = new Vector2(0.25f, SubObjects.transform.localPosition.y);
+            #region Walk Right
+            if (Input.GetKey(Manager.Keys[1]))
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
 
-            ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
-        }
+                PlayerAnimator.SetBool("IsWalking", true);
+
+                SubObjects.transform.rotation = Quaternion.Euler(SubObjects.transform.rotation.x, 0.0f, SubObjects.transform.rotation.z);
+                SubObjects.transform.localPosition = new Vector2(0.25f, SubObjects.transform.localPosition.y);
+
+                ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
+            }
+            #endregion
+
+            #region Stop Walking
+            if (Input.GetKeyUp(Manager.Keys[0]) || Input.GetKeyUp(Manager.Keys[1]))
+            {
+                PlayerAnimator.SetBool("IsWalking", false);
+            }
+            #endregion
         #endregion
 
         #region Jump
@@ -76,15 +92,15 @@ public class PlayerMove : MonoBehaviour
         }
         #endregion
 
-        #region Realistic Jump
+        #region Jump Realism
         if (RigidBody.velocity.y < 0)
         {
-            RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - 1.0f) * Time.deltaTime;
+            RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.deltaTime;
         }
 
         else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
         {
-            RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - 1.5f) * Time.deltaTime;
+            RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.deltaTime;
         }
         #endregion
     }
