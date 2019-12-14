@@ -6,6 +6,7 @@ public class MeleeAttack : MonoBehaviour
 {
     private GameManager Manager;
     [SerializeField] private float AttackTimer;
+    [SerializeField] private float MeleeDistance = 0.5f;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class MeleeAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(Manager.Keys[2]))
         {
-            StartCoroutine(AttackLeft());
+            StartCoroutine(Attack());
         }
 
         if (Input.GetKeyDown(Manager.Keys[3]))
@@ -25,25 +26,15 @@ public class MeleeAttack : MonoBehaviour
             StartCoroutine(AttackUp());
         }
 
-        if (Input.GetKeyDown(Manager.Keys[4]))
-        {
-            StartCoroutine(AttackRight());
-        }
-
         if(Input.GetKeyDown(Manager.Keys[2]) && Input.GetKeyDown(Manager.Keys[3]))
         {
             StartCoroutine(AttackLeftDiagonal());
         }
-
-        if (Input.GetKeyDown(Manager.Keys[4]) && Input.GetKeyDown(Manager.Keys[3]))
-        {
-            StartCoroutine(AttackRightDiagonal());
-        }
     }
 
-    IEnumerator AttackLeft()
+    IEnumerator Attack()
     {
-        this.transform.localPosition = new Vector2(this.transform.parent.position.x - 1.0f, 0);
+        this.transform.localPosition = new Vector2(this.transform.parent.position.x + MeleeDistance, 0);
         yield return new WaitForSeconds(AttackTimer);
         this.transform.localPosition = new Vector2(0,0);
         yield return null;
@@ -51,15 +42,7 @@ public class MeleeAttack : MonoBehaviour
 
     IEnumerator AttackUp()
     {
-        this.transform.localPosition = new Vector2(0, this.transform.parent.position.y + 1.0f);
-        yield return new WaitForSeconds(AttackTimer);
-        this.transform.localPosition = new Vector2(0, 0);
-        yield return null;
-    }
-
-    IEnumerator AttackRight()
-    {
-        this.transform.localPosition = new Vector2(this.transform.parent.position.x + 1.0f, 0);
+        this.transform.localPosition = new Vector2(0, this.transform.parent.position.y + MeleeDistance);
         yield return new WaitForSeconds(AttackTimer);
         this.transform.localPosition = new Vector2(0, 0);
         yield return null;
