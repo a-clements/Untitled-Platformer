@@ -26,17 +26,29 @@ public class MeleeAttack : MonoBehaviour
             StartCoroutine(AttackUp());
         }
 
-        if(Input.GetKeyDown(Manager.Keys[2]) && Input.GetKeyDown(Manager.Keys[3]))
+        if(Input.GetKeyDown(Manager.Keys[4]))
         {
-            StartCoroutine(AttackLeftDiagonal());
+            StartCoroutine(AttackDiagonal());
         }
     }
 
     IEnumerator Attack()
     {
-        this.transform.localPosition = new Vector2(this.transform.parent.position.x + MeleeDistance, 0);
+        this.transform.root.GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsAttacking", true);
+
+        if(this.transform.root.GetComponent<SpriteRenderer>().flipX == false)
+        {
+            this.transform.localPosition = new Vector2(this.transform.parent.position.x + MeleeDistance, 0);
+        }
+
+        else
+        {
+            this.transform.localPosition = new Vector2(this.transform.parent.position.x - MeleeDistance, 0);
+        }
+
         yield return new WaitForSeconds(AttackTimer);
         this.transform.localPosition = new Vector2(0,0);
+        this.transform.root.GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsAttacking", false);
         yield return null;
     }
 
@@ -48,17 +60,18 @@ public class MeleeAttack : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator AttackLeftDiagonal()
+    IEnumerator AttackDiagonal()
     {
-        this.transform.localPosition = new Vector2(this.transform.parent.position.x - 1.0f, this.transform.parent.position.y + 1.0f);
-        yield return new WaitForSeconds(AttackTimer);
-        this.transform.localPosition = new Vector2(0, 0);
-        yield return null;
-    }
+        if (this.transform.root.GetComponent<SpriteRenderer>().flipX == false)
+        {
+            this.transform.localPosition = new Vector2(this.transform.parent.position.x + MeleeDistance, this.transform.parent.position.y + MeleeDistance);
+        }
 
-    IEnumerator AttackRightDiagonal()
-    {
-        this.transform.localPosition = new Vector2(this.transform.parent.position.x + 1.0f, this.transform.parent.position.y + 1.0f);
+        else
+        {
+            this.transform.localPosition = new Vector2(this.transform.parent.position.x - MeleeDistance, this.transform.parent.position.y + MeleeDistance);
+        }
+
         yield return new WaitForSeconds(AttackTimer);
         this.transform.localPosition = new Vector2(0, 0);
         yield return null;
