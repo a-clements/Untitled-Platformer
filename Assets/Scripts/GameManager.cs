@@ -29,8 +29,9 @@ public class GameManager : MonoBehaviour
             Keys[1] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.RightKey, true);
             Keys[2] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireLeftKey, true);
             Keys[3] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireUpKey, true);
-            Keys[4] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.ThrowKey, true);
-            Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
+            Keys[4] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireDiagonalKey, true);
+            Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.ThrowKey, true);
+            Keys[6] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
 
             //Movement[0] = Gamesettings.Movement0;
             //Movement[1] = Gamesettings.Movement1;
@@ -127,8 +128,9 @@ public class GameManager : MonoBehaviour
             Gamesettings.RightKey = Keys[1].ToString();
             Gamesettings.FireLeftKey = Keys[2].ToString();
             Gamesettings.FireUpKey = Keys[3].ToString();
-            Gamesettings.ThrowKey = Keys[4].ToString();
-            Gamesettings.JumpKey = Keys[5].ToString();
+            Gamesettings.FireDiagonalKey = Keys[4].ToString();
+            Gamesettings.ThrowKey = Keys[5].ToString();
+            Gamesettings.JumpKey = Keys[6].ToString();
 
 
             string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string

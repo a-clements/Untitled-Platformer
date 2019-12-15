@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float JumpModifier = 1.0f;
     [SerializeField] private float FallModifier = 1.5f;
     [SerializeField] private GameObject SubObjects;
-    [SerializeField] private Animator PlayerAnimator;
+    public Animator PlayerAnimator;
     private Rigidbody2D RigidBody;
     private Transform ThisTransform;
     public int JumpCount = 1;
@@ -45,8 +45,6 @@ public class PlayerMove : MonoBehaviour
             {
                 GetComponent<SpriteRenderer>().flipX = true;
 
-                PlayerAnimator.SetBool("IsWalking", true);
-
                 SubObjects.transform.rotation = Quaternion.Euler(SubObjects.transform.rotation.x, 180.0f, SubObjects.transform.rotation.z);
                 SubObjects.transform.localPosition = new Vector2(-0.25f, SubObjects.transform.localPosition.y);
 
@@ -59,12 +57,17 @@ public class PlayerMove : MonoBehaviour
             {
                 GetComponent<SpriteRenderer>().flipX = false;
 
-                PlayerAnimator.SetBool("IsWalking", true);
-
                 SubObjects.transform.rotation = Quaternion.Euler(SubObjects.transform.rotation.x, 0.0f, SubObjects.transform.rotation.z);
                 SubObjects.transform.localPosition = new Vector2(0.25f, SubObjects.transform.localPosition.y);
 
                 ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
+            }
+        #endregion
+
+            #region Start Walking
+            if(Input.GetKey(Manager.Keys[0]) || Input.GetKey(Manager.Keys[1]))
+            {
+                PlayerAnimator.SetBool("IsWalking", true);
             }
             #endregion
 
@@ -77,7 +80,7 @@ public class PlayerMove : MonoBehaviour
         #endregion
 
         #region Jump
-        if (Input.GetKeyDown(Manager.Keys[5]))
+        if (Input.GetKeyDown(Manager.Keys[6]))
         {
             if (CanJump == true)
             {
@@ -98,7 +101,7 @@ public class PlayerMove : MonoBehaviour
             RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.deltaTime;
         }
 
-        else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
+        else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[6]))
         {
             RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.deltaTime;
         }
