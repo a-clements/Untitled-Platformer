@@ -25,7 +25,6 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D CollisionInfo)
     {
-        Debug.Log(CollisionInfo.transform.tag);
         if (CollisionInfo.transform.tag == "Ground")
         {
             Speed *= -1.0f;

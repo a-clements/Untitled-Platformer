@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Enemy : MonoBehaviour
+public class FlyingEnemyMove : MonoBehaviour
 {
     private Transform ThisTransform;
     private Rigidbody RigidBody;
@@ -112,7 +112,7 @@ public class Enemy : MonoBehaviour
         {
             ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
             ScoreManager.UpdateScores(PointValue);
-            ThisTransform.GetComponent<Enemy>().enabled = false;
+            ThisTransform.GetComponent<FlyingEnemyMove>().enabled = false;
             ThisTransform.GetComponent<Animator>().enabled = false;
             ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
             ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
