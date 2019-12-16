@@ -25,6 +25,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D CollisionInfo)
     {
+        Debug.Log(CollisionInfo.transform.tag);
         if (CollisionInfo.transform.tag == "Ground")
         {
             Speed *= -1.0f;
@@ -35,7 +36,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (XAxis == true)
         {
-            if (ThisTransform.localPosition.x > MaxXDistance || ThisTransform.localPosition.x < MinXDistance)
+            if (ThisTransform.localPosition.x >= MaxXDistance || ThisTransform.localPosition.x <= MinXDistance)
             {
                 Speed *= -1.0f;
             }
@@ -44,7 +45,7 @@ public class MovingPlatform : MonoBehaviour
 
         if (YAxis == true)
         {
-            if (ThisTransform.localPosition.y > MaxYDistance || ThisTransform.localPosition.y < MinYDistance)
+            if (ThisTransform.localPosition.y >= MaxYDistance || ThisTransform.localPosition.y <= MinYDistance)
             {
                 Speed *= -1.0f;
             }

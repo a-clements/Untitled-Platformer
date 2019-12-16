@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void GainLife()
     {
-        if(LivesRemaining < Health.Length)
+        if(LivesRemaining != (Health.Length - 1))
         {
             LivesRemaining++;
             Health[LivesRemaining].gameObject.SetActive(true);
@@ -33,18 +33,29 @@ public class PlayerHealth : MonoBehaviour
         if(LivesRemaining == -1)
         {
             ScoreManager.SaveScores();
-            this.transform.position = this.GetComponent<PlayerMove>().Checkpoint.position;
-
-            this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            this.transform.rotation = Quaternion.identity;
-
-            GetComponent<PlayerMove>().CanJump = true;
-            GetComponent<PlayerMove>().JumpCount = 1;
-
-            for(int i = 0; i < Health.Length; i++)
-            {
-                GainLife();
-            }
+            StartCoroutine(DeathAnimation());
         }
+    }
+
+    IEnumerator DeathAnimation()
+    {
+        GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", true);
+        yield return new WaitForSeconds(GetComponent<PlayerMove>().PlayerAnimator.GetCurrentAnimatorStateInfo(0).length);
+        GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", false);
+
+        this.transform.position = this.GetComponent<PlayerMove>().Checkpoint.position;
+
+        this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        this.transform.rotation = Quaternion.identity;
+
+        GetComponent<PlayerMove>().CanJump = true;
+        GetComponent<PlayerMove>().JumpCount = 1;
+
+        for (int i = 0; i < Health.Length; i++)
+        {
+            GainLife();
+        }
+
+        yield return null;
     }
 }
