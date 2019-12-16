@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
 
         if (XAxis == true)
         {
-            if (ThisTransform.localPosition.x > MaxXDistance || ThisTransform.localPosition.x < MinXDistance)
+            if (ThisTransform.localPosition.x >= MaxXDistance || ThisTransform.localPosition.x <= MinXDistance)
             {
                 Speed *= -1.0f;
                 
@@ -92,7 +92,7 @@ public class Enemy : MonoBehaviour
 
         if (YAxis == true)
         {
-            if (ThisTransform.localPosition.y > MaxYDistance || ThisTransform.localPosition.y < MinYDistance)
+            if (ThisTransform.localPosition.y >= MaxYDistance || ThisTransform.localPosition.y <= MinYDistance)
             {
                 Speed *= -1.0f;
             }
