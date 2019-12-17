@@ -18,7 +18,6 @@ public class PlayerMove : MonoBehaviour
     public bool CanJump = true;
     public Transform Checkpoint;
     public Vector2 OriginalCameraPosition;
-    RaycastHit2D Hit2D = new RaycastHit2D();
 
 
     private void Awake()
