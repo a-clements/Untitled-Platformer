@@ -255,7 +255,7 @@ MonoBehaviour:
   FadeOutTime: 1
   PointValue: 0
   Direction: 
-  Speed: 0
+  Speed: 1
   XAxis: 0
   MaxXDistance: 0
   MinXDistance: 0

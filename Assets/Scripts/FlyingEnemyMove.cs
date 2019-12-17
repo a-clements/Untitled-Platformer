@@ -77,16 +77,21 @@ public class FlyingEnemyMove : MonoBehaviour
 
         if (YAxis == true)
         {
-            if (ThisTransform.localPosition.y >= MaxYDistance || ThisTransform.localPosition.y <= MinYDistance)
+            if (ThisTransform.localPosition.y >= MaxYDistance)
             {
-                Speed *= -1.0f;
+                ThisTransform.eulerAngles = new Vector3(0, 0);
+            }
+
+            else if(ThisTransform.localPosition.y <= MinYDistance)
+            {
+                ThisTransform.eulerAngles = new Vector3(180, 0);
             }
         }
 
         switch (Direction)
         {
             case "Up":
-                ThisTransform.Translate(Vector2.up * Speed * Time.deltaTime);
+                ThisTransform.Translate(Vector2.down * Speed * Time.deltaTime);
                 break;
             case "Left":
                 ThisTransform.Translate(Vector2.left * Speed * Time.deltaTime);
