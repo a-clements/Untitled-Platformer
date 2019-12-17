@@ -46,16 +46,7 @@ public class FlyingEnemyMove : MonoBehaviour
 
         if (CollisionInfo.transform.tag == "Ground" || CollisionInfo.transform.tag == "Enemy")
         {
-            Speed *= -1.0f;
-
-            if (Speed > 0)
-            {
-                Sprite.flipX = false;
-            }
-            else
-            {
-                Sprite.flipX = true;
-            }
+            //Speed *= -1.0f;
         }
     }
 
@@ -73,19 +64,13 @@ public class FlyingEnemyMove : MonoBehaviour
 
         if (XAxis == true)
         {
-            if (ThisTransform.localPosition.x >= MaxXDistance || ThisTransform.localPosition.x <= MinXDistance)
+            if (ThisTransform.localPosition.x >= MaxXDistance)
             {
-                Speed *= -1.0f;
-                
-                if(Sprite.flipX == false)
-                {
-                    Sprite.flipX = true;
-                }
-
-                else
-                {
-                    Sprite.flipX = false;
-                }
+                ThisTransform.eulerAngles = new Vector3(0, 0);
+            }
+            else if(ThisTransform.localPosition.x <= MinXDistance)
+            {
+                ThisTransform.eulerAngles = new Vector3(0, 180);
             }
 
         }
@@ -101,10 +86,10 @@ public class FlyingEnemyMove : MonoBehaviour
         switch (Direction)
         {
             case "Up":
-                ThisTransform.Translate(new Vector3(0, Speed, 0) * Time.deltaTime);
+                ThisTransform.Translate(Vector2.up * Speed * Time.deltaTime);
                 break;
             case "Left":
-                ThisTransform.Translate(new Vector3(Speed, 0, 0) * Time.deltaTime);
+                ThisTransform.Translate(Vector2.left * Speed * Time.deltaTime);
                 break;
         }
 
@@ -116,15 +101,6 @@ public class FlyingEnemyMove : MonoBehaviour
             ThisTransform.GetComponent<Animator>().enabled = false;
             ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
             ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
-
-            if (Speed > 0)
-            {
-                Sprite.flipX = false;
-            }
-            else
-            {
-                Sprite.flipX = true;
-            }
 
             StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(),FadeOutTime));
         }
