@@ -43,21 +43,18 @@ public class RockThrow : MonoBehaviour
             {
                 if (!RockList[i].activeInHierarchy)
                 {
-                    if (this.transform.parent.parent.GetComponent<SpriteRenderer>().flipX == true)
-                    {
-                        RockList[i].SetActive(true);
+                    RockList[i].SetActive(true);
 
-                        RockList[i].transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
-                        RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.left) * Speed * Time.deltaTime;
-                        //RockList[i].transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
+                    RockList[i].transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
+
+                    if(transform.root.rotation.y == 0)
+                    {
+                        RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.right) * Speed * Time.deltaTime;
                     }
+
                     else
                     {
-                        RockList[i].SetActive(true);
-
-                        RockList[i].transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
-                        RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.right) * Speed * Time.deltaTime;
-                        //RockList[i].transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = true;
+                        RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.left) * Speed * Time.deltaTime;
                     }
                     break;
                 }

@@ -43,22 +43,16 @@ public class PlayerMove : MonoBehaviour
             #region Walk Left
             if (Input.GetKey(Manager.Keys[0]))
             {
-                GetComponent<SpriteRenderer>().flipX = true;
+                ThisTransform.eulerAngles = new Vector3(0, 180);
 
-                SubObjects.transform.rotation = Quaternion.Euler(SubObjects.transform.rotation.x, 180.0f, SubObjects.transform.rotation.z);
-                SubObjects.transform.localPosition = new Vector2(-0.25f, SubObjects.transform.localPosition.y);
-
-                ThisTransform.Translate(Vector2.left * Time.deltaTime * RunSpeed, Space.Self);
+                ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
             }
             #endregion
 
             #region Walk Right
             if (Input.GetKey(Manager.Keys[1]))
             {
-                GetComponent<SpriteRenderer>().flipX = false;
-
-                SubObjects.transform.rotation = Quaternion.Euler(SubObjects.transform.rotation.x, 0.0f, SubObjects.transform.rotation.z);
-                SubObjects.transform.localPosition = new Vector2(0.25f, SubObjects.transform.localPosition.y);
+                ThisTransform.eulerAngles =  new Vector3(0, 0);
 
                 ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
             }
