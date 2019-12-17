@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class RockThrow : MonoBehaviour
 {
-    public GameObject Rock;
-
-    public int PooledObjects = 10;
-
-    public float FireRate = 0.5F;
-    public float Speed = 64.0f;
-
-    private float NextFire = 1.0F;
+    [Tooltip("The prefab of the projectile goes here.")]
+    [SerializeField] private GameObject Rock;
+    [Tooltip("Change this to however many projectiles you want to have in the pool.")]
+    [SerializeField] private int PooledObjects = 10;
+    [Tooltip("A declaration of the rate of fire.")]
+    [SerializeField] private float FireRate = 0.5F;
+    [Tooltip("A declaration of the speed of the projectile.")]
+    [SerializeField] float Speed = 64.0f;
+    [Tooltip("A declaration of how long between projectiles.")]
+    [SerializeField] private float NextFire = 1.0F;
 
     private GameManager Manager;
 

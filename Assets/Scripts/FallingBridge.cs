@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class FallingBridge : MonoBehaviour
 {
+    [Tooltip("A declaration on if the bridge is falling. If it is false then all variables are should be empty.")]
     [SerializeField] private bool IsFallingBridge = false;
+    [Tooltip("A declaration of how quickly after the player steps onto the bridge that it will fall.")]
     [SerializeField] private float WaitTimer = 0.0f;
+    [Tooltip("A declaration of the where the bridge starts.")]
     [SerializeField] private float StartPosition = 0.0f;
+    [Tooltip("A declaration of the where the bridge starts.")]
     [SerializeField] private float EndPosition = 0.0f;
+    [Tooltip("A declaration of how fast the bridge will fall.")]
     [SerializeField] private float FallSpeed = 0.0f;
+    [Tooltip("A declaration of how fast the bridge will reset.")]
     [SerializeField] private float RiseSpeed = 0.0f;
-    [SerializeField] private string Direction = "";
+
+    private string Direction = "";
 
     void Update()
     {
@@ -51,8 +58,6 @@ public class FallingBridge : MonoBehaviour
         Direction = "Fall";
 
         yield return new WaitForSeconds(WaitTimer);
-
-        //yield return null;
     }
 
     IEnumerator Rise()
