@@ -84,6 +84,7 @@ public class PlayerMove : MonoBehaviour
                 {
                     CanJump = false;
                 }
+                PlayerAnimator.SetBool("IsJumping", true);
             }
         }
         #endregion
@@ -92,6 +93,7 @@ public class PlayerMove : MonoBehaviour
         if (RigidBody.velocity.y < 0)
         {
             RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.deltaTime;
+            PlayerAnimator.SetBool("IsJumping", false);
         }
 
         else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[6]))

@@ -1,88 +1,118 @@
 fileFormatVersion: 2
-guid: 035a45c2c8b69874ea5cdf1d91f474c2
+guid: ea985fad47cb0a1408d07e699d0c3f71
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5814206788314200511
-    second: barry_the_boring_SPRITE_SHEET__0
+      213: 4961886194751291235
+    second: barry_FULL__0
   - first:
-      213: -2557322829847309058
-    second: barry_the_boring_SPRITE_SHEET__1
+      213: 5588669195687636637
+    second: barry_FULL__1
   - first:
-      213: -4034270356139788572
-    second: barry_the_boring_SPRITE_SHEET__2
+      213: -6210148091891006175
+    second: barry_FULL__2
   - first:
-      213: 8361846988101778737
-    second: barry_the_boring_SPRITE_SHEET__3
+      213: -4663803655423216828
+    second: barry_FULL__3
   - first:
-      213: -5634495403881920689
-    second: barry_the_boring_SPRITE_SHEET__4
+      213: -9141755600560421601
+    second: barry_FULL__4
   - first:
-      213: -5900897035295559420
-    second: barry_the_boring_SPRITE_SHEET__5
+      213: -4556898637687120817
+    second: barry_FULL__5
   - first:
-      213: -2209236121442505722
-    second: barry_the_boring_SPRITE_SHEET__6
+      213: -6019858115016896286
+    second: barry_FULL__6
   - first:
-      213: -770932399089558856
-    second: barry_the_boring_SPRITE_SHEET__7
+      213: 3168835511497933744
+    second: barry_FULL__7
   - first:
-      213: -1618193278926797150
-    second: barry_the_boring_SPRITE_SHEET__8
+      213: -3392316746061851393
+    second: barry_FULL__8
   - first:
-      213: 5473368412861672123
-    second: barry_the_boring_SPRITE_SHEET__9
+      213: -2870462801736598152
+    second: barry_FULL__9
   - first:
-      213: -3257099268528068235
-    second: barry_the_boring_SPRITE_SHEET__10
+      213: -2484838528540721320
+    second: barry_FULL__10
   - first:
-      213: 2936704471100840008
-    second: barry_the_boring_SPRITE_SHEET__11
+      213: -1730054693512341789
+    second: barry_FULL__11
   - first:
-      213: 4406193556536465765
-    second: barry_the_boring_SPRITE_SHEET__12
+      213: 6121693709362272534
+    second: barry_FULL__12
   - first:
-      213: -7976585772764369478
-    second: barry_the_boring_SPRITE_SHEET__13
+      213: -7764596659868242795
+    second: barry_FULL__13
   - first:
-      213: -8387469145612640249
-    second: barry_the_boring_SPRITE_SHEET__14
+      213: -8402013802109674914
+    second: barry_FULL__14
   - first:
-      213: -6074877690189501198
-    second: barry_the_boring_SPRITE_SHEET__15
+      213: -3406965701805500306
+    second: barry_FULL__15
   - first:
-      213: -8727788133678597252
-    second: barry_the_boring_SPRITE_SHEET__16
+      213: -5428024005076891294
+    second: barry_FULL__16
   - first:
-      213: 9206371463896072781
-    second: barry_the_boring_SPRITE_SHEET__17
+      213: -8382232756532453759
+    second: barry_FULL__17
   - first:
-      213: 6784381775768031244
-    second: barry_the_boring_SPRITE_SHEET__18
+      213: 2530806930330154231
+    second: barry_FULL__18
   - first:
-      213: 3424618208603350415
-    second: barry_the_boring_SPRITE_SHEET__19
+      213: -5328765684283641050
+    second: barry_FULL__19
   - first:
-      213: -100058525036233122
-    second: barry_the_boring_SPRITE_SHEET__20
+      213: 6362836297722497505
+    second: barry_FULL__20
   - first:
-      213: -2540504950583621416
-    second: barry_the_boring_SPRITE_SHEET__21
+      213: -286229904007843403
+    second: barry_FULL__21
   - first:
-      213: -8114417217140182326
-    second: barry_the_boring_SPRITE_SHEET__22
+      213: -6881932742146586299
+    second: barry_FULL__22
   - first:
-      213: 7406232968766092004
-    second: barry_the_boring_SPRITE_SHEET__23
+      213: -5668031331452473187
+    second: barry_FULL__23
   - first:
-      213: -5687145415075664718
-    second: barry_the_boring_SPRITE_SHEET__24
+      213: -3289508488123318629
+    second: barry_FULL__24
   - first:
-      213: -9095279705028352719
-    second: barry_the_boring_SPRITE_SHEET__25
+      213: 1352405944452313517
+    second: barry_FULL__25
   - first:
-      213: -5181366993114797209
-    second: barry_the_boring_SPRITE_SHEET__26
+      213: -1569808713247108152
+    second: barry_FULL__26
+  - first:
+      213: -6416366045095437280
+    second: barry_FULL__27
+  - first:
+      213: 8803115677749908314
+    second: barry_FULL__28
+  - first:
+      213: 954889080642382119
+    second: barry_FULL__29
+  - first:
+      213: -7489809331850504461
+    second: barry_FULL__30
+  - first:
+      213: -6597431810941212627
+    second: barry_FULL__31
+  - first:
+      213: 7178780754344021923
+    second: barry_FULL__32
+  - first:
+      213: 3660154571372603323
+    second: barry_FULL__33
+  - first:
+      213: 1559810289533102893
+    second: barry_FULL__34
+  - first:
+      213: -1566690413606019981
+    second: barry_FULL__35
+  - first:
+      213: -3224415334122766475
+    second: barry_FULL__36
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -123,7 +153,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 48
@@ -167,568 +197,547 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__0
+      name: barry_FULL__0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 1456
-        width: 47
-        height: 27
+        x: 0
+        y: 323.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02887228eb083da489e14aa64ea2e60a
-      internalID: 5814206788314200511
+      spriteID: 2a58058eb72b3e54c962d009256a4316
+      internalID: 4961886194751291235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__1
+      name: barry_FULL__1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 1407
-        width: 43
-        height: 26
+        x: 65
+        y: 323.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 194fa76f77fc43843974e596872dbdb9
-      internalID: -2557322829847309058
+      spriteID: e5b347441d2b98e419f6e606f3f57e86
+      internalID: 5588669195687636637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__2
+      name: barry_FULL__2
       rect:
         serializedVersion: 2
-        x: 31
-        y: 1360
-        width: 46
-        height: 27
+        x: 130
+        y: 323.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f8cfa318c82d394c91c3a4136f45392
-      internalID: -4034270356139788572
+      spriteID: f26589fbffb354f43badbdb4ab6d0033
+      internalID: -6210148091891006175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__3
+      name: barry_FULL__3
       rect:
         serializedVersion: 2
-        x: 29
-        y: 1315
-        width: 44
-        height: 26
+        x: 195
+        y: 323.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c41c707dce3cc5449ac6af286c84bab
-      internalID: 8361846988101778737
+      spriteID: 07aae5fe6590c784991ddcfdd7165cd2
+      internalID: -4663803655423216828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__4
+      name: barry_FULL__4
       rect:
         serializedVersion: 2
-        x: 13
-        y: 1262
-        width: 57
-        height: 26
+        x: 260
+        y: 323.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 705c85a7a895989499b502d48bcb40b1
-      internalID: -5634495403881920689
+      spriteID: dbd1ff309a0d803448bf0385591d33d6
+      internalID: -9141755600560421601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__5
+      name: barry_FULL__5
       rect:
         serializedVersion: 2
-        x: 22
-        y: 1203
-        width: 48
-        height: 41
+        x: 0
+        y: 259.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57ca7d65325e0cc4bbec2329310a11b2
-      internalID: -5900897035295559420
+      spriteID: fc7f32a681a4fa045bb44b953b460ee6
+      internalID: -4556898637687120817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__6
+      name: barry_FULL__6
       rect:
         serializedVersion: 2
-        x: 41
-        y: 1146
-        width: 47
-        height: 42
+        x: 65
+        y: 259.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc4ec0a69eaf0f941a041b8e4020fec6
-      internalID: -2209236121442505722
+      spriteID: 783009772e56b91428e98115d0f55c5a
+      internalID: -6019858115016896286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__7
+      name: barry_FULL__7
       rect:
         serializedVersion: 2
-        x: 41
-        y: 1088
-        width: 59
-        height: 26
+        x: 130
+        y: 259.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 567f4bca4a240b148b33a72a0bb184c1
-      internalID: -770932399089558856
+      spriteID: 5204989f6ae13494eaace6ad0a13326b
+      internalID: 3168835511497933744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__8
+      name: barry_FULL__8
       rect:
         serializedVersion: 2
-        x: 41
-        y: 1042
-        width: 57
-        height: 27
+        x: 195
+        y: 259.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aae8d5edc7f30fc4eb2e4cdc664214ff
-      internalID: -1618193278926797150
+      spriteID: e85bac7aa448a5b49995386014aa63bf
+      internalID: -3392316746061851393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__9
+      name: barry_FULL__9
       rect:
         serializedVersion: 2
-        x: 42
-        y: 989
-        width: 50
-        height: 27
+        x: 260
+        y: 259.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bcc62aa442cda04a950682c841c7130
-      internalID: 5473368412861672123
+      spriteID: 9bb67e96b9d12074a8eefcf4ea04f982
+      internalID: -2870462801736598152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__10
+      name: barry_FULL__10
       rect:
         serializedVersion: 2
-        x: 26
-        y: 938
-        width: 43
-        height: 26
+        x: 0
+        y: 195.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bee071ee9998754b805ab4a71a74bb3
-      internalID: -3257099268528068235
+      spriteID: 3d3a79724cc26c142a5083b31c2629a0
+      internalID: -2484838528540721320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__11
+      name: barry_FULL__11
       rect:
         serializedVersion: 2
-        x: 19
-        y: 881
-        width: 58
-        height: 20
+        x: 65
+        y: 195.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf90eb40a79a0b44b91f1eada1e8a003
-      internalID: 2936704471100840008
+      spriteID: 6cf46d81b67654d4ba139cafbe3031d4
+      internalID: -1730054693512341789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__12
+      name: barry_FULL__12
       rect:
         serializedVersion: 2
-        x: 19
-        y: 822
-        width: 58
-        height: 20
+        x: 130
+        y: 195.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69e4c303700ebc74bbceb2b1fecdf078
-      internalID: 4406193556536465765
+      spriteID: 993383be52302904a9925d3c09898214
+      internalID: 6121693709362272534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__13
+      name: barry_FULL__13
       rect:
         serializedVersion: 2
-        x: 17
-        y: 770
-        width: 59
-        height: 20
+        x: 195
+        y: 195.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b01b4f9167befce4a8dbdc49c4db5d09
-      internalID: -7976585772764369478
+      spriteID: f8c9dadd2fc058b40928dd9b1f9af1da
+      internalID: -7764596659868242795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__14
+      name: barry_FULL__14
       rect:
         serializedVersion: 2
-        x: 18
-        y: 709
-        width: 43
-        height: 26
+        x: 260
+        y: 195.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b05387049160bd3409bf56dc96318692
-      internalID: -8387469145612640249
+      spriteID: b2942e61f0fe3374d87e1d559b062b9e
+      internalID: -8402013802109674914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__15
+      name: barry_FULL__15
       rect:
         serializedVersion: 2
-        x: 14
-        y: 650
-        width: 62
-        height: 22
+        x: 0
+        y: 131.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccea3d95db3681f4199b8340acc37763
-      internalID: -6074877690189501198
+      spriteID: 2b57314326798c847b80f293f3a8c324
+      internalID: -3406965701805500306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__16
+      name: barry_FULL__16
       rect:
         serializedVersion: 2
-        x: 9
-        y: 595
-        width: 67
-        height: 18
+        x: 65
+        y: 131.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db75f0c858825834cbfe5fd17994e8d1
-      internalID: -8727788133678597252
+      spriteID: 737577e117934bd40b898d4c8d2ffae6
+      internalID: -5428024005076891294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__17
+      name: barry_FULL__17
       rect:
         serializedVersion: 2
-        x: 31
-        y: 538
-        width: 67
-        height: 8
+        x: 130
+        y: 131.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d5225c2d55c2bc4db8982473db5d27a
-      internalID: 9206371463896072781
+      spriteID: 045ef2e59ea74cd42b43a0f5220096de
+      internalID: -8382232756532453759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__18
+      name: barry_FULL__18
       rect:
         serializedVersion: 2
-        x: 23
-        y: 477
-        width: 47
-        height: 26
+        x: 195
+        y: 131.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24ee375fee75084419e5bb1632ec9f03
-      internalID: 6784381775768031244
+      spriteID: ec3809f8646c4fa40bd8db913e91fa75
+      internalID: 2530806930330154231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__19
+      name: barry_FULL__19
       rect:
         serializedVersion: 2
-        x: 25
-        y: 418
-        width: 47
-        height: 24
+        x: 260
+        y: 131.33334
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ae4e703e03666943bce07373deae80c
-      internalID: 3424618208603350415
+      spriteID: b5df8a2d3ee6a664b89d9a0c9fb863f6
+      internalID: -5328765684283641050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__20
+      name: barry_FULL__20
       rect:
         serializedVersion: 2
-        x: 28
-        y: 360
-        width: 42
-        height: 27
+        x: 0
+        y: 67.333336
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb7755baccdee349b1434885ed52411
-      internalID: -100058525036233122
+      spriteID: 026f5cdecf05fb44290a2edeeb1b3f33
+      internalID: 6362836297722497505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__21
+      name: barry_FULL__21
       rect:
         serializedVersion: 2
-        x: 22
-        y: 325
-        width: 44
-        height: 27
+        x: 65
+        y: 67.333336
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 330a95d631a5dab4ca95b7c7620714c9
-      internalID: -2540504950583621416
+      spriteID: 800e0d05a727c9c49bc86d2addf031b5
+      internalID: -286229904007843403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__22
+      name: barry_FULL__22
       rect:
         serializedVersion: 2
-        x: 24
-        y: 266
-        width: 43
-        height: 27
+        x: 130
+        y: 67.333336
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84b590a482e9cbe48b11dd9064ae165a
-      internalID: -8114417217140182326
+      spriteID: 8e3db9a679b4c074799d9a85e3822435
+      internalID: -6881932742146586299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__23
+      name: barry_FULL__23
       rect:
         serializedVersion: 2
-        x: 25
-        y: 204
-        width: 43
-        height: 27
+        x: 195
+        y: 67.333336
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6557350ff2bd0624993d7e01d1052703
-      internalID: 7406232968766092004
+      spriteID: 0de611005429ceb49a466bf642052891
+      internalID: -5668031331452473187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__24
+      name: barry_FULL__24
       rect:
         serializedVersion: 2
-        x: 18
-        y: 144
-        width: 47
-        height: 24
+        x: 260
+        y: 67.333336
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a20b09a7f81d2a94d8ce1628ccb76024
-      internalID: -5687145415075664718
+      spriteID: 37fde81d40e3d5541ad9dc145593b7f8
+      internalID: -3289508488123318629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__25
+      name: barry_FULL__25
       rect:
         serializedVersion: 2
-        x: 18
-        y: 84
-        width: 46
-        height: 26
+        x: 0
+        y: 3.3333359
+        width: 65.6
+        height: 64.666664
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 190914b55649fca4fbde3f511cd22acb
-      internalID: -9095279705028352719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: barry_the_boring_SPRITE_SHEET__26
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 25
-        width: 43
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00b5b42b8b060ef46b2d84041dd88462
-      internalID: -5181366993114797209
+      spriteID: 686217bb2d9d6d247a7de19bc484f15c
+      internalID: 1352405944452313517
       vertices: []
       indices: 
       edges: []
@@ -736,7 +745,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: f09a865d7fd4f594bb345f2a99a8420c
     internalID: 0
     vertices: []
     indices: 

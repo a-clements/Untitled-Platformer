@@ -6400,7 +6400,7 @@ PrefabInstance:
     - target: {fileID: 3147331610985716604, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
@@ -6465,7 +6465,7 @@ PrefabInstance:
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
       propertyPath: MaxXDistance
-      value: -5.5
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
@@ -8200,6 +8200,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3434565583055710541, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2dc276c87610cb946b6a9907eceb6b68, type: 2}
     - target: {fileID: 1211305407845736607, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8273,7 +8278,7 @@ PrefabInstance:
     - target: {fileID: 2513995295296279266, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2513995295296279266, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
