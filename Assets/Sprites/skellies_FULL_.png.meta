@@ -1,109 +1,82 @@
 fileFormatVersion: 2
-guid: a8a4ad49451f89045b0ee1b2e219f055
+guid: c7f7a10d24be75a44b1cd87c971a085b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -784649157289339210
-    second: skellies_-export_0
+      213: 4506329718026186978
+    second: skellies_FULL__0
   - first:
-      213: 4870619923722861091
-    second: skellies_-export_1
+      213: 8397827549630214453
+    second: skellies_FULL__1
   - first:
-      213: 5359488530116360013
-    second: skellies_-export_2
+      213: -2296804680200748808
+    second: skellies_FULL__2
   - first:
-      213: -8208619961911308037
-    second: skellies_-export_3
+      213: 5485776653429766553
+    second: skellies_FULL__3
   - first:
-      213: 461761349793945959
-    second: skellies_-export_4
+      213: 5231959310928359026
+    second: skellies_FULL__4
   - first:
-      213: 8522020502591418526
-    second: skellies_-export_5
+      213: -607905027063460427
+    second: skellies_FULL__5
   - first:
-      213: 1985507550644260209
-    second: skellies_-export_6
+      213: -4424156896727009407
+    second: skellies_FULL__6
   - first:
-      213: 1496013134077577857
-    second: skellies_-export_7
+      213: 5656673214022890364
+    second: skellies_FULL__7
   - first:
-      213: -3203370111215645871
-    second: skellies_-export_8
+      213: -337995278432056459
+    second: skellies_FULL__8
   - first:
-      213: -6601792989509359294
-    second: skellies_-export_9
+      213: 189054112374710478
+    second: skellies_FULL__9
   - first:
-      213: -462684470420479349
-    second: skellies_-export_10
+      213: 1355480668529165103
+    second: skellies_FULL__10
   - first:
-      213: -8517580596419636396
-    second: skellies_-export_11
+      213: -5415495104115469282
+    second: skellies_FULL__11
   - first:
-      213: 6433502596977410836
-    second: skellies_-export_12
+      213: 3822950961963306892
+    second: skellies_FULL__12
   - first:
-      213: 7654612183509216878
-    second: skellies_-export_13
+      213: 714378933984268629
+    second: skellies_FULL__13
   - first:
-      213: -8378243003411729980
-    second: skellies_-export_14
+      213: 7059956343938053563
+    second: skellies_FULL__14
   - first:
-      213: 6312834670146228164
-    second: skellies_-export_15
+      213: -7570620528531437676
+    second: skellies_FULL__15
   - first:
-      213: -6888896191052070270
-    second: skellies_-export_16
+      213: 7504213745990715011
+    second: skellies_FULL__16
   - first:
-      213: 6553251810234853375
-    second: skellies_-export_17
+      213: 6275714091092985012
+    second: skellies_FULL__17
   - first:
-      213: 3663073828624329984
-    second: skellies_-export_18
+      213: 955027031624248252
+    second: skellies_FULL__18
   - first:
-      213: -5061655079834444481
-    second: skellies_-export_19
+      213: -4043914429997362534
+    second: skellies_FULL__19
   - first:
-      213: -4267492218514223291
-    second: skellies_-export_20
+      213: -8539102795892846816
+    second: skellies_FULL__20
   - first:
-      213: 8367173728891424276
-    second: skellies_-export_21
+      213: 6719619830668848294
+    second: skellies_FULL__21
   - first:
-      213: -5451248042579044280
-    second: skellies_-export_22
+      213: 8457948660139417735
+    second: skellies_FULL__22
   - first:
-      213: -2033465508866358696
-    second: skellies_-export_23
+      213: 7952183848467508674
+    second: skellies_FULL__23
   - first:
-      213: 1515553855127762715
-    second: skellies_-export_24
-  - first:
-      213: -4268391187080204718
-    second: skellies_-export_25
-  - first:
-      213: -2129503453242516084
-    second: skellies_-export_26
-  - first:
-      213: -4247175099391349700
-    second: skellies_-export_27
-  - first:
-      213: -2565990392445574083
-    second: skellies_-export_28
-  - first:
-      213: 2573037517425464611
-    second: skellies_-export_29
-  - first:
-      213: -8623350449596396761
-    second: skellies_-export_30
-  - first:
-      213: -5445780092906693906
-    second: skellies_-export_31
-  - first:
-      213: 1568531359119989184
-    second: skellies_-export_32
-  - first:
-      213: -6836032364155242074
-    second: skellies_-export_33
+      213: -2585374068188329805
+    second: skellies_FULL__24
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -147,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 48
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -188,11 +161,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skellies_-export_0
+      name: skellies_FULL__0
       rect:
         serializedVersion: 2
         x: 0
-        y: 884
+        y: 560
         width: 144
         height: 140
       alignment: 0
@@ -202,18 +175,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5b6601a967a4fd4da6c2128035d370d
-      internalID: -784649157289339210
+      spriteID: dc0282e0db7267a49ad9393b15d4f4d7
+      internalID: 4506329718026186978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_1
+      name: skellies_FULL__1
       rect:
         serializedVersion: 2
         x: 144
-        y: 884
+        y: 560
         width: 144
         height: 140
       alignment: 0
@@ -223,18 +196,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f6f9f2248a58844daae375c033f292b
-      internalID: 4870619923722861091
+      spriteID: 9407aa2f1f5d6fb4b887fc7f0604d8de
+      internalID: 8397827549630214453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_2
+      name: skellies_FULL__2
       rect:
         serializedVersion: 2
         x: 288
-        y: 884
+        y: 560
         width: 144
         height: 140
       alignment: 0
@@ -244,18 +217,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d8175a3ee870e446a9c244f0a8ee676
-      internalID: 5359488530116360013
+      spriteID: 1d374f0863377cf488bc6965bfb2e2ef
+      internalID: -2296804680200748808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_3
+      name: skellies_FULL__3
       rect:
         serializedVersion: 2
         x: 432
-        y: 884
+        y: 560
         width: 144
         height: 140
       alignment: 0
@@ -265,18 +238,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46bea59a24529e047aaa65963f0e30fa
-      internalID: -8208619961911308037
+      spriteID: 4e12018f65403ce4e877eed3f8d0adfc
+      internalID: 5485776653429766553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_4
+      name: skellies_FULL__4
       rect:
         serializedVersion: 2
         x: 576
-        y: 884
+        y: 560
         width: 144
         height: 140
       alignment: 0
@@ -286,60 +259,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74911a1c60bf4fe44ac0d657d68b36c9
-      internalID: 461761349793945959
+      spriteID: 1244b6e4ad0870b47aa989c7cab60ade
+      internalID: 5231959310928359026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_5
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 884
-        width: 144
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31436c36629699f4094efe0424a3b846
-      internalID: 8522020502591418526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skellies_-export_6
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 884
-        width: 144
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 327a127e68a80084a86eefba45c9d6e2
-      internalID: 1985507550644260209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skellies_-export_7
+      name: skellies_FULL__5
       rect:
         serializedVersion: 2
         x: 0
-        y: 744
+        y: 420
         width: 144
         height: 140
       alignment: 0
@@ -349,18 +280,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 483af9423459c264699f7d6745d5e805
-      internalID: 1496013134077577857
+      spriteID: 77db0056e11a0f44a95a26615870fa8b
+      internalID: -607905027063460427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_8
+      name: skellies_FULL__6
       rect:
         serializedVersion: 2
         x: 144
-        y: 744
+        y: 420
         width: 144
         height: 140
       alignment: 0
@@ -370,18 +301,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92a81f9d4bc0c0b468a01ec083cae92a
-      internalID: -3203370111215645871
+      spriteID: f935aa77da054b5489f4afc703dfe1c1
+      internalID: -4424156896727009407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_9
+      name: skellies_FULL__7
       rect:
         serializedVersion: 2
         x: 288
-        y: 744
+        y: 420
         width: 144
         height: 140
       alignment: 0
@@ -391,18 +322,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d74e62e4a3fbe7d408f73d32367d0c68
-      internalID: -6601792989509359294
+      spriteID: 9ebfd62f6604d4d42a23518c3219070c
+      internalID: 5656673214022890364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_10
+      name: skellies_FULL__8
       rect:
         serializedVersion: 2
         x: 432
-        y: 744
+        y: 420
         width: 144
         height: 140
       alignment: 0
@@ -412,18 +343,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ce7a0685719229469314cc511b34f82
-      internalID: -462684470420479349
+      spriteID: f1d93f2e50faae84f8885af5cd47ca55
+      internalID: -337995278432056459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_11
+      name: skellies_FULL__9
       rect:
         serializedVersion: 2
         x: 576
-        y: 744
+        y: 420
         width: 144
         height: 140
       alignment: 0
@@ -433,60 +364,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25fe2737b0d8d38499131e2dd2bc0d21
-      internalID: -8517580596419636396
+      spriteID: cf320f50d2f46944583d2ce611302fd1
+      internalID: 189054112374710478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_12
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 744
-        width: 144
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25716c90ce364af4db850d6eb5396c1f
-      internalID: 6433502596977410836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skellies_-export_13
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 744
-        width: 144
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 538683a346764274388b4297917fff99
-      internalID: 7654612183509216878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skellies_-export_14
+      name: skellies_FULL__10
       rect:
         serializedVersion: 2
         x: 0
-        y: 604
+        y: 280
         width: 144
         height: 140
       alignment: 0
@@ -496,18 +385,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c1fcbf5f53a89d4291d907550dd3864
-      internalID: -8378243003411729980
+      spriteID: ac52e8441d163ec4680c740367615b7c
+      internalID: 1355480668529165103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_15
+      name: skellies_FULL__11
       rect:
         serializedVersion: 2
         x: 144
-        y: 604
+        y: 280
         width: 144
         height: 140
       alignment: 0
@@ -517,18 +406,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab6486defa96c124fb40b73018ec5082
-      internalID: 6312834670146228164
+      spriteID: a7af01ffaf4e7fb45984761f6ebfee06
+      internalID: -5415495104115469282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_16
+      name: skellies_FULL__12
       rect:
         serializedVersion: 2
         x: 288
-        y: 604
+        y: 280
         width: 144
         height: 140
       alignment: 0
@@ -538,18 +427,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0feb82ade5095e44b8191889b4f45c08
-      internalID: -6888896191052070270
+      spriteID: 0581c3227a9dc9d44bc1565e57e213e2
+      internalID: 3822950961963306892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_17
+      name: skellies_FULL__13
       rect:
         serializedVersion: 2
         x: 432
-        y: 604
+        y: 280
         width: 144
         height: 140
       alignment: 0
@@ -559,18 +448,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6a12cf4531c2664585729cce0662855
-      internalID: 6553251810234853375
+      spriteID: ae2187bf3cfb39b43b2e6eb2973771e6
+      internalID: 714378933984268629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_18
+      name: skellies_FULL__14
       rect:
         serializedVersion: 2
         x: 576
-        y: 604
+        y: 280
         width: 144
         height: 140
       alignment: 0
@@ -580,39 +469,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad861db96dd554e40be65db048003ced
-      internalID: 3663073828624329984
+      spriteID: 1c28fc128db93b0449bf698eebfbff83
+      internalID: 7059956343938053563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_19
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 604
-        width: 144
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01ce993a38e89ba47bba886febc40974
-      internalID: -5061655079834444481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skellies_-export_20
+      name: skellies_FULL__15
       rect:
         serializedVersion: 2
         x: 0
-        y: 464
+        y: 140
         width: 144
         height: 140
       alignment: 0
@@ -622,18 +490,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8978b733176451a479883344d54630dd
-      internalID: -4267492218514223291
+      spriteID: a7fc3dd8e01fd7c44939e0f79d1821c9
+      internalID: -7570620528531437676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_21
+      name: skellies_FULL__16
       rect:
         serializedVersion: 2
         x: 144
-        y: 464
+        y: 140
         width: 144
         height: 140
       alignment: 0
@@ -643,18 +511,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b560163130d31c94a9568c414796a973
-      internalID: 8367173728891424276
+      spriteID: 0dd354f6906941c4c8b59e50a908921c
+      internalID: 7504213745990715011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_22
+      name: skellies_FULL__17
       rect:
         serializedVersion: 2
         x: 288
-        y: 464
+        y: 140
         width: 144
         height: 140
       alignment: 0
@@ -664,18 +532,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 329b2589ddce180438b9226aea710dd2
-      internalID: -5451248042579044280
+      spriteID: 292021979a3ebfa4d8bba33a0e9269a4
+      internalID: 6275714091092985012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_23
+      name: skellies_FULL__18
       rect:
         serializedVersion: 2
         x: 432
-        y: 464
+        y: 140
         width: 144
         height: 140
       alignment: 0
@@ -685,18 +553,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f219eb21cb1b14249ad625abea670c90
-      internalID: -2033465508866358696
+      spriteID: 9468d345a6240f64db8f9ba71d396ae2
+      internalID: 955027031624248252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_24
+      name: skellies_FULL__19
       rect:
         serializedVersion: 2
         x: 576
-        y: 464
+        y: 140
         width: 144
         height: 140
       alignment: 0
@@ -706,60 +574,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d60c1977d09e3b644bcabf0662b62bb6
-      internalID: 1515553855127762715
+      spriteID: a54769ebab38ffb4e9e0e0498b5ee338
+      internalID: -4043914429997362534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_25
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 464
-        width: 144
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d13dacddf1995d4482162ea11f63b92
-      internalID: -4268391187080204718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skellies_-export_26
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 464
-        width: 144
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d59a0cd82a4e38469e84e2cb0d45ead
-      internalID: -2129503453242516084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skellies_-export_27
+      name: skellies_FULL__20
       rect:
         serializedVersion: 2
         x: 0
-        y: 324
+        y: 0
         width: 144
         height: 140
       alignment: 0
@@ -769,18 +595,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b905282c51e17147b936dfc28587283
-      internalID: -4247175099391349700
+      spriteID: 03ccf1db089ab034a81b9d8b1d9ab9fb
+      internalID: -8539102795892846816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_28
+      name: skellies_FULL__21
       rect:
         serializedVersion: 2
         x: 144
-        y: 324
+        y: 0
         width: 144
         height: 140
       alignment: 0
@@ -790,18 +616,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b738d329e72f974fa6f95aa1e7db0ea
-      internalID: -2565990392445574083
+      spriteID: c862e0a3e2a1e7542bf215034f8a1bcf
+      internalID: 6719619830668848294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_29
+      name: skellies_FULL__22
       rect:
         serializedVersion: 2
         x: 288
-        y: 324
+        y: 0
         width: 144
         height: 140
       alignment: 0
@@ -811,18 +637,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 550909fd57de9444e8510e99457bf2f3
-      internalID: 2573037517425464611
+      spriteID: fc7f949612202da429f01b2c98443b08
+      internalID: 8457948660139417735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_30
+      name: skellies_FULL__23
       rect:
         serializedVersion: 2
         x: 432
-        y: 324
+        y: 0
         width: 144
         height: 140
       alignment: 0
@@ -832,18 +658,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a257ee0e762cc78408978516256946db
-      internalID: -8623350449596396761
+      spriteID: 52d668892f7ed7e41b4acb018ea13723
+      internalID: 7952183848467508674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skellies_-export_31
+      name: skellies_FULL__24
       rect:
         serializedVersion: 2
         x: 576
-        y: 324
+        y: 0
         width: 144
         height: 140
       alignment: 0
@@ -853,50 +679,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c055b1ffeaf8ca43a90b7735652939e
-      internalID: -5445780092906693906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skellies_-export_32
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 324
-        width: 144
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 320b6d7ae77bcf94d8921c7d5d94fc67
-      internalID: 1568531359119989184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skellies_-export_33
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 184
-        width: 144
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60e2e9a7fe4612c44a01eff97314b55a
-      internalID: -6836032364155242074
+      spriteID: 6b4a48503216e4f43a1b78441c0333ce
+      internalID: -2585374068188329805
       vertices: []
       indices: 
       edges: []
@@ -904,7 +688,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: c0f87c4f47596364094bed74c6ee8386
     internalID: 0
     vertices: []
     indices: 
