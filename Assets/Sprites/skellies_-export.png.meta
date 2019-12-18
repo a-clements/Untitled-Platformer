@@ -1,0 +1,919 @@
+fileFormatVersion: 2
+guid: a8a4ad49451f89045b0ee1b2e219f055
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -784649157289339210
+    second: skellies_-export_0
+  - first:
+      213: 4870619923722861091
+    second: skellies_-export_1
+  - first:
+      213: 5359488530116360013
+    second: skellies_-export_2
+  - first:
+      213: -8208619961911308037
+    second: skellies_-export_3
+  - first:
+      213: 461761349793945959
+    second: skellies_-export_4
+  - first:
+      213: 8522020502591418526
+    second: skellies_-export_5
+  - first:
+      213: 1985507550644260209
+    second: skellies_-export_6
+  - first:
+      213: 1496013134077577857
+    second: skellies_-export_7
+  - first:
+      213: -3203370111215645871
+    second: skellies_-export_8
+  - first:
+      213: -6601792989509359294
+    second: skellies_-export_9
+  - first:
+      213: -462684470420479349
+    second: skellies_-export_10
+  - first:
+      213: -8517580596419636396
+    second: skellies_-export_11
+  - first:
+      213: 6433502596977410836
+    second: skellies_-export_12
+  - first:
+      213: 7654612183509216878
+    second: skellies_-export_13
+  - first:
+      213: -8378243003411729980
+    second: skellies_-export_14
+  - first:
+      213: 6312834670146228164
+    second: skellies_-export_15
+  - first:
+      213: -6888896191052070270
+    second: skellies_-export_16
+  - first:
+      213: 6553251810234853375
+    second: skellies_-export_17
+  - first:
+      213: 3663073828624329984
+    second: skellies_-export_18
+  - first:
+      213: -5061655079834444481
+    second: skellies_-export_19
+  - first:
+      213: -4267492218514223291
+    second: skellies_-export_20
+  - first:
+      213: 8367173728891424276
+    second: skellies_-export_21
+  - first:
+      213: -5451248042579044280
+    second: skellies_-export_22
+  - first:
+      213: -2033465508866358696
+    second: skellies_-export_23
+  - first:
+      213: 1515553855127762715
+    second: skellies_-export_24
+  - first:
+      213: -4268391187080204718
+    second: skellies_-export_25
+  - first:
+      213: -2129503453242516084
+    second: skellies_-export_26
+  - first:
+      213: -4247175099391349700
+    second: skellies_-export_27
+  - first:
+      213: -2565990392445574083
+    second: skellies_-export_28
+  - first:
+      213: 2573037517425464611
+    second: skellies_-export_29
+  - first:
+      213: -8623350449596396761
+    second: skellies_-export_30
+  - first:
+      213: -5445780092906693906
+    second: skellies_-export_31
+  - first:
+      213: 1568531359119989184
+    second: skellies_-export_32
+  - first:
+      213: -6836032364155242074
+    second: skellies_-export_33
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skellies_-export_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 884
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b6601a967a4fd4da6c2128035d370d
+      internalID: -784649157289339210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 884
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6f9f2248a58844daae375c033f292b
+      internalID: 4870619923722861091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 884
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8175a3ee870e446a9c244f0a8ee676
+      internalID: 5359488530116360013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 884
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46bea59a24529e047aaa65963f0e30fa
+      internalID: -8208619961911308037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_4
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 884
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74911a1c60bf4fe44ac0d657d68b36c9
+      internalID: 461761349793945959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 884
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31436c36629699f4094efe0424a3b846
+      internalID: 8522020502591418526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_6
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 884
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327a127e68a80084a86eefba45c9d6e2
+      internalID: 1985507550644260209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 744
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483af9423459c264699f7d6745d5e805
+      internalID: 1496013134077577857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 744
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a81f9d4bc0c0b468a01ec083cae92a
+      internalID: -3203370111215645871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 744
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74e62e4a3fbe7d408f73d32367d0c68
+      internalID: -6601792989509359294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_10
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 744
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce7a0685719229469314cc511b34f82
+      internalID: -462684470420479349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_11
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 744
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fe2737b0d8d38499131e2dd2bc0d21
+      internalID: -8517580596419636396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 744
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25716c90ce364af4db850d6eb5396c1f
+      internalID: 6433502596977410836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_13
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 744
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 538683a346764274388b4297917fff99
+      internalID: 7654612183509216878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 604
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1fcbf5f53a89d4291d907550dd3864
+      internalID: -8378243003411729980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 604
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6486defa96c124fb40b73018ec5082
+      internalID: 6312834670146228164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_16
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 604
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0feb82ade5095e44b8191889b4f45c08
+      internalID: -6888896191052070270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_17
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 604
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a12cf4531c2664585729cce0662855
+      internalID: 6553251810234853375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 604
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad861db96dd554e40be65db048003ced
+      internalID: 3663073828624329984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_19
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 604
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ce993a38e89ba47bba886febc40974
+      internalID: -5061655079834444481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8978b733176451a479883344d54630dd
+      internalID: -4267492218514223291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_21
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 464
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b560163130d31c94a9568c414796a973
+      internalID: 8367173728891424276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_22
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 464
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329b2589ddce180438b9226aea710dd2
+      internalID: -5451248042579044280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_23
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 464
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f219eb21cb1b14249ad625abea670c90
+      internalID: -2033465508866358696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_24
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 464
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60c1977d09e3b644bcabf0662b62bb6
+      internalID: 1515553855127762715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_25
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 464
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d13dacddf1995d4482162ea11f63b92
+      internalID: -4268391187080204718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_26
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 464
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d59a0cd82a4e38469e84e2cb0d45ead
+      internalID: -2129503453242516084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 324
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b905282c51e17147b936dfc28587283
+      internalID: -4247175099391349700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_28
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 324
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b738d329e72f974fa6f95aa1e7db0ea
+      internalID: -2565990392445574083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_29
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 324
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550909fd57de9444e8510e99457bf2f3
+      internalID: 2573037517425464611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_30
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 324
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a257ee0e762cc78408978516256946db
+      internalID: -8623350449596396761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_31
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 324
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c055b1ffeaf8ca43a90b7735652939e
+      internalID: -5445780092906693906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_32
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 324
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320b6d7ae77bcf94d8921c7d5d94fc67
+      internalID: 1568531359119989184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skellies_-export_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e2e9a7fe4612c44a01eff97314b55a
+      internalID: -6836032364155242074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Treasure : MonoBehaviour
 {
-    [SerializeField] private int PointValue;
+    [SerializeField] private int PointValue = 10;
 
     void Start()
     {

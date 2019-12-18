@@ -92,12 +92,12 @@ public class FlyingEnemyMove : MonoBehaviour
 
             if(Reverse == true)
             {
-                ThisTransform.eulerAngles = new Vector3(0, 0);
+                ThisTransform.eulerAngles = new Vector3(0, 0, 0);
             }
 
             else
             {
-                ThisTransform.eulerAngles = new Vector3(0, 180);
+                ThisTransform.eulerAngles = new Vector3(0, 180, 0);
             }
 
         }
@@ -111,12 +111,12 @@ public class FlyingEnemyMove : MonoBehaviour
 
             if(Reverse == true)
             {
-                ThisTransform.eulerAngles = new Vector3(0, 0);
+                ThisTransform.eulerAngles = new Vector3(0, 0, 0);
             }
 
             else
             {
-                ThisTransform.eulerAngles = new Vector3(180, 0);
+                ThisTransform.eulerAngles = new Vector3(180, 0, 0);
             }
         }
 
