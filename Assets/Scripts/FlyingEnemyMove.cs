@@ -106,17 +106,7 @@ public class FlyingEnemyMove : MonoBehaviour
         {
             if (ThisTransform.localPosition.y >= MaxYDistance || ThisTransform.localPosition.y <= MinYDistance)
             {
-                Reverse = !Reverse;
-            }
-
-            if(Reverse == true)
-            {
-                ThisTransform.eulerAngles = new Vector3(0, 0, 0);
-            }
-
-            else
-            {
-                ThisTransform.eulerAngles = new Vector3(180, 0, 0);
+                Speed *= -1.0f;
             }
         }
 
