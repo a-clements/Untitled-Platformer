@@ -10,7 +10,6 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float GravityMultiplier;
     [SerializeField] private float JumpModifier = 1.0f;
     [SerializeField] private float FallModifier = 1.5f;
-    [SerializeField] private GameObject SubObjects;
     public Animator PlayerAnimator;
     private Rigidbody2D RigidBody;
     private Transform ThisTransform;
@@ -29,6 +28,18 @@ public class PlayerMove : MonoBehaviour
     {
         RigidBody = GetComponent<Rigidbody2D>();
         ThisTransform = this.transform;
+    }
+
+    private void OnCollisionEnter2D(Collision2D CollisionInfo)
+    {
+        if (CollisionInfo.transform.tag == "Ground")
+        {
+            JumpCount = 1;
+            CanJump = true;
+
+            RigidBody.velocity = Vector2.zero;
+            RigidBody.angularVelocity = 0.0f;
+        }
     }
 
     void Start()
