@@ -16,8 +16,6 @@ public class FlyingEnemyMove : MonoBehaviour
     private FadeOut Fade;
     private AudioSource SFX;
 
-    [Tooltip("A declaration on if the direction of the flyer has been reversed. If it is false then the Y rotation must be set to 0. If it is true then the Y rotation must be set to 180.")]
-    [SerializeField] private bool Reverse;
     [Tooltip("The sprite to show upon death of the flyer goes here.")]
     [SerializeField] private Sprite DeathSprite;
     [Tooltip("A declaration of the time frame over which the flyer will fade after death.")]
@@ -42,6 +40,7 @@ public class FlyingEnemyMove : MonoBehaviour
     [SerializeField] private float MinYDistance = 0.0f;
     [Tooltip("Is the flyer dead. This variable does not get used by the designer but needs to be public for other scripts to access it.")]
     public bool Dead;
+    [SerializeField] private bool CanReverse;
 
     void Start()
     {
@@ -60,20 +59,24 @@ public class FlyingEnemyMove : MonoBehaviour
     {
         if (CollisionInfo.transform.tag == "Rock")
         {
-
             Dead = true;
         }
 
         if (CollisionInfo.transform.tag == "Ground" || CollisionInfo.transform.tag == "Enemy")
         {
-            Reverse = !Reverse;
+            Speed *= -1.0f;
         }
     }
 
-    // Update is called once per frame
-    void Update ()
+    private void FixedUpdate()
     {
-        if(Time.timeScale == 0)
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Time.timeScale == 0)
         {
             SFX.Pause();
         }
@@ -84,29 +87,30 @@ public class FlyingEnemyMove : MonoBehaviour
 
         if (XAxis == true)
         {
-            if (ThisTransform.localPosition.x >= MaxXDistance || ThisTransform.localPosition.x <= MinXDistance)
+            if (ThisTransform.localPosition.x >= MaxXDistance && CanReverse == true || ThisTransform.localPosition.x <= MinXDistance && CanReverse == true)
             {
-                Reverse = !Reverse;
-
+                Speed *= -1.0f;
+                Sprite.flipX = !Sprite.flipX;
+                CanReverse = false;
             }
 
-            if(Reverse == true)
+            if (ThisTransform.localPosition.x < MaxXDistance || ThisTransform.localPosition.x > MinXDistance)
             {
-                ThisTransform.eulerAngles = new Vector3(0, 0, 0);
+                CanReverse = true;
             }
-
-            else
-            {
-                ThisTransform.eulerAngles = new Vector3(0, 180, 0);
-            }
-
         }
 
         if (YAxis == true)
         {
-            if (ThisTransform.localPosition.y >= MaxYDistance || ThisTransform.localPosition.y <= MinYDistance)
+            if (ThisTransform.localPosition.y >= MaxYDistance && CanReverse == true || ThisTransform.localPosition.y <= MinYDistance && CanReverse == true)
             {
                 Speed *= -1.0f;
+                CanReverse = false;
+            }
+
+            if (ThisTransform.localPosition.y < MaxYDistance || ThisTransform.localPosition.y > MinYDistance)
+            {
+                CanReverse = true;
             }
         }
 
@@ -120,7 +124,7 @@ public class FlyingEnemyMove : MonoBehaviour
                 break;
         }
 
-        if(Dead == true)
+        if (Dead == true)
         {
             ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
             ScoreManager.UpdateScores(PointValue);
@@ -129,7 +133,7 @@ public class FlyingEnemyMove : MonoBehaviour
             ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
             ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
 
-            StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(),FadeOutTime));
+            StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(), FadeOutTime));
         }
-	}
+    }
 }
