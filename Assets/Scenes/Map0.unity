@@ -19651,6 +19651,11 @@ PrefabInstance:
       propertyPath: LowContrast
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6979977874568028886, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c302baad298440b6601430d6ef3be, type: 3}
 --- !u!1001 &899296759
@@ -38754,7 +38759,12 @@ PrefabInstance:
     - target: {fileID: 4072923454028994750, guid: dc660db0760915d469d61ab62c5721aa,
         type: 3}
       propertyPath: m_Name
-      value: PostProcess
+      value: Post Process
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072923454028994750, guid: dc660db0760915d469d61ab62c5721aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4072923454028994748, guid: dc660db0760915d469d61ab62c5721aa,
         type: 3}
@@ -38810,6 +38820,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171781640964614123, guid: dc660db0760915d469d61ab62c5721aa,
+        type: 3}
+      propertyPath: Saturation
+      value: -100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc660db0760915d469d61ab62c5721aa, type: 3}

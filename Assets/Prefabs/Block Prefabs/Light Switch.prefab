@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6979977874568028887}
   - component: {fileID: 6979977874568028885}
   - component: {fileID: 6979977874568028886}
+  - component: {fileID: 7721232939617779995}
   - component: {fileID: 6979977874568028884}
   m_Layer: 0
   m_Name: Light Switch
@@ -95,10 +96,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Exposure: 0
-  LowLight: -0.3
-  FullLight: 0
+  Contrast: 1
+  LowExposure: -1
+  FullExposure: 0
+  LowContrast: 0
+  FullContrast: 1
   Tilemap: {fileID: 0}
   Lights: {fileID: 0}
+--- !u!114 &7721232939617779995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979977874568028888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776ccfc6f4342e5448bf866b789f8e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PostProcess: {fileID: 0}
+  Value: 16.67
 --- !u!61 &6979977874568028884
 BoxCollider2D:
   m_ObjectHideFlags: 0

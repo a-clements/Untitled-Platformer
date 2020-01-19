@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4072923454028994749}
   - component: {fileID: 6171781640964614123}
   m_Layer: 8
-  m_Name: PostProcess
+  m_Name: Post Process
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
