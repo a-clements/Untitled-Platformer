@@ -33,7 +33,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.42, y: -3.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7196528222197624423}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -251,18 +252,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bd00915bd475c4b8d80c56cc70ec11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Reverse: 0
-  DeathSprite: {fileID: 0}
-  FadeOutTime: 1
   PointValue: 0
-  Direction: 
+  FadeOutTime: 1
+  DeathSprite: {fileID: 0}
+  IsMoving: 0
   Speed: 1
-  XAxis: 0
-  MaxXDistance: 0
-  MinXDistance: 0
-  YAxis: 0
-  MaxYDistance: 0
-  MinYDistance: 0
+  Points: []
   Dead: 0
 --- !u!114 &3147331610985716600
 MonoBehaviour:
@@ -276,3 +271,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1d64c5e5e1e6e46850853a588c6b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8486693667840832948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7196528222197624423}
+  - component: {fileID: 7504712129856604559}
+  m_Layer: 0
+  m_Name: RockSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7196528222197624423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486693667840832948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3147331610985716604}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7504712129856604559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486693667840832948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849f908d385f8714f86d69edbdc183e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rock: {fileID: 1790570571939622, guid: da63f87228db9174dae87a9d754bffb1, type: 3}
+  PooledObjects: 10
+  FireRate: 0.5
+  Speed: 64
+  NextFire: 1
