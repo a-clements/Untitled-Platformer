@@ -37,6 +37,7 @@ public class FlyingEnemyMove : MonoBehaviour
         ThisTransform = transform;
         RigidBody = GetComponent<Rigidbody2D>();
         Sprite = GetComponent<SpriteRenderer>();
+        Fade = GetComponent<FadeOut>();
 
         if (IsMoving == true)
         {
@@ -46,21 +47,31 @@ public class FlyingEnemyMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D CollisionInfo)
     {
-        if (CollisionInfo.transform.tag == "Ground")
+        if(CollisionInfo.transform.tag == "Ground")
         {
             //Reverse = !Reverse;
+        }
+
+        if(CollisionInfo.transform.tag == "Rock")
+        {
+            Dead = true;
+        }
+
+        if(CollisionInfo.transform.tag == "Player")
+        {
+            CollisionInfo.transform.GetComponent<PlayerHealth>().LoseLife();
         }
     }
 
     void Update()
     {
-        if (IsMoving == true)
+        if(IsMoving == true)
         {
-            if (ThisTransform.position == Points[PointNumber])
+            if(ThisTransform.position == Points[PointNumber])
             {
                 PointNumber++;
 
-                if (PointNumber == Points.Length)
+                if(PointNumber == Points.Length)
                 {
                     PointNumber = 0;
                 }
@@ -73,7 +84,7 @@ public class FlyingEnemyMove : MonoBehaviour
             ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed);
         }  
 
-        if (Dead == true)
+        if(Dead == true)
         {
             ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
             ScoreManager.UpdateScores(PointValue);
