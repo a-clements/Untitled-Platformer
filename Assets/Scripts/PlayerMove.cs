@@ -53,16 +53,16 @@ public class PlayerMove : MonoBehaviour
             #region Walk Left
             if (Input.GetKey(Manager.Keys[0]))
             {
-                ThisTransform.eulerAngles = new Vector3(0, 180);
+                ThisTransform.GetComponent<SpriteRenderer>().flipX = false;
 
-                ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
+                ThisTransform.Translate(Vector2.left * Time.deltaTime * RunSpeed, Space.Self);
             }
             #endregion
 
             #region Walk Right
             if (Input.GetKey(Manager.Keys[1]))
             {
-                ThisTransform.eulerAngles =  new Vector3(0, 0);
+                ThisTransform.GetComponent<SpriteRenderer>().flipX = true;
 
                 ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
             }

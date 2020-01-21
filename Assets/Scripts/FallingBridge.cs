@@ -43,9 +43,9 @@ public class FallingBridge : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D CollisionInfo)
+    private void OnCollisionStay2D(Collision2D CollisionInfo)
     {
-        if(CollisionInfo.transform.tag == "Player" && IsFallingBridge == true)
+        if (CollisionInfo.transform.tag == "Player" && IsFallingBridge == true)
         {
             StartCoroutine(Fall());
         }
@@ -57,7 +57,7 @@ public class FallingBridge : MonoBehaviour
 
         Direction = "Fall";
 
-        yield return new WaitForSeconds(WaitTimer);
+        yield return null;
     }
 
     IEnumerator Rise()
