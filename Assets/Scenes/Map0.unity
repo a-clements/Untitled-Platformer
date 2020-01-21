@@ -6087,6 +6087,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -6153,11 +6158,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -6393,6 +6393,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -6459,11 +6464,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7051,6 +7051,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -7117,11 +7122,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7333,7 +7333,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -8245,6 +8245,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -8311,11 +8316,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8701,7 +8701,7 @@ PrefabInstance:
     - target: {fileID: 1211305407845736607, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.5
+      value: 60.5
       objectReference: {fileID: 0}
     - target: {fileID: 1211305407845736607, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
@@ -8913,6 +8913,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -8979,11 +8984,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -11978,6 +11978,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -12044,11 +12049,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -12748,7 +12748,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -15254,7 +15254,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -18707,7 +18707,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -19093,7 +19093,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -19992,6 +19992,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -20058,11 +20063,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -26251,6 +26251,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -26317,11 +26322,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -26542,7 +26542,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -26715,7 +26715,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -27186,6 +27186,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -27252,11 +27257,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -27424,7 +27424,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -29290,7 +29290,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -29381,6 +29381,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -29447,11 +29452,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -30298,6 +30298,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -30364,11 +30369,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -32007,7 +32007,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -32373,12 +32373,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1533815933}
     m_Modifications:
-    - target: {fileID: -2644718181937166858, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: Rock
-      value: 
-      objectReference: {fileID: 1790570571939622, guid: da63f87228db9174dae87a9d754bffb1,
-        type: 3}
     - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Name
@@ -32439,17 +32433,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2644718181937166858, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: Rock
+      value: 
+      objectReference: {fileID: 1790570571939622, guid: da63f87228db9174dae87a9d754bffb1,
+        type: 3}
     - target: {fileID: 8486693667840832948, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000,
         type: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0627f015e9470aa429d3cc2331101eab, type: 3}
 --- !u!4 &1557242970 stripped
@@ -32757,7 +32757,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -33042,6 +33042,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -33108,11 +33113,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -35870,7 +35870,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -38104,6 +38104,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -38170,11 +38175,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -40578,7 +40578,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -40779,7 +40779,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -40890,7 +40890,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -41420,6 +41420,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -41486,11 +41491,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -41835,6 +41835,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -41906,11 +41911,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -41998,7 +41998,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: WaitTimer
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -42277,6 +42277,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -42343,11 +42348,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
       value: 0

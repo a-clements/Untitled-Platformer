@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class RockCollision : MonoBehaviour
 {
-    public float Distance;
+    [SerializeField] private float Distance = 5.0f;
+    [SerializeField] private float Knockback = 3.0f;
+
     private void OnEnable()
     {
         //called second
@@ -20,16 +22,34 @@ public class RockCollision : MonoBehaviour
         //called third
     }
 
-    private void OnCollisionEnter2D(Collision2D CollisionInfo)
+    private void OnTriggerEnter2D(Collider2D TriggerInfo)
     {
-        if (CollisionInfo.transform.tag == "Enemy")
+        if (TriggerInfo.transform.tag == "Enemy")
+        {
+            this.gameObject.SetActive(false);
+            TriggerInfo.transform.GetComponent<FlyingEnemyMove>().Dead = true;
+        }
+
+        if (TriggerInfo.transform.tag == "Ground")
         {
             this.gameObject.SetActive(false);
         }
 
-        if (CollisionInfo.transform.tag == "Ground")
+        if (TriggerInfo.transform.tag == "Player")
         {
             this.gameObject.SetActive(false);
+
+            TriggerInfo.transform.GetComponent<PlayerHealth>().LoseLife();
+
+            if (TriggerInfo.transform.GetComponent<SpriteRenderer>().flipX == false)
+            {
+                TriggerInfo.GetComponent<Rigidbody2D>().AddForce((Vector2.right + Vector2.up) * Knockback ,ForceMode2D.Impulse);
+            }
+
+            else
+            {
+                TriggerInfo.GetComponent<Rigidbody2D>().AddForce((Vector2.left + Vector2.up) * Knockback, ForceMode2D.Impulse);
+            }
         }
     }
 

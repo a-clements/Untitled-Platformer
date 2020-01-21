@@ -48,6 +48,8 @@ public class EnemyShoot : MonoBehaviour
                     RockList[i].transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
 
                     RockList[i].GetComponent<Rigidbody2D>().velocity = Vector2.down * Speed * Time.deltaTime;
+
+                    break;
                 }
             }
         }

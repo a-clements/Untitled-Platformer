@@ -52,11 +52,6 @@ public class FlyingEnemyMove : MonoBehaviour
             //Reverse = !Reverse;
         }
 
-        if(CollisionInfo.transform.tag == "Rock")
-        {
-            Dead = true;
-        }
-
         if(CollisionInfo.transform.tag == "Player")
         {
             CollisionInfo.transform.GetComponent<PlayerHealth>().LoseLife();
