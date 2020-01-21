@@ -8,7 +8,7 @@ public class CameraShake : MonoBehaviour
 {
     [SerializeField] private Camera MainCamera;
     [SerializeField] private Image ShoutMetre;
-    [Range(0, 0.5f)]
+    [Range(0, 1.0f)]
     [SerializeField] private float ShakeMagnitude = 0.5f;
     [Range(0.1f, 0.9f)]
     [SerializeField] private float Volume = 0.4f;
@@ -31,8 +31,6 @@ public class CameraShake : MonoBehaviour
         //OnEvent.AddListener(Ping);
 
         //Threshhold.text = Volume.ToString();
-
-        OriginalPosition = MainCamera.transform.localPosition;
     }
 
     //void Ping()
@@ -53,14 +51,16 @@ public class CameraShake : MonoBehaviour
 
     IEnumerator Shake()
     {
+        OriginalPosition = MainCamera.transform.localPosition;
+
         MainCamera.GetComponent<CameraFollow>().enabled = false;
 
-        while(ShoutMetre.fillAmount > 0)
+        while (ShoutMetre.fillAmount > 0)
         {
             XShake = Random.Range(-1.0f, 1.0f) * ShakeMagnitude;
             YShake = Random.Range(-1.0f, 1.0f) * ShakeMagnitude;
 
-            MainCamera.transform.localPosition = new Vector3(XShake, YShake, OriginalPosition.z);
+            MainCamera.transform.localPosition = new Vector3(OriginalPosition.x - XShake, OriginalPosition.y - YShake, OriginalPosition.z);
 
             ShoutMetre.fillAmount -= Time.deltaTime;
             yield return null;
