@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class FlyingEnemyMove : MonoBehaviour
@@ -17,6 +18,7 @@ public class FlyingEnemyMove : MonoBehaviour
     private AudioSource SFX;
     private Vector3 NextPosition;
     private int PointNumber = 0;
+    [SerializeField]private Image ShoutMetre;
 
     [Tooltip("A declaration of how many points will be added to the score when the flyer dies.")]
     [SerializeField] private int PointValue;
@@ -31,9 +33,11 @@ public class FlyingEnemyMove : MonoBehaviour
     [Tooltip("An array of points at which the enemy will stop.")]
     [SerializeField] private Vector3[] Points;
     public bool Dead;
+    [SerializeField] private float RefillAmount = 0.1f;
 
     void Start()
     {
+        ShoutMetre = GameObject.Find("Post Process Canvas").transform.GetChild(0).GetComponent<Image>();
         ThisTransform = transform;
         RigidBody = GetComponent<Rigidbody2D>();
         Sprite = GetComponent<SpriteRenderer>();
@@ -81,6 +85,11 @@ public class FlyingEnemyMove : MonoBehaviour
 
         if(Dead == true)
         {
+            if(ShoutMetre.fillAmount < 1.0f)
+            {
+                ShoutMetre.fillAmount += RefillAmount;
+            }
+
             ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
             ScoreManager.UpdateScores(PointValue);
             ThisTransform.GetComponent<FlyingEnemyMove>().enabled = false;
