@@ -63,7 +63,7 @@ public class ButtonRemapping : MonoBehaviour
         OldKeycode = GameManager.Keys[Index];
         Button.transform.GetChild(0).GetComponent<Text>().text = "Please enter a new key";
 
-        GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+        //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
@@ -103,27 +103,27 @@ public class ButtonRemapping : MonoBehaviour
                         if (keytext == "SysReq")
                         {
                             Button.transform.GetChild(0).GetComponent<Text>().text = "System Requirements";
-                            GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                            //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
                         }
                         else
                         {
                             keytext = keytext.Substring(0, 5) + " " + keytext.Substring(5, stringlength - 5);
 
                             Button.transform.GetChild(0).GetComponent<Text>().text = keytext;
-                            GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                            //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
                         }
                     }
                     else
                     {
                         Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                        GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                        //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
                     }
 
                     IsButtonPressed = false;
                 }
                 else
                 {
-                    GameManager.Speak("Cancel");
+                    //GameManager.Speak("Cancel");
                     Keycode = GameManager.Keys[Index];
                     Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
                     IsButtonPressed = false;
@@ -153,7 +153,7 @@ public class ButtonRemapping : MonoBehaviour
             keytext = keytext.Substring(0, 5) + " " + keytext.Substring(5, stringlength - 5);
 
             Button.transform.GetChild(0).GetComponent<Text>().text = keytext;
-            GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+            //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
 
             IsButtonPressed = false;
         }
@@ -191,7 +191,7 @@ public class ButtonRemapping : MonoBehaviour
             {
                 IsButtonPressed = false;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak("Cancel");
+                //GameManager.Speak("Cancel");
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton2))
@@ -200,7 +200,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton2;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Action 1";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton3))
@@ -209,7 +209,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton3;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Action 2";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton4))
@@ -218,7 +218,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton4;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Left Bumper";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton5))
@@ -227,7 +227,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton5;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Right Bumper";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton6))
@@ -236,7 +236,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton6;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Status";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton7))
@@ -245,7 +245,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton7;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Pause";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton8))
@@ -254,7 +254,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton8;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Left Analogue Button";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton9))
@@ -263,7 +263,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton9;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Right Analogue Button";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton10))
@@ -272,7 +272,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton10;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton11))
@@ -281,7 +281,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton11;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton12))
@@ -290,7 +290,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton12;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton13))
@@ -299,7 +299,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton13;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton14))
@@ -308,7 +308,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton14;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton15))
@@ -317,7 +317,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton15;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton16))
@@ -326,7 +326,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton16;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton17))
@@ -335,7 +335,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton17;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton18))
@@ -344,7 +344,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton18;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetKeyDown(KeyCode.JoystickButton19))
@@ -353,7 +353,7 @@ public class ButtonRemapping : MonoBehaviour
                 Keycode = KeyCode.JoystickButton19;
                 GameManager.Keys[Index] = Keycode;
                 Button.transform.GetChild(0).GetComponent<Text>().text = Keycode.ToString();
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             if (Input.GetAxis("Horizontal") != 0.0f)
@@ -364,7 +364,7 @@ public class ButtonRemapping : MonoBehaviour
 
                 GameManager.Keys[Index] = KeyCode.None;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Left Thumbstick Horizontal";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             if (Input.GetAxis("Vertical") != 0.0f)
@@ -375,7 +375,7 @@ public class ButtonRemapping : MonoBehaviour
 
                 GameManager.Keys[Index] = KeyCode.None;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Left Thumbstick Vertical";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             if (Input.GetAxis("Right Thumbstick Horizontal") != 0.0f)
@@ -386,7 +386,7 @@ public class ButtonRemapping : MonoBehaviour
 
                 GameManager.Keys[Index] = KeyCode.None;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Right Thumbstick Horizontal";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             if (Input.GetAxis("Right Thumbstick Vertical") != 0.0f)
@@ -397,7 +397,7 @@ public class ButtonRemapping : MonoBehaviour
 
                 GameManager.Keys[Index] = KeyCode.None;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Right Thumbstick Vertical";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetAxis("Left Trigger") != 0.0f)
@@ -408,7 +408,7 @@ public class ButtonRemapping : MonoBehaviour
 
                 GameManager.Keys[Index] = KeyCode.None;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Left Trigger";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetAxis("Right Trigger") != 0.0f)
@@ -419,7 +419,7 @@ public class ButtonRemapping : MonoBehaviour
 
                 GameManager.Keys[Index] = KeyCode.None;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "Right Trigger";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetAxis("DPad Vertical") != 0.0f)
@@ -430,7 +430,7 @@ public class ButtonRemapping : MonoBehaviour
 
                 GameManager.Keys[Index] = KeyCode.None;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "DPad Vertical";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             else if (Input.GetAxis("DPad Horizontal") != 0.0f)
@@ -441,7 +441,7 @@ public class ButtonRemapping : MonoBehaviour
 
                 GameManager.Keys[Index] = KeyCode.None;
                 Button.transform.GetChild(0).GetComponent<Text>().text = "DPad Horizontal";
-                GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+                //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
             }
 
             yield return null;

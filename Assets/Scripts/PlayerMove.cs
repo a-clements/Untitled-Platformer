@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     public int JumpCount = 1;
     public bool CanJump = true;
     public Transform Checkpoint;
-    public Vector2 OriginalCameraPosition;
+    //public Vector2 OriginalCameraPosition;
 
 
     private void Awake()
@@ -126,7 +126,7 @@ public class PlayerMove : MonoBehaviour
             PlayerAnimator.SetBool("IsJumping", false);
         }
 
-        else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[6]))
+        else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
         {
             RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.deltaTime;
         }
