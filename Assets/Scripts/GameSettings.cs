@@ -19,7 +19,6 @@ public class GameSettings
     public string Rightkey;
     public string Fireleftkey;
     public string Fireupkey;
-    public string Firediagonalkey;
     public string Throwkey;
     public string Jumpkey;
     //public string movement0;
@@ -104,19 +103,6 @@ public class GameSettings
         set
         {
             Fireupkey = value;
-        }
-    }
-
-    public string FireDiagonalKey
-    {
-        get
-        {
-            return Firediagonalkey;
-        }
-
-        set
-        {
-            Firediagonalkey = value;
         }
     }
 

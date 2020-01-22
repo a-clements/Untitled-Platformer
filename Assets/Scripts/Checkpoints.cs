@@ -14,33 +14,46 @@ public class Checkpoints : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D TriggerInfo)
+    private void OnTriggerStay2D(Collider2D TriggerInfo)
     {
         if (TriggerInfo.gameObject.tag == "Player")
         {
             TriggerInfo.GetComponent<PlayerMove>().Checkpoint = this.transform;
             ScoreManager.SaveScores();
-        }
 
-        if (Panel != null)
-        {
-            Panel.SetActive(true);
+            if (Panel != null)
+            {
+                Panel.SetActive(true);
+            }
         }
     }
 
-    //private void OnTriggerExit2D(Collider2D TriggerInfo)
-    //{
-    //    if (Panel != null)
-    //    {
-    //        Panel.SetActive(false);
-    //    }
-    //}
+    private void OnTriggerExit2D(Collider2D TriggerInfo)
+    {
+        if (TriggerInfo.gameObject.tag == "Player")
+        {
+            if (Panel != null)
+            {
+                Panel.SetActive(false);
+            }
+        }
+    }
 
     private void OnGUI()
     {
         KeyEvent = Event.current;
 
         if(KeyEvent.isKey)
+        {
+            StartCoroutine(ClosePanel());
+        }
+    }
+
+    IEnumerator ClosePanel()
+    {
+        yield return null;
+
+        if (Panel != null)
         {
             Panel.SetActive(false);
         }
