@@ -66,7 +66,7 @@ public class RockThrow : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(Manager.Keys[5]))
+        if (Input.GetKey(Manager.Keys[4]))
         {
             Throw();
         }

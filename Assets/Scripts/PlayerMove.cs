@@ -103,7 +103,7 @@ public class PlayerMove : MonoBehaviour
         #endregion
 
         #region Jump
-        if (Input.GetKeyDown(Manager.Keys[6]))
+        if (Input.GetKeyDown(Manager.Keys[5]))
         {
             if (CanJump == true)
             {
