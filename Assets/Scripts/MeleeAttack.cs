@@ -25,11 +25,6 @@ public class MeleeAttack : MonoBehaviour
         {
             StartCoroutine(AttackUp());
         }
-
-        if(Input.GetKeyDown(Manager.Keys[4]))
-        {
-            StartCoroutine(AttackDiagonal());
-        }
     }
 
     IEnumerator Attack()
