@@ -7,12 +7,14 @@ public class Checkpoints : MonoBehaviour
 {
     [SerializeField] private GameObject Panel;
 
+    Event KeyEvent;
+
     private void Start()
     {
 
     }
 
-    private void OnTriggerStay2D(Collider2D TriggerInfo)
+    private void OnTriggerEnter2D(Collider2D TriggerInfo)
     {
         if (TriggerInfo.gameObject.tag == "Player")
         {
@@ -26,9 +28,19 @@ public class Checkpoints : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D TriggerInfo)
+    //private void OnTriggerExit2D(Collider2D TriggerInfo)
+    //{
+    //    if (Panel != null)
+    //    {
+    //        Panel.SetActive(false);
+    //    }
+    //}
+
+    private void OnGUI()
     {
-        if (Panel != null)
+        KeyEvent = Event.current;
+
+        if(KeyEvent.isKey)
         {
             Panel.SetActive(false);
         }
