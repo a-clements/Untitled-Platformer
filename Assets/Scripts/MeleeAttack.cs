@@ -54,21 +54,4 @@ public class MeleeAttack : MonoBehaviour
         this.transform.localPosition = new Vector2(0, 0);
         yield return null;
     }
-
-    IEnumerator AttackDiagonal()
-    {
-        if (this.transform.root.GetComponent<SpriteRenderer>().flipX == false)
-        {
-            this.transform.localPosition = new Vector2(this.transform.parent.position.x + MeleeDistance, this.transform.parent.position.y + MeleeDistance);
-        }
-
-        else
-        {
-            this.transform.localPosition = new Vector2(this.transform.parent.position.x - MeleeDistance, this.transform.parent.position.y + MeleeDistance);
-        }
-
-        yield return new WaitForSeconds(AttackTimer);
-        this.transform.localPosition = new Vector2(0, 0);
-        yield return null;
-    }
 }
