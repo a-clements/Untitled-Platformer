@@ -14,7 +14,7 @@ public class Checkpoints : MonoBehaviour
 
     }
 
-    private void OnTriggerStay2D(Collider2D TriggerInfo)
+    private void OnTriggerEnter2D(Collider2D TriggerInfo)
     {
         if (TriggerInfo.gameObject.tag == "Player")
         {
@@ -24,6 +24,7 @@ public class Checkpoints : MonoBehaviour
             if (Panel != null)
             {
                 Panel.SetActive(true);
+                Time.timeScale = 0;
             }
         }
     }
@@ -35,6 +36,7 @@ public class Checkpoints : MonoBehaviour
             if (Panel != null)
             {
                 Panel.SetActive(false);
+                Time.timeScale = 1;
             }
         }
     }
@@ -43,9 +45,12 @@ public class Checkpoints : MonoBehaviour
     {
         KeyEvent = Event.current;
 
-        if(KeyEvent.isKey)
+        if (KeyEvent.isKey)
         {
-            StartCoroutine(ClosePanel());
+            if(KeyEvent.keyCode != KeyCode.A || KeyEvent.keyCode != KeyCode.D)
+            {
+                StartCoroutine(ClosePanel());
+            }
         }
     }
 
@@ -56,6 +61,7 @@ public class Checkpoints : MonoBehaviour
         if (Panel != null)
         {
             Panel.SetActive(false);
+            Time.timeScale = 1;
         }
     }
 }
