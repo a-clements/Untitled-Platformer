@@ -80,7 +80,7 @@ public class FlyingEnemyMove : MonoBehaviour
                 Sprite.flipX = !Sprite.flipX;
             }
 
-            ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed);
+            ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed * Time.deltaTime);
         }  
 
         if(Dead == true)

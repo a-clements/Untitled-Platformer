@@ -57,7 +57,7 @@ public class MovingPlatform : MonoBehaviour
                 NextPosition = Points[PointNumber];
             }
 
-            ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed);
+            ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed * Time.deltaTime);
         }
     }
 }
