@@ -51,7 +51,9 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        #region Walking
+        if(Time.timeScale > 0)
+        {
+            #region Walking
             #region Walk Left
             if (Input.GetKey(Manager.Keys[0]))
             {
@@ -68,10 +70,10 @@ public class PlayerMove : MonoBehaviour
 
                 ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
             }
-        #endregion
+            #endregion
 
             #region Start Walking
-            if(Input.GetKey(Manager.Keys[0]) || Input.GetKey(Manager.Keys[1]))
+            if (Input.GetKey(Manager.Keys[0]) || Input.GetKey(Manager.Keys[1]))
             {
                 PlayerAnimator.SetBool("IsWalking", true);
             }
@@ -84,13 +86,13 @@ public class PlayerMove : MonoBehaviour
             }
             #endregion
 
-            if(PlayerAnimator.GetBool("IsWalking") == true || PlayerAnimator.GetBool("IsJumping") == true)
+            if (PlayerAnimator.GetBool("IsWalking") == true || PlayerAnimator.GetBool("IsJumping") == true)
             {
                 BoxCollider.offset = new Vector2(0.0f, -.07f);
                 BoxCollider.size = new Vector2(0.5f, 1.0f);
             }
-            
-            else if(PlayerAnimator.GetBool("IsIdle") == true)
+
+            else if (PlayerAnimator.GetBool("IsIdle") == true)
             {
                 BoxCollider.offset = new Vector2(0, -.32f);
                 BoxCollider.size = new Vector2(0.5f, 0.5f);
@@ -100,24 +102,25 @@ public class PlayerMove : MonoBehaviour
             {
 
             }
-        #endregion
+            #endregion
 
-        #region Jump
-        if (Input.GetKeyDown(Manager.Keys[5]))
-        {
-            if (CanJump == true)
+            #region Jump
+            if (Input.GetKeyDown(Manager.Keys[5]))
             {
-                RigidBody.velocity = Vector2.up * JumpHeight * Time.deltaTime;
-                JumpCount--;
-
-                if (JumpCount < 0)
+                if (CanJump == true)
                 {
-                    CanJump = false;
+                    RigidBody.velocity = Vector2.up * JumpHeight * Time.deltaTime;
+                    JumpCount--;
+
+                    if (JumpCount < 0)
+                    {
+                        CanJump = false;
+                    }
+                    PlayerAnimator.SetBool("IsJumping", true);
                 }
-                PlayerAnimator.SetBool("IsJumping", true);
             }
+            #endregion
         }
-        #endregion
 
         #region Jump Realism
         if (RigidBody.velocity.y < 0)

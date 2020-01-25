@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Checkpoints : MonoBehaviour
 {
     [SerializeField] private GameObject Panel;
+    [SerializeField] EventSystem GetEventSystem;
 
     Event KeyEvent;
 
     private void Start()
     {
-
+        GetEventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
     }
 
     private void OnTriggerEnter2D(Collider2D TriggerInfo)
@@ -24,6 +26,8 @@ public class Checkpoints : MonoBehaviour
             if (Panel != null)
             {
                 Panel.SetActive(true);
+                GetEventSystem.firstSelectedGameObject = Panel.transform.GetChild(0).gameObject;
+                Panel.transform.GetChild(0).GetComponent<Button>().Select();
                 Time.timeScale = 0;
             }
         }
@@ -45,11 +49,14 @@ public class Checkpoints : MonoBehaviour
     {
         KeyEvent = Event.current;
 
-        if (KeyEvent.isKey)
+        if(Panel != null)
         {
-            if(KeyEvent.keyCode != KeyCode.A || KeyEvent.keyCode != KeyCode.D)
+            if (KeyEvent.isKey && Panel.activeSelf)
             {
-                StartCoroutine(ClosePanel());
+                if (KeyEvent.keyCode == KeyCode.Escape)
+                {
+                    StartCoroutine(ClosePanel());
+                }
             }
         }
     }
