@@ -9244,6 +9244,21 @@ PrefabInstance:
       propertyPath: LowContrast
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Tilemap
+      value: 
+      objectReference: {fileID: 1605633373}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Lights
+      value: 
+      objectReference: {fileID: 1078516386}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: MethodNumber
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c302baad298440b6601430d6ef3be, type: 3}
 --- !u!4 &513729831 stripped
@@ -20585,9 +20600,35 @@ PrefabInstance:
     - target: {fileID: 6979977874568028886, guid: fe8c302baad298440b6601430d6ef3be,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Value
+      value: 16.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Tilemap
+      value: 
+      objectReference: {fileID: 71175606}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Lights
+      value: 
+      objectReference: {fileID: 1484023635}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: MethodNumber
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7721232939617779995, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7721232939617779995, guid: fe8c302baad298440b6601430d6ef3be, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fe8c302baad298440b6601430d6ef3be, type: 3}
 --- !u!1001 &899296759
 PrefabInstance:
@@ -20771,6 +20812,16 @@ PrefabInstance:
       propertyPath: LowContrast
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Tilemap
+      value: 
+      objectReference: {fileID: 1489018882}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Lights
+      value: 
+      objectReference: {fileID: 1797873880}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c302baad298440b6601430d6ef3be, type: 3}
 --- !u!1001 &911419766
@@ -22705,6 +22756,16 @@ PrefabInstance:
       propertyPath: LowContrast
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Tilemap
+      value: 
+      objectReference: {fileID: 1594896874}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Lights
+      value: 
+      objectReference: {fileID: 894061334}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c302baad298440b6601430d6ef3be, type: 3}
 --- !u!1001 &1043697160
@@ -33527,6 +33588,16 @@ PrefabInstance:
       propertyPath: LowContrast
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Tilemap
+      value: 
+      objectReference: {fileID: 1574481562}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Lights
+      value: 
+      objectReference: {fileID: 70388677}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c302baad298440b6601430d6ef3be, type: 3}
 --- !u!4 &1511429161 stripped
@@ -33639,6 +33710,16 @@ PrefabInstance:
       propertyPath: LowContrast
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Tilemap
+      value: 
+      objectReference: {fileID: 1675833207}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Lights
+      value: 
+      objectReference: {fileID: 1355891964}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c302baad298440b6601430d6ef3be, type: 3}
 --- !u!1 &1533815932
@@ -40500,7 +40581,7 @@ PrefabInstance:
     - target: {fileID: 4072923454028994750, guid: dc660db0760915d469d61ab62c5721aa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4072923454028994748, guid: dc660db0760915d469d61ab62c5721aa,
         type: 3}
@@ -40560,7 +40641,7 @@ PrefabInstance:
     - target: {fileID: 6171781640964614123, guid: dc660db0760915d469d61ab62c5721aa,
         type: 3}
       propertyPath: Saturation
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc660db0760915d469d61ab62c5721aa, type: 3}

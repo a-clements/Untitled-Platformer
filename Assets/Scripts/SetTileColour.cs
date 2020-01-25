@@ -14,7 +14,7 @@ public class SetTileColour : MonoBehaviour
     [Range(0, 1)]
     public float Contrast = 1.0f;
 
-    [SerializeField] private float LowExposure = -1.0f;
+    [SerializeField] private float LowExposure = -0.3f;
     [SerializeField] private float FullExposure = 0.0f;
 
     [SerializeField] private float LowContrast = 0.0f;
