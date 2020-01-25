@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
 public class LightSwitch : MonoBehaviour
 {
     private MaterialPropertyBlock PropertyBlock;
@@ -34,10 +33,11 @@ public class LightSwitch : MonoBehaviour
 
     void Start()
     {
-        switch(MethodNumber)
+        PostProcess = GameObject.Find("Post Process");
+
+        switch (MethodNumber)
         {
             case 0:
-                PostProcess = GameObject.Find("Post Process");
                 PostProcess.GetComponent<ColourGrading>().Saturation = -100;
                 break;
 
@@ -75,7 +75,7 @@ public class LightSwitch : MonoBehaviour
             {
                 case 0:
                     PostProcess.GetComponent<ColourGrading>().Saturation += Value;
-                    this.enabled = false;
+                    Value = 0.0f;
                     break;
 
                 case 1:
