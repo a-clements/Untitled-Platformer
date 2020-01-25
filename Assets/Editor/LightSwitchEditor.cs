@@ -12,13 +12,11 @@ public class LightSwitchEditor : Editor
     {
         LightSwitch Lightswitch = (LightSwitch)target;
 
-        EditorUtility.SetDirty(target);
-
         PanelNumber = GUILayout.Toolbar(PanelNumber, new string[] { "Saturation", "Lights Out"});
 
-
-
         Lightswitch.MethodNumber = PanelNumber;
+
+        EditorUtility.SetDirty(target);
 
         base.OnInspectorGUI();
     }
