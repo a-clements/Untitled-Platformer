@@ -4,19 +4,24 @@ using UnityEngine;
 using UnityEditor;
 
 [CustomEditor(typeof(LightSwitch))]
+[CanEditMultipleObjects]
 public class LightSwitchEditor : Editor
 {
     public int PanelNumber;
+    SerializedProperty Method;
+
+    private void OnEnable()
+    {
+        Method = serializedObject.FindProperty("MethodNumber");
+    }
 
     public override void OnInspectorGUI()
     {
-        LightSwitch Lightswitch = (LightSwitch)target;
+        serializedObject.Update();
 
-        PanelNumber = GUILayout.Toolbar(PanelNumber, new string[] { "Saturation", "Lights Out"});
+        Method.intValue = GUILayout.Toolbar(Method.intValue, new string[] { "Saturation", "Lights Out"});
 
-        Lightswitch.MethodNumber = PanelNumber;
-
-        EditorUtility.SetDirty(target);
+        serializedObject.ApplyModifiedProperties();
 
         base.OnInspectorGUI();
     }
