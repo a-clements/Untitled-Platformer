@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3387401467479141535
 Transform:
   m_ObjectHideFlags: 0
@@ -199,7 +199,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3958334, y: 1.3541666}
+    oldSize: {x: 1.3666667, y: 1.3472222}
     newSize: {x: 2.7333333, y: 2.6944444}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -239,12 +239,10 @@ MonoBehaviour:
   GravityMultiplier: 2
   JumpModifier: 1
   FallModifier: 1.5
-  SubObjects: {fileID: 0}
   PlayerAnimator: {fileID: 3434565583055710541}
   JumpCount: 1
   CanJump: 1
   Checkpoint: {fileID: 0}
-  OriginalCameraPosition: {x: 0, y: 0}
 --- !u!114 &5773494915484282218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +266,7 @@ Animator:
   m_GameObject: {fileID: 1211305407845736603}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b587fc99ec18acf49b3497f6f350eb6f, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -287,6 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429249590708278755}
   - component: {fileID: 5138295582255414811}
+  - component: {fileID: 9077561394843252138}
   m_Layer: 0
   m_Name: MeleeAttack
   m_TagString: Untagged
@@ -322,6 +321,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackTimer: 0.5
   MeleeDistance: 0.5
+--- !u!58 &9077561394843252138
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2538241286286453464}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
 --- !u!1 &4941476712472113313
 GameObject:
   m_ObjectHideFlags: 0

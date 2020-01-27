@@ -57,7 +57,9 @@ public class PlayerMove : MonoBehaviour
             #region Walk Left
             if (Input.GetKey(Manager.Keys[0]))
             {
-                ThisTransform.GetComponent<SpriteRenderer>().flipX = false;
+                //ThisTransform.GetComponent<SpriteRenderer>().flipX = false;
+
+                this.transform.rotation = Quaternion.Euler(0, 180, 0);
 
                 ThisTransform.Translate(Vector2.left * Time.deltaTime * RunSpeed, Space.Self);
             }
@@ -66,7 +68,9 @@ public class PlayerMove : MonoBehaviour
             #region Walk Right
             if (Input.GetKey(Manager.Keys[1]))
             {
-                ThisTransform.GetComponent<SpriteRenderer>().flipX = true;
+                //ThisTransform.GetComponent<SpriteRenderer>().flipX = true;
+
+                this.transform.rotation = Quaternion.Euler(0, 0, 0);
 
                 ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
             }
