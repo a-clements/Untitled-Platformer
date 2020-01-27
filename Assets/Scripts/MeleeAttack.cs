@@ -31,19 +31,14 @@ public class MeleeAttack : MonoBehaviour
     {
         this.transform.root.GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsAttacking", true);
 
-        if(this.transform.root.GetComponent<SpriteRenderer>().flipX == false)
-        {
-            this.transform.localPosition = new Vector2(this.transform.parent.position.x + MeleeDistance, 0);
-        }
+        this.GetComponent<CircleCollider2D>().enabled = true;
 
-        else
-        {
-            this.transform.localPosition = new Vector2(this.transform.parent.position.x - MeleeDistance, 0);
-        }
+        this.transform.localPosition = new Vector2(this.transform.localPosition.x + MeleeDistance, 0);
 
         yield return new WaitForSeconds(AttackTimer);
         this.transform.localPosition = new Vector2(0,0);
         this.transform.root.GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsAttacking", false);
+        this.GetComponent<CircleCollider2D>().enabled = false;
         yield return null;
     }
 
@@ -53,5 +48,13 @@ public class MeleeAttack : MonoBehaviour
         yield return new WaitForSeconds(AttackTimer);
         this.transform.localPosition = new Vector2(0, 0);
         yield return null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D TriggerInfo)
+    {
+        if (TriggerInfo.tag == "Enemy")
+        {
+            TriggerInfo.GetComponent<FlyingEnemyMove>().Dead = true;
+        }
     }
 }
