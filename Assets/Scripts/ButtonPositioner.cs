@@ -11,10 +11,7 @@ public class ButtonPositioner : MonoBehaviour
     private float ButtonWidth;
     private float Position;
     private float Space;
-    [SerializeField] private float ButtonPositionMultiplier;
-    /*If Buttons.Length > 3 ButtonPositionMultiplier = 0                      */
-    /*If Buttons.Length = 3 ButtonPositionMultiplier = .3                     */
-    /*If Buttons.Length < 3 ButtonPositionMultiplier = add .55 for each button*/
+    private float ButtonPositionMultiplier;
 
     public void Positioner()
     {
@@ -38,6 +35,16 @@ public class ButtonPositioner : MonoBehaviour
         else
         {
             Position = (this.GetComponent<RectTransform>().rect.height - (ButtonHeight * Buttons.Length)) / Buttons.Length;
+        }
+
+        if(Buttons.Length <= 3)
+        {
+            ButtonPositionMultiplier = 0.3f;
+        }
+
+        else
+        {
+            ButtonPositionMultiplier = 0.3f + (0.55f * (Buttons.Length - 3));
         }
 
         Space = Position / Buttons.Length;
