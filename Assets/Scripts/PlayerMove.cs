@@ -61,7 +61,7 @@ public class PlayerMove : MonoBehaviour
 
                 this.transform.rotation = Quaternion.Euler(0, 180, 0);
 
-                ThisTransform.Translate(Vector2.left * Time.deltaTime * RunSpeed, Space.Self);
+                ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
             }
             #endregion
 
