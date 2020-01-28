@@ -32,8 +32,8 @@ public class FlyingEnemyMove : MonoBehaviour
     [SerializeField] private float Speed;
     [Tooltip("An array of points at which the enemy will stop.")]
     [SerializeField] private Vector3[] Points;
-    public bool Dead;
     [SerializeField] private float RefillAmount = 0.1f;
+    public bool Dead;
 
     void Start()
     {

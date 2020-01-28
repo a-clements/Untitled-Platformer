@@ -12,7 +12,7 @@ public class CameraShake : MonoBehaviour
     [SerializeField] private float ShakeMagnitude = 0.5f;
     [Range(0.1f, 0.9f)]
     [SerializeField] private float Volume = 0.4f;
-    public Text Threshhold;
+    [SerializeField] private Text Threshhold;
 
     private Vector3 OriginalPosition;
     private float XShake;
