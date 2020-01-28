@@ -12,6 +12,7 @@ public class CameraShake : MonoBehaviour
     [SerializeField] private float ShakeMagnitude = 0.5f;
     [Range(0.1f, 0.9f)]
     [SerializeField] private float Volume = 0.4f;
+    [SerializeField] private CircleCollider2D ShockWave;
     [SerializeField] private Text Threshhold;
 
     private Vector3 OriginalPosition;
@@ -71,8 +72,13 @@ public class CameraShake : MonoBehaviour
             MainCamera.transform.localPosition = new Vector3(OriginalPosition.x - XShake, OriginalPosition.y - YShake, OriginalPosition.z);
 
             ShoutMetre.fillAmount -= Time.deltaTime;
+
+            ShockWave.radius += (Time.deltaTime * 10);
+
             yield return null;
         }
+
+        ShockWave.radius = 0.1f;
 
         MainCamera.transform.localPosition = OriginalPosition;
 

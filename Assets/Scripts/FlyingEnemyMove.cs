@@ -35,7 +35,8 @@ public class FlyingEnemyMove : MonoBehaviour
     [Tooltip("An array of points at which the enemy will stop.")]
     [SerializeField] private Vector3[] Points;
     [SerializeField] private float RefillAmount = 0.1f;
-    public bool Dead;
+    public bool Dead = false;
+    public bool Shocked = false;
 
     void Start()
     {
@@ -99,6 +100,18 @@ public class FlyingEnemyMove : MonoBehaviour
                 }
             }
 
+            ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
+            ScoreManager.UpdateScores(PointValue);
+            ThisTransform.GetComponent<FlyingEnemyMove>().enabled = false;
+            ThisTransform.GetComponent<Animator>().enabled = false;
+            ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
+            ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
+
+            StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(), FadeOutTime));
+        }
+
+        if(Shocked == true)
+        {
             ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
             ScoreManager.UpdateScores(PointValue);
             ThisTransform.GetComponent<FlyingEnemyMove>().enabled = false;
