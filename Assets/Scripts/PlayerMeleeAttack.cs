@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeAttack : MonoBehaviour
+public class PlayerMeleeAttack : MonoBehaviour
 {
     private GameManager Manager;
     [SerializeField] private float AttackTimer;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShoot : MonoBehaviour
+public class EnemyBombardment : MonoBehaviour
 {
     [Tooltip("The prefab of the projectile goes here.")]
     [SerializeField] private GameObject Rock;
