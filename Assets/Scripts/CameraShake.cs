@@ -17,6 +17,7 @@ public class CameraShake : MonoBehaviour
     private Vector3 OriginalPosition;
     private float XShake;
     private float YShake;
+    private bool CanShow = true;
 
     //[System.Serializable]
     //public class MyEventType : UnityEvent { }
@@ -41,6 +42,13 @@ public class CameraShake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(ShoutMetre.fillAmount == 1.0f && CanShow == true)
+        {
+            GameObject.Find("Entry").GetComponent<Checkpoints>().PanelTwo.SetActive(true);
+            Time.timeScale = 0;
+            CanShow = false;
+        }
+
         Threshhold.text = Mathf.RoundToInt((Volume * 100)).ToString();
 
         if (ShoutControl.Volume > Volume && ShoutMetre.fillAmount == 1.0f)

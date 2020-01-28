@@ -18,6 +18,8 @@ public class FlyingEnemyMove : MonoBehaviour
     private AudioSource SFX;
     private Vector3 NextPosition;
     private int PointNumber = 0;
+    private bool CanShow = true;
+
     [SerializeField]private Image ShoutMetre;
 
     [Tooltip("A declaration of how many points will be added to the score when the flyer dies.")]
@@ -88,6 +90,13 @@ public class FlyingEnemyMove : MonoBehaviour
             if(ShoutMetre.fillAmount < 1.0f)
             {
                 ShoutMetre.fillAmount += RefillAmount;
+
+                if(CanShow == true)
+                {
+                    GameObject.Find("Entry").GetComponent<Checkpoints>().PanelThree.SetActive(true);
+                    Time.timeScale = 0;
+                    CanShow = false;
+                }
             }
 
             ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);

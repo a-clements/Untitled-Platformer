@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class Checkpoints : MonoBehaviour
 {
-    [SerializeField] private GameObject Panel;
+    [SerializeField] private GameObject PanelOne;
+    public GameObject PanelTwo;
+    public GameObject PanelThree;
     [SerializeField] EventSystem GetEventSystem;
 
     Event KeyEvent;
@@ -23,11 +25,11 @@ public class Checkpoints : MonoBehaviour
             TriggerInfo.GetComponent<PlayerMove>().Checkpoint = this.transform;
             ScoreManager.SaveScores();
 
-            if (Panel != null)
+            if (PanelOne != null)
             {
-                Panel.SetActive(true);
-                GetEventSystem.firstSelectedGameObject = Panel.transform.GetChild(0).gameObject;
-                Panel.transform.GetChild(0).GetComponent<Button>().Select();
+                PanelOne.SetActive(true);
+                GetEventSystem.firstSelectedGameObject = PanelOne;
+                PanelOne.transform.GetChild(0).GetComponent<Button>().Select();
                 Time.timeScale = 0;
             }
         }
@@ -37,9 +39,9 @@ public class Checkpoints : MonoBehaviour
     {
         if (TriggerInfo.gameObject.tag == "Player")
         {
-            if (Panel != null)
+            if (PanelOne != null)
             {
-                Panel.SetActive(false);
+                PanelOne.SetActive(false);
                 Time.timeScale = 1;
             }
         }
@@ -49,9 +51,9 @@ public class Checkpoints : MonoBehaviour
     {
         KeyEvent = Event.current;
 
-        if(Panel != null)
+        if(PanelOne != null)
         {
-            if (KeyEvent.isKey && Panel.activeSelf)
+            if (KeyEvent.isKey && PanelOne.activeSelf || KeyEvent.isKey && PanelTwo.activeSelf || KeyEvent.isKey && PanelThree.activeSelf)
             {
                 if (KeyEvent.keyCode == KeyCode.Escape)
                 {
@@ -65,9 +67,11 @@ public class Checkpoints : MonoBehaviour
     {
         yield return null;
 
-        if (Panel != null)
+        if (PanelOne != null)
         {
-            Panel.SetActive(false);
+            PanelOne.SetActive(false);
+            PanelTwo.SetActive(false);
+            PanelThree.SetActive(false);
             Time.timeScale = 1;
         }
     }
