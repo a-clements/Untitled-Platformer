@@ -34,7 +34,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D CollisionInfo)
     {
-        if (CollisionInfo.transform.tag == "Ground")
+        if (CollisionInfo.gameObject.tag == "Ground")
         {
             JumpCount = 1;
             CanJump = true;
@@ -58,7 +58,7 @@ public class PlayerMove : MonoBehaviour
             {
                 if (CanJump == true)
                 {
-                    RigidBody.velocity = Vector2.up * JumpHeight * Time.deltaTime;
+                    RigidBody.velocity = Vector2.up * JumpHeight * Time.fixedDeltaTime;
                     JumpCount--;
 
                     if (JumpCount < 0)
@@ -73,13 +73,13 @@ public class PlayerMove : MonoBehaviour
             #region Jump Realism
             if (RigidBody.velocity.y < 0)
             {
-                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.deltaTime;
+                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.fixedDeltaTime;
                 PlayerAnimator.SetBool("IsJumping", false);
             }
 
             else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
             {
-                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.deltaTime;
+                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.fixedDeltaTime;
             }
             #endregion
         }
