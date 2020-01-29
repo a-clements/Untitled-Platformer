@@ -45,9 +45,9 @@ public class CameraShake : MonoBehaviour
     {
         if(ShoutMetre.fillAmount == 1.0f && CanShow == true)
         {
-            GameObject.Find("Entry").GetComponent<Checkpoints>().PanelTwo.SetActive(true);
-            Time.timeScale = 0;
+            GameObject.Find("Entry").GetComponent<Checkpoints>().PanelThree.SetActive(true);
             CanShow = false;
+            Time.timeScale = 0;
         }
 
         Threshhold.text = Mathf.RoundToInt((Volume * 100)).ToString();

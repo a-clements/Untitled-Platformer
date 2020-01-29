@@ -18,7 +18,6 @@ public class FlyingEnemyMove : MonoBehaviour
     private AudioSource SFX;
     private Vector3 NextPosition;
     private int PointNumber = 0;
-    private bool CanShow = true;
 
     [SerializeField]private Image ShoutMetre;
 
@@ -37,6 +36,7 @@ public class FlyingEnemyMove : MonoBehaviour
     [SerializeField] private float RefillAmount = 0.1f;
     public bool Dead = false;
     public bool Shocked = false;
+    public bool CanShowPanel = true;
 
     void Start()
     {
@@ -92,11 +92,17 @@ public class FlyingEnemyMove : MonoBehaviour
             {
                 ShoutMetre.fillAmount += RefillAmount;
 
-                if(CanShow == true)
+                if(CanShowPanel == true)
                 {
-                    GameObject.Find("Entry").GetComponent<Checkpoints>().PanelThree.SetActive(true);
+                    GameObject.Find("Entry").GetComponent<Checkpoints>().PanelTwo.SetActive(true);
                     Time.timeScale = 0;
-                    CanShow = false;
+
+                    var Monsters = FindObjectsOfType<FlyingEnemyMove>();
+                    
+                    foreach(FlyingEnemyMove monster in Monsters)
+                    {
+                        monster.CanShowPanel = false;
+                    }
                 }
             }
 

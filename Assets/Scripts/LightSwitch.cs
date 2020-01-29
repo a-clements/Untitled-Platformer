@@ -39,6 +39,12 @@ public class LightSwitch : MonoBehaviour
         {
             case 0:
                 PostProcess.GetComponent<ColourGrading>().Saturation = -100;
+
+                for (int i = 0; i < Lights.transform.childCount; i++)
+                {
+                    Lights.transform.GetChild(i).GetComponent<FlickeringLights>().LightsActive = true;
+                }
+
                 break;
 
             case 1:
