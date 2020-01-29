@@ -27,7 +27,7 @@ public class RockCollision : MonoBehaviour
         if (TriggerInfo.transform.tag == "Enemy")
         {
             this.gameObject.SetActive(false);
-            TriggerInfo.transform.GetComponent<FlyingEnemyMove>().Dead = true;
+            TriggerInfo.transform.GetComponent<EnemyDeath>().Dead = true;
         }
 
         if (TriggerInfo.transform.tag == "Ground")
