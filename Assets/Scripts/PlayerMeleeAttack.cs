@@ -54,7 +54,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     {
         if (TriggerInfo.tag == "Enemy")
         {
-            TriggerInfo.GetComponent<FlyingEnemyMove>().Dead = true;
+            TriggerInfo.GetComponent<EnemyDeath>().Dead = true;
         }
     }
 }

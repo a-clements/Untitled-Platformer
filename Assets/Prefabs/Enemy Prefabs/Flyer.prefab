@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3147331610985716605}
   - component: {fileID: 3147331610985716601}
   - component: {fileID: 3147331610985716600}
+  - component: {fileID: 5273189164765170396}
   m_Layer: 0
   m_Name: Flyer
   m_TagString: Enemy
@@ -251,18 +252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bd00915bd475c4b8d80c56cc70ec11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathSprite: {fileID: 0}
-  FadeOutTime: 1
-  PointValue: 0
-  Direction: 
+  IsMoving: 0
   Speed: 1
-  XAxis: 0
-  MaxXDistance: 0
-  MinXDistance: 0
-  YAxis: 0
-  MaxYDistance: 0
-  MinYDistance: 0
-  Dead: 0
+  Points: []
 --- !u!114 &3147331610985716600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,3 +267,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1d64c5e5e1e6e46850853a588c6b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5273189164765170396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147331610985716599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207e94ccfc414e14884bd346c5e2aff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShoutMetre: {fileID: 0}
+  RefillAmount: 0.1
+  PointValue: 0
+  FadeOutTime: 1
+  DeathSprite: {fileID: 0}
+  Dead: 0
+  Shocked: 0
+  CanShowPanel: 1
