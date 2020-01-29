@@ -23,6 +23,7 @@ public class Checkpoints : MonoBehaviour
         if (TriggerInfo.gameObject.tag == "Player")
         {
             TriggerInfo.GetComponent<PlayerMove>().Checkpoint = this.transform;
+            TriggerInfo.GetComponent<Animator>().SetBool("IsWalking", false);
             ScoreManager.SaveScores();
 
             if (PanelOne != null)

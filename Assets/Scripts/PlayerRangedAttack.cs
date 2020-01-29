@@ -49,7 +49,7 @@ public class PlayerRangedAttack : MonoBehaviour
 
                     RockList[i].transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
 
-                    if(transform.root.rotation.y == 0)
+                    if(transform.parent.rotation.y == 0)
                     {
                         RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.right) * Speed * Time.deltaTime;
                     }
