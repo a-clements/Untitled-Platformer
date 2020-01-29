@@ -49,11 +49,46 @@ public class PlayerMove : MonoBehaviour
         
     }
 
+    private void FixedUpdate()
+    {
+        if (Time.timeScale > 0)
+        {
+            #region Jump
+            if (Input.GetKeyDown(Manager.Keys[5]))
+            {
+                if (CanJump == true)
+                {
+                    RigidBody.velocity = Vector2.up * JumpHeight * Time.deltaTime;
+                    JumpCount--;
+
+                    if (JumpCount < 0)
+                    {
+                        CanJump = false;
+                    }
+                    PlayerAnimator.SetBool("IsJumping", true);
+                }
+            }
+            #endregion
+
+            #region Jump Realism
+            if (RigidBody.velocity.y < 0)
+            {
+                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.deltaTime;
+                PlayerAnimator.SetBool("IsJumping", false);
+            }
+
+            else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
+            {
+                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.deltaTime;
+            }
+            #endregion
+        }
+    }
+
     void Update()
     {
         if(Time.timeScale > 0)
         {
-            #region Walking
             #region Walk Left
             if (Input.GetKey(Manager.Keys[0]))
             {
@@ -90,6 +125,7 @@ public class PlayerMove : MonoBehaviour
             }
             #endregion
 
+            #region Resize Collider
             if (PlayerAnimator.GetBool("IsWalking") == true || PlayerAnimator.GetBool("IsJumping") == true)
             {
                 BoxCollider.offset = new Vector2(0.0f, -.07f);
@@ -101,42 +137,7 @@ public class PlayerMove : MonoBehaviour
                 BoxCollider.offset = new Vector2(0, -.32f);
                 BoxCollider.size = new Vector2(0.5f, 0.5f);
             }
-
-            else
-            {
-
-            }
-            #endregion
-
-            #region Jump
-            if (Input.GetKeyDown(Manager.Keys[5]))
-            {
-                if (CanJump == true)
-                {
-                    RigidBody.velocity = Vector2.up * JumpHeight * Time.deltaTime;
-                    JumpCount--;
-
-                    if (JumpCount < 0)
-                    {
-                        CanJump = false;
-                    }
-                    PlayerAnimator.SetBool("IsJumping", true);
-                }
-            }
             #endregion
         }
-
-        #region Jump Realism
-        if (RigidBody.velocity.y < 0)
-        {
-            RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.deltaTime;
-            PlayerAnimator.SetBool("IsJumping", false);
-        }
-
-        else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
-        {
-            RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.deltaTime;
-        }
-        #endregion
     }
 }
