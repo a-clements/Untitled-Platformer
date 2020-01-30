@@ -22,8 +22,8 @@ public class EnemyDeath : MonoBehaviour
     private Image ShoutMetre;
     private FadeOut Fade;
 
-    public bool Dead = false;
-    public bool Shocked = false;
+    //public bool Dead = false;
+    //public bool Shocked = false;
     public bool CanShowPanel = true;
 
     private void Start()
@@ -33,48 +33,58 @@ public class EnemyDeath : MonoBehaviour
         Fade = GetComponent<FadeOut>();
     }
 
-    private void Update()
+    public void Dead()
     {
-        if (Dead == true)
+        if (ShoutMetre.fillAmount < 1.0f)
         {
-            if (ShoutMetre.fillAmount < 1.0f)
+            ShoutMetre.fillAmount += RefillAmount;
+
+            if (CanShowPanel == true)
             {
-                ShoutMetre.fillAmount += RefillAmount;
+                GameObject.Find("Entry").GetComponent<Checkpoints>().PanelTwo.SetActive(true);
+                Time.timeScale = 0;
 
-                if (CanShowPanel == true)
+                var Monsters = FindObjectsOfType<EnemyDeath>();
+
+                foreach (EnemyDeath monster in Monsters)
                 {
-                    GameObject.Find("Entry").GetComponent<Checkpoints>().PanelTwo.SetActive(true);
-                    Time.timeScale = 0;
-
-                    var Monsters = FindObjectsOfType<EnemyDeath>();
-
-                    foreach (EnemyDeath monster in Monsters)
-                    {
-                        monster.CanShowPanel = false;
-                    }
+                    monster.CanShowPanel = false;
                 }
             }
-
-            ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
-            ScoreManager.UpdateScores(PointValue);
-            ThisTransform.GetComponent<EnemyDeath>().enabled = false;
-            ThisTransform.GetComponent<Animator>().enabled = false;
-            ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
-            ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
-
-            StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(), FadeOutTime));
         }
 
-        if (Shocked == true)
-        {
-            ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
-            ScoreManager.UpdateScores(PointValue);
-            ThisTransform.GetComponent<EnemyDeath>().enabled = false;
-            ThisTransform.GetComponent<Animator>().enabled = false;
-            ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
-            ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
+        ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
+        ScoreManager.UpdateScores(PointValue);
+        ThisTransform.GetComponent<EnemyDeath>().enabled = false;
+        ThisTransform.GetComponent<Animator>().enabled = false;
+        ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
+        ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
 
-            StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(), FadeOutTime));
-        }
+        StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(), FadeOutTime));
+    }
+
+    public void Shocked()
+    {
+        ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
+        ScoreManager.UpdateScores(PointValue);
+        ThisTransform.GetComponent<EnemyDeath>().enabled = false;
+        ThisTransform.GetComponent<Animator>().enabled = false;
+        ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
+        ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
+
+        StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(), FadeOutTime));
+    }
+
+    private void Update()
+    {
+        //if (Dead == true)
+        //{
+
+        //}
+
+        //if (Shocked == true)
+        //{
+
+        //}
     }
 }
