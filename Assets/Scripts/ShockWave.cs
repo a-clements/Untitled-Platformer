@@ -20,7 +20,7 @@ public class ShockWave : MonoBehaviour
     {
         if(TriggerInfo.tag == "Enemy")
         {
-            TriggerInfo.GetComponent<EnemyDeath>().Shocked = true;
+            TriggerInfo.GetComponent<EnemyDeath>().Shocked();
         }
     }
 }
