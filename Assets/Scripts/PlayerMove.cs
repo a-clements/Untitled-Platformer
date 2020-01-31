@@ -49,42 +49,6 @@ public class PlayerMove : MonoBehaviour
         
     }
 
-    private void FixedUpdate()
-    {
-        if (Time.timeScale > 0)
-        {
-            #region Jump
-            if (Input.GetKeyDown(Manager.Keys[5]))
-            {
-                if (CanJump == true)
-                {
-                    RigidBody.velocity = Vector2.up * JumpHeight * Time.fixedDeltaTime;
-                    JumpCount--;
-
-                    if (JumpCount < 0)
-                    {
-                        CanJump = false;
-                    }
-                    PlayerAnimator.SetBool("IsJumping", true);
-                }
-            }
-            #endregion
-
-            #region Jump Realism
-            if (RigidBody.velocity.y < 0)
-            {
-                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.fixedDeltaTime;
-                PlayerAnimator.SetBool("IsJumping", false);
-            }
-
-            else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
-            {
-                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.fixedDeltaTime;
-            }
-            #endregion
-        }
-    }
-
     void Update()
     {
         if(Time.timeScale > 0)
@@ -122,6 +86,36 @@ public class PlayerMove : MonoBehaviour
             if (Input.GetKeyUp(Manager.Keys[0]) || Input.GetKeyUp(Manager.Keys[1]))
             {
                 PlayerAnimator.SetBool("IsWalking", false);
+            }
+            #endregion
+
+            #region Jump
+            if (Input.GetKeyDown(Manager.Keys[5]))
+            {
+                if (CanJump == true)
+                {
+                    RigidBody.velocity = Vector2.up * JumpHeight * Time.fixedDeltaTime;
+                    JumpCount--;
+
+                    if (JumpCount < 0)
+                    {
+                        CanJump = false;
+                    }
+                    PlayerAnimator.SetBool("IsJumping", true);
+                }
+            }
+            #endregion
+
+            #region Jump Realism
+            if (RigidBody.velocity.y < 0)
+            {
+                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.fixedDeltaTime;
+                PlayerAnimator.SetBool("IsJumping", false);
+            }
+
+            else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
+            {
+                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.fixedDeltaTime;
             }
             #endregion
 
