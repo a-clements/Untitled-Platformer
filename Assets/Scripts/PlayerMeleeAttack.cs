@@ -29,7 +29,7 @@ public class PlayerMeleeAttack : MonoBehaviour
 
     IEnumerator Attack()
     {
-        this.transform.root.GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsAttacking", true);
+        this.transform.root.GetComponent<PlayerMove>().PlayerAnimator.SetTrigger("IsAttacking");
 
         this.GetComponent<CircleCollider2D>().enabled = true;
 
@@ -37,16 +37,23 @@ public class PlayerMeleeAttack : MonoBehaviour
 
         yield return new WaitForSeconds(AttackTimer);
         this.transform.localPosition = new Vector2(0,0);
-        this.transform.root.GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsAttacking", false);
         this.GetComponent<CircleCollider2D>().enabled = false;
         yield return null;
     }
 
     IEnumerator AttackUp()
     {
-        this.transform.localPosition = new Vector2(0, this.transform.parent.position.y + MeleeDistance);
+        this.transform.root.GetComponent<PlayerMove>().PlayerAnimator.SetTrigger("IsAttackUp");
+
+        yield return new WaitForSeconds(this.transform.root.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+
+        this.GetComponent<CircleCollider2D>().enabled = true;
+
+        this.transform.localPosition = new Vector2(0, this.transform.localPosition.y + MeleeDistance);
+
         yield return new WaitForSeconds(AttackTimer);
         this.transform.localPosition = new Vector2(0, 0);
+        this.GetComponent<CircleCollider2D>().enabled = false;
         yield return null;
     }
 

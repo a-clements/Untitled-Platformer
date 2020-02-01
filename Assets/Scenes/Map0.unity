@@ -9322,7 +9322,7 @@ PrefabInstance:
     - target: {fileID: 1211305407845736607, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1211305407845736607, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
@@ -9605,6 +9605,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138295582255414811, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: MeleeDistance
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3582540164286732280, guid: 78d7a96f4f592d640be4afb0ae9489de, type: 3}
@@ -22018,7 +22023,7 @@ RectTransform:
   - {fileID: 1408548609}
   - {fileID: 2046223365}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -32519,7 +32524,7 @@ PrefabInstance:
     - target: {fileID: 385086115284334760, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_FillAmount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7786851628459160647, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
