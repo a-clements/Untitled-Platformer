@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float GravityMultiplier;
     [SerializeField] private float JumpModifier = 1.0f;
     [SerializeField] private float FallModifier = 1.5f;
+
     public Animator PlayerAnimator;
     private Rigidbody2D RigidBody;
     private BoxCollider2D BoxCollider;
