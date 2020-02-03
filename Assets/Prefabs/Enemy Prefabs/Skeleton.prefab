@@ -181,9 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32eb8d1ae2a6d9440bddc53929db15a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpHeight: 200
+  JumpDistance: 10
+  JumpHeight: 250
   Speed: 1
-  Points:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  PointNumber: 0
+  Points: []
+  ColliderSize: {x: 0.5, y: 0.8}
+  ColliderOffset: {x: 0.15, y: -0.1}
