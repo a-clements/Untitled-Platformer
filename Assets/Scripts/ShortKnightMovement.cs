@@ -2,13 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonMove : MonoBehaviour
+public class ShortKnightMovement : MonoBehaviour
 {
-    [Tooltip("How far along the X axis can the Skeleton jump.")]
-    [SerializeField] private float JumpDistance = 10;
-    [Tooltip("How high along the Y axis can the Skeleton jump.")]
-    [SerializeField] private float JumpHeight = 150;
-    [Tooltip("How fast is the Skeleton.")]
+    [Tooltip("How fast is the Knight.")]
     [SerializeField] private float Speed = 1;
     [Tooltip("An array of NavPoints at which the enemy will stop.")]
     [SerializeField] private Vector3[] NavPoints;
@@ -17,9 +13,9 @@ public class SkeletonMove : MonoBehaviour
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
-    private Vector3 NextPosition;
+    [SerializeField]private Vector3 NextPosition;
     private int PointNumber = 0;
-    private bool IsMoving = true;
+    [SerializeField]private bool IsMoving = true;
     private Animator EnemyAnimator;
     private int Action;
     private int PreviousAction;
@@ -37,84 +33,22 @@ public class SkeletonMove : MonoBehaviour
         BoxCollider.offset = ColliderOffset;
         BoxCollider.size = ColliderSize;
 
-        Action = Random.Range(0, 3);
+        Action = Random.Range(0, 2);
         PreviousAction = Action;
 
-        switch(Action)
+        switch (Action)
         {
             case 0:
-                StartCoroutine(Jump());
-                break;
-            case 1:
                 StartCoroutine(Walk());
                 break;
-            case 2:
-                StartCoroutine(Throw());
+            case 1:
+                StartCoroutine(Attack());
                 break;
         }
 
         if (IsMoving == true)
         {
             NextPosition = NavPoints[PointNumber];
-        }
-    }
-
-    IEnumerator Jump()
-    {
-        yield return null;
-
-        IsMoving = false;
-
-        EnemyAnimator.SetTrigger("IsJumping");
-
-        if (!Sprite.flipX)
-        {
-            RigidBody.velocity = ((Vector2.up * JumpHeight) + (Vector2.left * JumpDistance)) * Time.fixedDeltaTime;
-        }
-        else
-        {
-            RigidBody.velocity = ((Vector2.up * JumpHeight) + (Vector2.right * JumpDistance)) * Time.fixedDeltaTime;
-        }
-
-        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
-
-        if (ThisTransform.position.x <= NavPoints[0].x || ThisTransform.position.x >= NavPoints[NavPoints.Length - 1].x)
-        {
-            PointNumber++;
-
-            if (PointNumber == NavPoints.Length)
-            {
-                PointNumber = 0;
-            }
-
-            NextPosition = NavPoints[PointNumber];
-
-            Sprite.flipX = !Sprite.flipX;
-
-            ColliderOffset.x *= -1;
-
-            BoxCollider.offset = ColliderOffset;
-            BoxCollider.size = ColliderSize;
-        }
-
-        while (Action == PreviousAction)
-        {
-            Action = Random.Range(0, 3);
-        }
-
-        PreviousAction = Action;
-
-        switch (Action)
-        {
-            case 0:
-                StartCoroutine(Jump());
-                break;
-            case 1:
-                StartCoroutine(Walk());
-                break;
-            case 2:
-                StartCoroutine(Throw());
-                break;
         }
     }
 
@@ -124,7 +58,7 @@ public class SkeletonMove : MonoBehaviour
 
         IsMoving = true;
 
-        EnemyAnimator.SetBool("IsWalking",true);
+        EnemyAnimator.SetBool("IsWalking", true);
 
         yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
 
@@ -132,7 +66,7 @@ public class SkeletonMove : MonoBehaviour
 
         while (Action == PreviousAction)
         {
-            Action = Random.Range(0, 3);
+            Action = Random.Range(0, 2);
         }
 
         PreviousAction = Action;
@@ -140,30 +74,27 @@ public class SkeletonMove : MonoBehaviour
         switch (Action)
         {
             case 0:
-                StartCoroutine(Jump());
-                break;
-            case 1:
                 StartCoroutine(Walk());
                 break;
-            case 2:
-                StartCoroutine(Throw());
+            case 1:
+                StartCoroutine(Attack());
                 break;
         }
     }
 
-    IEnumerator Throw()
+    IEnumerator Attack()
     {
         yield return null;
 
         IsMoving = false;
 
-        EnemyAnimator.SetTrigger("IsThrowing");
+        EnemyAnimator.SetTrigger("IsAttacking");
 
         yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
 
         while (Action == PreviousAction)
         {
-            Action = Random.Range(0, 3);
+            Action = Random.Range(0, 2);
         }
 
         PreviousAction = Action;
@@ -171,13 +102,10 @@ public class SkeletonMove : MonoBehaviour
         switch (Action)
         {
             case 0:
-                StartCoroutine(Jump());
-                break;
-            case 1:
                 StartCoroutine(Walk());
                 break;
-            case 2:
-                StartCoroutine(Throw());
+            case 1:
+                StartCoroutine(Attack());
                 break;
         }
     }
@@ -186,7 +114,7 @@ public class SkeletonMove : MonoBehaviour
     {
         if (IsMoving == true)
         {
-            if (ThisTransform.position == NavPoints[PointNumber])
+            if (ThisTransform.position.x <= NavPoints[0].x || ThisTransform.position.x >= NavPoints[NavPoints.Length - 1].x)
             {
                 PointNumber++;
 

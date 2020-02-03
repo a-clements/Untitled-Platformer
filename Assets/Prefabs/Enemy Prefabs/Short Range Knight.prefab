@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4776181397980765740}
   - component: {fileID: 4776181397980765743}
   - component: {fileID: -592217422876691933}
+  - component: {fileID: 9208260813038602025}
   m_Layer: 0
   m_Name: Short Range Knight
   m_TagString: Untagged
@@ -105,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4776181397980765740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,11 +164,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207e94ccfc414e14884bd346c5e2aff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShoutMetre: {fileID: 0}
   RefillAmount: 0.1
   PointValue: 0
   FadeOutTime: 1
   DeathSprite: {fileID: 0}
-  Dead: 0
-  Shocked: 0
   CanShowPanel: 0
+--- !u!114 &9208260813038602025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776181397980765742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bfdbbb7364a1e49b90b705691c08ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
+  NavPoints:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  ColliderSize: {x: 0.75, y: 1}
+  ColliderOffset: {x: 0.25, y: -0.1}
+  NextPosition: {x: 0, y: 0, z: 0}
+  IsMoving: 1
