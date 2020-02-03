@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3147331610985716599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.42, y: -3.42, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7196528222197624423}
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &3147331610985716606
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsMoving: 0
   Speed: 1
-  Points: []
+  NavPoints: []
 --- !u!114 &3147331610985716600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,13 +280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207e94ccfc414e14884bd346c5e2aff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShoutMetre: {fileID: 0}
   RefillAmount: 0.1
   PointValue: 0
   FadeOutTime: 1
   DeathSprite: {fileID: 0}
-  Dead: 0
-  Shocked: 0
   CanShowPanel: 1
 --- !u!1 &8486693667840832948
 GameObject:

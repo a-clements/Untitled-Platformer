@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShortKnightMovement : MonoBehaviour
+public class LongKnightMovement : MonoBehaviour
 {
+    [Tooltip("How far along the X axis can the Knight jump.")]
+    [SerializeField] private float JumpDistance = 25;
+    [Tooltip("How high along the Y axis can the Knight jump.")]
+    [SerializeField] private float JumpHeight = 250;
     [Tooltip("How fast is the Knight.")]
     [SerializeField] private float Speed = 1;
     [Tooltip("An array of NavPoints at which the enemy will stop.")]
@@ -39,16 +43,72 @@ public class ShortKnightMovement : MonoBehaviour
         switch (Action)
         {
             case 0:
-                StartCoroutine(Walk());
+                StartCoroutine(Jump());
                 break;
             case 1:
-                StartCoroutine(Attack());
+                StartCoroutine(Walk());
                 break;
         }
 
         if (IsMoving == true)
         {
             NextPosition = NavPoints[PointNumber];
+        }
+    }
+
+    IEnumerator Jump()
+    {
+        yield return null;
+
+        IsMoving = false;
+
+        EnemyAnimator.SetTrigger("IsAttacking");
+
+        if (!Sprite.flipX)
+        {
+            RigidBody.velocity = ((Vector2.up * JumpHeight) + (Vector2.left * JumpDistance)) * Time.fixedDeltaTime;
+        }
+        else
+        {
+            RigidBody.velocity = ((Vector2.up * JumpHeight) + (Vector2.right * JumpDistance)) * Time.fixedDeltaTime;
+        }
+
+        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
+
+        if (ThisTransform.position.x <= NavPoints[0].x || ThisTransform.position.x >= NavPoints[NavPoints.Length - 1].x)
+        {
+            PointNumber++;
+
+            if (PointNumber == NavPoints.Length)
+            {
+                PointNumber = 0;
+            }
+
+            NextPosition = NavPoints[PointNumber];
+
+            Sprite.flipX = !Sprite.flipX;
+
+            ColliderOffset.x *= -1;
+
+            BoxCollider.offset = ColliderOffset;
+            BoxCollider.size = ColliderSize;
+        }
+
+        while (Action == PreviousAction)
+        {
+            Action = Random.Range(0, 2);
+        }
+
+        PreviousAction = Action;
+
+        switch (Action)
+        {
+            case 0:
+                StartCoroutine(Jump());
+                break;
+            case 1:
+                StartCoroutine(Walk());
+                break;
         }
     }
 
@@ -74,38 +134,10 @@ public class ShortKnightMovement : MonoBehaviour
         switch (Action)
         {
             case 0:
-                StartCoroutine(Walk());
+                StartCoroutine(Jump());
                 break;
             case 1:
-                StartCoroutine(Attack());
-                break;
-        }
-    }
-
-    IEnumerator Attack()
-    {
-        yield return null;
-
-        IsMoving = false;
-
-        EnemyAnimator.SetTrigger("IsAttacking");
-
-        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
-
-        while (Action == PreviousAction)
-        {
-            Action = Random.Range(0, 2);
-        }
-
-        PreviousAction = Action;
-
-        switch (Action)
-        {
-            case 0:
                 StartCoroutine(Walk());
-                break;
-            case 1:
-                StartCoroutine(Attack());
                 break;
         }
     }
@@ -114,7 +146,7 @@ public class ShortKnightMovement : MonoBehaviour
     {
         if (IsMoving == true)
         {
-            if (ThisTransform.position.x <= NavPoints[0].x || ThisTransform.position.x >= NavPoints[NavPoints.Length - 1].x)
+            if (ThisTransform.position == NavPoints[PointNumber])
             {
                 PointNumber++;
 

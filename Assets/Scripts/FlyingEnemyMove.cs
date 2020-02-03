@@ -21,8 +21,8 @@ public class FlyingEnemyMove : MonoBehaviour
     [SerializeField] private bool IsMoving;
     [Tooltip("A declaration of how fast the flyer is moving. Only positive numbers.")]
     [SerializeField] private float Speed;
-    [Tooltip("An array of points at which the enemy will stop.")]
-    [SerializeField] private Vector3[] Points;
+    [Tooltip("An array of NavPoints at which the enemy will stop.")]
+    [SerializeField] private Vector3[] NavPoints;
 
 
     void Start()
@@ -32,7 +32,7 @@ public class FlyingEnemyMove : MonoBehaviour
 
         if (IsMoving == true)
         {
-            NextPosition = Points[PointNumber];
+            NextPosition = NavPoints[PointNumber];
         }
     }
 
@@ -53,16 +53,16 @@ public class FlyingEnemyMove : MonoBehaviour
     {
         if (IsMoving == true)
         {
-            if (ThisTransform.position == Points[PointNumber])
+            if (ThisTransform.position == NavPoints[PointNumber])
             {
                 PointNumber++;
 
-                if (PointNumber == Points.Length)
+                if (PointNumber == NavPoints.Length)
                 {
                     PointNumber = 0;
                 }
 
-                NextPosition = Points[PointNumber];
+                NextPosition = NavPoints[PointNumber];
 
                 Sprite.flipX = !Sprite.flipX;
             }
