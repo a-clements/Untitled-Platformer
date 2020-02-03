@@ -12,6 +12,8 @@ public class SkeletonMove : MonoBehaviour
     [SerializeField] private float Speed = 1;
     [Tooltip("An array of points at which the enemy will stop.")]
     [SerializeField] private Vector3[] Points;
+    [SerializeField] private Vector2 ColliderSize;
+    [SerializeField] private Vector2 ColliderOffset;
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
@@ -19,9 +21,10 @@ public class SkeletonMove : MonoBehaviour
     private int PointNumber = 0;
     private bool IsMoving = true;
     private Animator EnemyAnimator;
-    [SerializeField] private int Action;
+    private int Action;
     private int PreviousAction;
     private Rigidbody2D RigidBody;
+    private BoxCollider2D BoxCollider;
 
     void Start()
     {
@@ -29,6 +32,10 @@ public class SkeletonMove : MonoBehaviour
         Sprite = GetComponent<SpriteRenderer>();
         EnemyAnimator = GetComponent<Animator>();
         RigidBody = GetComponent<Rigidbody2D>();
+        BoxCollider = GetComponent<BoxCollider2D>();
+
+        BoxCollider.offset = ColliderOffset;
+        BoxCollider.size = ColliderSize;
 
         Action = Random.Range(0, 3);
         PreviousAction = Action;
@@ -59,8 +66,8 @@ public class SkeletonMove : MonoBehaviour
         IsMoving = false;
 
         EnemyAnimator.SetTrigger("IsJumping");
-        
-        if(!Sprite.flipX)
+
+        if (!Sprite.flipX)
         {
             RigidBody.velocity = ((Vector2.up * JumpHeight) + (Vector2.left * JumpDistance)) * Time.fixedDeltaTime;
         }
@@ -69,9 +76,28 @@ public class SkeletonMove : MonoBehaviour
             RigidBody.velocity = ((Vector2.up * JumpHeight) + (Vector2.right * JumpDistance)) * Time.fixedDeltaTime;
         }
 
-        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
 
-        while(Action == PreviousAction)
+        if (ThisTransform.position.x <= Points[0].x || ThisTransform.position.x >= Points[Points.Length - 1].x)
+        {
+            PointNumber++;
+
+            if (PointNumber == Points.Length)
+            {
+                PointNumber = 0;
+            }
+
+            NextPosition = Points[PointNumber];
+
+            Sprite.flipX = !Sprite.flipX;
+
+            ColliderOffset.x *= -1;
+
+            BoxCollider.offset = ColliderOffset;
+            BoxCollider.size = ColliderSize;
+        }
+
+        while (Action == PreviousAction)
         {
             Action = Random.Range(0, 3);
         }
@@ -90,18 +116,17 @@ public class SkeletonMove : MonoBehaviour
                 StartCoroutine(Throw());
                 break;
         }
-
-        IsMoving = true;
     }
 
     IEnumerator Walk()
     {
         yield return null;
 
+        IsMoving = true;
 
         EnemyAnimator.SetBool("IsWalking",true);
 
-        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
 
         EnemyAnimator.SetBool("IsWalking", false);
 
@@ -134,7 +159,7 @@ public class SkeletonMove : MonoBehaviour
 
         EnemyAnimator.SetTrigger("IsThrowing");
 
-        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
 
         while (Action == PreviousAction)
         {
@@ -155,8 +180,6 @@ public class SkeletonMove : MonoBehaviour
                 StartCoroutine(Throw());
                 break;
         }
-
-        IsMoving = true;
     }
 
     void Update()
@@ -175,6 +198,11 @@ public class SkeletonMove : MonoBehaviour
                 NextPosition = Points[PointNumber];
 
                 Sprite.flipX = !Sprite.flipX;
+
+                ColliderOffset.x *= -1;
+
+                BoxCollider.offset = ColliderOffset;
+                BoxCollider.size = ColliderSize;
             }
 
             ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed * Time.deltaTime);
