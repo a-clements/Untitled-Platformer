@@ -184,6 +184,6 @@ MonoBehaviour:
   JumpDistance: 10
   JumpHeight: 250
   Speed: 1
-  Points: []
+  NavPoints: []
   ColliderSize: {x: 0.5, y: 0.8}
   ColliderOffset: {x: 0.15, y: -0.1}

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 8301214325355971986}
   - component: {fileID: 8301214325355971987}
   - component: {fileID: 6849315049505376691}
+  - component: {fileID: 8841029935724940485}
   m_Layer: 0
   m_Name: Long Range Knight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8301214325355971986
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,11 +164,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207e94ccfc414e14884bd346c5e2aff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShoutMetre: {fileID: 0}
   RefillAmount: 0.1
   PointValue: 0
   FadeOutTime: 1
   DeathSprite: {fileID: 0}
-  Dead: 0
-  Shocked: 0
   CanShowPanel: 0
+--- !u!114 &8841029935724940485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301214325355971984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73aaf2e5079c18d42a372933d6f8a180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpDistance: 25
+  JumpHeight: 250
+  Speed: 1
+  NavPoints: []
+  ColliderSize: {x: 0.5, y: 0.8}
+  ColliderOffset: {x: 0.05, y: -0.3}

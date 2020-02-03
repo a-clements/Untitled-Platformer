@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 9208260813038602025}
   m_Layer: 0
   m_Name: Short Range Knight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,5 +187,3 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   ColliderSize: {x: 0.75, y: 1}
   ColliderOffset: {x: 0.25, y: -0.1}
-  NextPosition: {x: 0, y: 0, z: 0}
-  IsMoving: 1
