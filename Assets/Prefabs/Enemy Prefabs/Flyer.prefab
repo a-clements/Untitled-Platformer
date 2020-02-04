@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3147331610985716603}
   - component: {fileID: 3147331610985716607}
   - component: {fileID: 3147331610985716602}
-  - component: {fileID: 3147331610985716606}
   - component: {fileID: 3147331610985716605}
   - component: {fileID: 3147331610985716601}
   - component: {fileID: 3147331610985716600}
   - component: {fileID: 5273189164765170396}
+  - component: {fileID: -606941753719192278}
   m_Layer: 0
   m_Name: Flyer
   m_TagString: Enemy
@@ -128,22 +128,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!58 &3147331610985716606
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3147331610985716599}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.25
 --- !u!82 &3147331610985716605
 AudioSource:
   m_ObjectHideFlags: 0
@@ -284,3 +268,19 @@ MonoBehaviour:
   FadeOutTime: 1
   DeathSprite: {fileID: 0}
   CanShowPanel: 1
+--- !u!70 &-606941753719192278
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147331610985716599}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 0.5}
+  m_Direction: 0

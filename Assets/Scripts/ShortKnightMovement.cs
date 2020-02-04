@@ -20,7 +20,7 @@ public class ShortKnightMovement : MonoBehaviour
     private int Action;
     private int PreviousAction;
     private Rigidbody2D RigidBody;
-    private BoxCollider2D BoxCollider;
+    private CapsuleCollider2D CapsuleCollider;
 
     void Start()
     {
@@ -28,10 +28,10 @@ public class ShortKnightMovement : MonoBehaviour
         Sprite = GetComponent<SpriteRenderer>();
         EnemyAnimator = GetComponent<Animator>();
         RigidBody = GetComponent<Rigidbody2D>();
-        BoxCollider = GetComponent<BoxCollider2D>();
+        CapsuleCollider = GetComponent<CapsuleCollider2D>();
 
-        BoxCollider.offset = ColliderOffset;
-        BoxCollider.size = ColliderSize;
+        CapsuleCollider.offset = ColliderOffset;
+        CapsuleCollider.size = ColliderSize;
 
         Action = Random.Range(0, 2);
         PreviousAction = Action;
@@ -129,8 +129,8 @@ public class ShortKnightMovement : MonoBehaviour
 
                 ColliderOffset.x *= -1;
 
-                BoxCollider.offset = ColliderOffset;
-                BoxCollider.size = ColliderSize;
+                CapsuleCollider.offset = ColliderOffset;
+                CapsuleCollider.size = ColliderSize;
             }
 
             ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed * Time.deltaTime);

@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8301214325355971991}
   - component: {fileID: 8301214325355971988}
   - component: {fileID: 8301214325355971989}
-  - component: {fileID: 8301214325355971986}
   - component: {fileID: 8301214325355971987}
   - component: {fileID: 6849315049505376691}
   - component: {fileID: 8841029935724940485}
+  - component: {fileID: -132556072414996234}
   m_Layer: 0
   m_Name: Long Range Knight
   m_TagString: Enemy
@@ -107,32 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &8301214325355971986
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8301214325355971984}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3333334, y: 1.4791666}
-    newSize: {x: 1.3333334, y: 1.4791666}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2, y: 1.2}
-  m_EdgeRadius: 0
 --- !u!95 &8301214325355971987
 Animator:
   serializedVersion: 3
@@ -187,3 +161,19 @@ MonoBehaviour:
   NavPoints: []
   ColliderSize: {x: 0.5, y: 0.8}
   ColliderOffset: {x: 0.05, y: -0.3}
+--- !u!70 &-132556072414996234
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301214325355971984}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.3333334, y: 1.4791666}
+  m_Direction: 0
