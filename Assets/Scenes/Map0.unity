@@ -5318,6 +5318,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Range Knight
       objectReference: {fileID: 0}
+    - target: {fileID: 8301214325355971984, guid: a50942cd049dc43489a3c22d539fd40a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8841029935724940485, guid: a50942cd049dc43489a3c22d539fd40a,
         type: 3}
       propertyPath: NavPoints.Array.size
@@ -5574,6 +5579,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
       propertyPath: Speed
       value: 1
       objectReference: {fileID: 0}
@@ -5620,6 +5630,26 @@ PrefabInstance:
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
       propertyPath: Points.Array.data[1].y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
       value: -1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6692,6 +6722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6764,6 +6799,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -6815,6 +6855,26 @@ PrefabInstance:
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
@@ -6998,6 +7058,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7070,6 +7135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -7121,6 +7191,26 @@ PrefabInstance:
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
@@ -7410,6 +7500,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
       propertyPath: XAxis
       value: 1
       objectReference: {fileID: 0}
@@ -7457,6 +7552,26 @@ PrefabInstance:
         type: 3}
       propertyPath: Points.Array.data[1].x
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d823044211499a546a14682ca9e042b2, type: 3}
@@ -7661,6 +7776,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7733,6 +7853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -7785,6 +7910,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -8443,6 +8588,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8510,6 +8660,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
       propertyPath: Direction
       value: Left
       objectReference: {fileID: 0}
@@ -8557,6 +8712,26 @@ PrefabInstance:
         type: 3}
       propertyPath: Points.Array.data[0].x
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 96
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d823044211499a546a14682ca9e042b2, type: 3}
@@ -8855,6 +9030,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8927,6 +9107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -8979,6 +9164,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -9726,6 +9931,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9798,6 +10008,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -9850,6 +10065,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -13066,6 +13301,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13138,6 +13378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -13190,6 +13435,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -13459,6 +13724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
       propertyPath: XAxis
       value: 1
       objectReference: {fileID: 0}
@@ -13506,6 +13776,26 @@ PrefabInstance:
         type: 3}
       propertyPath: Points.Array.data[1].x
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d823044211499a546a14682ca9e042b2, type: 3}
@@ -21577,6 +21867,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21649,6 +21944,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -21700,6 +22000,26 @@ PrefabInstance:
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
@@ -28056,6 +28376,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28128,6 +28453,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -28179,6 +28509,26 @@ PrefabInstance:
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
@@ -28702,6 +29052,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28769,6 +29124,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
       propertyPath: Direction
       value: Left
       objectReference: {fileID: 0}
@@ -28816,6 +29176,26 @@ PrefabInstance:
         type: 3}
       propertyPath: Points.Array.data[1].y
       value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 79.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 85.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d823044211499a546a14682ca9e042b2, type: 3}
@@ -28991,6 +29371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29063,6 +29448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -29115,6 +29505,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -30173,6 +30583,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
       propertyPath: Speed
       value: 1
       objectReference: {fileID: 0}
@@ -30220,6 +30635,26 @@ PrefabInstance:
         type: 3}
       propertyPath: Points.Array.data[0].x
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d823044211499a546a14682ca9e042b2, type: 3}
@@ -31322,6 +31757,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31394,6 +31834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -31446,6 +31891,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -32239,6 +32704,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32311,6 +32781,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -32363,6 +32838,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -35329,6 +35824,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -35381,6 +35881,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -39543,6 +40063,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
       propertyPath: XAxis
       value: 1
       objectReference: {fileID: 0}
@@ -39589,6 +40114,26 @@ PrefabInstance:
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
       propertyPath: Points.Array.data[1].x
+      value: 81.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 79.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
       value: 81.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -40398,6 +40943,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40470,6 +41020,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -40522,6 +41077,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -41114,6 +41689,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41176,6 +41756,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -41222,6 +41807,26 @@ PrefabInstance:
     - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
         type: 3}
       propertyPath: Points.Array.data[1].x
+      value: 89.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 84.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: d823044211499a546a14682ca9e042b2,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
       value: 89.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -43753,6 +44358,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43825,6 +44435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -43877,6 +44492,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -44168,6 +44803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44240,6 +44880,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -44297,6 +44942,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -44689,6 +45354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flyer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716599, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716604, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44761,6 +45431,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
+      propertyPath: NavPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
       propertyPath: Direction
       value: Up
       objectReference: {fileID: 0}
@@ -44813,6 +45488,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[0].x
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147331610985716601, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NavPoints.Array.data[1].x
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
