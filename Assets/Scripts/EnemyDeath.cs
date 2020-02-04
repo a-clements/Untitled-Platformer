@@ -21,6 +21,7 @@ public class EnemyDeath : MonoBehaviour
     private Transform ThisTransform;
     private Image ShoutMetre;
     private FadeOut Fade;
+    private CapsuleCollider2D Collider;
 
     //public bool Dead = false;
     //public bool Shocked = false;
@@ -31,6 +32,7 @@ public class EnemyDeath : MonoBehaviour
         ShoutMetre = GameObject.Find("Post Process Canvas").transform.GetChild(0).GetComponent<Image>();
         ThisTransform = transform;
         Fade = GetComponent<FadeOut>();
+        Collider = GetComponent<CapsuleCollider2D>();
     }
 
     public void Dead()
@@ -53,18 +55,12 @@ public class EnemyDeath : MonoBehaviour
             }
         }
 
-        ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
-        ScoreManager.UpdateScores(PointValue);
-        ThisTransform.GetComponent<EnemyDeath>().enabled = false;
-        ThisTransform.GetComponent<Animator>().enabled = false;
-        ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
-        ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
-
-        StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(), FadeOutTime));
+        Shocked();
     }
 
     public void Shocked()
     {
+        Collider.enabled = false;
         ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
         ScoreManager.UpdateScores(PointValue);
         ThisTransform.GetComponent<EnemyDeath>().enabled = false;
@@ -77,14 +73,6 @@ public class EnemyDeath : MonoBehaviour
 
     private void Update()
     {
-        //if (Dead == true)
-        //{
 
-        //}
-
-        //if (Shocked == true)
-        //{
-
-        //}
     }
 }
