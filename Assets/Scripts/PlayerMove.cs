@@ -13,12 +13,11 @@ public class PlayerMove : MonoBehaviour
 
     public Animator PlayerAnimator;
     private Rigidbody2D RigidBody;
-    private BoxCollider2D BoxCollider;
+    private CapsuleCollider2D CapsuleCollider;
     private Transform ThisTransform;
     public int JumpCount = 1;
     public bool CanJump = true;
     public Transform Checkpoint;
-    //public Vector2 OriginalCameraPosition;
 
 
     private void Awake()
@@ -29,7 +28,7 @@ public class PlayerMove : MonoBehaviour
     private void OnEnable()
     {
         RigidBody = GetComponent<Rigidbody2D>();
-        BoxCollider = GetComponent<BoxCollider2D>();
+        CapsuleCollider = GetComponent<CapsuleCollider2D>();
         ThisTransform = this.transform;
     }
 
@@ -123,14 +122,14 @@ public class PlayerMove : MonoBehaviour
             #region Resize Collider
             if (PlayerAnimator.GetBool("IsWalking") == true || PlayerAnimator.GetBool("IsJumping") == true)
             {
-                BoxCollider.offset = new Vector2(0.0f, -.07f);
-                BoxCollider.size = new Vector2(0.5f, 1.0f);
+                CapsuleCollider.offset = new Vector2(0.0f, -.07f);
+                CapsuleCollider.size = new Vector2(0.5f, 1.0f);
             }
 
             else if (PlayerAnimator.GetBool("IsIdle") == true)
             {
-                BoxCollider.offset = new Vector2(0, -.32f);
-                BoxCollider.size = new Vector2(0.5f, 0.5f);
+                CapsuleCollider.offset = new Vector2(0, -.32f);
+                CapsuleCollider.size = new Vector2(0.5f, 0.5f);
             }
             #endregion
         }
