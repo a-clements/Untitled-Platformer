@@ -91,8 +91,6 @@ public class SkeletonMove : MonoBehaviour
 
             Sprite.flipX = !Sprite.flipX;
 
-            ColliderOffset.x *= -1;
-
             CapsuleCollider.offset = ColliderOffset;
             CapsuleCollider.size = ColliderSize;
         }
@@ -198,8 +196,6 @@ public class SkeletonMove : MonoBehaviour
                 NextPosition = NavPoints[PointNumber];
 
                 Sprite.flipX = !Sprite.flipX;
-
-                ColliderOffset.x *= -1;
 
                 CapsuleCollider.offset = ColliderOffset;
                 CapsuleCollider.size = ColliderSize;
