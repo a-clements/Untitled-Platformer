@@ -159,8 +159,8 @@ MonoBehaviour:
   JumpHeight: 250
   Speed: 1
   NavPoints: []
-  ColliderSize: {x: 0.5, y: 0.8}
-  ColliderOffset: {x: 0.15, y: -0.1}
+  ColliderSize: {x: 0.35, y: 0.8}
+  ColliderOffset: {x: 0, y: -0.15}
 --- !u!70 &-3929461768111613006
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

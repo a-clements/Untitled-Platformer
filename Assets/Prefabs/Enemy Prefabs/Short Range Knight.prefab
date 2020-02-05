@@ -159,8 +159,8 @@ MonoBehaviour:
   NavPoints:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
-  ColliderSize: {x: 0.75, y: 1}
-  ColliderOffset: {x: 0.25, y: -0.1}
+  ColliderSize: {x: 0.5, y: 1}
+  ColliderOffset: {x: 0, y: 0}
 --- !u!70 &8246274713683672788
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

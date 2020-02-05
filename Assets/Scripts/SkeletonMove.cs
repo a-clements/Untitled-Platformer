@@ -13,7 +13,6 @@ public class SkeletonMove : MonoBehaviour
     [Tooltip("An array of NavPoints at which the enemy will stop.")]
     [SerializeField] private Vector3[] NavPoints;
     [SerializeField] private Vector2 ColliderSize;
-    [SerializeField] private Vector2 ColliderOffset;
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
@@ -34,7 +33,6 @@ public class SkeletonMove : MonoBehaviour
         RigidBody = GetComponent<Rigidbody2D>();
         CapsuleCollider = GetComponent<CapsuleCollider2D>();
 
-        CapsuleCollider.offset = ColliderOffset;
         CapsuleCollider.size = ColliderSize;
 
         Action = Random.Range(0, 3);
@@ -91,9 +89,6 @@ public class SkeletonMove : MonoBehaviour
 
             Sprite.flipX = !Sprite.flipX;
 
-            ColliderOffset.x *= -1;
-
-            CapsuleCollider.offset = ColliderOffset;
             CapsuleCollider.size = ColliderSize;
         }
 
@@ -199,9 +194,6 @@ public class SkeletonMove : MonoBehaviour
 
                 Sprite.flipX = !Sprite.flipX;
 
-                ColliderOffset.x *= -1;
-
-                CapsuleCollider.offset = ColliderOffset;
                 CapsuleCollider.size = ColliderSize;
             }
 
