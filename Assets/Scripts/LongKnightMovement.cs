@@ -13,7 +13,6 @@ public class LongKnightMovement : MonoBehaviour
     [Tooltip("An array of NavPoints at which the enemy will stop.")]
     [SerializeField] private Vector3[] NavPoints;
     [SerializeField] private Vector2 ColliderSize;
-    [SerializeField] private Vector2 ColliderOffset;
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
@@ -34,7 +33,6 @@ public class LongKnightMovement : MonoBehaviour
         RigidBody = GetComponent<Rigidbody2D>();
         CapsuleCollider = GetComponent<CapsuleCollider2D>();
 
-        CapsuleCollider.offset = ColliderOffset;
         CapsuleCollider.size = ColliderSize;
 
         Action = Random.Range(0, 2);
@@ -75,24 +73,19 @@ public class LongKnightMovement : MonoBehaviour
 
         yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
 
-        if (ThisTransform.position.x <= NavPoints[0].x || ThisTransform.position.x >= NavPoints[NavPoints.Length - 1].x)
-        {
-            PointNumber++;
+        //if (ThisTransform.position.x <= NavPoints[0].x || ThisTransform.position.x >= NavPoints[NavPoints.Length - 1].x)
+        //{
+        //    PointNumber++;
 
-            if (PointNumber == NavPoints.Length)
-            {
-                PointNumber = 0;
-            }
+        //    if (PointNumber == NavPoints.Length)
+        //    {
+        //        PointNumber = 0;
+        //    }
 
-            NextPosition = NavPoints[PointNumber];
+        //    NextPosition = NavPoints[PointNumber];
 
-            Sprite.flipX = !Sprite.flipX;
-
-            ColliderOffset.x *= -1;
-
-            CapsuleCollider.offset = ColliderOffset;
-            CapsuleCollider.size = ColliderSize;
-        }
+        //    Sprite.flipX = !Sprite.flipX;
+        //}
 
         while (Action == PreviousAction)
         {
@@ -146,7 +139,7 @@ public class LongKnightMovement : MonoBehaviour
     {
         if (IsMoving == true)
         {
-            if (ThisTransform.position == NavPoints[PointNumber])
+            if (ThisTransform.localPosition == NavPoints[PointNumber])
             {
                 PointNumber++;
 
@@ -158,14 +151,9 @@ public class LongKnightMovement : MonoBehaviour
                 NextPosition = NavPoints[PointNumber];
 
                 Sprite.flipX = !Sprite.flipX;
-
-                ColliderOffset.x *= -1;
-
-                CapsuleCollider.offset = ColliderOffset;
-                CapsuleCollider.size = ColliderSize;
             }
 
-            ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed * Time.deltaTime);
+            ThisTransform.localPosition = Vector3.MoveTowards(ThisTransform.localPosition, NextPosition, Speed * Time.deltaTime);
         }
     }
 }
