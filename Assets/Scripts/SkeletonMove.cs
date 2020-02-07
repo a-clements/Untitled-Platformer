@@ -88,8 +88,6 @@ public class SkeletonMove : MonoBehaviour
             NextPosition = NavPoints[PointNumber];
 
             Sprite.flipX = !Sprite.flipX;
-
-            CapsuleCollider.size = ColliderSize;
         }
 
         while (Action == PreviousAction)
@@ -193,8 +191,6 @@ public class SkeletonMove : MonoBehaviour
                 NextPosition = NavPoints[PointNumber];
 
                 Sprite.flipX = !Sprite.flipX;
-
-                CapsuleCollider.size = ColliderSize;
             }
 
             ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed * Time.deltaTime);
