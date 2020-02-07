@@ -54,6 +54,23 @@ public class LongKnightMovement : MonoBehaviour
         }
     }
 
+    void CheckPosition()
+    {
+        if (ThisTransform.localPosition == NavPoints[PointNumber])
+        {
+            PointNumber++;
+
+            if (PointNumber == NavPoints.Length)
+            {
+                PointNumber = 0;
+            }
+
+            NextPosition = NavPoints[PointNumber];
+
+            Sprite.flipX = !Sprite.flipX;
+        }
+    }
+
     IEnumerator Jump()
     {
         yield return null;
@@ -87,6 +104,8 @@ public class LongKnightMovement : MonoBehaviour
         //    Sprite.flipX = !Sprite.flipX;
         //}
 
+        CheckPosition();
+
         while (Action == PreviousAction)
         {
             Action = Random.Range(0, 2);
@@ -117,6 +136,8 @@ public class LongKnightMovement : MonoBehaviour
 
         EnemyAnimator.SetBool("IsWalking", false);
 
+        CheckPosition();
+
         while (Action == PreviousAction)
         {
             Action = Random.Range(0, 2);
@@ -139,20 +160,6 @@ public class LongKnightMovement : MonoBehaviour
     {
         if (IsMoving == true)
         {
-            if (ThisTransform.localPosition == NavPoints[PointNumber])
-            {
-                PointNumber++;
-
-                if (PointNumber == NavPoints.Length)
-                {
-                    PointNumber = 0;
-                }
-
-                NextPosition = NavPoints[PointNumber];
-
-                Sprite.flipX = !Sprite.flipX;
-            }
-
             ThisTransform.localPosition = Vector3.MoveTowards(ThisTransform.localPosition, NextPosition, Speed * Time.deltaTime);
         }
     }
