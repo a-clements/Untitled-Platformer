@@ -112,7 +112,8 @@ public class ShortKnightMovement : MonoBehaviour
     {
         if (IsMoving == true)
         {
-            if (ThisTransform.position.x <= NavPoints[0].x || ThisTransform.position.x >= NavPoints[NavPoints.Length - 1].x)
+            //if (ThisTransform.localPosition == NavPoints[PointNumber])
+            if (ThisTransform.localPosition.x <= NavPoints[0].x || ThisTransform.localPosition.x >= NavPoints[NavPoints.Length - 1].x)
             {
                 PointNumber++;
 
@@ -124,11 +125,9 @@ public class ShortKnightMovement : MonoBehaviour
                 NextPosition = NavPoints[PointNumber];
 
                 Sprite.flipX = !Sprite.flipX;
-
-                CapsuleCollider.size = ColliderSize;
             }
 
-            ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed * Time.deltaTime);
+            ThisTransform.localPosition = Vector3.MoveTowards(ThisTransform.localPosition, NextPosition, Speed * Time.deltaTime);
         }
     }
 }
