@@ -17,7 +17,7 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField] private bool IsMoving;
     [Tooltip("A declaration of how fast the platform is moving. Only positive numbers.")]
     [SerializeField] private float Speed;
-    [Tooltip("An array of points at which the platform will stop.")]
+    [Tooltip("An array of points at which the platform will stop. X values should be between -12 and 12. Y values should be between -3.5 and 19")]
     [SerializeField] private Vector3[] Points;
 
 
@@ -45,7 +45,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (IsMoving == true)
         {
-            if (ThisTransform.position == Points[PointNumber])
+            if (ThisTransform.localPosition == Points[PointNumber])
             {
                 PointNumber++;
 
@@ -57,7 +57,7 @@ public class MovingPlatform : MonoBehaviour
                 NextPosition = Points[PointNumber];
             }
 
-            ThisTransform.position = Vector3.MoveTowards(ThisTransform.position, NextPosition, Speed * Time.deltaTime);
+            ThisTransform.localPosition = Vector3.MoveTowards(ThisTransform.localPosition, NextPosition, Speed * Time.deltaTime);
         }
     }
 }
