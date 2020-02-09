@@ -31,6 +31,12 @@ public class GameManager : MonoBehaviour
             Keys[3] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireUpKey, true);
             Keys[4] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.ThrowKey, true);
             Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
+            ColourGrading.Instance.Exposure = Gamesettings.PostExposure;
+            ColourGrading.Instance.HueShift = Gamesettings.HueShift;
+            ColourGrading.Instance.Contrast = Gamesettings.ContrastValue;
+            ColourGrading.Instance.RedChannel = Gamesettings.RedChannel;
+            ColourGrading.Instance.GreenChannel = Gamesettings.GreenChannel;
+            ColourGrading.Instance.BlueChannel = Gamesettings.BlueChannel;
 
             //Movement[0] = Gamesettings.Movement0;
             //Movement[1] = Gamesettings.Movement1;
@@ -129,6 +135,12 @@ public class GameManager : MonoBehaviour
             Gamesettings.FireUpKey = Keys[3].ToString();
             Gamesettings.ThrowKey = Keys[4].ToString();
             Gamesettings.JumpKey = Keys[5].ToString();
+            Gamesettings.PostExposure = ColourGrading.Instance.Exposure;
+            Gamesettings.HueShift = ColourGrading.Instance.HueShift;
+            Gamesettings.ContrastValue = ColourGrading.Instance.Contrast;
+            Gamesettings.RedChannel = ColourGrading.Instance.RedChannel;
+            Gamesettings.GreenChannel = ColourGrading.Instance.GreenChannel;
+            Gamesettings.BlueChannel = ColourGrading.Instance.BlueChannel;
 
 
             string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
