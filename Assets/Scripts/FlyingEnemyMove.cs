@@ -45,7 +45,7 @@ public class FlyingEnemyMove : MonoBehaviour
 
         if(CollisionInfo.transform.tag == "Player")
         {
-            CollisionInfo.transform.GetComponent<PlayerHealth>().LoseLife();
+            CollisionInfo.transform.GetComponent<PlayerHealth>().LoseHeart();
         }
     }
 

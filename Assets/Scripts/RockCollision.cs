@@ -39,7 +39,7 @@ public class RockCollision : MonoBehaviour
         {
             this.gameObject.SetActive(false);
 
-            TriggerInfo.transform.GetComponent<PlayerHealth>().LoseLife();
+            TriggerInfo.transform.GetComponent<PlayerHealth>().LoseHeart();
 
             if (TriggerInfo.transform.GetComponent<SpriteRenderer>().flipX == false)
             {
