@@ -10,7 +10,7 @@ public class SpikeTrap : MonoBehaviour
     {
         if(CollisionInfo.transform.tag == "Player")
         {
-            CollisionInfo.transform.GetComponent<PlayerHealth>().LoseLife();
+            CollisionInfo.transform.GetComponent<PlayerHealth>().LoseHeart();
 
             if (CollisionInfo.transform.GetComponent<SpriteRenderer>().flipX == true)
             {

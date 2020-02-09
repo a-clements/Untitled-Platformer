@@ -15,9 +15,9 @@ public class DeathVolume : MonoBehaviour
     {
         if (TriggerInfo.tag == "Player")
         {
-            for(int i = PlayerHealth.LivesRemaining; i > -1; i--)
+            for(int i = PlayerHealth.HeartsRemaining; i > -1; i--)
             {
-                TriggerInfo.GetComponent<PlayerHealth>().LoseLife();
+                TriggerInfo.GetComponent<PlayerHealth>().LoseHeart();
             }
 
             //TriggerInfo.gameObject.SetActive(false);

@@ -2,58 +2,83 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private Image[] Health;
-    [SerializeField] public static int LivesRemaining;
+    [SerializeField] private Image[] Hearts;
+    [SerializeField] private Text Lives;
+    [SerializeField] public static int HeartsRemaining;
 
     void Start()
     {
-        LivesRemaining = Health.Length - 1;
+        HeartsRemaining = Hearts.Length - 1;
+        Lives.text = "X " + LivesManager.LivesRemaining;
     }
 
-    public void GainLife()
+    public void GainHeart()
     {
-        if(LivesRemaining != (Health.Length - 1))
+        if(HeartsRemaining != (Hearts.Length - 1))
         {
-            LivesRemaining++;
-            Health[LivesRemaining].gameObject.SetActive(true);
+            HeartsRemaining++;
+            Hearts[HeartsRemaining].gameObject.SetActive(true);
+        }
+
+        else
+        {
+            LivesManager.LivesRemaining++;
+            Lives.text = "X " + LivesManager.LivesRemaining;
         }
     }
 
-    public void LoseLife()
+    public void LoseHeart()
     {
-        if(LivesRemaining > -1)
+        if(HeartsRemaining > -1)
         {
-            Health[LivesRemaining].gameObject.SetActive(false);
-            LivesRemaining--;
+            Hearts[HeartsRemaining].gameObject.SetActive(false);
+            HeartsRemaining--;
         }
 
-        if(LivesRemaining == -1)
+        if(HeartsRemaining == -1)
         {
+            GetComponent<CapsuleCollider2D>().enabled = false;
             ScoreManager.SaveScores();
             StartCoroutine(DeathAnimation());
+            LivesManager.LivesRemaining--;
+            Lives.text = "X " + LivesManager.LivesRemaining;
         }
     }
 
     IEnumerator DeathAnimation()
     {
-        GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", true);
-        yield return new WaitForSeconds(GetComponent<PlayerMove>().PlayerAnimator.GetCurrentAnimatorStateInfo(0).length);
-        GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", false);
-
-        this.transform.position = this.GetComponent<PlayerMove>().Checkpoint.position;
-
-        this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        this.transform.rotation = Quaternion.identity;
-
-        GetComponent<PlayerMove>().CanJump = true;
-        GetComponent<PlayerMove>().JumpCount = 1;
-
-        for (int i = 0; i < Health.Length; i++)
+        if(LivesManager.LivesRemaining > 0)
         {
-            GainLife();
+            GetComponent<PlayerMove>().enabled = false;
+
+            GetComponent<PlayerMove>().PlayerAnimator.SetTrigger("IsDead");
+
+            yield return new WaitForSeconds(GetComponent<PlayerMove>().PlayerAnimator.GetCurrentAnimatorStateInfo(0).length);
+
+            this.transform.position = this.GetComponent<PlayerMove>().Checkpoint.position;
+
+            GetComponent<CapsuleCollider2D>().enabled = true;
+
+            this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            this.transform.rotation = Quaternion.identity;
+
+            for (int i = 0; i < Hearts.Length; i++)
+            {
+                GainHeart();
+            }
+
+            GetComponent<PlayerMove>().CanJump = true;
+            GetComponent<PlayerMove>().JumpCount = 1;
+            GetComponent<PlayerMove>().enabled = true;
+        }
+
+        else
+        {
+            SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
         }
 
         yield return null;

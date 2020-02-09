@@ -44,6 +44,8 @@ public class MenuScript : MonoBehaviour
 
     IEnumerator LoadScene()
     {
+        LivesManager.LivesRemaining = 3;
+
         if(Running == false)
         {
             while(PanelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Scroll Out"))

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -275,7 +275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e97d5ac2f0b584419d8d4f77d3780d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonPositionMultiplier: 0
 --- !u!1 &145409216
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e97d5ac2f0b584419d8d4f77d3780d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonPositionMultiplier: 0
 --- !u!1001 &309624624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -800,7 +798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e97d5ac2f0b584419d8d4f77d3780d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonPositionMultiplier: 0
 --- !u!1001 &807874183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1006,12 +1003,17 @@ PrefabInstance:
     - target: {fileID: 4037795148738090484, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6939091769307642786, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763109453938756941, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4732819889275024533, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
@@ -1043,12 +1045,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2645194331306005212, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5013835870462234507, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1358874384250965574, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788734181694087374, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_IsActive
       value: 0
