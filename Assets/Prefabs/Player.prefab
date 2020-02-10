@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 1211305407845736604}
   - component: {fileID: 5773494915484282218}
   - component: {fileID: 3434565583055710541}
+  - component: {fileID: 646765598877646851}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -325,7 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d46494535e8284ebdc6bdb0843d528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: []
+  Hearts: []
+  Lives: {fileID: 0}
 --- !u!95 &3434565583055710541
 Animator:
   serializedVersion: 3
@@ -345,6 +347,14 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!81 &646765598877646851
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211305407845736603}
+  m_Enabled: 1
 --- !u!1 &2538241286286453464
 GameObject:
   m_ObjectHideFlags: 0
