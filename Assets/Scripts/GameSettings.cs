@@ -21,6 +21,9 @@ public class GameSettings
     public string Fireupkey;
     public string Throwkey;
     public string Jumpkey;
+    public string Fireupkey;
+    public string Throwkey;
+    public string Jumpkey;
     public float Exposure;
     public int Hue;
     public int Contrast;

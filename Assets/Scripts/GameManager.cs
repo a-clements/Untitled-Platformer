@@ -13,8 +13,6 @@ public class GameManager : MonoBehaviour
 
     SpVoice Voice = new SpVoice();
 
-    public static GameManager Instance = null;
-
     private void Awake()
     {
         //this function is executed first
@@ -23,11 +21,6 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         //this function is executed second
-        LoadSettings();
-    }
-
-    public void LoadSettings()
-    {
         if (File.Exists(Application.persistentDataPath + "/GameSettings.json"))
         {
             Gamesettings = JsonUtility.FromJson<GameSettings>(File.ReadAllText(Application.persistentDataPath + "/GameSettings.json"));
@@ -136,28 +129,25 @@ public class GameManager : MonoBehaviour
 
         else
         {
-            SaveSettings();
+            Gamesettings.LeftKey = Keys[0].ToString();
+            Gamesettings.RightKey = Keys[1].ToString();
+            Gamesettings.FireLeftKey = Keys[2].ToString();
+            Gamesettings.FireUpKey = Keys[3].ToString();
+            Gamesettings.ThrowKey = Keys[4].ToString();
+            Gamesettings.JumpKey = Keys[5].ToString();
+            Gamesettings.PostExposure = ColourGrading.Instance.Exposure;
+            Gamesettings.HueShift = ColourGrading.Instance.HueShift;
+            Gamesettings.ContrastValue = ColourGrading.Instance.Contrast;
+            Gamesettings.RedChannel = ColourGrading.Instance.RedChannel;
+            Gamesettings.GreenChannel = ColourGrading.Instance.GreenChannel;
+            Gamesettings.BlueChannel = ColourGrading.Instance.BlueChannel;
+
+
+
+            string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
+
+            File.WriteAllText(Application.persistentDataPath + "/GameSettings.json", jsondata); //This line writes the jsondata string to a file at the application path.
         }
-    }
-
-    public void SaveSettings()
-    {
-        Gamesettings.LeftKey = Keys[0].ToString();
-        Gamesettings.RightKey = Keys[1].ToString();
-        Gamesettings.FireLeftKey = Keys[2].ToString();
-        Gamesettings.FireUpKey = Keys[3].ToString();
-        Gamesettings.ThrowKey = Keys[4].ToString();
-        Gamesettings.JumpKey = Keys[5].ToString();
-        Gamesettings.PostExposure = ColourGrading.Instance.Exposure;
-        Gamesettings.HueShift = ColourGrading.Instance.HueShift;
-        Gamesettings.ContrastValue = ColourGrading.Instance.Contrast;
-        Gamesettings.RedChannel = ColourGrading.Instance.RedChannel;
-        Gamesettings.GreenChannel = ColourGrading.Instance.GreenChannel;
-        Gamesettings.BlueChannel = ColourGrading.Instance.BlueChannel;
-
-        string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
-
-        File.WriteAllText(Application.persistentDataPath + "/GameSettings.json", jsondata); //This line writes the jsondata string to a file at the application path.
     }
 
     private void OnDisable()
