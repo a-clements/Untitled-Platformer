@@ -11,6 +11,7 @@ public class GameSettings
     //public bool Autofire;
     //public bool Voicecontrol;
     //public bool Texttospeech;
+    //public int Resolutionindex;
     //public float Musicvolume;
     //public float SFXvolume;
     //public float Gammacorrection;
@@ -20,13 +21,6 @@ public class GameSettings
     public string Fireupkey;
     public string Throwkey;
     public string Jumpkey;
-    public float Exposure;
-    public int Hue;
-    public int Contrast;
-    public int Red;
-    public int Green;
-    public int Blue;
-
     //public string movement0;
     //public string movement1;
     //public string movement2;
@@ -59,84 +53,6 @@ public class GameSettings
     //        Voicecontrol = value;
     //    }
     //}
-
-    public float PostExposure
-    {
-        get
-        {
-            return Exposure;
-        }
-
-        set
-        {
-            Exposure = value;
-        }
-    }
-
-    public int HueShift
-    {
-        get
-        {
-            return Hue;
-        }
-
-        set
-        {
-            Hue = value;
-        }
-    }
-
-    public int ContrastValue
-    {
-        get
-        {
-            return Contrast;
-        }
-
-        set
-        {
-            Contrast = value;
-        }
-    }
-
-    public int RedChannel
-    {
-        get
-        {
-            return Red;
-        }
-
-        set
-        {
-            Red = value;
-        }
-    }
-
-    public int GreenChannel
-    {
-        get
-        {
-            return Green;
-        }
-
-        set
-        {
-            Green = value;
-        }
-    }
-
-    public int BlueChannel
-    {
-        get
-        {
-            return Blue;
-        }
-
-        set
-        {
-            Blue = value;
-        }
-    }
 
     public string RightKey
     {
