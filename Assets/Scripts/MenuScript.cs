@@ -33,12 +33,12 @@ public class MenuScript : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(ScrollIn());
+        StartCoroutine(MainScrollIn());
     }
 
     public void OnPlayButtonClick()
     {
-        StartCoroutine(ScrollOut());
+        StartCoroutine(MainScrollOut());
         StartCoroutine(LoadScene());
     }
 
@@ -48,7 +48,7 @@ public class MenuScript : MonoBehaviour
 
         if(Running == false)
         {
-            while(PanelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Scroll Out"))
+            while(PanelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Main Scroll Out"))
             {
                 yield return null;
             }
@@ -65,17 +65,17 @@ public class MenuScript : MonoBehaviour
         }
     }
 
-    private IEnumerator ScrollIn()
+    private IEnumerator MainScrollIn()
     {
         yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[0]);
-        PanelAnimator.SetTrigger("Scroll In");
+        PanelAnimator.SetTrigger("Main Scroll In");
         //yield return null;
     }
 
-    private IEnumerator ScrollOut()
+    private IEnumerator MainScrollOut()
     {
         yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[1]);
-        PanelAnimator.SetTrigger("Scroll Out");
+        PanelAnimator.SetTrigger("Main Scroll Out");
         Running = false;
         yield return new WaitForSeconds(WaitTimer);
     }

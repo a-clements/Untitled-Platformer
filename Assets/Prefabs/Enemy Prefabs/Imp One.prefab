@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5273189164765170396}
   - component: {fileID: -606941753719192278}
   m_Layer: 0
-  m_Name: Flyer
+  m_Name: Imp One
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
