@@ -9,9 +9,10 @@ public class Checkpoints : MonoBehaviour
     [SerializeField] private GameObject PanelOne;
     public GameObject PanelTwo;
     public GameObject PanelThree;
+    private bool CanShow = true;
     [SerializeField] EventSystem GetEventSystem;
 
-    Event KeyEvent;
+    //Event KeyEvent;
 
     private void Start()
     {
@@ -26,12 +27,13 @@ public class Checkpoints : MonoBehaviour
             TriggerInfo.GetComponent<Animator>().SetBool("IsWalking", false);
             ScoreManager.SaveScores();
 
-            if (PanelOne != null)
+            if (PanelOne != null && CanShow == true)
             {
                 PanelOne.SetActive(true);
                 GetEventSystem.firstSelectedGameObject = PanelOne;
                 PanelOne.transform.GetChild(0).GetComponent<Button>().Select();
                 Time.timeScale = 0;
+                CanShow = false;
             }
         }
     }
@@ -48,21 +50,43 @@ public class Checkpoints : MonoBehaviour
         }
     }
 
-    private void OnGUI()
+    private void Update()
     {
-        KeyEvent = Event.current;
-
-        if(PanelOne != null)
+        if (PanelOne != null)
         {
-            if (KeyEvent.isKey && PanelOne.activeSelf || KeyEvent.isKey && PanelTwo.activeSelf || KeyEvent.isKey && PanelThree.activeSelf)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (KeyEvent.keyCode == KeyCode.Escape)
+                if (PanelOne.activeSelf || PanelTwo.activeSelf || PanelThree.activeSelf)
                 {
                     StartCoroutine(ClosePanel());
+                }
+                else
+                {
+                    PanelOne.SetActive(true);
                 }
             }
         }
     }
+
+    //private void OnGUI()
+    //{
+    //    KeyEvent = Event.current;
+
+    //    if(PanelOne != null)
+    //    {
+    //        if (KeyEvent.isKey && PanelOne.activeSelf || KeyEvent.isKey && PanelTwo.activeSelf || KeyEvent.isKey && PanelThree.activeSelf)
+    //        {
+    //            if (KeyEvent.keyCode == KeyCode.Escape)
+    //            {
+    //                StartCoroutine(ClosePanel());
+    //            }
+    //            else
+    //            {
+    //                PanelOne.SetActive(true);
+    //            }
+    //        }
+    //    }
+    //}
 
     IEnumerator ClosePanel()
     {
