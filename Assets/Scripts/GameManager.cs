@@ -20,23 +20,9 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
+        LoadSettings();
         //this function is executed second
-        if (File.Exists(Application.persistentDataPath + "/GameSettings.json"))
-        {
-            Gamesettings = JsonUtility.FromJson<GameSettings>(File.ReadAllText(Application.persistentDataPath + "/GameSettings.json"));
 
-            Keys[0] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.LeftKey, true);
-            Keys[1] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.RightKey, true);
-            Keys[2] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireLeftKey, true);
-            Keys[3] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireUpKey, true);
-            Keys[4] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.ThrowKey, true);
-            Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
-            ColourGrading.Instance.Exposure = Gamesettings.PostExposure;
-            ColourGrading.Instance.HueShift = Gamesettings.HueShift;
-            ColourGrading.Instance.Contrast = Gamesettings.ContrastValue;
-            ColourGrading.Instance.RedChannel = Gamesettings.RedChannel;
-            ColourGrading.Instance.GreenChannel = Gamesettings.GreenChannel;
-            ColourGrading.Instance.BlueChannel = Gamesettings.BlueChannel;
 
             //Movement[0] = Gamesettings.Movement0;
             //Movement[1] = Gamesettings.Movement1;
@@ -125,29 +111,52 @@ public class GameManager : MonoBehaviour
             //SecondHue.value = Hue;
             //SecondSaturation.value = Saturation;
             //SecondBrightness.value = Brightness;
+    }
+
+    public void LoadSettings()
+    {
+        if (File.Exists(Application.persistentDataPath + "/GameSettings.json"))
+        {
+            Gamesettings = JsonUtility.FromJson<GameSettings>(File.ReadAllText(Application.persistentDataPath + "/GameSettings.json"));
+
+            Keys[0] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.LeftKey, true);
+            Keys[1] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.RightKey, true);
+            Keys[2] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireLeftKey, true);
+            Keys[3] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireUpKey, true);
+            Keys[4] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.ThrowKey, true);
+            Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
+            ColourGrading.Instance.Exposure = Gamesettings.PostExposure;
+            ColourGrading.Instance.HueShift = Gamesettings.HueShift;
+            ColourGrading.Instance.Contrast = Gamesettings.ContrastValue;
+            ColourGrading.Instance.RedChannel = Gamesettings.RedChannel;
+            ColourGrading.Instance.GreenChannel = Gamesettings.GreenChannel;
+            ColourGrading.Instance.BlueChannel = Gamesettings.BlueChannel;
         }
 
         else
         {
-            Gamesettings.LeftKey = Keys[0].ToString();
-            Gamesettings.RightKey = Keys[1].ToString();
-            Gamesettings.FireLeftKey = Keys[2].ToString();
-            Gamesettings.FireUpKey = Keys[3].ToString();
-            Gamesettings.ThrowKey = Keys[4].ToString();
-            Gamesettings.JumpKey = Keys[5].ToString();
-            Gamesettings.PostExposure = ColourGrading.Instance.Exposure;
-            Gamesettings.HueShift = ColourGrading.Instance.HueShift;
-            Gamesettings.ContrastValue = ColourGrading.Instance.Contrast;
-            Gamesettings.RedChannel = ColourGrading.Instance.RedChannel;
-            Gamesettings.GreenChannel = ColourGrading.Instance.GreenChannel;
-            Gamesettings.BlueChannel = ColourGrading.Instance.BlueChannel;
-
-
-
-            string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
-
-            File.WriteAllText(Application.persistentDataPath + "/GameSettings.json", jsondata); //This line writes the jsondata string to a file at the application path.
+            SaveSettings();
         }
+    }
+
+    public void SaveSettings()
+    {
+        Gamesettings.LeftKey = Keys[0].ToString();
+        Gamesettings.RightKey = Keys[1].ToString();
+        Gamesettings.FireLeftKey = Keys[2].ToString();
+        Gamesettings.FireUpKey = Keys[3].ToString();
+        Gamesettings.ThrowKey = Keys[4].ToString();
+        Gamesettings.JumpKey = Keys[5].ToString();
+        Gamesettings.PostExposure = ColourGrading.Instance.Exposure;
+        Gamesettings.HueShift = ColourGrading.Instance.HueShift;
+        Gamesettings.ContrastValue = ColourGrading.Instance.Contrast;
+        Gamesettings.RedChannel = ColourGrading.Instance.RedChannel;
+        Gamesettings.GreenChannel = ColourGrading.Instance.GreenChannel;
+        Gamesettings.BlueChannel = ColourGrading.Instance.BlueChannel;
+
+        string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
+
+        File.WriteAllText(Application.persistentDataPath + "/GameSettings.json", jsondata); //This line writes the jsondata string to a file at the application path.
     }
 
     private void OnDisable()
