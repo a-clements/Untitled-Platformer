@@ -62,6 +62,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PostProcess: {fileID: 0}
+  HueSlider: {fileID: 0}
+  ContrastSlider: {fileID: 0}
+  ExposureSlider: {fileID: 0}
+  RedChannelSlider: {fileID: 0}
+  GreenChannelSlider: {fileID: 0}
+  BlueChannelSlider: {fileID: 0}
   HueShift: 0
   Saturation: 0
   Contrast: 0

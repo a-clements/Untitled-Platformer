@@ -125,12 +125,12 @@ public class GameManager : MonoBehaviour
             Keys[3] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireUpKey, true);
             Keys[4] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.ThrowKey, true);
             Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
-            ColourGrading.Instance.Exposure = Gamesettings.PostExposure;
-            ColourGrading.Instance.HueShift = Gamesettings.HueShift;
-            ColourGrading.Instance.Contrast = Gamesettings.ContrastValue;
-            ColourGrading.Instance.RedChannel = Gamesettings.RedChannel;
-            ColourGrading.Instance.GreenChannel = Gamesettings.GreenChannel;
-            ColourGrading.Instance.BlueChannel = Gamesettings.BlueChannel;
+            ColourGrading.Instance.ExposureSlider.value = Gamesettings.PostExposure;
+            ColourGrading.Instance.HueSlider.value = Gamesettings.HueShift;
+            ColourGrading.Instance.ContrastSlider.value = Gamesettings.ContrastValue;
+            ColourGrading.Instance.RedChannelSlider.value = Gamesettings.RedChannel;
+            ColourGrading.Instance.GreenChannelSlider.value = Gamesettings.GreenChannel;
+            ColourGrading.Instance.BlueChannelSlider.value = Gamesettings.BlueChannel;
         }
 
         else
@@ -147,12 +147,12 @@ public class GameManager : MonoBehaviour
         Gamesettings.FireUpKey = Keys[3].ToString();
         Gamesettings.ThrowKey = Keys[4].ToString();
         Gamesettings.JumpKey = Keys[5].ToString();
-        Gamesettings.PostExposure = ColourGrading.Instance.Exposure;
-        Gamesettings.HueShift = ColourGrading.Instance.HueShift;
-        Gamesettings.ContrastValue = ColourGrading.Instance.Contrast;
-        Gamesettings.RedChannel = ColourGrading.Instance.RedChannel;
-        Gamesettings.GreenChannel = ColourGrading.Instance.GreenChannel;
-        Gamesettings.BlueChannel = ColourGrading.Instance.BlueChannel;
+        Gamesettings.PostExposure = ColourGrading.Instance.ExposureSlider.value;
+        Gamesettings.HueShift = (int)ColourGrading.Instance.HueSlider.value;
+        Gamesettings.ContrastValue = (int)ColourGrading.Instance.ContrastSlider.value;
+        Gamesettings.RedChannel = (int)ColourGrading.Instance.RedChannelSlider.value;
+        Gamesettings.GreenChannel = (int)ColourGrading.Instance.GreenChannelSlider.value;
+        Gamesettings.BlueChannel = (int)ColourGrading.Instance.BlueChannelSlider.value;
 
         string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
 
