@@ -13,8 +13,6 @@ public class GameManager : MonoBehaviour
 
     SpVoice Voice = new SpVoice();
 
-    public static GameManager Instance = null;
-
     private void Awake()
     {
         //this function is executed first
@@ -22,28 +20,9 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        //this function is executed second
         LoadSettings();
-    }
+        //this function is executed second
 
-    public void LoadSettings()
-    {
-        if (File.Exists(Application.persistentDataPath + "/GameSettings.json"))
-        {
-            Gamesettings = JsonUtility.FromJson<GameSettings>(File.ReadAllText(Application.persistentDataPath + "/GameSettings.json"));
-
-            Keys[0] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.LeftKey, true);
-            Keys[1] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.RightKey, true);
-            Keys[2] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireLeftKey, true);
-            Keys[3] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireUpKey, true);
-            Keys[4] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.ThrowKey, true);
-            Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
-            ColourGrading.Instance.Exposure = Gamesettings.PostExposure;
-            ColourGrading.Instance.HueShift = Gamesettings.HueShift;
-            ColourGrading.Instance.Contrast = Gamesettings.ContrastValue;
-            ColourGrading.Instance.RedChannel = Gamesettings.RedChannel;
-            ColourGrading.Instance.GreenChannel = Gamesettings.GreenChannel;
-            ColourGrading.Instance.BlueChannel = Gamesettings.BlueChannel;
 
             //Movement[0] = Gamesettings.Movement0;
             //Movement[1] = Gamesettings.Movement1;
@@ -132,6 +111,26 @@ public class GameManager : MonoBehaviour
             //SecondHue.value = Hue;
             //SecondSaturation.value = Saturation;
             //SecondBrightness.value = Brightness;
+    }
+
+    public void LoadSettings()
+    {
+        if (File.Exists(Application.persistentDataPath + "/GameSettings.json"))
+        {
+            Gamesettings = JsonUtility.FromJson<GameSettings>(File.ReadAllText(Application.persistentDataPath + "/GameSettings.json"));
+
+            Keys[0] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.LeftKey, true);
+            Keys[1] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.RightKey, true);
+            Keys[2] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireLeftKey, true);
+            Keys[3] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireUpKey, true);
+            Keys[4] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.ThrowKey, true);
+            Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
+            ColourGrading.Instance.Exposure = Gamesettings.PostExposure;
+            ColourGrading.Instance.HueShift = Gamesettings.HueShift;
+            ColourGrading.Instance.Contrast = Gamesettings.ContrastValue;
+            ColourGrading.Instance.RedChannel = Gamesettings.RedChannel;
+            ColourGrading.Instance.GreenChannel = Gamesettings.GreenChannel;
+            ColourGrading.Instance.BlueChannel = Gamesettings.BlueChannel;
         }
 
         else
