@@ -42,6 +42,19 @@ public class MenuScript : MonoBehaviour
         StartCoroutine(LoadScene());
     }
 
+    public void OnQuitButtonClick()
+    {
+        StartCoroutine(MainScrollOut());
+
+        #if UNITY_STANDALONE
+            Application.Quit();
+        #endif
+
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
+
     IEnumerator LoadScene()
     {
         LivesManager.LivesRemaining = 3;
