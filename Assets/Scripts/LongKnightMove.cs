@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LongKnightMovement : MonoBehaviour
+public class LongKnightMove : MonoBehaviour
 {
     [Tooltip("How far along the X axis can the Knight jump.")]
     [SerializeField] private float JumpDistance = 25;

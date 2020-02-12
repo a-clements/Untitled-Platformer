@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShortKnightMovement : MonoBehaviour
+public class ShortKnightMove : MonoBehaviour
 {
     [Tooltip("How fast is the Knight.")]
     [SerializeField] private float Speed = 1;

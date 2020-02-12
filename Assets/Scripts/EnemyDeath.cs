@@ -63,6 +63,32 @@ public class EnemyDeath : MonoBehaviour
         Collider.enabled = false;
         ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
         ScoreManager.UpdateScores(PointValue);
+
+        ThisTransform.GetComponent<Rigidbody2D>().gravityScale = Mathf.Abs(ThisTransform.GetComponent<Rigidbody2D>().gravityScale - 1);
+
+        switch(ThisTransform.name)
+        {
+            case "Imp One":
+                GetComponent<FlyingEnemyMove>().enabled = false;
+                    break;
+
+            case "Imp Two":
+                GetComponent<FlyingEnemyMove>().enabled = false;
+                break;
+
+            case "Skeleton":
+                GetComponent<SkeletonMove>().enabled = false;
+                break;
+
+            case "Short Range Knight":
+                GetComponent<ShortKnightMove>().enabled = false;
+                break;
+
+            case "Long Range Knight":
+                GetComponent<LongKnightMove>().enabled = false;
+                break;
+        }
+
         ThisTransform.GetComponent<EnemyDeath>().enabled = false;
         ThisTransform.GetComponent<Animator>().enabled = false;
         ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
