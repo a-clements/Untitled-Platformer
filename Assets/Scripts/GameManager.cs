@@ -20,9 +20,8 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        LoadSettings();
         //this function is executed second
-
+        LoadSettings();
 
             //Movement[0] = Gamesettings.Movement0;
             //Movement[1] = Gamesettings.Movement1;
@@ -131,6 +130,10 @@ public class GameManager : MonoBehaviour
             ColourGrading.Instance.RedChannelSlider.value = Gamesettings.RedChannel;
             ColourGrading.Instance.GreenChannelSlider.value = Gamesettings.GreenChannel;
             ColourGrading.Instance.BlueChannelSlider.value = Gamesettings.BlueChannel;
+            AudioMixer.Instance.MasterVolumeSlider.value = Gamesettings.MasterVolume;
+            AudioMixer.Instance.AmbientVolumeSlider.value = Gamesettings.AmbientVolume;
+            AudioMixer.Instance.MusicVolumeSlider.value = Gamesettings.MusicVolume;
+            AudioMixer.Instance.SFXVolumeSlider.value = Gamesettings.SFXVolume;
         }
 
         else
@@ -153,6 +156,10 @@ public class GameManager : MonoBehaviour
         Gamesettings.RedChannel = (int)ColourGrading.Instance.RedChannelSlider.value;
         Gamesettings.GreenChannel = (int)ColourGrading.Instance.GreenChannelSlider.value;
         Gamesettings.BlueChannel = (int)ColourGrading.Instance.BlueChannelSlider.value;
+        Gamesettings.MasterVolume = (int)AudioMixer.Instance.MasterVolumeSlider.value;
+        Gamesettings.AmbientVolume = (int)AudioMixer.Instance.AmbientVolumeSlider.value;
+        Gamesettings.MusicVolume = (int)AudioMixer.Instance.MusicVolumeSlider.value;
+        Gamesettings.SFXVolume = (int)AudioMixer.Instance.SFXVolumeSlider.value;
 
         string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
 
@@ -167,6 +174,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //this function is executed third
+        AudioMixer.Instance.OnMasterVolumeChange();
+        AudioMixer.Instance.OnAmbientVolumeChange();
+        AudioMixer.Instance.OnMusicVolumeChange();
+        AudioMixer.Instance.OnSFXVolumeChange();
     }
 
     public void Speak(string text)

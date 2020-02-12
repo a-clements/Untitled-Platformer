@@ -23,6 +23,7 @@ public class Checkpoints : MonoBehaviour
     {
         if (TriggerInfo.gameObject.tag == "Player")
         {
+
             TriggerInfo.GetComponent<PlayerMove>().Checkpoint = this.transform;
             TriggerInfo.GetComponent<Animator>().SetBool("IsWalking", false);
             ScoreManager.SaveScores();
@@ -31,7 +32,7 @@ public class Checkpoints : MonoBehaviour
             {
                 PanelOne.SetActive(true);
                 GetEventSystem.firstSelectedGameObject = PanelOne;
-                PanelOne.transform.GetChild(0).GetComponent<Button>().Select();
+                PanelOne.transform.GetChild(1).GetChild(0).GetComponent<Button>().Select();
                 Time.timeScale = 0;
                 CanShow = false;
             }
@@ -63,6 +64,7 @@ public class Checkpoints : MonoBehaviour
                 else
                 {
                     PanelOne.SetActive(true);
+                    Time.timeScale = 0;
                 }
             }
         }

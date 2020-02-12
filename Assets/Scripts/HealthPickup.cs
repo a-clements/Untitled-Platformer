@@ -19,12 +19,9 @@ public class HealthPickup : MonoBehaviour
     {
         if (TriggerInfo.gameObject.tag == "Player")
         {
-            if(PlayerHealth.HeartsRemaining < 3)
-            {
-                TriggerInfo.GetComponent<PlayerHealth>().GainHeart();
+            TriggerInfo.GetComponent<PlayerHealth>().GainHeart();
 
-                this.gameObject.SetActive(false);
-            }
+            this.gameObject.SetActive(false);
         }
     }
 }
