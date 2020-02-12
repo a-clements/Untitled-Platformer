@@ -28,6 +28,10 @@ public class PlayerHealth : MonoBehaviour
         {
             LivesManager.LivesRemaining++;
             Lives.text = "X " + LivesManager.LivesRemaining;
+            Hearts[3].gameObject.SetActive(false);
+            Hearts[2].gameObject.SetActive(false);
+            Hearts[1].gameObject.SetActive(false);
+            HeartsRemaining = 0;
         }
     }
 

@@ -142,7 +142,7 @@ MonoBehaviour:
   RefillAmount: 0.1
   PointValue: 0
   FadeOutTime: 1
-  DeathSprite: {fileID: 0}
+  DeathSprite: {fileID: 21300000, guid: 73ffa597b9472a94aab4c3204ea9d288, type: 3}
   CanShowPanel: 0
 --- !u!114 &-8378578692436288027
 MonoBehaviour:
@@ -186,7 +186,8 @@ AudioSource:
   m_GameObject: {fileID: 1211305407845736603}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5602983012942237831, guid: a081a72b8c1682048a200c010439a999,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

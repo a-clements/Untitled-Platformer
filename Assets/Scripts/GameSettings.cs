@@ -27,6 +27,10 @@ public class GameSettings
     public int Red;
     public int Green;
     public int Blue;
+    public int Master;
+    public int Ambient;
+    public int Music;
+    public int SFX;
 
     //public string movement0; 
     //public string movement1; 
@@ -135,6 +139,58 @@ public class GameSettings
         set
         {
             Blue = value;
+        }
+    }
+
+    public int MasterVolume
+    {
+        get
+        {
+            return Master;
+        }
+
+        set
+        {
+            Master = value;
+        }
+    }
+
+    public int AmbientVolume
+    {
+        get
+        {
+            return Ambient;
+        }
+
+        set
+        {
+            Ambient = value;
+        }
+    }
+
+    public int MusicVolume
+    {
+        get
+        {
+            return Music;
+        }
+
+        set
+        {
+            Music = value;
+        }
+    }
+
+    public int SFXVolume
+    {
+        get
+        {
+            return SFX;
+        }
+
+        set
+        {
+            SFX = value;
         }
     }
 
