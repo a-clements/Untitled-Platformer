@@ -69,9 +69,6 @@ public class EnemyDeath : MonoBehaviour
         switch(ThisTransform.name)
         {
             case "Imp One":
-                GetComponent<FlyingEnemyMove>().enabled = false;
-                    break;
-
             case "Imp Two":
                 GetComponent<FlyingEnemyMove>().enabled = false;
                 break;
