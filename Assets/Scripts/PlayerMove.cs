@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float GravityMultiplier;
     [SerializeField] private float JumpModifier = 1.0f;
     [SerializeField] private float FallModifier = 1.5f;
+    [SerializeField] private float Knockback = 3.0f;
 
     public Animator PlayerAnimator;
     private Rigidbody2D RigidBody;
@@ -41,6 +42,19 @@ public class PlayerMove : MonoBehaviour
 
             RigidBody.velocity = Vector2.zero;
             RigidBody.angularVelocity = 0.0f;
+        }
+
+        if(CollisionInfo.gameObject.tag == "Enemy")
+        {
+            if(CollisionInfo.transform.position.x > ThisTransform.position.x)
+            {
+                ThisTransform.GetComponent<Rigidbody2D>().AddForce((Vector2.left + Vector2.up) * Knockback, ForceMode2D.Impulse);
+            }
+
+            else
+            {
+                ThisTransform.GetComponent<Rigidbody2D>().AddForce((Vector2.right + Vector2.up) * Knockback, ForceMode2D.Impulse);
+            }
         }
     }
 
@@ -76,7 +90,7 @@ public class PlayerMove : MonoBehaviour
             #endregion
 
             #region Start Walking
-            if (Input.GetKey(Manager.Keys[0]) || Input.GetKey(Manager.Keys[1]))
+            if (Input.GetKeyDown(Manager.Keys[0]) || Input.GetKeyDown(Manager.Keys[1]))
             {
                 PlayerAnimator.SetBool("IsWalking", true);
             }

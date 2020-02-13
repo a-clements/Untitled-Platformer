@@ -7,6 +7,8 @@ public class RockCollision : MonoBehaviour
     [SerializeField] private float Distance = 5.0f;
     [SerializeField] private float Knockback = 3.0f;
 
+    private Transform ThisTransform;
+
     private void OnEnable()
     {
         //called second
@@ -15,6 +17,7 @@ public class RockCollision : MonoBehaviour
     private void Awake()
     {
         //called first
+        ThisTransform = this.transform;
     }
 
     private void Start()
@@ -41,14 +44,14 @@ public class RockCollision : MonoBehaviour
 
             TriggerInfo.transform.GetComponent<PlayerHealth>().LoseHeart();
 
-            if (TriggerInfo.transform.GetComponent<SpriteRenderer>().flipX == false)
+            if (TriggerInfo.transform.position.x < ThisTransform.position.x)
             {
-                TriggerInfo.GetComponent<Rigidbody2D>().AddForce((Vector2.right + Vector2.up) * Knockback ,ForceMode2D.Impulse);
+                TriggerInfo.GetComponent<Rigidbody2D>().AddForce((Vector2.left + Vector2.up) * Knockback ,ForceMode2D.Impulse);
             }
 
-            else
+            else if(TriggerInfo.transform.position.x > ThisTransform.position.x)
             {
-                TriggerInfo.GetComponent<Rigidbody2D>().AddForce((Vector2.left + Vector2.up) * Knockback, ForceMode2D.Impulse);
+                TriggerInfo.GetComponent<Rigidbody2D>().AddForce((Vector2.right + Vector2.up) * Knockback, ForceMode2D.Impulse);
             }
         }
     }

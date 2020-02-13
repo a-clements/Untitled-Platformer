@@ -50,6 +50,11 @@ public class ShortKnightMove : MonoBehaviour
         }
     }
 
+    public void StopEverything()
+    {
+        StopAllCoroutines();
+    }
+
     IEnumerator Walk()
     {
         yield return null;

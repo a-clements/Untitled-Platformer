@@ -12,7 +12,6 @@ public class SkeletonMove : MonoBehaviour
     [SerializeField] private float Speed = 1;
     [Tooltip("An array of NavPoints at which the enemy will stop.")]
     [SerializeField] private Vector3[] NavPoints;
-    [SerializeField] private Vector2 ColliderSize;
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
@@ -33,7 +32,7 @@ public class SkeletonMove : MonoBehaviour
         RigidBody = GetComponent<Rigidbody2D>();
         CapsuleCollider = GetComponent<CapsuleCollider2D>();
 
-        CapsuleCollider.size = ColliderSize;
+        CapsuleCollider.size = new Vector2(0.35f, 0.8f);
 
         Action = Random.Range(0, 3);
         PreviousAction = Action;
@@ -55,6 +54,19 @@ public class SkeletonMove : MonoBehaviour
         {
             NextPosition = NavPoints[PointNumber];
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D CollisionInfo)
+    {
+        if (CollisionInfo.transform.tag == "Player")
+        {
+            CollisionInfo.transform.GetComponent<PlayerHealth>().LoseHeart();
+        }
+    }
+
+    public void StopEverything()
+    {
+        StopAllCoroutines();
     }
 
     void CheckPosition()

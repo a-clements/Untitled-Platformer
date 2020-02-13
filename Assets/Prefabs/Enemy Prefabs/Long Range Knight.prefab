@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8841029935724940485}
   - component: {fileID: -132556072414996234}
   - component: {fileID: 4698516643999020142}
+  - component: {fileID: 2457753916177088843}
   m_Layer: 0
   m_Name: Long Range Knight
   m_TagString: Enemy
@@ -97,7 +98,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 8301214325355971984}
   m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -160,7 +161,6 @@ MonoBehaviour:
   JumpHeight: 250
   Speed: 1
   NavPoints: []
-  ColliderSize: {x: 0.5, y: 1}
 --- !u!70 &-132556072414996234
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -274,3 +274,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2457753916177088843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301214325355971984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1d64c5e5e1e6e46850853a588c6b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

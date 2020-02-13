@@ -57,6 +57,7 @@ public class MenuScript : MonoBehaviour
 
     IEnumerator LoadScene()
     {
+        ScoreManager.LevelScore = 0;
         LivesManager.LivesRemaining = 3;
 
         if(Running == false)
