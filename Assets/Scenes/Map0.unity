@@ -13522,6 +13522,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: IsFallingBridge
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: WaitTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: StartPosition
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: EndPosition
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: FallSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: RiseSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525e5547919f99e4ca3eeb8bbae5ca00, type: 3}
 --- !u!4 &400816895 stripped
@@ -13611,7 +13641,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -15354,15 +15384,20 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2dc276c87610cb946b6a9907eceb6b68, type: 2}
+    - target: {fileID: 3434565583055710541, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1211305407845736607, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.5
+      value: -7.3
       objectReference: {fileID: 0}
     - target: {fileID: 1211305407845736607, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.42
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1211305407845736607, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
@@ -15392,7 +15427,7 @@ PrefabInstance:
     - target: {fileID: 1211305407845736607, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1211305407845736607, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
@@ -15435,6 +15470,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2484838528540721320, guid: ea985fad47cb0a1408d07e699d0c3f71,
         type: 3}
+    - target: {fileID: 1211305407845736606, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2513995295296279266, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: m_Size.y
@@ -15479,6 +15519,11 @@ PrefabInstance:
         type: 3}
       propertyPath: JumpHeight
       value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1211305407845736604, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7631642777966178953, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
@@ -15546,6 +15591,11 @@ PrefabInstance:
       propertyPath: Lives
       value: 
       objectReference: {fileID: 1629282237}
+    - target: {fileID: 5773494915484282218, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 429249590708278755, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15717,15 +15767,24 @@ PrefabInstance:
       propertyPath: MeleeDistance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6555279146340636485, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 646765598877646851, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342887358421806099, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3582540164286732280, guid: 78d7a96f4f592d640be4afb0ae9489de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 78d7a96f4f592d640be4afb0ae9489de, type: 3}
---- !u!58 &522416741 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 5085079483660041686, guid: 78d7a96f4f592d640be4afb0ae9489de,
-    type: 3}
-  m_PrefabInstance: {fileID: 522416740}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &525282136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23426,7 +23485,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -28865,7 +28924,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -35986,7 +36045,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -36552,7 +36611,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -38384,7 +38443,7 @@ RectTransform:
   - {fileID: 1408548609}
   - {fileID: 2046223365}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -40327,7 +40386,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ShockWave
       value: 
-      objectReference: {fileID: 522416741}
+      objectReference: {fileID: 0}
     - target: {fileID: 8853638549990858286, guid: 25dc3e5b5fa152743affe7d6ba8beee6,
         type: 3}
       propertyPath: MainCamera
@@ -49150,7 +49209,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -49329,7 +49388,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -50860,7 +50919,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -51181,6 +51240,11 @@ PrefabInstance:
     - target: {fileID: 1211305407845736606, guid: 99df59505c438f94884deceffb0362df,
         type: 3}
       propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504341057774544636, guid: 99df59505c438f94884deceffb0362df,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -54113,7 +54177,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -54283,6 +54347,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: IsFallingBridge
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: WaitTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: StartPosition
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: EndPosition
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: FallSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: RiseSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525e5547919f99e4ca3eeb8bbae5ca00, type: 3}
@@ -56687,23 +56781,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Icon
       objectReference: {fileID: 0}
-    - target: {fileID: 385086115284334760, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6486568803888031585, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -2484838528540721320, guid: ea985fad47cb0a1408d07e699d0c3f71,
-        type: 3}
-    - target: {fileID: 7786851628459160647, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: accc512d8b38f394aa4cf98b48739728,
-        type: 3}
     - target: {fileID: 1135207252481092936, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_FontData.m_Alignment
@@ -56725,16 +56802,6 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 60
       objectReference: {fileID: 0}
-    - target: {fileID: 3381212565968939490, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4335106981702531664, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 717831941624610127, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_FontData.m_Font
@@ -56750,6 +56817,33 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 385086115284334760, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6486568803888031585, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2484838528540721320, guid: ea985fad47cb0a1408d07e699d0c3f71,
+        type: 3}
+    - target: {fileID: 7786851628459160647, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: accc512d8b38f394aa4cf98b48739728,
+        type: 3}
+    - target: {fileID: 3381212565968939490, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335106981702531664, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ba6528b5e99a64892af17dff1f28ff, type: 3}
@@ -58592,7 +58686,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -60008,7 +60102,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -66236,7 +66330,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -71624,26 +71718,6 @@ PrefabInstance:
       propertyPath: SFXVolumeSlider
       value: 
       objectReference: {fileID: 1579348563}
-    - target: {fileID: 3837156157064195156, guid: dc660db0760915d469d61ab62c5721aa,
-        type: 3}
-      propertyPath: MasterVolumeSlider
-      value: 
-      objectReference: {fileID: 514649786}
-    - target: {fileID: 3837156157064195156, guid: dc660db0760915d469d61ab62c5721aa,
-        type: 3}
-      propertyPath: AmbientVolumeSlider
-      value: 
-      objectReference: {fileID: 1634574730}
-    - target: {fileID: 3837156157064195156, guid: dc660db0760915d469d61ab62c5721aa,
-        type: 3}
-      propertyPath: MusicVolumeSlider
-      value: 
-      objectReference: {fileID: 1706713663}
-    - target: {fileID: 3837156157064195156, guid: dc660db0760915d469d61ab62c5721aa,
-        type: 3}
-      propertyPath: SFXVolumeSlider
-      value: 
-      objectReference: {fileID: 1579348563}
     - target: {fileID: 422902035085227092, guid: dc660db0760915d469d61ab62c5721aa,
         type: 3}
       propertyPath: MasterVolumeSlider
@@ -71680,6 +71754,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1706713663}
     - target: {fileID: 2970667674302251232, guid: dc660db0760915d469d61ab62c5721aa,
+        type: 3}
+      propertyPath: SFXVolumeSlider
+      value: 
+      objectReference: {fileID: 1579348563}
+    - target: {fileID: 3837156157064195156, guid: dc660db0760915d469d61ab62c5721aa,
+        type: 3}
+      propertyPath: MasterVolumeSlider
+      value: 
+      objectReference: {fileID: 514649786}
+    - target: {fileID: 3837156157064195156, guid: dc660db0760915d469d61ab62c5721aa,
+        type: 3}
+      propertyPath: AmbientVolumeSlider
+      value: 
+      objectReference: {fileID: 1634574730}
+    - target: {fileID: 3837156157064195156, guid: dc660db0760915d469d61ab62c5721aa,
+        type: 3}
+      propertyPath: MusicVolumeSlider
+      value: 
+      objectReference: {fileID: 1706713663}
+    - target: {fileID: 3837156157064195156, guid: dc660db0760915d469d61ab62c5721aa,
         type: 3}
       propertyPath: SFXVolumeSlider
       value: 
@@ -73185,6 +73279,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: IsFallingBridge
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: WaitTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: StartPosition
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: EndPosition
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: FallSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: RiseSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525e5547919f99e4ca3eeb8bbae5ca00, type: 3}
 --- !u!4 &1883516589 stripped
@@ -73330,7 +73454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1893760477
 PrefabInstance:
@@ -73787,6 +73911,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: IsFallingBridge
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: WaitTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: StartPosition
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: EndPosition
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: FallSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
+        type: 3}
+      propertyPath: RiseSpeed
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 525e5547919f99e4ca3eeb8bbae5ca00, type: 3}
@@ -74383,7 +74537,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -75032,7 +75186,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -75530,7 +75684,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -76997,7 +77151,7 @@ PrefabInstance:
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
       propertyPath: IsFallingBridge
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859689941440182673, guid: 525e5547919f99e4ca3eeb8bbae5ca00,
         type: 3}
@@ -77911,7 +78065,7 @@ PrefabInstance:
     - target: {fileID: 8581976250420022747, guid: 0c7cea9c9f0d9e74faa66111c5aa4810,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8581976250420022747, guid: 0c7cea9c9f0d9e74faa66111c5aa4810,
         type: 3}

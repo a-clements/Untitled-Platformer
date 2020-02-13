@@ -61,7 +61,7 @@ public class EnemyDeath : MonoBehaviour
     public void Shocked()
     {
         Collider.enabled = false;
-        ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 2.0f);
+        ThisTransform.position = new Vector3(ThisTransform.position.x, ThisTransform.position.y, 0.0f);
         ScoreManager.UpdateScores(PointValue);
 
         ThisTransform.GetComponent<Rigidbody2D>().gravityScale = Mathf.Abs(ThisTransform.GetComponent<Rigidbody2D>().gravityScale - 1);
@@ -74,14 +74,17 @@ public class EnemyDeath : MonoBehaviour
                 break;
 
             case "Skeleton":
+                GetComponent<SkeletonMove>().StopEverything();
                 GetComponent<SkeletonMove>().enabled = false;
                 break;
 
             case "Short Range Knight":
+                GetComponent<ShortKnightMove>().StopEverything();
                 GetComponent<ShortKnightMove>().enabled = false;
                 break;
 
             case "Long Range Knight":
+                GetComponent<LongKnightMove>().StopEverything();
                 GetComponent<LongKnightMove>().enabled = false;
                 break;
         }
