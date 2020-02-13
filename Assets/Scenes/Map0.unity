@@ -56426,6 +56426,11 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 2100000, guid: 0eebcdbe0273b9f438355eb23fbb4296, type: 3}
+    - target: {fileID: 674217526186743741, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 9052714012261033890, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_Color.r
@@ -56715,6 +56720,11 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 2100000, guid: 0eebcdbe0273b9f438355eb23fbb4296, type: 3}
+    - target: {fileID: 1135207252481092936, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 3381212565968939490, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_RootOrder
@@ -56736,6 +56746,11 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 2100000, guid: 0eebcdbe0273b9f438355eb23fbb4296, type: 3}
+    - target: {fileID: 717831941624610127, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ba6528b5e99a64892af17dff1f28ff, type: 3}
 --- !u!4 &1447464249 stripped
