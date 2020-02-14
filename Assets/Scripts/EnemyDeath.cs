@@ -97,7 +97,7 @@ public class EnemyDeath : MonoBehaviour
         StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(), FadeOutTime));
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
 
     }

@@ -67,6 +67,8 @@ public class PlayerMove : MonoBehaviour
     {
         if(Time.timeScale > 0)
         {
+            AnimatorClipInfo[] ClipInfo = PlayerAnimator.GetCurrentAnimatorClipInfo(0);
+
             #region Walk Left
             if (Input.GetKey(Manager.Keys[0]))
             {
@@ -134,16 +136,22 @@ public class PlayerMove : MonoBehaviour
             #endregion
 
             #region Resize Collider
-            if (PlayerAnimator.GetBool("IsWalking") == true || PlayerAnimator.GetBool("IsJumping") == true)
+            switch(ClipInfo[0].clip.name)
             {
-                CapsuleCollider.offset = new Vector2(0.0f, -.07f);
-                CapsuleCollider.size = new Vector2(0.5f, 1.0f);
-            }
+                case "Player Walk":
+                case "Player Jump":
+                case "Player Attack Up":
+                case "Player Attack":
+                    CapsuleCollider.offset = new Vector2(0.0f, -.07f);
+                    CapsuleCollider.size = new Vector2(0.5f, 1.0f);
+                    break;
 
-            else if (PlayerAnimator.GetBool("IsIdle") == true)
-            {
-                CapsuleCollider.offset = new Vector2(0, -.32f);
-                CapsuleCollider.size = new Vector2(0.5f, 0.5f);
+                case "Player Idle":
+                    CapsuleCollider.offset = new Vector2(0, -.32f);
+                    CapsuleCollider.size = new Vector2(0.5f, 0.5f);
+                    break;
+
+
             }
             #endregion
         }

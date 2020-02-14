@@ -170,6 +170,28 @@ public class LongKnightMove : MonoBehaviour
 
     void Update()
     {
+        AnimatorClipInfo[] ClipInfo = EnemyAnimator.GetCurrentAnimatorClipInfo(0);
+
+        #region Resize Collider
+        switch (ClipInfo[0].clip.name)
+        {
+            case "Long Range Knight Idle":
+                CapsuleCollider.offset = new Vector2(0.0f, -.2f);
+                CapsuleCollider.size = new Vector2(0.7f, 0.7f);
+                break;
+
+            case "Long Range Knight Walk":
+                CapsuleCollider.offset = new Vector2(0.0f, -.05f);
+                CapsuleCollider.size = new Vector2(0.5f, 1.0f);
+                break;
+
+            case "Long Range Knight Attack":
+                CapsuleCollider.offset = new Vector2(0.0f, -.05f);
+                CapsuleCollider.size = new Vector2(0.5f, 1.0f);
+                break;
+        }
+        #endregion
+
         if (IsMoving == true)
         {
             ThisTransform.localPosition = Vector3.MoveTowards(ThisTransform.localPosition, NextPosition, Speed * Time.deltaTime);
