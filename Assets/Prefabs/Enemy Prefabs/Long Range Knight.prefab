@@ -143,7 +143,7 @@ MonoBehaviour:
   RefillAmount: 0.1
   PointValue: 0
   FadeOutTime: 1
-  DeathSprite: {fileID: 0}
+  DeathSprite: {fileID: 21300000, guid: 8534d889253cb0a47b2ed7078db04489, type: 3}
   CanShowPanel: 0
 --- !u!114 &8841029935724940485
 MonoBehaviour:
