@@ -8,7 +8,6 @@ public class ShortKnightMove : MonoBehaviour
     [SerializeField] private float Speed = 1;
     [Tooltip("An array of NavPoints at which the enemy will stop.")]
     [SerializeField] private Vector3[] NavPoints;
-    [SerializeField] private Vector2 ColliderSize;
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
@@ -28,8 +27,6 @@ public class ShortKnightMove : MonoBehaviour
         EnemyAnimator = GetComponent<Animator>();
         RigidBody = GetComponent<Rigidbody2D>();
         CapsuleCollider = GetComponent<CapsuleCollider2D>();
-
-        CapsuleCollider.size = ColliderSize;
 
         Action = Random.Range(0, 2);
         PreviousAction = Action;
@@ -115,6 +112,28 @@ public class ShortKnightMove : MonoBehaviour
 
     void Update()
     {
+        AnimatorClipInfo[] ClipInfo = EnemyAnimator.GetCurrentAnimatorClipInfo(0);
+
+        #region Resize Collider
+        switch (ClipInfo[0].clip.name)
+        {
+            case "Short Range Knight Idle":
+                CapsuleCollider.offset = new Vector2(0.0f, -.2f);
+                CapsuleCollider.size = new Vector2(0.7f, 0.7f);
+                break;
+
+            case "Short Range Knight Walk":
+                CapsuleCollider.offset = new Vector2(0.0f, -.05f);
+                CapsuleCollider.size = new Vector2(0.5f, 1.0f);
+                break;
+
+            case "Short Range Knight Attack":
+                CapsuleCollider.offset = new Vector2(0.0f, -.05f);
+                CapsuleCollider.size = new Vector2(0.5f, 1.0f);
+                break;
+        }
+        #endregion
+
         if (IsMoving == true)
         {
             //if (ThisTransform.localPosition == NavPoints[PointNumber])
