@@ -23,7 +23,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
-        Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     private void OnEnable()

@@ -34,7 +34,7 @@ public class ButtonRemapping : MonoBehaviour
 
     private void Start()
     {
-        GameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        GameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         Keycode = GameManager.Keys[Index];
 
         if(Keycode != KeyCode.None)
@@ -63,7 +63,7 @@ public class ButtonRemapping : MonoBehaviour
         OldKeycode = GameManager.Keys[Index];
         Button.transform.GetChild(0).GetComponent<Text>().text = "Please enter a new key";
 
-        //GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
+        GameManager.Speak(this.transform.GetComponentInChildren<Text>().text);
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
