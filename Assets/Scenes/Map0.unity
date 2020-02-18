@@ -12250,6 +12250,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 325831642}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &331022721 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5085079483660041686, guid: 78d7a96f4f592d640be4afb0ae9489de,
+    type: 3}
+  m_PrefabInstance: {fileID: 522416740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &336242469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40476,7 +40482,12 @@ PrefabInstance:
         type: 3}
       propertyPath: ShockWave
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 331022721}
+    - target: {fileID: 5666257317738757428, guid: 25dc3e5b5fa152743affe7d6ba8beee6,
+        type: 3}
+      propertyPath: ThresholdText
+      value: 
+      objectReference: {fileID: 245032869}
     - target: {fileID: 8853638549990858286, guid: 25dc3e5b5fa152743affe7d6ba8beee6,
         type: 3}
       propertyPath: MainCamera

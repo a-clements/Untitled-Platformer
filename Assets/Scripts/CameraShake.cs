@@ -11,9 +11,9 @@ public class CameraShake : MonoBehaviour
     [Range(0, 1.0f)]
     [SerializeField] private float ShakeMagnitude = 0.5f;
     [Range(0.1f, 0.9f)]
-    [SerializeField] private float Volume = 0.4f;
+    [SerializeField] private float VolumeThreshold = 0.4f;
     [SerializeField] private CircleCollider2D ShockWave;
-    [SerializeField] private Text Threshhold;
+    [SerializeField] private Text ThresholdText;
 
     private Vector3 OriginalPosition;
     private float XShake;
@@ -50,9 +50,9 @@ public class CameraShake : MonoBehaviour
             Time.timeScale = 0;
         }
 
-        Threshhold.text = Mathf.RoundToInt((Volume * 100)).ToString();
+        ThresholdText.text = Mathf.RoundToInt((VolumeThreshold * 100)).ToString();
 
-        if (ShoutControl.Volume > Volume && ShoutMetre.fillAmount == 1.0f)
+        if (ShoutControl.Volume > VolumeThreshold && ShoutMetre.fillAmount == 1.0f)
         {
             StartCoroutine(Shake());
         }

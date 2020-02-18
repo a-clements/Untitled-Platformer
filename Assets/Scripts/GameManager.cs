@@ -7,7 +7,7 @@ using SpeechLib;
 public class GameManager : MonoBehaviour
 {
     public KeyCode[] Keys;
-    public string[] Movement;
+    [HideInInspector] public string[] Movement;
 
     public GameSettings Gamesettings = new GameSettings();
 
