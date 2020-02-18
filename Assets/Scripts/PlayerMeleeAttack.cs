@@ -10,7 +10,7 @@ public class PlayerMeleeAttack : MonoBehaviour
 
     void Start()
     {
-        Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame

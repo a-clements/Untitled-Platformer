@@ -32,7 +32,7 @@ public class PlayerRangedAttack : MonoBehaviour
             RockList[i].SetActive(false);
         }
 
-        Manager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     void Throw()
