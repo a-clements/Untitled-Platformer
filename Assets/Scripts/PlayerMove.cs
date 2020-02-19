@@ -12,10 +12,12 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float FallModifier = 1.5f;
     [SerializeField] private float Knockback = 3.0f;
 
-    public Animator PlayerAnimator;
     private Rigidbody2D RigidBody;
     private CapsuleCollider2D CapsuleCollider;
     private Transform ThisTransform;
+    private int FallDamage;
+
+    public Animator PlayerAnimator;
     public int JumpCount = 1;
     public bool CanJump = true;
     public Transform Checkpoint;
@@ -39,6 +41,25 @@ public class PlayerMove : MonoBehaviour
         {
             JumpCount = 1;
             CanJump = true;
+
+            if(FallDamage < -20)
+            {
+                GetComponent<PlayerHealth>().LoseHeart();
+                GetComponent<PlayerHealth>().LoseHeart();
+                GetComponent<PlayerHealth>().LoseHeart();
+                GetComponent<PlayerHealth>().LoseHeart();
+            }
+
+            if (FallDamage < -15)
+            {
+                GetComponent<PlayerHealth>().LoseHeart();
+                GetComponent<PlayerHealth>().LoseHeart();
+            }
+
+            if (FallDamage < -8)
+            {
+                GetComponent<PlayerHealth>().LoseHeart();
+            }
 
             RigidBody.velocity = Vector2.zero;
             RigidBody.angularVelocity = 0.0f;
@@ -127,6 +148,7 @@ public class PlayerMove : MonoBehaviour
             {
                 RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.fixedDeltaTime;
                 PlayerAnimator.SetBool("IsJumping", false);
+                FallDamage = (int)RigidBody.velocity.y;
             }
 
             else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
@@ -150,8 +172,6 @@ public class PlayerMove : MonoBehaviour
                     CapsuleCollider.offset = new Vector2(0, -.32f);
                     CapsuleCollider.size = new Vector2(0.5f, 0.5f);
                     break;
-
-
             }
             #endregion
         }

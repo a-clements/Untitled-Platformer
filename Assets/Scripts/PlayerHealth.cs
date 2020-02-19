@@ -8,7 +8,8 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private Image[] Hearts;
     [SerializeField] private Text Lives;
-    [SerializeField] public static int HeartsRemaining;
+    public static int HeartsRemaining;
+
 
     void Start()
     {
