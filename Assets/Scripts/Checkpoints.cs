@@ -11,6 +11,7 @@ public class Checkpoints : MonoBehaviour
     public GameObject PanelThree;
     private bool CanShow = true;
     [SerializeField] EventSystem GetEventSystem;
+    public static bool CanClose = true;
 
     //Event KeyEvent;
 
@@ -53,18 +54,21 @@ public class Checkpoints : MonoBehaviour
 
     private void Update()
     {
-        if (PanelOne != null)
+        if (CanClose == true)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (PanelOne != null)
             {
-                if (PanelOne.activeSelf || PanelTwo.activeSelf || PanelThree.activeSelf)
+                if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    StartCoroutine(ClosePanel());
-                }
-                else
-                {
-                    PanelOne.SetActive(true);
-                    Time.timeScale = 0;
+                    if (PanelOne.activeSelf || PanelTwo.activeSelf || PanelThree.activeSelf)
+                    {
+                        StartCoroutine(ClosePanel());
+                    }
+                    else
+                    {
+                        PanelOne.SetActive(true);
+                        Time.timeScale = 0;
+                    }
                 }
             }
         }
