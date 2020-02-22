@@ -58,8 +58,18 @@ public class ButtonRemapping : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && Checkpoints.CanClose == false)
+        {
+            Checkpoints.CanClose = true;
+        }
+    }
+
     public void OnButtonClick()
     {
+        Checkpoints.CanClose = false;
+
         OldKeycode = GameManager.Keys[Index];
         Button.transform.GetChild(0).GetComponent<Text>().text = "Please enter a new key";
 
