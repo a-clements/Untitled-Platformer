@@ -21,6 +21,7 @@ public class MenuScript : MonoBehaviour
     [SerializeField] private string SceneName;
 
     private bool Running = true;
+    [SerializeField]private bool Options = false;
 
     private void OnEnable()
     {
@@ -34,6 +35,23 @@ public class MenuScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(MainScrollIn());
+    }
+
+    public void OnOptionsButtonClick()
+    {
+        Options = !Options;
+
+        if (Options == true)
+        {
+            StartCoroutine(MainScrollOut());
+            StartCoroutine(OptionsScrollIn());
+        }
+
+        else
+        {
+            StartCoroutine(OptionsScrollOut());
+            StartCoroutine(MainScrollIn());
+        }
     }
 
     public void OnPlayButtonClick()
@@ -53,6 +71,21 @@ public class MenuScript : MonoBehaviour
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #endif
+    }
+
+    IEnumerator OptionsScrollIn()
+    {
+        yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[0]);
+        PanelAnimator.SetTrigger("Options Scroll In");
+    }
+
+    IEnumerator OptionsScrollOut()
+    {
+        yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[1]);
+        PanelAnimator.SetTrigger("Options Scroll Out");
+        Running = true;
+        yield return new WaitForSeconds(WaitTimer);
+        StartCoroutine(MainScrollIn());
     }
 
     IEnumerator LoadScene()
