@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         //this function is executed second
-        LoadSettings();
+        //LoadSettings();
 
             //Movement[0] = Gamesettings.Movement0;
             //Movement[1] = Gamesettings.Movement1;
@@ -173,11 +173,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        LoadSettings();
         //this function is executed third
-        //AudioMixer.Instance.OnMasterVolumeChange();
-        //AudioMixer.Instance.OnAmbientVolumeChange();
-        //AudioMixer.Instance.OnMusicVolumeChange();
-        //AudioMixer.Instance.OnSFXVolumeChange();
+        AudioMixer.Instance.OnMasterVolumeChange();
+        AudioMixer.Instance.OnAmbientVolumeChange();
+        AudioMixer.Instance.OnMusicVolumeChange();
+        AudioMixer.Instance.OnSFXVolumeChange();
     }
 
     public void Speak(string text)
