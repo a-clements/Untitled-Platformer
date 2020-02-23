@@ -23,8 +23,12 @@ public class MenuScript : MonoBehaviour
     private bool Running = true;
     [SerializeField]private bool Options = false;
 
+    private GameManager Manager;
+
     private void OnEnable()
     {
+        Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
         Panels.transform.GetChild(0).GetComponent<ButtonPositioner>().Positioner();
 
         Panels.transform.GetChild(1).GetComponent<ButtonPositioner>().Positioner();
@@ -49,6 +53,7 @@ public class MenuScript : MonoBehaviour
 
         else
         {
+            Manager.SaveSettings();
             StartCoroutine(OptionsScrollOut());
             StartCoroutine(MainScrollIn());
         }
