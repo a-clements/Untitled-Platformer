@@ -22,15 +22,15 @@ public class GameSettings
     public string Throwkey;
     public string Jumpkey;
     public float Exposure;
-    public int Hue;
-    public int Contrast;
-    public int Red;
-    public int Green;
-    public int Blue;
-    public int Master;
-    public int Ambient;
-    public int Music;
-    public int SFX;
+    public float Hue;
+    public float Contrast;
+    public float Red;
+    public float Green;
+    public float Blue;
+    public float Master;
+    public float Ambient;
+    public float Music;
+    public float SFX;
 
     //public string movement0; 
     //public string movement1; 
@@ -77,7 +77,7 @@ public class GameSettings
         }
     }
 
-    public int HueShift
+    public float HueShift
     {
         get
         {
@@ -90,7 +90,7 @@ public class GameSettings
         }
     }
 
-    public int ContrastValue
+    public float ContrastValue
     {
         get
         {
@@ -103,7 +103,7 @@ public class GameSettings
         }
     }
 
-    public int RedChannel
+    public float RedChannel
     {
         get
         {
@@ -116,7 +116,7 @@ public class GameSettings
         }
     }
 
-    public int GreenChannel
+    public float GreenChannel
     {
         get
         {
@@ -129,7 +129,7 @@ public class GameSettings
         }
     }
 
-    public int BlueChannel
+    public float BlueChannel
     {
         get
         {
@@ -142,7 +142,7 @@ public class GameSettings
         }
     }
 
-    public int MasterVolume
+    public float MasterVolume
     {
         get
         {
@@ -155,7 +155,7 @@ public class GameSettings
         }
     }
 
-    public int AmbientVolume
+    public float AmbientVolume
     {
         get
         {
@@ -168,7 +168,7 @@ public class GameSettings
         }
     }
 
-    public int MusicVolume
+    public float MusicVolume
     {
         get
         {
@@ -181,7 +181,7 @@ public class GameSettings
         }
     }
 
-    public int SFXVolume
+    public float SFXVolume
     {
         get
         {
