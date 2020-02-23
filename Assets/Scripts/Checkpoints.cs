@@ -10,13 +10,15 @@ public class Checkpoints : MonoBehaviour
     public GameObject PanelTwo;
     public GameObject PanelThree;
     private bool CanShow = true;
-    [SerializeField] EventSystem GetEventSystem;
+    [SerializeField] private EventSystem GetEventSystem;
+    [SerializeField] private GameManager Manager;
     public static bool CanClose = true;
 
     //Event KeyEvent;
 
     private void Start()
     {
+        Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         GetEventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
     }
 
@@ -62,6 +64,7 @@ public class Checkpoints : MonoBehaviour
                 {
                     if (PanelOne.activeSelf || PanelTwo.activeSelf || PanelThree.activeSelf)
                     {
+                        Manager.SaveSettings();
                         StartCoroutine(ClosePanel());
                     }
                     else
