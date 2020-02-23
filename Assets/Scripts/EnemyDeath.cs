@@ -95,7 +95,7 @@ public class EnemyDeath : MonoBehaviour
         ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
         ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
 
-        //StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(), FadeOutTime));
+        StartCoroutine(Fade.FadingOut(GetComponent<SpriteRenderer>(), FadeOutTime));
     }
 
     private void FixedUpdate()
