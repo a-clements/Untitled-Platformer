@@ -12,6 +12,8 @@ public class SkeletonMove : MonoBehaviour
     [SerializeField] private float Speed = 1;
     [Tooltip("An array of NavPoints at which the enemy will stop.")]
     [SerializeField] private Vector3[] NavPoints;
+    [Tooltip("The Skeleton throw audio clip goes here.")]
+    [SerializeField] private AudioClip ThrowBone;
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
@@ -182,6 +184,8 @@ public class SkeletonMove : MonoBehaviour
         yield return null;
 
         IsMoving = false;
+
+        GetComponent<AudioSource>().PlayOneShot(ThrowBone);
 
         EnemyAnimator.SetTrigger("IsThrowing");
 
