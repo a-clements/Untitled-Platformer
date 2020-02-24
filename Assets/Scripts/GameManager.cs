@@ -12,9 +12,11 @@ public class GameManager : MonoBehaviour
     public GameSettings Gamesettings = new GameSettings();
 
     SpVoice Voice = new SpVoice();
+    SpeechVoiceSpeakFlags Flags;
 
     private void Awake()
     {
+        Flags = SpeechVoiceSpeakFlags.SVSFlagsAsync;
         //this function is executed first
     }
 

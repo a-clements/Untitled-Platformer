@@ -5,6 +5,10 @@ using System;
 
 public class FadeOut : MonoBehaviour
 {
+    [Tooltip("The audio clip for death goes here.")]
+    [SerializeField] private AudioClip Death;
+    [SerializeField] private float WaitTimer = 0.1f;
+
     private void Start()
     {
         
@@ -13,6 +17,10 @@ public class FadeOut : MonoBehaviour
     public IEnumerator FadingOut(SpriteRenderer Sprite, float FadeOutTime)
     {
         Color Colour = Sprite.color;
+
+        yield return new WaitForSeconds(WaitTimer);
+
+        GetComponent<AudioSource>().PlayOneShot(Death);
 
         while (Colour.a > 0.0f)
         {

@@ -17,6 +17,8 @@ public class EnemyDeath : MonoBehaviour
     [SerializeField] private float FadeOutTime = 1.0f;
     [Tooltip("The sprite to show upon death of the flyer goes here.")]
     [SerializeField] private Sprite DeathSprite;
+    [Tooltip("The audio clip for impact goes here.")]
+    [SerializeField] private AudioClip Impact;
 
     private Transform ThisTransform;
     private Image ShoutMetre;
@@ -26,7 +28,7 @@ public class EnemyDeath : MonoBehaviour
     //public bool Dead = false;
     //public bool Shocked = false;
     public bool CanShowPanel = true;
-    public bool IsDead = false;
+    //public bool IsDead = false;
 
     private void Start()
     {
@@ -92,6 +94,9 @@ public class EnemyDeath : MonoBehaviour
 
         ThisTransform.GetComponent<EnemyDeath>().enabled = false;
         ThisTransform.GetComponent<Animator>().enabled = false;
+
+        GetComponent<AudioSource>().PlayOneShot(Impact);
+
         ThisTransform.GetComponent<SpriteRenderer>().sprite = DeathSprite;
         ThisTransform.localScale = new Vector3(ThisTransform.localScale.x, ThisTransform.localScale.y / 2, ThisTransform.localScale.z);
 
@@ -100,9 +105,9 @@ public class EnemyDeath : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(IsDead == true)
-        {
-            Dead();
-        }
+        //if(IsDead == true)
+        //{
+        //    Dead();
+        //}
     }
 }

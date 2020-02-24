@@ -19,6 +19,8 @@ public class AudioMixer : MonoBehaviour
 
     private void Awake()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        Enemies = GameObject.FindGameObjectsWithTag("Enemy");
         AudioManager = GameObject.Find("Audio Manager");
 
         if (Instance == null)
@@ -34,8 +36,7 @@ public class AudioMixer : MonoBehaviour
 
     void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
     }
 
     public void OnMasterVolumeChange()
@@ -55,15 +56,16 @@ public class AudioMixer : MonoBehaviour
 
     public void OnSFXVolumeChange()
     {
-        if (SceneManager.GetActiveScene().buildIndex != 0)
-        {
-            Player.GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer.SetFloat("SFX", SFXVolumeSlider.value);
+        //if (SceneManager.GetActiveScene().buildIndex != 0)
+        //{
+            //Player.GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer.SetFloat("SFX", SFXVolumeSlider.value);
 
-            foreach (GameObject Enemy in Enemies)
-            {
-                Enemy.GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer.SetFloat("SFX", SFXVolumeSlider.value);
-            }
-        }
+            //foreach (GameObject Enemy in Enemies)
+            //{
+            //    Enemy.GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer.SetFloat("SFX", SFXVolumeSlider.value);
+            //}
+            AudioManager.transform.GetChild(3).GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer.SetFloat("SFX", SFXVolumeSlider.value);
+        //}
     }
 
     // Update is called once per frame

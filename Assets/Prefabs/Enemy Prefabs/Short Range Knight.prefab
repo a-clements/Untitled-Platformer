@@ -145,6 +145,7 @@ MonoBehaviour:
   FadeOutTime: 1
   DeathSprite: {fileID: 21300000, guid: 82ec672aa6accd1449e1bf19880c98eb, type: 3}
   CanShowPanel: 0
+  IsDead: 0
 --- !u!114 &9208260813038602025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +188,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 5602983012942237831, guid: a081a72b8c1682048a200c010439a999,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -196,8 +197,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0.1
+  MaxDistance: 0.5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -232,7 +233,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
