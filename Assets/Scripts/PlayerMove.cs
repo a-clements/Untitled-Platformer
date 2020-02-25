@@ -15,7 +15,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D RigidBody;
     private CapsuleCollider2D CapsuleCollider;
     private Transform ThisTransform;
-    private int FallDamage;
+    [SerializeField] private int FallDamage;
 
     public Animator PlayerAnimator;
     public int JumpCount = 1;
@@ -56,13 +56,15 @@ public class PlayerMove : MonoBehaviour
                 GetComponent<PlayerHealth>().LoseHeart();
             }
 
-            if (FallDamage < -8)
+            if (FallDamage < -10)
             {
                 GetComponent<PlayerHealth>().LoseHeart();
             }
 
             RigidBody.velocity = Vector2.zero;
             RigidBody.angularVelocity = 0.0f;
+
+            FallDamage = 0;
         }
 
         if(CollisionInfo.gameObject.tag == "Enemy")
