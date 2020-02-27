@@ -8,11 +8,16 @@ public class LevelRandomiser : MonoBehaviour
 
     [SerializeField] private GameObject[] Modules;
 
+    private System.Random GetRandom;
+
     private int ModulePosition = 0;
     private int j;
 
     private void OnEnable()
     {
+        //GetRandom = new System.Random((int)System.DateTime.Now.Ticks & 0x0000FFFF);
+        GetRandom = new System.Random(System.Guid.NewGuid().GetHashCode() & 0x0000FFFF);
+
         for(int i = 0; i < Modules.Length; i++)
         {
             ModulesList.Add(Modules[i]);
@@ -24,7 +29,7 @@ public class LevelRandomiser : MonoBehaviour
         for (int i = 0; i < Modules.Length; i++)
         {
             ModulePosition += 24;
-            j = Random.Range(0, ModulesList.Count);
+            j = GetRandom.Next(0, ModulesList.Count);
             ModulesList[j].transform.position = new Vector2(ModulePosition, ModulesList[j].transform.position.y);
             ModulesList.RemoveAt(j);
         }
