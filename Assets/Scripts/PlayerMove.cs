@@ -61,6 +61,11 @@ public class PlayerMove : MonoBehaviour
                 GetComponent<PlayerHealth>().LoseHeart();
             }
 
+            if(PlayerAnimator.GetBool("IsWalking") == false)
+            {
+                PlayerAnimator.SetBool("IsIdle", true);
+            }
+
             RigidBody.velocity = Vector2.zero;
             RigidBody.angularVelocity = 0.0f;
 
@@ -117,6 +122,7 @@ public class PlayerMove : MonoBehaviour
             #region Start Walking
             if (Input.GetKeyDown(Manager.Keys[0]) || Input.GetKeyDown(Manager.Keys[1]))
             {
+                PlayerAnimator.SetBool("IsIdle", false);
                 PlayerAnimator.SetBool("IsWalking", true);
             }
             #endregion
@@ -125,6 +131,7 @@ public class PlayerMove : MonoBehaviour
             if (Input.GetKeyUp(Manager.Keys[0]) || Input.GetKeyUp(Manager.Keys[1]))
             {
                 PlayerAnimator.SetBool("IsWalking", false);
+                PlayerAnimator.SetBool("IsIdle", true);
             }
             #endregion
 
@@ -140,7 +147,9 @@ public class PlayerMove : MonoBehaviour
                     {
                         CanJump = false;
                     }
+
                     PlayerAnimator.SetBool("IsJumping", true);
+                    PlayerAnimator.SetBool("IsIdle", false);
                 }
             }
             #endregion
@@ -166,13 +175,21 @@ public class PlayerMove : MonoBehaviour
                 case "Player Jump":
                 case "Player Attack Up":
                 case "Player Attack":
+                    CapsuleCollider.direction = CapsuleDirection2D.Vertical;
                     CapsuleCollider.offset = new Vector2(0.0f, -.07f);
                     CapsuleCollider.size = new Vector2(0.5f, 1.0f);
                     break;
 
                 case "Player Idle":
+                    CapsuleCollider.direction = CapsuleDirection2D.Vertical;
                     CapsuleCollider.offset = new Vector2(0, -.32f);
                     CapsuleCollider.size = new Vector2(0.5f, 0.5f);
+                    break;
+
+                case "Snooze":
+                    CapsuleCollider.direction = CapsuleDirection2D.Horizontal;
+                    CapsuleCollider.offset = new Vector2(0, -.4f);
+                    CapsuleCollider.size = new Vector2(0.7f, 0.25f);
                     break;
             }
             #endregion
