@@ -56,16 +56,7 @@ public class AudioMixer : MonoBehaviour
 
     public void OnSFXVolumeChange()
     {
-        //if (SceneManager.GetActiveScene().buildIndex != 0)
-        //{
-            //Player.GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer.SetFloat("SFX", SFXVolumeSlider.value);
-
-            //foreach (GameObject Enemy in Enemies)
-            //{
-            //    Enemy.GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer.SetFloat("SFX", SFXVolumeSlider.value);
-            //}
-            AudioManager.transform.GetChild(3).GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer.SetFloat("SFX", SFXVolumeSlider.value);
-        //}
+        AudioManager.transform.GetChild(3).GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer.SetFloat("SFX", SFXVolumeSlider.value);
     }
 
     // Update is called once per frame

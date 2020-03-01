@@ -15541,6 +15541,11 @@ PrefabInstance:
       propertyPath: CanJump
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1211305407845736604, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: SnoozeTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7631642777966178953, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: m_Icon

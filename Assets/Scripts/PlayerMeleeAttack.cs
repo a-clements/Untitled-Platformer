@@ -8,22 +8,46 @@ public class PlayerMeleeAttack : MonoBehaviour
     [SerializeField] private float AttackTimer;
     [SerializeField] private float MeleeDistance = 0.5f;
 
+    private PlayerMove Player;
+
     void Start()
     {
         Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        Player = this.transform.parent.GetComponent<PlayerMove>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(Manager.Keys[2]))
+        if (Input.GetKey(Manager.Keys[2]))
         {
             StartCoroutine(Attack());
         }
 
-        if (Input.GetKeyDown(Manager.Keys[3]))
+        if (Input.GetKey(Manager.Keys[3]))
         {
             StartCoroutine(AttackUp());
+        }
+
+        if (Input.GetKeyDown(Manager.Keys[2]) || Input.GetKeyDown(Manager.Keys[3]))
+        {
+            Player.StopEverything();
+
+            if (Player.ClipInfo[0].clip.name == "Snooze")
+            {
+                StartCoroutine(Player.WakeUp());
+            }
+
+            Player.PlayerAnimator.SetBool("IsIdle", false);
+        }
+
+        if (Input.GetKeyUp(Manager.Keys[2]) || Input.GetKeyUp(Manager.Keys[3]))
+        {
+            Player.PlayerAnimator.SetBool("IsIdle", true);
+
+            Player.StopEverything();
+
+            StartCoroutine(Player.GoBackToSleep());
         }
     }
 
