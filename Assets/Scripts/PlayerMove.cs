@@ -11,16 +11,18 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float JumpModifier = 1.0f;
     [SerializeField] private float FallModifier = 1.5f;
     [SerializeField] private float Knockback = 3.0f;
+    [SerializeField] private float SnoozeTimer = 1.0f;
+    [SerializeField] private int FallSpeed;
 
     private Rigidbody2D RigidBody;
     private CapsuleCollider2D CapsuleCollider;
     private Transform ThisTransform;
-    [SerializeField] private int FallDamage;
 
     public Animator PlayerAnimator;
     public int JumpCount = 1;
     public bool CanJump = true;
     public Transform Checkpoint;
+    public AnimatorClipInfo[] ClipInfo;
 
 
     private void Awake()
@@ -42,7 +44,7 @@ public class PlayerMove : MonoBehaviour
             JumpCount = 1;
             CanJump = true;
 
-            if(FallDamage < -20)
+            if(FallSpeed < -20)
             {
                 GetComponent<PlayerHealth>().LoseHeart();
                 GetComponent<PlayerHealth>().LoseHeart();
@@ -50,13 +52,13 @@ public class PlayerMove : MonoBehaviour
                 GetComponent<PlayerHealth>().LoseHeart();
             }
 
-            if (FallDamage < -15)
+            if (FallSpeed < -15)
             {
                 GetComponent<PlayerHealth>().LoseHeart();
                 GetComponent<PlayerHealth>().LoseHeart();
             }
 
-            if (FallDamage < -10)
+            if (FallSpeed < -10)
             {
                 GetComponent<PlayerHealth>().LoseHeart();
             }
@@ -69,7 +71,9 @@ public class PlayerMove : MonoBehaviour
             RigidBody.velocity = Vector2.zero;
             RigidBody.angularVelocity = 0.0f;
 
-            FallDamage = 0;
+            FallSpeed = 0;
+
+            StartCoroutine(GoBackToSleep());
         }
 
         if(CollisionInfo.gameObject.tag == "Enemy")
@@ -86,25 +90,82 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    public void StopEverything()
+    {
+        StopAllCoroutines();
+    }
+
+    public IEnumerator Snooze()
+    {
+        //AnimatorClipInfo[] ClipInfo = PlayerAnimator.GetCurrentAnimatorClipInfo(0);
+
+        //if (ClipInfo[0].clip.name != "Snooze")
+        //{
+        //    PlayerAnimator.SetBool("IsSleeping", false);
+        //}
+
+        //else
+        //{
+        //    yield return null;
+        //}
+        yield return new WaitForSeconds(SnoozeTimer);
+
+        PlayerAnimator.SetBool("IsIdle", false);
+        PlayerAnimator.SetBool("IsSleeping", true);
+
+        yield return null;
+    }
+
+    public IEnumerator WakeUp()
+    {
+        ClipInfo = PlayerAnimator.GetCurrentAnimatorClipInfo(0);
+
+        if(ClipInfo[0].clip.name == "Snooze")
+        {
+            PlayerAnimator.SetBool("IsSleeping", false);
+            PlayerAnimator.SetBool("IsIdle", true);
+        }
+
+        else
+        {
+            yield return null;
+        }
+
+        yield return null;
+    }
+
+    public IEnumerator GoBackToSleep()
+    {
+        //yield return new WaitForSeconds(ClipInfo.Length);
+        yield return new WaitForSeconds(SnoozeTimer);
+
+        StartCoroutine(Snooze());
+
+        yield return null;
+    }
+
     void Start()
     {
-        
+
     }
 
     void Update()
     {
         if(Time.timeScale > 0)
         {
-            AnimatorClipInfo[] ClipInfo = PlayerAnimator.GetCurrentAnimatorClipInfo(0);
+            ClipInfo = PlayerAnimator.GetCurrentAnimatorClipInfo(0);
 
             #region Walk Left
             if (Input.GetKey(Manager.Keys[0]))
             {
                 //ThisTransform.GetComponent<SpriteRenderer>().flipX = false;
+                if (ClipInfo[0].clip.name != "Snooze" && ClipInfo[0].clip.name != "Wake Up")
+                {
+                    this.transform.rotation = Quaternion.Euler(0, 180, 0);
 
-                this.transform.rotation = Quaternion.Euler(0, 180, 0);
+                    ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
+                }
 
-                ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
             }
             #endregion
 
@@ -112,10 +173,12 @@ public class PlayerMove : MonoBehaviour
             if (Input.GetKey(Manager.Keys[1]))
             {
                 //ThisTransform.GetComponent<SpriteRenderer>().flipX = true;
+                if (ClipInfo[0].clip.name != "Snooze" && ClipInfo[0].clip.name != "Wake Up")
+                {
+                    this.transform.rotation = Quaternion.Euler(0, 0, 0);
 
-                this.transform.rotation = Quaternion.Euler(0, 0, 0);
-
-                ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
+                    ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
+                }
             }
             #endregion
 
@@ -124,6 +187,9 @@ public class PlayerMove : MonoBehaviour
             {
                 PlayerAnimator.SetBool("IsIdle", false);
                 PlayerAnimator.SetBool("IsWalking", true);
+
+                StopEverything();
+                StartCoroutine(WakeUp());
             }
             #endregion
 
@@ -132,24 +198,30 @@ public class PlayerMove : MonoBehaviour
             {
                 PlayerAnimator.SetBool("IsWalking", false);
                 PlayerAnimator.SetBool("IsIdle", true);
+
+                StopEverything();
+                StartCoroutine(GoBackToSleep());
             }
             #endregion
 
             #region Jump
             if (Input.GetKeyDown(Manager.Keys[5]))
             {
-                if (CanJump == true)
+                if (ClipInfo[0].clip.name != "Snooze" && ClipInfo[0].clip.name != "Wake Up")
                 {
-                    RigidBody.velocity = Vector2.up * JumpHeight * Time.fixedDeltaTime;
-                    JumpCount--;
-
-                    if (JumpCount < 0)
+                    if (CanJump == true)
                     {
-                        CanJump = false;
-                    }
+                        RigidBody.velocity = Vector2.up * JumpHeight * Time.fixedDeltaTime;
+                        JumpCount--;
 
-                    PlayerAnimator.SetBool("IsJumping", true);
-                    PlayerAnimator.SetBool("IsIdle", false);
+                        if (JumpCount < 0)
+                        {
+                            CanJump = false;
+                        }
+
+                        PlayerAnimator.SetBool("IsJumping", true);
+                        PlayerAnimator.SetBool("IsIdle", false);
+                    }
                 }
             }
             #endregion
@@ -159,7 +231,7 @@ public class PlayerMove : MonoBehaviour
             {
                 RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.fixedDeltaTime;
                 PlayerAnimator.SetBool("IsJumping", false);
-                FallDamage = (int)RigidBody.velocity.y;
+                FallSpeed = (int)RigidBody.velocity.y;
             }
 
             else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))

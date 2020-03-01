@@ -16,6 +16,7 @@ public class PlayerRangedAttack : MonoBehaviour
     [SerializeField] private float NextFire = 1.0F;
 
     private GameManager Manager;
+    private PlayerMove Player;
 
     List<GameObject> RockList = new List<GameObject>();
 
@@ -33,6 +34,7 @@ public class PlayerRangedAttack : MonoBehaviour
         }
 
         Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        Player = this.transform.parent.GetComponent<PlayerMove>();
     }
 
     void Throw()
@@ -68,7 +70,27 @@ public class PlayerRangedAttack : MonoBehaviour
     {
         if (Input.GetKey(Manager.Keys[4]))
         {
-            Throw();
+            Player.StopEverything();
+
+            if (Player.ClipInfo[0].clip.name == "Snooze")
+            {
+                StartCoroutine(Player.WakeUp());
+            }
+
+            if (Player.ClipInfo[0].clip.name != "Snooze" && Player.ClipInfo[0].clip.name != "Wake Up")
+            {
+                Throw();
+            }
+        }
+
+
+        if (Input.GetKeyUp(Manager.Keys[4]))
+        {
+            Player.PlayerAnimator.SetBool("IsIdle", true);
+
+            Player.StopEverything();
+
+            StartCoroutine(Player.GoBackToSleep());
         }
     }
 }
