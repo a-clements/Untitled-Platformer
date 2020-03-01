@@ -12,8 +12,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float FallModifier = 1.5f;
     [SerializeField] private float Knockback = 3.0f;
     [SerializeField] private float SnoozeTimer = 1.0f;
-    [SerializeField] private int FallSpeed;
 
+    private int FallSpeed;
     private Rigidbody2D RigidBody;
     private CapsuleCollider2D CapsuleCollider;
     private Transform ThisTransform;
