@@ -187,6 +187,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8693164123060285964, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 1436022660}
+    - target: {fileID: 8693164123060285964, guid: 78d7a96f4f592d640be4afb0ae9489de,
+        type: 3}
+      propertyPath: HighScore
+      value: 
+      objectReference: {fileID: 1436022659}
     - target: {fileID: 1211305407845736604, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: Camera
@@ -247,16 +257,6 @@ PrefabInstance:
       propertyPath: Health.Array.data[3]
       value: 
       objectReference: {fileID: 1766419576}
-    - target: {fileID: 8693164123060285964, guid: 78d7a96f4f592d640be4afb0ae9489de,
-        type: 3}
-      propertyPath: Score
-      value: 
-      objectReference: {fileID: 1436022660}
-    - target: {fileID: 8693164123060285964, guid: 78d7a96f4f592d640be4afb0ae9489de,
-        type: 3}
-      propertyPath: HighScore
-      value: 
-      objectReference: {fileID: 1436022659}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78d7a96f4f592d640be4afb0ae9489de, type: 3}
 --- !u!20 &71895012 stripped
@@ -1044,6 +1044,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Post Process Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 7151443723851990693, guid: 60f5baf1de9288040a03fedc570f7c6f,
+        type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7151443723851990618, guid: 60f5baf1de9288040a03fedc570f7c6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1098,11 +1103,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7151443723851990693, guid: 60f5baf1de9288040a03fedc570f7c6f,
-        type: 3}
-      propertyPath: orthographic size
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5064083092641248918, guid: 60f5baf1de9288040a03fedc570f7c6f,
         type: 3}
@@ -1239,6 +1239,65 @@ PrefabInstance:
       propertyPath: m_Name
       value: Post Process Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3541237023420044755, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: accc512d8b38f394aa4cf98b48739728,
+        type: 3}
+    - target: {fileID: 1283791554169142694, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: accc512d8b38f394aa4cf98b48739728,
+        type: 3}
+    - target: {fileID: 7647847822779080704, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: accc512d8b38f394aa4cf98b48739728,
+        type: 3}
+    - target: {fileID: 7867008736673109013, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_FillMethod
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867008736673109013, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c8b7a25d190b73459fff0cae01f40c6,
+        type: 3}
+    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.09424569
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.007876454
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.5566038
+      objectReference: {fileID: 0}
     - target: {fileID: 4460084663314402109, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1344,6 +1403,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4460084663314402108, guid: a8ba6528b5e99a64892af17dff1f28ff,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 71895012}
     - target: {fileID: 1913390383538411774, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_Name
@@ -1354,70 +1418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Life Two
       objectReference: {fileID: 0}
-    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_FontData.m_AlignByGeometry
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.09424569
-      objectReference: {fileID: 0}
-    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.007876454
-      objectReference: {fileID: 0}
-    - target: {fileID: 6690124362881119579, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.5566038
-      objectReference: {fileID: 0}
-    - target: {fileID: 7647847822779080704, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: accc512d8b38f394aa4cf98b48739728,
-        type: 3}
-    - target: {fileID: 3541237023420044755, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: accc512d8b38f394aa4cf98b48739728,
-        type: 3}
-    - target: {fileID: 1283791554169142694, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: accc512d8b38f394aa4cf98b48739728,
-        type: 3}
     - target: {fileID: 7786851628459160647, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: accc512d8b38f394aa4cf98b48739728,
-        type: 3}
-    - target: {fileID: 7867008736673109013, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_FillMethod
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867008736673109013, guid: a8ba6528b5e99a64892af17dff1f28ff,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 4c8b7a25d190b73459fff0cae01f40c6,
         type: 3}
     - target: {fileID: 3381212565968939490, guid: a8ba6528b5e99a64892af17dff1f28ff,
         type: 3}
