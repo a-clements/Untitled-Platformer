@@ -317,9 +317,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1939107393
+  m_SortingLayer: -3
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -564,8 +564,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1939107393
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -697,11 +697,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976273841889162144}
     m_Modifications:
-    - target: {fileID: 6979977874568028888, guid: fe8c302baad298440b6601430d6ef3be,
-        type: 3}
-      propertyPath: m_Name
-      value: Light Switch
-      objectReference: {fileID: 0}
     - target: {fileID: 6979977874568028887, guid: fe8c302baad298440b6601430d6ef3be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -756,6 +751,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979977874568028888, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: m_Name
+      value: Light Switch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c302baad298440b6601430d6ef3be, type: 3}
@@ -847,11 +847,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976273841889162144}
     m_Modifications:
-    - target: {fileID: 6516343559656064461, guid: 3e129649661a31b45a54197afc3885f9,
-        type: 3}
-      propertyPath: m_Name
-      value: Checkpoint
-      objectReference: {fileID: 0}
     - target: {fileID: 6516343559656064310, guid: 3e129649661a31b45a54197afc3885f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -906,6 +901,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516343559656064461, guid: 3e129649661a31b45a54197afc3885f9,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e129649661a31b45a54197afc3885f9, type: 3}
