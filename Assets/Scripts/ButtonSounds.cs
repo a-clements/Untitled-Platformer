@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class ButtonSounds : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -14,6 +15,8 @@ public class ButtonSounds : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     private Outline ButtonOutline;
     private AudioSource ButtonAudio;
+
+    //SerializedObject Halo;
 
 
     void Start()
@@ -27,7 +30,10 @@ public class ButtonSounds : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         if (SceneManager.GetActiveScene().name == "MapSelection")
         {
+            //Halo = new SerializedObject(GetComponent("Halo"));
+            //Halo.FindProperty("m_Enabled").boolValue = false;
             this.transform.GetChild(0).gameObject.SetActive(false);
+            //Halo.ApplyModifiedProperties();
         }
     }
 
@@ -36,9 +42,11 @@ public class ButtonSounds : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         ButtonOutline.enabled = true;
         //ButtonAudio.PlayOneShot(MouseEnter);
 
-        if(SceneManager.GetActiveScene().name == "MapSelection")
+        if (SceneManager.GetActiveScene().name == "MapSelection")
         {
+            //Halo.FindProperty("m_Enabled").boolValue = true;
             this.transform.GetChild(0).gameObject.SetActive(true);
+            //Halo.ApplyModifiedProperties();
         }
     }
 
@@ -49,7 +57,9 @@ public class ButtonSounds : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         if (SceneManager.GetActiveScene().name == "MapSelection")
         {
+            //Halo.FindProperty("m_Enabled").boolValue = false;
             this.transform.GetChild(0).gameObject.SetActive(false);
+            //Halo.ApplyModifiedProperties();
         }
     }
 }
