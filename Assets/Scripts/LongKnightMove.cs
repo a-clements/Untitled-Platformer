@@ -19,7 +19,7 @@ public class LongKnightMove : MonoBehaviour
     private int PointNumber = 0;
     private bool IsMoving = true;
     private Animator EnemyAnimator;
-    private int Action;
+    private int CurrentAction;
     private int PreviousAction;
     private Rigidbody2D RigidBody;
     private CapsuleCollider2D CapsuleCollider;
@@ -34,10 +34,10 @@ public class LongKnightMove : MonoBehaviour
 
         CapsuleCollider.size = new Vector2(0.5f, 1.0f);
 
-        Action = Random.Range(0, 2);
-        PreviousAction = Action;
+        CurrentAction = Random.Range(0, 2);
+        PreviousAction = CurrentAction;
 
-        switch (Action)
+        switch (CurrentAction)
         {
             case 0:
                 StartCoroutine(Jump());
@@ -59,6 +59,11 @@ public class LongKnightMove : MonoBehaviour
         {
             CollisionInfo.transform.GetComponent<PlayerHealth>().LoseHeart();
         }
+    }
+
+    public void LongKnightAction()
+    {
+        AnimatorClipInfo[] ClipInfo = EnemyAnimator.GetCurrentAnimatorClipInfo(0);
     }
 
     public void StopEverything()
@@ -102,30 +107,16 @@ public class LongKnightMove : MonoBehaviour
 
         yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
 
-        //if (ThisTransform.position.x <= NavPoints[0].x || ThisTransform.position.x >= NavPoints[NavPoints.Length - 1].x)
-        //{
-        //    PointNumber++;
-
-        //    if (PointNumber == NavPoints.Length)
-        //    {
-        //        PointNumber = 0;
-        //    }
-
-        //    NextPosition = NavPoints[PointNumber];
-
-        //    Sprite.flipX = !Sprite.flipX;
-        //}
-
         CheckPosition();
 
-        while (Action == PreviousAction)
+        while (CurrentAction == PreviousAction)
         {
-            Action = Random.Range(0, 2);
+            CurrentAction = Random.Range(0, 2);
         }
 
-        PreviousAction = Action;
+        PreviousAction = CurrentAction;
 
-        switch (Action)
+        switch (CurrentAction)
         {
             case 0:
                 StartCoroutine(Jump());
@@ -150,14 +141,14 @@ public class LongKnightMove : MonoBehaviour
 
         CheckPosition();
 
-        while (Action == PreviousAction)
+        while (CurrentAction == PreviousAction)
         {
-            Action = Random.Range(0, 2);
+            CurrentAction = Random.Range(0, 2);
         }
 
-        PreviousAction = Action;
+        PreviousAction = CurrentAction;
 
-        switch (Action)
+        switch (CurrentAction)
         {
             case 0:
                 StartCoroutine(Jump());
