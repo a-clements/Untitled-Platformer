@@ -12,6 +12,8 @@ public class LongKnightMove : MonoBehaviour
     [SerializeField] private float Speed = 1;
     [Tooltip("An array of NavPoints at which the enemy will stop.")]
     [SerializeField] private Vector3[] NavPoints;
+    [Tooltip("Place an audio clip here.")]
+    [SerializeField] private AudioClip AttackClip;
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
@@ -64,6 +66,13 @@ public class LongKnightMove : MonoBehaviour
     public void LongKnightAction()
     {
         AnimatorClipInfo[] ClipInfo = EnemyAnimator.GetCurrentAnimatorClipInfo(0);
+
+        switch(ClipInfo[0].clip.name)
+        {
+            case "Long Range Knight Attack":
+                GetComponent<AudioSource>().PlayOneShot(AttackClip);
+                break;
+        }
     }
 
     public void StopEverything()

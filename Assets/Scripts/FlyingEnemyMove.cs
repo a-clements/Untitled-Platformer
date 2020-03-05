@@ -23,6 +23,8 @@ public class FlyingEnemyMove : MonoBehaviour
     [SerializeField] private float Speed;
     [Tooltip("An array of NavPoints at which the enemy will stop. Values on the X axis are between -12 and 12. Values on the Y axis are between -3.5 and 19")]
     [SerializeField] private Vector3[] NavPoints;
+    [Tooltip("Place an audio clip here.")]
+    [SerializeField] private AudioClip WingFlap;
 
 
     void Start()
@@ -51,7 +53,7 @@ public class FlyingEnemyMove : MonoBehaviour
 
     public void ImpAction()
     {
-        //Debug.Log(GetComponent<Animator>().GetCurrentAnimatorStateInfo(0));
+        GetComponent<AudioSource>().PlayOneShot(WingFlap);
     }
 
     void Update()

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8301214325355971987}
   - component: {fileID: 6849315049505376691}
   - component: {fileID: 8841029935724940485}
+  - component: {fileID: 2457753916177088843}
   - component: {fileID: -132556072414996234}
   - component: {fileID: 4698516643999020142}
-  - component: {fileID: 2457753916177088843}
   m_Layer: 0
   m_Name: Long Range Knight
   m_TagString: Enemy
@@ -144,8 +144,8 @@ MonoBehaviour:
   PointValue: 0
   FadeOutTime: 1
   DeathSprite: {fileID: 21300000, guid: 8534d889253cb0a47b2ed7078db04489, type: 3}
+  Impact: {fileID: 0}
   CanShowPanel: 0
-  IsDead: 0
 --- !u!114 &8841029935724940485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +162,21 @@ MonoBehaviour:
   JumpHeight: 250
   Speed: 1
   NavPoints: []
+  AttackClip: {fileID: 8300000, guid: 31224c1677433434c8f2be6a5368331f, type: 3}
+--- !u!114 &2457753916177088843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301214325355971984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1d64c5e5e1e6e46850853a588c6b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Death: {fileID: 0}
+  WaitTimer: 0.1
 --- !u!70 &-132556072414996234
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -200,7 +215,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 0.5
+  MaxDistance: 0.15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -275,15 +290,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2457753916177088843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8301214325355971984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1d64c5e5e1e6e46850853a588c6b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

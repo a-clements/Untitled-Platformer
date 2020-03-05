@@ -224,6 +224,18 @@ public class PlayerMove : MonoBehaviour
                         PlayerAnimator.SetBool("IsIdle", false);
                     }
                 }
+
+                else
+                {
+                    StopEverything();
+                    StartCoroutine(WakeUp());
+                }
+            }
+
+            if(Input.GetKeyUp(Manager.Keys[5]))
+            {
+                StopEverything();
+                StartCoroutine(GoBackToSleep());
             }
             #endregion
 
