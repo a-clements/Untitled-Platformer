@@ -150,7 +150,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0.1
-  MaxDistance: 0.5
+  MaxDistance: 0.15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   IsMoving: 0
   Speed: 1
   NavPoints: []
+  WingFlap: {fileID: 8300000, guid: a7a775498e1c27f4a8d264db1831505c, type: 3}
 --- !u!114 &3147331610985716600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1d64c5e5e1e6e46850853a588c6b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Death: {fileID: 0}
+  WaitTimer: 0.1
 --- !u!114 &5273189164765170396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,8 +271,8 @@ MonoBehaviour:
   PointValue: 0
   FadeOutTime: 1
   DeathSprite: {fileID: 21300000, guid: f1de1d6eeac115d44a38dc009d5e4726, type: 3}
+  Impact: {fileID: 0}
   CanShowPanel: 1
-  IsDead: 0
 --- !u!70 &-606941753719192278
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
