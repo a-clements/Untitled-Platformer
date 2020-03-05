@@ -697,6 +697,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976273841889162144}
     m_Modifications:
+    - target: {fileID: 6979977874568028888, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: m_Name
+      value: Light Switch
+      objectReference: {fileID: 0}
     - target: {fileID: 6979977874568028887, guid: fe8c302baad298440b6601430d6ef3be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -752,11 +757,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6979977874568028888, guid: fe8c302baad298440b6601430d6ef3be,
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
         type: 3}
-      propertyPath: m_Name
-      value: Light Switch
-      objectReference: {fileID: 0}
+      propertyPath: Platforms
+      value: 
+      objectReference: {fileID: 5727456168491431655}
+    - target: {fileID: 7172037072816348530, guid: fe8c302baad298440b6601430d6ef3be,
+        type: 3}
+      propertyPath: Lights
+      value: 
+      objectReference: {fileID: 4916921010157095175}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c302baad298440b6601430d6ef3be, type: 3}
 --- !u!4 &8952329401114443089 stripped
@@ -847,6 +857,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976273841889162144}
     m_Modifications:
+    - target: {fileID: 6516343559656064461, guid: 3e129649661a31b45a54197afc3885f9,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpoint
+      objectReference: {fileID: 0}
     - target: {fileID: 6516343559656064310, guid: 3e129649661a31b45a54197afc3885f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -901,11 +916,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6516343559656064461, guid: 3e129649661a31b45a54197afc3885f9,
-        type: 3}
-      propertyPath: m_Name
-      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e129649661a31b45a54197afc3885f9, type: 3}
