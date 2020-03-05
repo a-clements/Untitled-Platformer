@@ -257,7 +257,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d46494535e8284ebdc6bdb0843d528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hearts: []
+  Hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Lives: {fileID: 0}
 --- !u!95 &3434565583055710541
 Animator:

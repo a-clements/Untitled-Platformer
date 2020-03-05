@@ -24,7 +24,7 @@ public class LightSwitch : MonoBehaviour
     [SerializeField] private float LowContrast = 0.0f;
     [SerializeField] private float FullContrast = 1.0f;
 
-    [SerializeField] private GameObject Tilemap;
+    [SerializeField] private GameObject Platforms;
     [SerializeField] private GameObject Lights;
 
     [Header("Greyscale")]
@@ -50,23 +50,23 @@ public class LightSwitch : MonoBehaviour
             case 1:
                 PropertyBlock = new MaterialPropertyBlock();
 
-                Tilemap.transform.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+                Platforms.transform.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
                 Exposure = LowExposure;
                 Contrast = LowContrast;
                 PropertyBlock.SetFloat("_Exposure", Exposure);
                 PropertyBlock.SetFloat("_Contrast", Contrast);
-                Tilemap.transform.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+                Platforms.transform.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
 
-                if (Tilemap.transform.childCount > 0)
+                if (Platforms.transform.childCount > 0)
                 {
-                    for (int i = 0; i < Tilemap.transform.childCount; i++)
+                    for (int i = 0; i < Platforms.transform.childCount; i++)
                     {
-                        Tilemap.transform.GetChild(i).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+                        Platforms.transform.GetChild(i).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
                         Exposure = LowExposure;
                         Contrast = LowContrast;
                         PropertyBlock.SetFloat("_Exposure", Exposure);
                         PropertyBlock.SetFloat("_Contrast", Contrast);
-                        Tilemap.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+                        Platforms.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
                     }
                 }
                 break;
@@ -85,23 +85,23 @@ public class LightSwitch : MonoBehaviour
                     break;
 
                 case 1:
-                    Tilemap.transform.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+                    Platforms.transform.GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
                     Exposure = FullExposure;
                     Contrast = FullContrast;
                     PropertyBlock.SetFloat("_Exposure", Exposure);
                     PropertyBlock.SetFloat("_Contrast", Contrast);
-                    Tilemap.transform.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+                    Platforms.transform.GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
 
-                    if (Tilemap.transform.childCount > 0)
+                    if (Platforms.transform.childCount > 0)
                     {
-                        for (int i = 0; i < Tilemap.transform.childCount; i++)
+                        for (int i = 0; i < Platforms.transform.childCount; i++)
                         {
-                            Tilemap.transform.GetChild(i).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
+                            Platforms.transform.GetChild(i).GetComponent<Renderer>().GetPropertyBlock(PropertyBlock);
                             Exposure = FullExposure;
                             Contrast = FullContrast;
                             PropertyBlock.SetFloat("_Exposure", Exposure);
                             PropertyBlock.SetFloat("_Contrast", Contrast);
-                            Tilemap.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
+                            Platforms.transform.GetChild(i).GetComponent<Renderer>().SetPropertyBlock(PropertyBlock);
                         }
                     }
 
