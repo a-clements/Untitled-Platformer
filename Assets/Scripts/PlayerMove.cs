@@ -133,9 +133,18 @@ public class PlayerMove : MonoBehaviour
         yield return null;
     }
 
-    public void PlayMeleeSound()
+    public void PlayerAction()
     {
-        ThisTransform.GetComponent<AudioSource>().PlayOneShot(ThisTransform.GetChild(1).GetComponent<PlayerMeleeAttack>().AttackClip);
+        switch(ClipInfo[0].clip.name)
+        {
+            case "Player Attack":
+                ThisTransform.GetComponent<AudioSource>().PlayOneShot(ThisTransform.GetChild(1).GetComponent<PlayerMeleeAttack>().AttackClip);
+                break;
+
+            case "Player Attack Up":
+                ThisTransform.GetComponent<AudioSource>().PlayOneShot(ThisTransform.GetChild(1).GetComponent<PlayerMeleeAttack>().AttackClip);
+                break;
+        }
     }
 
     void Start()

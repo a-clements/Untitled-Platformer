@@ -49,6 +49,11 @@ public class FlyingEnemyMove : MonoBehaviour
         }
     }
 
+    public void ImpAction()
+    {
+        //Debug.Log(GetComponent<Animator>().GetCurrentAnimatorStateInfo(0));
+    }
+
     void Update()
     {
         if (IsMoving == true)
