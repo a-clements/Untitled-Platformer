@@ -77959,7 +77959,7 @@ PrefabInstance:
     - target: {fileID: 8951459336480972569, guid: 11e72db3317f43a44a106a923da01822,
         type: 3}
       propertyPath: SceneName
-      value: Map1
+      value: MapSelection
       objectReference: {fileID: 0}
     - target: {fileID: 3687205796713308285, guid: 11e72db3317f43a44a106a923da01822,
         type: 3}

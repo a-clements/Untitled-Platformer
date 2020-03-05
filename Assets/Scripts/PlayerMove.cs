@@ -97,17 +97,6 @@ public class PlayerMove : MonoBehaviour
 
     public IEnumerator Snooze()
     {
-        //AnimatorClipInfo[] ClipInfo = PlayerAnimator.GetCurrentAnimatorClipInfo(0);
-
-        //if (ClipInfo[0].clip.name != "Snooze")
-        //{
-        //    PlayerAnimator.SetBool("IsSleeping", false);
-        //}
-
-        //else
-        //{
-        //    yield return null;
-        //}
         yield return new WaitForSeconds(SnoozeTimer);
 
         PlayerAnimator.SetBool("IsIdle", false);
@@ -144,6 +133,20 @@ public class PlayerMove : MonoBehaviour
         yield return null;
     }
 
+    public void PlayerAction()
+    {
+        switch(ClipInfo[0].clip.name)
+        {
+            case "Player Attack":
+                ThisTransform.GetComponent<AudioSource>().PlayOneShot(ThisTransform.GetChild(1).GetComponent<PlayerMeleeAttack>().AttackClip);
+                break;
+
+            case "Player Attack Up":
+                ThisTransform.GetComponent<AudioSource>().PlayOneShot(ThisTransform.GetChild(1).GetComponent<PlayerMeleeAttack>().AttackClip);
+                break;
+        }
+    }
+
     void Start()
     {
 
@@ -158,14 +161,12 @@ public class PlayerMove : MonoBehaviour
             #region Walk Left
             if (Input.GetKey(Manager.Keys[0]))
             {
-                //ThisTransform.GetComponent<SpriteRenderer>().flipX = false;
                 if (ClipInfo[0].clip.name != "Snooze" && ClipInfo[0].clip.name != "Wake Up")
                 {
                     this.transform.rotation = Quaternion.Euler(0, 180, 0);
 
                     ThisTransform.Translate(Vector2.right * Time.deltaTime * RunSpeed, Space.Self);
                 }
-
             }
             #endregion
 

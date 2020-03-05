@@ -15,7 +15,7 @@ public class ShortKnightMove : MonoBehaviour
     private int PointNumber = 0;
     private bool IsMoving = true;
     private Animator EnemyAnimator;
-    private int Action;
+    private int CurrentAction;
     private int PreviousAction;
     private Rigidbody2D RigidBody;
     private CapsuleCollider2D CapsuleCollider;
@@ -28,10 +28,10 @@ public class ShortKnightMove : MonoBehaviour
         RigidBody = GetComponent<Rigidbody2D>();
         CapsuleCollider = GetComponent<CapsuleCollider2D>();
 
-        Action = Random.Range(0, 2);
-        PreviousAction = Action;
+        CurrentAction = Random.Range(0, 2);
+        PreviousAction = CurrentAction;
 
-        switch (Action)
+        switch (CurrentAction)
         {
             case 0:
                 StartCoroutine(Walk());
@@ -52,6 +52,11 @@ public class ShortKnightMove : MonoBehaviour
         StopAllCoroutines();
     }
 
+    public void ShortKnightAction()
+    {
+        AnimatorClipInfo[] ClipInfo = EnemyAnimator.GetCurrentAnimatorClipInfo(0);
+    }
+
     IEnumerator Walk()
     {
         yield return null;
@@ -64,14 +69,14 @@ public class ShortKnightMove : MonoBehaviour
 
         EnemyAnimator.SetBool("IsWalking", false);
 
-        while (Action == PreviousAction)
+        while (CurrentAction == PreviousAction)
         {
-            Action = Random.Range(0, 2);
+            CurrentAction = Random.Range(0, 2);
         }
 
-        PreviousAction = Action;
+        PreviousAction = CurrentAction;
 
-        switch (Action)
+        switch (CurrentAction)
         {
             case 0:
                 StartCoroutine(Walk());
@@ -92,14 +97,14 @@ public class ShortKnightMove : MonoBehaviour
 
         yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
 
-        while (Action == PreviousAction)
+        while (CurrentAction == PreviousAction)
         {
-            Action = Random.Range(0, 2);
+            CurrentAction = Random.Range(0, 2);
         }
 
-        PreviousAction = Action;
+        PreviousAction = CurrentAction;
 
-        switch (Action)
+        switch (CurrentAction)
         {
             case 0:
                 StartCoroutine(Walk());
