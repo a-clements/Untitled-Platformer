@@ -21,7 +21,7 @@ public class SkeletonMove : MonoBehaviour
     private int PointNumber = 0;
     private bool IsMoving = true;
     private Animator EnemyAnimator;
-    private int Action;
+    private int CurrentAction;
     private int PreviousAction;
     private Rigidbody2D RigidBody;
     private CapsuleCollider2D CapsuleCollider;
@@ -36,10 +36,10 @@ public class SkeletonMove : MonoBehaviour
 
         CapsuleCollider.size = new Vector2(0.35f, 0.8f);
 
-        Action = Random.Range(0, 3);
-        PreviousAction = Action;
+        CurrentAction = Random.Range(0, 3);
+        PreviousAction = CurrentAction;
 
-        switch(Action)
+        switch(CurrentAction)
         {
             case 0:
                 StartCoroutine(Jump());
@@ -88,6 +88,24 @@ public class SkeletonMove : MonoBehaviour
         }
     }
 
+    public void SkeletonAction()
+    {
+        AnimatorClipInfo[] ClipInfo = EnemyAnimator.GetCurrentAnimatorClipInfo(0);
+
+        switch (ClipInfo[0].clip.name)
+        {
+            case "Skeleton Jump":
+                break;
+
+            case "Skeleton Throw":
+                GetComponent<AudioSource>().PlayOneShot(ThrowBone);
+                break;
+
+            case "Skeleton Walk":
+                break;
+        }
+    }
+
     IEnumerator Jump()
     {
         yield return null;
@@ -107,30 +125,16 @@ public class SkeletonMove : MonoBehaviour
 
         yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
 
-        //if (ThisTransform.position.x <= NavPoints[0].x || ThisTransform.position.x >= NavPoints[NavPoints.Length - 1].x)
-        //{
-        //    PointNumber++;
-
-        //    if (PointNumber == NavPoints.Length)
-        //    {
-        //        PointNumber = 0;
-        //    }
-
-        //    NextPosition = NavPoints[PointNumber];
-
-        //    Sprite.flipX = !Sprite.flipX;
-        //}
-
         CheckPosition();
 
-        while (Action == PreviousAction)
+        while (CurrentAction == PreviousAction)
         {
-            Action = Random.Range(0, 3);
+            CurrentAction = Random.Range(0, 3);
         }
 
-        PreviousAction = Action;
+        PreviousAction = CurrentAction;
 
-        switch (Action)
+        switch (CurrentAction)
         {
             case 0:
                 StartCoroutine(Jump());
@@ -158,14 +162,14 @@ public class SkeletonMove : MonoBehaviour
 
         CheckPosition();
 
-        while (Action == PreviousAction)
+        while (CurrentAction == PreviousAction)
         {
-            Action = Random.Range(0, 3);
+            CurrentAction = Random.Range(0, 3);
         }
 
-        PreviousAction = Action;
+        PreviousAction = CurrentAction;
 
-        switch (Action)
+        switch (CurrentAction)
         {
             case 0:
                 StartCoroutine(Jump());
@@ -185,20 +189,18 @@ public class SkeletonMove : MonoBehaviour
 
         IsMoving = false;
 
-        GetComponent<AudioSource>().PlayOneShot(ThrowBone);
-
         EnemyAnimator.SetTrigger("IsThrowing");
 
         yield return new WaitForSeconds(EnemyAnimator.GetCurrentAnimatorStateInfo(0).length + 1);
 
-        while (Action == PreviousAction)
+        while (CurrentAction == PreviousAction)
         {
-            Action = Random.Range(0, 3);
+            CurrentAction = Random.Range(0, 3);
         }
 
-        PreviousAction = Action;
+        PreviousAction = CurrentAction;
 
-        switch (Action)
+        switch (CurrentAction)
         {
             case 0:
                 StartCoroutine(Jump());
