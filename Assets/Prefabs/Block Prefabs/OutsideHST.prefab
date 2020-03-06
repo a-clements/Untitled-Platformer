@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ac32afeb19d4b45b0dfcd6a5d21393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpikeTrap: {fileID: 0}
+  SpikeTrap: {fileID: 4406055954813182129}
   WaitTimer: 0.25
 --- !u!61 &3041588169517092029
 BoxCollider2D:
@@ -130,6 +130,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1440982961823089794}
     m_Modifications:
+    - target: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
+        type: 3}
+      propertyPath: m_Name
+      value: SpikePit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1440982961823089794, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -185,16 +195,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
-        type: 3}
-      propertyPath: m_Name
-      value: SpikePit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3724462789984291878, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
         type: 3}
       propertyPath: m_SortingOrder
@@ -207,6 +207,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 89231a86aac2bb845be199bfb636b8be, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48891dcb3c625024e9fbdf8c225d0aa3, type: 3}
+--- !u!1 &4406055954813182129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7941079469212602654, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5985588744117481903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4678803925722854701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1440982961823089794, guid: 48891dcb3c625024e9fbdf8c225d0aa3,
