@@ -21,6 +21,7 @@ public class LongKnightMove : MonoBehaviour
     private int PointNumber = 0;
     private bool IsMoving = true;
     private Animator EnemyAnimator;
+    private Animation animations;
     private int CurrentAction;
     private int PreviousAction;
     private Rigidbody2D RigidBody;
@@ -82,7 +83,7 @@ public class LongKnightMove : MonoBehaviour
 
     void CheckPosition()
     {
-        if (ThisTransform.localPosition == NavPoints[PointNumber])
+        if (ThisTransform.localPosition.x <= NavPoints[0].x || ThisTransform.localPosition.x >= NavPoints[NavPoints.Length - 1].x)
         {
             PointNumber++;
 
@@ -176,12 +177,12 @@ public class LongKnightMove : MonoBehaviour
         switch (ClipInfo[0].clip.name)
         {
             case "Long Range Knight Idle":
-                CapsuleCollider.offset = new Vector2(0.0f, -.2f);
+                CapsuleCollider.offset = new Vector2(0.0f, -.15f);
                 CapsuleCollider.size = new Vector2(0.7f, 0.7f);
                 break;
 
             case "Long Range Knight Walk":
-                CapsuleCollider.offset = new Vector2(0.0f, -.05f);
+                CapsuleCollider.offset = new Vector2(0.0f, -.03f);
                 CapsuleCollider.size = new Vector2(0.5f, 1.0f);
                 break;
 

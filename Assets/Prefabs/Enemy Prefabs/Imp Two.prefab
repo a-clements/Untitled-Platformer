@@ -272,7 +272,7 @@ MonoBehaviour:
   PointValue: 0
   FadeOutTime: 1
   DeathSprite: {fileID: 21300000, guid: f1de1d6eeac115d44a38dc009d5e4726, type: 3}
-  Impact: {fileID: 0}
+  Impact: {fileID: 8300000, guid: 6e52f2cce2d0af048971c5e9d040a4ad, type: 3}
   CanShowPanel: 1
 --- !u!70 &-610215431575786540
 CapsuleCollider2D:
