@@ -5,22 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
-    [SerializeField] private string MapOne;
-    [SerializeField] private string MapTwo;
+    [SerializeField] private string CutScene1;
+    [SerializeField] private string CutScene2;
+    public static int Counter;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     public void ZoneOne()
     {
-        SceneManager.LoadSceneAsync(MapOne, LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync(CutScene1, LoadSceneMode.Single);
     }
 
     public void ZoneTwo()
     {
-        SceneManager.LoadSceneAsync(MapTwo, LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync(CutScene2, LoadSceneMode.Single);
     }
 
     // Update is called once per frame

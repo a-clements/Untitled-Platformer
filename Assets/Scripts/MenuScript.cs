@@ -21,7 +21,7 @@ public class MenuScript : MonoBehaviour
     [SerializeField] private string SceneName;
 
     private bool Running = true;
-    [SerializeField]private bool Options = false;
+    private bool Options = false;
 
     private GameManager Manager;
 
@@ -97,6 +97,7 @@ public class MenuScript : MonoBehaviour
     {
         ScoreManager.LevelScore = 0;
         LivesManager.LivesRemaining = 3;
+        MapManager.Counter = 0;
 
         if(Running == false)
         {

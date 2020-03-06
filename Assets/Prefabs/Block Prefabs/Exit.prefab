@@ -71,7 +71,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cbd3ee05afd6e94dab95d38d3b0e411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: 
+  SceneName: MapSelection
+  FinalCutScene: CutScene3
 --- !u!212 &3687205796713308285
 SpriteRenderer:
   m_ObjectHideFlags: 0
