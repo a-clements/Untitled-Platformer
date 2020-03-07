@@ -136,6 +136,8 @@ public class GameManager : MonoBehaviour
             AudioMixer.Instance.AmbientVolumeSlider.value = Gamesettings.AmbientVolume;
             AudioMixer.Instance.MusicVolumeSlider.value = Gamesettings.MusicVolume;
             AudioMixer.Instance.SFXVolumeSlider.value = Gamesettings.SFXVolume;
+            VoiceOver.Instance.VoiceOverVolumeSlider.value = Gamesettings.VoiceoverVolume;
+            VoiceOver.Instance.VoiceOverToggleSlider.value = Gamesettings.VoiceoverToggle;
         }
 
         else
@@ -162,6 +164,8 @@ public class GameManager : MonoBehaviour
         Gamesettings.AmbientVolume = AudioMixer.Instance.AmbientVolumeSlider.value;
         Gamesettings.MusicVolume = AudioMixer.Instance.MusicVolumeSlider.value;
         Gamesettings.SFXVolume = AudioMixer.Instance.SFXVolumeSlider.value;
+        Gamesettings.VoiceoverVolume = VoiceOver.Instance.VoiceOverVolumeSlider.value;
+        Gamesettings.VoiceoverToggle = VoiceOver.Instance.VoiceOverToggleSlider.value;
 
         string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
 
@@ -185,7 +189,11 @@ public class GameManager : MonoBehaviour
 
     public void Speak(string text)
     {
-        Voice.Speak(text);
+        if(VoiceOver.Instance.VoiceOverToggleSlider.value == 1)
+        {
+            Voice.Volume = (int)(VoiceOver.Instance.VoiceOverVolumeSlider.value * 100);
+            Voice.Speak(text);
+        }
     }
 
 }

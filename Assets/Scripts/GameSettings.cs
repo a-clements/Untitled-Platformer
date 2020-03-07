@@ -31,6 +31,8 @@ public class GameSettings
     public float Ambient;
     public float Music;
     public float SFX;
+    public float Voiceover;
+    public float Toggle;
 
     //public string movement0; 
     //public string movement1; 
@@ -191,6 +193,32 @@ public class GameSettings
         set
         {
             SFX = value;
+        }
+    }
+
+    public float VoiceoverVolume
+    {
+        get
+        {
+            return Voiceover;
+        }
+
+        set
+        {
+            Voiceover = value;
+        }
+    }
+
+    public float VoiceoverToggle
+    {
+        get
+        {
+            return Toggle;
+        }
+
+        set
+        {
+            Toggle = value;
         }
     }
 
