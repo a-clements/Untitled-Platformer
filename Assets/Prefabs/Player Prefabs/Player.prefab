@@ -263,6 +263,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Lives: {fileID: 0}
+  DeathMusic: {fileID: 8300000, guid: 26502cffd5329334cb20668aa8f3afb3, type: 3}
 --- !u!95 &3434565583055710541
 Animator:
   serializedVersion: 3
@@ -273,7 +274,7 @@ Animator:
   m_GameObject: {fileID: 1211305407845736603}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2dc276c87610cb946b6a9907eceb6b68, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

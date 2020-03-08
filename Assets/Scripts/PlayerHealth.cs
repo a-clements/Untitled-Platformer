@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private Image[] Hearts;
     [SerializeField] private Text Lives;
+    [SerializeField] private AudioClip DeathMusic;
     public static int HeartsRemaining;
 
 
@@ -19,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void GainHeart()
     {
-        if(HeartsRemaining != (Hearts.Length - 1))
+        if (HeartsRemaining != (Hearts.Length - 1))
         {
             HeartsRemaining++;
             Hearts[HeartsRemaining].gameObject.SetActive(true);
@@ -38,31 +39,44 @@ public class PlayerHealth : MonoBehaviour
 
     public void LoseHeart()
     {
-        if(HeartsRemaining > -1)
+        if (HeartsRemaining > -1)
         {
             Hearts[HeartsRemaining].gameObject.SetActive(false);
             HeartsRemaining--;
         }
 
-        if(HeartsRemaining == -1)
+        if (HeartsRemaining == -1)
         {
             GetComponent<CapsuleCollider2D>().enabled = false;
             ScoreManager.SaveScores();
+
+            if(LivesManager.LivesRemaining > 0)
+            {
+                LivesManager.LivesRemaining--;
+                Lives.text = "X " + LivesManager.LivesRemaining;
+            }
+
             StartCoroutine(DeathAnimation());
-            LivesManager.LivesRemaining--;
-            Lives.text = "X " + LivesManager.LivesRemaining;
         }
     }
 
     IEnumerator DeathAnimation()
     {
-        if(LivesManager.LivesRemaining > 0)
+        if (LivesManager.LivesRemaining > 0)
         {
             GetComponent<PlayerMove>().enabled = false;
 
-            GetComponent<PlayerMove>().PlayerAnimator.SetTrigger("IsDead");
+            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsIdle", false);
+
+            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsSleeping", false);
+
+            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", true);
 
             yield return new WaitForSeconds(GetComponent<PlayerMove>().PlayerAnimator.GetCurrentAnimatorStateInfo(0).length);
+
+            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsIdle", true);
+
+            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", false);
 
             this.transform.position = this.GetComponent<PlayerMove>().Checkpoint.position;
 
@@ -83,6 +97,26 @@ public class PlayerHealth : MonoBehaviour
 
         else
         {
+            StopCoroutine(GetComponent<PlayerMove>().GoBackToSleep());
+            StopCoroutine(GetComponent<PlayerMove>().Snooze());
+
+            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsIdle", false);
+
+            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsSleeping", false);
+
+            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", true);
+
+            yield return new WaitForSeconds(GetComponent<PlayerMove>().PlayerAnimator.GetCurrentAnimatorStateInfo(0).length);
+
+            GetComponent<CapsuleCollider2D>().enabled = true;
+
+            this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            this.transform.rotation = Quaternion.identity;
+
+            GetComponent<AudioSource>().PlayOneShot(DeathMusic);
+
+            yield return new WaitForSeconds(DeathMusic.length);
+
             SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
         }
 
