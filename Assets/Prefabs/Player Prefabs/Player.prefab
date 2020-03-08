@@ -241,6 +241,8 @@ MonoBehaviour:
   FallModifier: 1.5
   Knockback: 3
   SnoozeTimer: 1
+  JumpClip: {fileID: 8300000, guid: 961637d4f06f7564fb0559d59d7d137d, type: 3}
+  LandClip: {fileID: 8300000, guid: abbb0a7e9b2aa1344820e66ed75d08cf, type: 3}
   PlayerAnimator: {fileID: 3434565583055710541}
   JumpCount: 1
   CanJump: 1
