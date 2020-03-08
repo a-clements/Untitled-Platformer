@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This script allows the designer to determine how many hearts there are in a life of the character. It will also take hearts off the player
+/// based on how far they fall. It is entirely possible for the player to die from falling too far.
+/// </summary>
+
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private Image[] Hearts;

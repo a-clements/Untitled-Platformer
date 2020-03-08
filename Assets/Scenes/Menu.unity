@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e97d5ac2f0b584419d8d4f77d3780d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonPositionMultiplier: 0
 --- !u!1001 &143913524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -777,6 +778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e97d5ac2f0b584419d8d4f77d3780d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonPositionMultiplier: 0
 --- !u!1 &179621963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7151443723851990694, guid: 60f5baf1de9288040a03fedc570f7c6f,
@@ -1637,6 +1639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e97d5ac2f0b584419d8d4f77d3780d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonPositionMultiplier: 0
 --- !u!1001 &807874183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4092,6 +4095,7 @@ MonoBehaviour:
   - 0.5
   - 0.25
   SceneName: CutScene0
+  StartingLives: 3
 --- !u!1 &1623588744
 GameObject:
   m_ObjectHideFlags: 0

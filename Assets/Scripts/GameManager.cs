@@ -4,6 +4,12 @@ using UnityEngine;
 using System.IO;
 using SpeechLib;
 
+/// <summary>
+/// This script determines how the game is played. The designer can define how many keys are to be used and what those keys are.
+/// The designer can also define how many game controller axis's to use. For the purpose of this game this has been dis-allowed. This script
+/// loads and saves the variables in the GameSettings script as a JSON, and will set the keys and sliders of the options menu.
+/// </summary>
+
 public class GameManager : MonoBehaviour
 {
     public KeyCode[] Keys;
@@ -14,104 +20,17 @@ public class GameManager : MonoBehaviour
     SpVoice Voice = new SpVoice();
     SpeechVoiceSpeakFlags Flags;
 
+    private VoiceOver Voiceover;
+    private ColourGrading Colourgrading;
+    private AudioMixer Audiomixer;
+
     private void Awake()
     {
         Flags = SpeechVoiceSpeakFlags.SVSFlagsAsync;
+        Voiceover = FindObjectOfType<VoiceOver>();
+        Colourgrading = FindObjectOfType<ColourGrading>();
+        Audiomixer = FindObjectOfType<AudioMixer>();
         //this function is executed first
-    }
-
-    private void OnEnable()
-    {
-        //this function is executed second
-        //LoadSettings();
-
-            //Movement[0] = Gamesettings.Movement0;
-            //Movement[1] = Gamesettings.Movement1;
-            //Movement[2] = Gamesettings.Movement2;
-
-            /*The following nested if statement is for loading the main colour*/
-            //UIMainColour = Gamesettings.UIMainColour;
-
-            //Color.RGBToHSV(UIMainColour, out Hue, out Saturation, out Brightness);
-
-            //if (UIMainColour == Color.black)
-            //{
-            //    MainColourDropdown.value = 0;
-            //}
-            //else if (UIMainColour == Color.blue)
-            //{
-            //    MainColourDropdown.value = 1;
-            //}
-            //else if (UIMainColour == Color.cyan)
-            //{
-            //    MainColourDropdown.value = 2;
-            //}
-            //else if (UIMainColour == Color.grey)
-            //{
-            //    MainColourDropdown.value = 3;
-            //}
-            //else if (UIMainColour == Color.magenta)
-            //{
-            //    MainColourDropdown.value = 4;
-            //}
-            //else if (UIMainColour == Color.red)
-            //{
-            //    MainColourDropdown.value = 5;
-            //}
-            //else if (UIMainColour == Color.white)
-            //{
-            //    MainColourDropdown.value = 6;
-            //}
-            //else
-            //{
-            //    MainColourDropdown.value = 7;
-            //}
-
-            //MainHue.value = Hue;
-            //MainSaturation.value = Saturation;
-            //MainBrightness.value = Brightness;
-
-            ///*The following nested if statement is for loading the secondary colour*/
-            //UISecondColour = Gamesettings.UISecondColour;
-
-            //Color.RGBToHSV(UISecondColour, out Hue, out Saturation, out Brightness);
-
-            //if (UISecondColour == Color.black)
-            //{
-            //    SecondColourDropdown.value = 0;
-            //}
-            //else if (UISecondColour == Color.blue)
-            //{
-            //    SecondColourDropdown.value = 1;
-            //}
-            //else if (UISecondColour == Color.cyan)
-            //{
-            //    SecondColourDropdown.value = 2;
-            //}
-            //else if (UISecondColour == Color.grey)
-            //{
-            //    SecondColourDropdown.value = 3;
-            //}
-            //else if (UISecondColour == Color.magenta)
-            //{
-            //    SecondColourDropdown.value = 4;
-            //}
-            //else if (UISecondColour == Color.red)
-            //{
-            //    SecondColourDropdown.value = 5;
-            //}
-            //else if (UISecondColour == Color.white)
-            //{
-            //    SecondColourDropdown.value = 6;
-            //}
-            //else
-            //{
-            //    SecondColourDropdown.value = 7;
-            //}
-
-            //SecondHue.value = Hue;
-            //SecondSaturation.value = Saturation;
-            //SecondBrightness.value = Brightness;
     }
 
     public void LoadSettings()
@@ -126,18 +45,18 @@ public class GameManager : MonoBehaviour
             Keys[3] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireUpKey, true);
             Keys[4] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.ThrowKey, true);
             Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
-            ColourGrading.Instance.ExposureSlider.value = Gamesettings.PostExposure;
-            ColourGrading.Instance.HueSlider.value = Gamesettings.HueShift;
-            ColourGrading.Instance.ContrastSlider.value = Gamesettings.ContrastValue;
-            ColourGrading.Instance.RedChannelSlider.value = Gamesettings.RedChannel;
-            ColourGrading.Instance.GreenChannelSlider.value = Gamesettings.GreenChannel;
-            ColourGrading.Instance.BlueChannelSlider.value = Gamesettings.BlueChannel;
-            AudioMixer.Instance.MasterVolumeSlider.value = Gamesettings.MasterVolume;
-            AudioMixer.Instance.AmbientVolumeSlider.value = Gamesettings.AmbientVolume;
-            AudioMixer.Instance.MusicVolumeSlider.value = Gamesettings.MusicVolume;
-            AudioMixer.Instance.SFXVolumeSlider.value = Gamesettings.SFXVolume;
-            VoiceOver.Instance.VoiceOverVolumeSlider.value = Gamesettings.VoiceoverVolume;
-            VoiceOver.Instance.VoiceOverToggleSlider.value = Gamesettings.VoiceoverToggle;
+            Colourgrading.ExposureSlider.value = Gamesettings.PostExposure;
+            Colourgrading.HueSlider.value = Gamesettings.HueShift;
+            Colourgrading.ContrastSlider.value = Gamesettings.ContrastValue;
+            Colourgrading.RedChannelSlider.value = Gamesettings.RedChannel;
+            Colourgrading.GreenChannelSlider.value = Gamesettings.GreenChannel;
+            Colourgrading.BlueChannelSlider.value = Gamesettings.BlueChannel;
+            Audiomixer.MasterVolumeSlider.value = Gamesettings.MasterVolume;
+            Audiomixer.AmbientVolumeSlider.value = Gamesettings.AmbientVolume;
+            Audiomixer.MusicVolumeSlider.value = Gamesettings.MusicVolume;
+            Audiomixer.SFXVolumeSlider.value = Gamesettings.SFXVolume;
+            Voiceover.VoiceOverVolumeSlider.value = Gamesettings.VoiceoverVolume;
+            Voiceover.VoiceOverToggleSlider.value = Gamesettings.VoiceoverToggle;
         }
 
         else
@@ -154,18 +73,18 @@ public class GameManager : MonoBehaviour
         Gamesettings.FireUpKey = Keys[3].ToString();
         Gamesettings.ThrowKey = Keys[4].ToString();
         Gamesettings.JumpKey = Keys[5].ToString();
-        Gamesettings.PostExposure = ColourGrading.Instance.ExposureSlider.value;
-        Gamesettings.HueShift = ColourGrading.Instance.HueSlider.value;
-        Gamesettings.ContrastValue = ColourGrading.Instance.ContrastSlider.value;
-        Gamesettings.RedChannel = ColourGrading.Instance.RedChannelSlider.value;
-        Gamesettings.GreenChannel = ColourGrading.Instance.GreenChannelSlider.value;
-        Gamesettings.BlueChannel = ColourGrading.Instance.BlueChannelSlider.value;
-        Gamesettings.MasterVolume = AudioMixer.Instance.MasterVolumeSlider.value;
-        Gamesettings.AmbientVolume = AudioMixer.Instance.AmbientVolumeSlider.value;
-        Gamesettings.MusicVolume = AudioMixer.Instance.MusicVolumeSlider.value;
-        Gamesettings.SFXVolume = AudioMixer.Instance.SFXVolumeSlider.value;
-        Gamesettings.VoiceoverVolume = VoiceOver.Instance.VoiceOverVolumeSlider.value;
-        Gamesettings.VoiceoverToggle = VoiceOver.Instance.VoiceOverToggleSlider.value;
+        Gamesettings.PostExposure = Colourgrading.ExposureSlider.value;
+        Gamesettings.HueShift = Colourgrading.HueSlider.value;
+        Gamesettings.ContrastValue = Colourgrading.ContrastSlider.value;
+        Gamesettings.RedChannel = Colourgrading.RedChannelSlider.value;
+        Gamesettings.GreenChannel = Colourgrading.GreenChannelSlider.value;
+        Gamesettings.BlueChannel = Colourgrading.BlueChannelSlider.value;
+        Gamesettings.MasterVolume = Audiomixer.MasterVolumeSlider.value;
+        Gamesettings.AmbientVolume = Audiomixer.AmbientVolumeSlider.value;
+        Gamesettings.MusicVolume = Audiomixer.MusicVolumeSlider.value;
+        Gamesettings.SFXVolume = Audiomixer.SFXVolumeSlider.value;
+        Gamesettings.VoiceoverVolume = Voiceover.VoiceOverVolumeSlider.value;
+        Gamesettings.VoiceoverToggle = Voiceover.VoiceOverToggleSlider.value;
 
         string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
 
@@ -181,17 +100,17 @@ public class GameManager : MonoBehaviour
     {
         LoadSettings();
         //this function is executed third
-        AudioMixer.Instance.OnMasterVolumeChange();
-        AudioMixer.Instance.OnAmbientVolumeChange();
-        AudioMixer.Instance.OnMusicVolumeChange();
-        AudioMixer.Instance.OnSFXVolumeChange();
+        Audiomixer.OnMasterVolumeChange();
+        Audiomixer.OnAmbientVolumeChange();
+        Audiomixer.OnMusicVolumeChange();
+        Audiomixer.OnSFXVolumeChange();
     }
 
     public void Speak(string text)
     {
-        if(VoiceOver.Instance.VoiceOverToggleSlider.value == 1)
+        if(Voiceover.VoiceOverToggleSlider.value == 1)
         {
-            Voice.Volume = (int)(VoiceOver.Instance.VoiceOverVolumeSlider.value * 100);
+            Voice.Volume = (int)(Voiceover.VoiceOverVolumeSlider.value * 100);
             Voice.Speak(text);
         }
     }

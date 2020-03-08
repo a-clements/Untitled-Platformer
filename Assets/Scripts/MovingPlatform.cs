@@ -6,6 +6,7 @@ public class MovingPlatform : MonoBehaviour
 {
     /// <summary>
     /// This script details how a platform will move between point A and point B. If the platform does not move then leave all variables blank.
+    /// The designer can define points to which the platform will move to.
     /// </summary>
 
     private Transform ThisTransform;

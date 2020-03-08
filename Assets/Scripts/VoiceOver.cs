@@ -3,25 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script holds the variables for two sliders. 
+/// </summary>
+
 public class VoiceOver : MonoBehaviour
 {
     public Slider VoiceOverToggleSlider;
     public Slider VoiceOverVolumeSlider;
-
-    public static VoiceOver Instance = null;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-
-        if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
 
     void Start()
     {

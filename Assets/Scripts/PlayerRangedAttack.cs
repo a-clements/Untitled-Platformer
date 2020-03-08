@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script allows the player to throw rock objects continously. The designer can define how many rock objects are in the object pool.
+/// The designer can also define the fire rate, the speed at which the rock object travels, and the time between throws. The throw rate
+/// is defined as Time.time > NextFire. If this condition is met, then the fire rate and Time.time is added to the NextFire variable.
+/// </summary>
+
 public class PlayerRangedAttack : MonoBehaviour
 {
     [Tooltip("The prefab of the projectile goes here.")]
@@ -33,8 +39,8 @@ public class PlayerRangedAttack : MonoBehaviour
             RockList[i].SetActive(false);
         }
 
-        Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-        Player = this.transform.parent.GetComponent<PlayerMove>();
+        Manager = FindObjectOfType<GameManager>();
+        Player = FindObjectOfType<PlayerMove>();
     }
 
     void Throw()

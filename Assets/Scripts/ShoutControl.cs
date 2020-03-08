@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script defines which microphone is used, what the sample length is, and the sample frequency.
+/// </summary>
 
 public class ShoutControl : MonoBehaviour
 {
-
     private AudioSource Source;
     private string Device;
     public static float Volume;

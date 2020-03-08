@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script is used to determine if a bridge is falling, how soon it falls after being stepped on, how fast it falls, how fast it resets
+/// where is the fall starts and ends. If the designer does not intend for a bridge section to fall, ensure the IsFallingBridge bool is set to
+/// false.
+/// </summary>
+
 public class FallingBridge : MonoBehaviour
 {
     [Tooltip("A declaration on if the bridge is falling. If it is false then all variables are should be empty.")]
     [SerializeField] private bool IsFallingBridge = false;
     [Tooltip("A declaration of how quickly after the player steps onto the bridge that it will fall.")]
-    [SerializeField] private float WaitTimer = 0.0f;
+    [SerializeField] private float WaitTimer = 1.0f;
     [Tooltip("A declaration of the where the bridge starts.")]
     [SerializeField] private float StartPosition = 0.0f;
     [Tooltip("A declaration of the where the bridge starts.")]

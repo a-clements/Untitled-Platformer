@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.LWRP;
 
+/// <summary>
+/// This script allows the designer to determine how the lights work. The lights will lerp between radius colour intensity and alpha.
+/// These values are defined at design time.
+/// </summary>
+
 public class FlickeringLights : MonoBehaviour
 {
     public bool LightsActive = false;

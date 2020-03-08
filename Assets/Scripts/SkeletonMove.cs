@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script defines how the skeleton enemy moves. The designer can change how far the skelen jumps. How high the skeleton jumps.
+/// The speed of the patrol, and how many navigation points the skeleton has. The action that the skeleton takes is random,
+/// and the same action cannot be carried out twice in succession.
+/// </summary>
+
 public class SkeletonMove : MonoBehaviour
 {
     [Tooltip("How far along the X axis can the Skeleton jump.")]

@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This script controls how the panels on the main menu slide in and out. The designer can determine the length of the wait timer, how many
+/// wait time multipliers there are, and the scene that will load when the play button is pressed. This script is also used to set the
+/// start lives of the player and resets the level score when the play button is pressed.
+/// </summary>
+
 public class MenuScript : MonoBehaviour
 {
     [SerializeField] private Animator PanelAnimator;
@@ -20,6 +26,9 @@ public class MenuScript : MonoBehaviour
     [Header("Scene Name")]
     [SerializeField] private string SceneName;
 
+    [Header("Starting Lives")]
+    [SerializeField] int StartingLives = 3;
+
     private bool Running = true;
     private bool Options = false;
 
@@ -27,7 +36,7 @@ public class MenuScript : MonoBehaviour
 
     private void OnEnable()
     {
-        Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        Manager = FindObjectOfType<GameManager>();
 
         Panels.transform.GetChild(0).GetComponent<ButtonPositioner>().Positioner();
 
@@ -96,7 +105,7 @@ public class MenuScript : MonoBehaviour
     IEnumerator LoadScene()
     {
         ScoreManager.LevelScore = 0;
-        LivesManager.LivesRemaining = 3;
+        LivesManager.LivesRemaining = StartingLives;
         MapManager.Counter = 0;
 
         if(Running == false)

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script calls the Shocked function of the EnemyDeath script.
+/// </summary>
+
 public class ShockWave : MonoBehaviour
 {
     // Start is called before the first frame update

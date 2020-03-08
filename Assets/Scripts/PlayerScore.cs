@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script keeps the level score and the high score up to date.
+/// </summary>
+
 public class PlayerScore : MonoBehaviour
 {
     [SerializeField] private Text Score;

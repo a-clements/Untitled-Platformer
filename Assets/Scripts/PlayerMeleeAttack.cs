@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script has two designer defined variables. The attack timer is the time between attacks. The melee distance is the reach of the
+/// melee attack.
+/// </summary>
+
 public class PlayerMeleeAttack : MonoBehaviour
 {
     private GameManager Manager;
-    [SerializeField] private float AttackTimer;
+    [SerializeField] private float AttackTimer = 0.5f;
     [SerializeField] private float MeleeDistance = 0.5f;
     public AudioClip AttackClip;
 
@@ -13,7 +18,7 @@ public class PlayerMeleeAttack : MonoBehaviour
 
     void Start()
     {
-        Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        Manager = FindObjectOfType<GameManager>();
         Player = this.transform.parent.GetComponent<PlayerMove>();
     }
 

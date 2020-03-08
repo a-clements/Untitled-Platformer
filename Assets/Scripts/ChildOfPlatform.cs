@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script attaches the player to the platform when the trigger volume is entered, and detaches the player when the player leaves the
+/// trigger volume.
+/// </summary>
+
 public class ChildOfPlatform : MonoBehaviour
 {
 	// Use this for initialization
 	void Start ()
     {
-        this.transform.position = new Vector3(this.transform.parent.position.x, this.transform.parent.position.y - 0.1f, this.transform.parent.position.z);
-        //this.transform.localScale = this.transform.parent.localScale;
+        this.transform.position = new Vector3(this.transform.parent.position.x,
+            this.transform.parent.position.y - 0.1f, this.transform.parent.position.z);
 	}
 	
 	// Update is called once per frame

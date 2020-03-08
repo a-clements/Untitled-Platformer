@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script takes one designer defined variable called WaitTimer. This variable determines how quickly the trap resets.
+/// </summary>
+
 public class HiddenSpikeTrap : MonoBehaviour
 {
     [SerializeField] private GameObject SpikeTrap;

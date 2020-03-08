@@ -6,6 +6,11 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEditor;
 
+/// <summary>
+/// This script detects a pointer enter, pointer exit, and pointer click. It is the scripting version of using an event trigger in the
+/// inspector.
+/// </summary>
+
 public class ButtonSounds : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     // Start is called before the first frame update
