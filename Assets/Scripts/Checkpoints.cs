@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// This sets the checkpoint on the player move script to be this transform. This script is also used in the training level to activate and
+/// deactivate panels. If the PanelOne variable is blank and CanShow is false, then no training panels will be activated.
+/// </summary>
+
 public class Checkpoints : MonoBehaviour
 {
     [SerializeField] private GameObject PanelOne;
@@ -18,8 +23,8 @@ public class Checkpoints : MonoBehaviour
 
     private void Start()
     {
-        Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-        GetEventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        Manager = FindObjectOfType<GameManager>();
+        GetEventSystem = FindObjectOfType<EventSystem>();
     }
 
     private void OnTriggerEnter2D(Collider2D TriggerInfo)

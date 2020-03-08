@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This is a very simple script that kills the player if entered.
+/// </summary>
+
 public class DeathVolume : MonoBehaviour
 {
 
@@ -19,8 +23,6 @@ public class DeathVolume : MonoBehaviour
             {
                 TriggerInfo.GetComponent<PlayerHealth>().LoseHeart();
             }
-
-            //TriggerInfo.gameObject.SetActive(false);
         }
     }
 }

@@ -4,28 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This script types a dialogue letter by letter at a rate determined by the WaitTimer, which is defined during design time. This script
+/// will enqueue and dequeue dialogue and load the next scene once all dialogue has been displayed.
+/// </summary>
+
 public class DialogueManager : MonoBehaviour
 {
     private Queue<string> Dialogue = new Queue<string>();
     // Start is called before the first frame update
 
-    public static DialogueManager Instance = null;
-
     [SerializeField] private Text DialogueText;
     [SerializeField] private string SceneName;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-
-        if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
+    [SerializeField] private float WaitTimer = 0.5f;
 
     public void StartDialogue(Dialogue dialogue)
     {
@@ -63,7 +54,7 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueText.text = "";
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(WaitTimer);
 
         foreach (char letter in dialogue.ToCharArray())
         {

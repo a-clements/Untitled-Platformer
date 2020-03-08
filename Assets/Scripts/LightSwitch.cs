@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script determines how the light switch object works. This script has a custom inspector attached to it so allow the designer to
+/// choose what type of light switch it is. The types are saturation based, or colour changing. The saturation based light switch is the
+/// default. The MethodNumber is set by the custom inspector and runs different code depending on the value of MethodNumber. The Lights Out
+/// method has four designer defined variables. LowExposure determines how visible the texture on the tile is. LowContrast makes the texture
+/// of the tile darker. FullExposure allows the texture of the tile to be fully visible and FullContrast allows the texture of the tile to
+/// have normal specular. If MethodNumber is 0 then the lights will always be on and flickering but in greyscale. If the MethodNumber is 1
+/// then the lights will activate when the player triggers the light switch.
+/// </summary>
+
 public class LightSwitch : MonoBehaviour
 {
     private MaterialPropertyBlock PropertyBlock;

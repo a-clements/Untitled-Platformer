@@ -2,14 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// THis script defines how the player moves. The designer can set the jump force, the run speed, the gravity multiplier, the fall modifier
+/// the knockback and the snooze timer. The JumpForce determines how much force the player jumps with. The RunSpeed determines how fast the 
+/// player can move on the X axis. The GravityMultiplier is used to determine the rate at which gravity increases when the player is falling.
+/// The JumpModifier determines how fast the jump slows down as the player reaches maximum jump height. The fallModifier is used to help
+/// normalise the rate at which gravity acts on a falling player. The knockback is used to determine how far the player is knocked back
+/// when colliding with an enemy or trap. The direction of the knockback is always the opposite of the direction the player is facing.
+/// The snooze timer is used to define how fast the player falls asleep when idle.
+/// </summary>
+
 public class PlayerMove : MonoBehaviour
 {
     private GameManager Manager;
-    [SerializeField] private float JumpHeight;
-    [SerializeField] private float RunSpeed;
-    [SerializeField] private float GravityMultiplier;
-    [SerializeField] private float JumpModifier = 1.0f;
-    [SerializeField] private float FallModifier = 1.5f;
+    [SerializeField] private float JumpForce = 250.0f;
+    [SerializeField] private float RunSpeed = 2.0f;
+    [SerializeField] private float GravityMultiplier = 2.0f;
+    [SerializeField] private float JumpModifier = 1.5f;
+    [SerializeField] private float FallModifier = 1.0f;
     [SerializeField] private float Knockback = 3.0f;
     [SerializeField] private float SnoozeTimer = 1.0f;
     [SerializeField] private AudioClip JumpClip;
@@ -29,7 +39,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
-        Manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        Manager = FindObjectOfType<GameManager>();
     }
 
     private void OnEnable()
@@ -219,7 +229,7 @@ public class PlayerMove : MonoBehaviour
                 {
                     if (CanJump == true)
                     {
-                        RigidBody.velocity = Vector2.up * JumpHeight * Time.fixedDeltaTime;
+                        RigidBody.velocity = Vector2.up * JumpForce * Time.fixedDeltaTime;
                         JumpCount--;
 
                         if (JumpCount < 0)
@@ -249,14 +259,14 @@ public class PlayerMove : MonoBehaviour
             #region Jump Realism
             if (RigidBody.velocity.y < 0)
             {
-                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.fixedDeltaTime;
+                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.fixedDeltaTime;
                 PlayerAnimator.SetBool("IsJumping", false);
                 FallSpeed = (int)RigidBody.velocity.y;
             }
 
             else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
             {
-                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.fixedDeltaTime;
+                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.fixedDeltaTime;
             }
             #endregion
 

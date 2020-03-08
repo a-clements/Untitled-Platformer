@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script takes in as many modules that are in the level and randomises their positions. The first and last module are never in the
+/// array. There are two methods of generating a random seed for the randomiser function, one is determined by the system clock in a bitwise 
+/// logical operation with the hex value of 65536, which has low variability, the other method the hash of the guid in a logical or of 65536
+/// which has a higher variability.
+/// </summary>
+
 public class LevelRandomiser : MonoBehaviour
 {
     List<GameObject> ModulesList = new List<GameObject>();

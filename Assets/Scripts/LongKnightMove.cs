@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script defines how the long range knight moves. The user can define how far the enemy can jump, how high the enemy can jump, the
+/// speed at which the enemy moves, and the amount of navpoints the enemy will have.
+/// </summary>
+
 public class LongKnightMove : MonoBehaviour
 {
     [Tooltip("How far along the X axis can the Knight jump.")]

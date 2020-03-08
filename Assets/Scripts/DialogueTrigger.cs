@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script trigggers a dialogue tree on a cut scene.
+/// </summary>
+
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue GetDialogue;
 
-    void TriggerDialogue()
-    {
-        DialogueManager.Instance.StartDialogue(GetDialogue);
-    }
+    private DialogueManager Dialoguemanager;
 
     private void Start()
     {
-        TriggerDialogue();
+        Dialoguemanager = FindObjectOfType<DialogueManager>();
+
+        Dialoguemanager.StartDialogue(GetDialogue);
     }
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script will evenly space out buttons on the vertical axis of a panel regardless of how many buttons are on the panel.
+/// Panels will always be in the middle of the panel on the X axis and resized to fit.
+/// </summary>
+
 public class ButtonPositioner : MonoBehaviour
 {
     private Button[] Buttons;
@@ -11,7 +16,7 @@ public class ButtonPositioner : MonoBehaviour
     private float ButtonWidth;
     private float Position;
     private float Space;
-    private float ButtonPositionMultiplier;
+    [SerializeField]private float ButtonPositionMultiplier;
 
     public void Positioner()
     {

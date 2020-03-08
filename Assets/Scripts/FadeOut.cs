@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+/// <summary>
+/// This script determines the speed of the enemy fade out after death. This script will also play a death sound and disable the game object
+/// once it is faded out entirely.
+/// </summary>
+
 public class FadeOut : MonoBehaviour
 {
     [Tooltip("The audio clip for death goes here.")]

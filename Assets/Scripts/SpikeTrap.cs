@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// THis script detects a collision with the player and causes damage, causing the player to be pushed back in
+/// the opposite direction to what they are facing.
+/// </summary>
+
 public class SpikeTrap : MonoBehaviour
 {
     [SerializeField] private float ForceMultiplier;

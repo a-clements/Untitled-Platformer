@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script controls camera shake magnitude and at what threshold the camera shake is initiated. This can only be triggered if the 
+/// shout metre is full and will continue until it is empty.
+/// </summary>
+
 public class CameraShake : MonoBehaviour
 {
     [SerializeField] private Camera MainCamera;
@@ -20,25 +25,10 @@ public class CameraShake : MonoBehaviour
     private float YShake;
     private bool CanShow = true;
 
-    //[System.Serializable]
-    //public class MyEventType : UnityEvent { }
-
-    //public MyEventType OnEvent;
-
     private void Start()
     {
-        //if (OnEvent == null)
-        //    OnEvent = new MyEventType();
 
-        //OnEvent.AddListener(Ping);
-
-        //Threshhold.text = Volume.ToString();
     }
-
-    //void Ping()
-    //{
-    //    Threshhold.text = Mathf.RoundToInt((Volume * 100)).ToString();
-    //}
 
     // Update is called once per frame
     void Update()

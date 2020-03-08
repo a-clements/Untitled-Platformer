@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script functions the same as the rockthrow script with the exception that is attached to Imp Two and the rock is thrown downward on
+/// the Y axis.
+/// </summary>
+
 public class EnemyBombardment : MonoBehaviour
 {
     [Tooltip("The prefab of the projectile goes here.")]

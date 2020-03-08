@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script defines how the short range knight moves. The designer can change the speed of the patrol
+/// and how many nav points the short range knight has. The actions taken by the short range knight is random, and the same action
+/// cannot be carried out twice in succession.
+/// </summary>
+
 public class ShortKnightMove : MonoBehaviour
 {
     [Tooltip("How fast is the Knight.")]

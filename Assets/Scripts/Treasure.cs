@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script detects a collision with the player and increments the score.
+/// </summary>
+
 public class Treasure : MonoBehaviour
 {
     [SerializeField] private int PointValue = 10;

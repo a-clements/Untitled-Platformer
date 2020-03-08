@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script detects collisions between the rock object and an enemy or the player. The designer can define the distance the rock travels
+/// when thrown by the player. This script also allows the designer to define how far the player is knocked back when the player is hit by a 
+/// rock. This script will also despawn the rock if it travels too far away from the spawn position, or if it hits an object with the Ground
+/// tag. This script will call the Dead function on the EnemyDeath script.
+/// </summary>
+
 public class RockCollision : MonoBehaviour
 {
     [SerializeField] private float Distance = 5.0f;

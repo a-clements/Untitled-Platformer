@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This script plays a designer defined cut scene when a button is clicked. This script also keeps track of how many cut scenes have played.
+/// </summary>
+
 public class MapManager : MonoBehaviour
 {
     [SerializeField] private string CutScene1;

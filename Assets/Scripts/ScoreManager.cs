@@ -3,6 +3,10 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script saves and loads the high score. This script also updates the high score if the level score is greater than the high score.
+/// </summary>
+
 public class ScoreManager : MonoBehaviour
 {
     public static long HighScore;

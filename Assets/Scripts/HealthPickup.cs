@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This is a simple script that adds one heart to the player when collected. Once the player triggers it, the object is disabled.
+/// </summary>
+
 public class HealthPickup : MonoBehaviour
 {
 

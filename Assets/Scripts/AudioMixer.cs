@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This script interfaces with the audio mixer group found in the Audio Mixer folder.
+/// The sliders control each channel of the mixer individually.
+/// </summary>
+
 public class AudioMixer : MonoBehaviour
 {
     public Slider MasterVolumeSlider;
@@ -15,23 +20,11 @@ public class AudioMixer : MonoBehaviour
     private GameObject[] Enemies;
     private GameObject AudioManager;
 
-    public static AudioMixer Instance = null;
-
     private void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         Enemies = GameObject.FindGameObjectsWithTag("Enemy");
         AudioManager = GameObject.Find("Audio Manager");
-
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-
-        if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
     }
 
     void Start()

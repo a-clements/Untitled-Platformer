@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script keeps track of how many lives remaining. The lives remaining carries over between levels.
+/// </summary>
+
 public class LivesManager : MonoBehaviour
 {
     public static long LivesRemaining;

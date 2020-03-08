@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class EnemyDeath : MonoBehaviour
 {   
     /// <summary>
-    /// How an emeny death behaves.
+    /// How an emeny death behaves. This script determines how fast the shout metre refills, the point value of the enemy, and the time
+    /// over which the fade out will occur. This script will also change the active sprite to the enemy death sprite, and play a sound.
     /// </summary>
     /// 
     [Tooltip("The amount of the shout metre that is filled.")]
