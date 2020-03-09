@@ -90,16 +90,31 @@ public class MenuScript : MonoBehaviour
     IEnumerator OptionsScrollIn()
     {
         yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[0]);
-        PanelAnimator.SetTrigger("Options Scroll In");
+        PanelAnimator.SetBool("Options", true);
     }
 
     IEnumerator OptionsScrollOut()
     {
         yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[1]);
-        PanelAnimator.SetTrigger("Options Scroll Out");
+        PanelAnimator.SetBool("Options", false);
         Running = true;
         yield return new WaitForSeconds(WaitTimer);
         StartCoroutine(MainScrollIn());
+    }
+
+    private IEnumerator MainScrollIn()
+    {
+        yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[0]);
+        PanelAnimator.SetBool("Main", true);
+        //yield return null;
+    }
+
+    private IEnumerator MainScrollOut()
+    {
+        yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[1]);
+        PanelAnimator.SetBool("Main", false);
+        Running = false;
+        yield return new WaitForSeconds(WaitTimer);
     }
 
     IEnumerator LoadScene()
@@ -108,9 +123,9 @@ public class MenuScript : MonoBehaviour
         LivesManager.LivesRemaining = StartingLives;
         MapManager.Counter = 0;
 
-        if(Running == false)
+        if (Running == false)
         {
-            while(PanelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Main Scroll Out"))
+            while (PanelAnimator.GetCurrentAnimatorStateInfo(0).IsName("Main Scroll Out"))
             {
                 yield return null;
             }
@@ -125,20 +140,5 @@ public class MenuScript : MonoBehaviour
             yield return null;
             StartCoroutine(LoadScene());
         }
-    }
-
-    private IEnumerator MainScrollIn()
-    {
-        yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[0]);
-        PanelAnimator.SetTrigger("Main Scroll In");
-        //yield return null;
-    }
-
-    private IEnumerator MainScrollOut()
-    {
-        yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[1]);
-        PanelAnimator.SetTrigger("Main Scroll Out");
-        Running = false;
-        yield return new WaitForSeconds(WaitTimer);
     }
 }
