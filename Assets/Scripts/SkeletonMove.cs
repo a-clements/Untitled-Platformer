@@ -79,7 +79,7 @@ public class SkeletonMove : MonoBehaviour
 
     void CheckPosition()
     {
-        if (ThisTransform.localPosition == NavPoints[PointNumber])
+        if (ThisTransform.localPosition.x <= NavPoints[0].x || ThisTransform.localPosition.x >= NavPoints[NavPoints.Length - 1].x)
         {
             PointNumber++;
 
