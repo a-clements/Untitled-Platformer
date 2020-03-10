@@ -13,8 +13,10 @@ public class CameraShake : MonoBehaviour
 {
     [SerializeField] private Camera MainCamera;
     [SerializeField] private Image ShoutMetre;
+    [SerializeField] private Slider ShakeSlider;
     [Range(0, 1.0f)]
     [SerializeField] private float ShakeMagnitude = 0.5f;
+    [SerializeField] private Slider VolumeThresholdSlider;
     [Range(0.1f, 0.9f)]
     [SerializeField] private float VolumeThreshold = 0.4f;
     [SerializeField] private CircleCollider2D ShockWave;
