@@ -234,13 +234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77898c64766738f4abde28849d36f120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpHeight: 250
+  JumpForce: 250
   RunSpeed: 2
   GravityMultiplier: 2
   JumpModifier: 1
   FallModifier: 1.5
   Knockback: 3
-  SnoozeTimer: 1
+  SnoozeTimer: 60
   JumpClip: {fileID: 8300000, guid: 961637d4f06f7564fb0559d59d7d137d, type: 3}
   LandClip: {fileID: 8300000, guid: abbb0a7e9b2aa1344820e66ed75d08cf, type: 3}
   PlayerAnimator: {fileID: 3434565583055710541}
@@ -499,7 +499,7 @@ MonoBehaviour:
   Rock: {fileID: 1790570571939622, guid: da63f87228db9174dae87a9d754bffb1, type: 3}
   PooledObjects: 10
   FireRate: 0.5
-  Speed: 64
+  Speed: 512
   NextFire: 1
 --- !u!1 &7835886026109701846
 GameObject:

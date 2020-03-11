@@ -70,7 +70,7 @@ public class PlayerMove : MonoBehaviour
                 GetComponent<PlayerHealth>().LoseHeart();
             }
 
-            if (FallSpeed < -10)
+            if (FallSpeed < -13)
             {
                 GetComponent<PlayerHealth>().LoseHeart();
             }
@@ -139,7 +139,6 @@ public class PlayerMove : MonoBehaviour
 
     public IEnumerator GoBackToSleep()
     {
-        //yield return new WaitForSeconds(ClipInfo.Length);
         yield return new WaitForSeconds(SnoozeTimer);
 
         StartCoroutine(Snooze());
@@ -190,7 +189,7 @@ public class PlayerMove : MonoBehaviour
             #region Walk Right
             if (Input.GetKey(Manager.Keys[1]))
             {
-                //ThisTransform.GetComponent<SpriteRenderer>().flipX = true;
+                StopEverything();
                 if (ClipInfo[0].clip.name != "Snooze" && ClipInfo[0].clip.name != "Wake Up")
                 {
                     this.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -203,6 +202,7 @@ public class PlayerMove : MonoBehaviour
             #region Start Walking
             if (Input.GetKeyDown(Manager.Keys[0]) || Input.GetKeyDown(Manager.Keys[1]))
             {
+                StopEverything();
                 PlayerAnimator.SetBool("IsIdle", false);
                 PlayerAnimator.SetBool("IsWalking", true);
 
