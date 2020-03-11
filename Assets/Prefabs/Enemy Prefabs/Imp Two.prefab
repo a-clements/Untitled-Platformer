@@ -335,6 +335,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rock: {fileID: 1790570571939622, guid: da63f87228db9174dae87a9d754bffb1, type: 3}
   PooledObjects: 10
-  FireRate: 0.5
+  FireRate: 2
   Speed: 64
   NextFire: 1
