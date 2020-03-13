@@ -78,12 +78,12 @@ public class PlayerRangedAttack : MonoBehaviour
         {
             Player.StopEverything();
 
-            if (Player.ClipInfo[0].clip.name == "Snooze")
+            if (Player.ClipInfo[0].clip.name == "Player Sleep")
             {
                 StartCoroutine(Player.WakeUp());
             }
 
-            if (Player.ClipInfo[0].clip.name != "Snooze" && Player.ClipInfo[0].clip.name != "Wake Up")
+            if (Player.ClipInfo[0].clip.name != "Player Sleep" && Player.ClipInfo[0].clip.name != "Player Wake Up")
             {
                 Throw();
             }

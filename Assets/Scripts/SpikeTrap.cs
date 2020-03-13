@@ -11,7 +11,7 @@ public class SpikeTrap : MonoBehaviour
 {
     [SerializeField] private float ForceMultiplier;
 
-    private void OnCollisionEnter2D(Collision2D CollisionInfo)
+    private void OnCollisionStay2D(Collision2D CollisionInfo)
     {
         if(CollisionInfo.transform.tag == "Player")
         {
@@ -19,12 +19,12 @@ public class SpikeTrap : MonoBehaviour
 
             if (CollisionInfo.transform.GetComponent<SpriteRenderer>().flipX == true)
             {
-                CollisionInfo.transform.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right) * ForceMultiplier, ForceMode2D.Impulse);
+                CollisionInfo.transform.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right) * ForceMultiplier, ForceMode2D.Force);
             }
 
             else
             {
-                CollisionInfo.transform.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.left) * ForceMultiplier, ForceMode2D.Impulse);
+                CollisionInfo.transform.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.left) * ForceMultiplier, ForceMode2D.Force);
             }
         }
     }

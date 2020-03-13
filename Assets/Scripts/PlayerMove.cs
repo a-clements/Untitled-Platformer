@@ -29,6 +29,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D RigidBody;
     private CapsuleCollider2D CapsuleCollider;
     private Transform ThisTransform;
+    private GameObject Snoring;
 
     public Animator PlayerAnimator;
     public int JumpCount = 1;
@@ -47,6 +48,7 @@ public class PlayerMove : MonoBehaviour
         RigidBody = GetComponent<Rigidbody2D>();
         CapsuleCollider = GetComponent<CapsuleCollider2D>();
         ThisTransform = this.transform;
+        Snoring = ThisTransform.GetChild(3).gameObject;
     }
 
     private void OnCollisionEnter2D(Collision2D CollisionInfo)
@@ -70,7 +72,7 @@ public class PlayerMove : MonoBehaviour
                 GetComponent<PlayerHealth>().LoseHeart();
             }
 
-            if (FallSpeed < -10)
+            if (FallSpeed < -13)
             {
                 GetComponent<PlayerHealth>().LoseHeart();
             }
@@ -116,6 +118,10 @@ public class PlayerMove : MonoBehaviour
         PlayerAnimator.SetBool("IsIdle", false);
         PlayerAnimator.SetBool("IsSleeping", true);
 
+        yield return new WaitForSeconds(ClipInfo[0].clip.length);
+
+        Snoring.SetActive(true);
+
         yield return null;
     }
 
@@ -123,10 +129,11 @@ public class PlayerMove : MonoBehaviour
     {
         ClipInfo = PlayerAnimator.GetCurrentAnimatorClipInfo(0);
 
-        if(ClipInfo[0].clip.name == "Snooze")
+        if(ClipInfo[0].clip.name == "Player Sleep")
         {
             PlayerAnimator.SetBool("IsSleeping", false);
             PlayerAnimator.SetBool("IsIdle", true);
+            Snoring.SetActive(false);
         }
 
         else
@@ -139,7 +146,6 @@ public class PlayerMove : MonoBehaviour
 
     public IEnumerator GoBackToSleep()
     {
-        //yield return new WaitForSeconds(ClipInfo.Length);
         yield return new WaitForSeconds(SnoozeTimer);
 
         StartCoroutine(Snooze());
@@ -178,7 +184,7 @@ public class PlayerMove : MonoBehaviour
             #region Walk Left
             if (Input.GetKey(Manager.Keys[0]))
             {
-                if (ClipInfo[0].clip.name != "Snooze" && ClipInfo[0].clip.name != "Wake Up")
+                if (ClipInfo[0].clip.name != "Player Sleep" && ClipInfo[0].clip.name != "Player Wake Up")
                 {
                     this.transform.rotation = Quaternion.Euler(0, 180, 0);
 
@@ -190,8 +196,8 @@ public class PlayerMove : MonoBehaviour
             #region Walk Right
             if (Input.GetKey(Manager.Keys[1]))
             {
-                //ThisTransform.GetComponent<SpriteRenderer>().flipX = true;
-                if (ClipInfo[0].clip.name != "Snooze" && ClipInfo[0].clip.name != "Wake Up")
+                StopEverything();
+                if (ClipInfo[0].clip.name != "Player Sleep" && ClipInfo[0].clip.name != "Player Wake Up")
                 {
                     this.transform.rotation = Quaternion.Euler(0, 0, 0);
 
@@ -203,6 +209,7 @@ public class PlayerMove : MonoBehaviour
             #region Start Walking
             if (Input.GetKeyDown(Manager.Keys[0]) || Input.GetKeyDown(Manager.Keys[1]))
             {
+                StopEverything();
                 PlayerAnimator.SetBool("IsIdle", false);
                 PlayerAnimator.SetBool("IsWalking", true);
 
@@ -225,7 +232,7 @@ public class PlayerMove : MonoBehaviour
             #region Jump
             if (Input.GetKeyDown(Manager.Keys[5]))
             {
-                if (ClipInfo[0].clip.name != "Snooze" && ClipInfo[0].clip.name != "Wake Up")
+                if (ClipInfo[0].clip.name != "Player Sleep" && ClipInfo[0].clip.name != "Player Wake Up")
                 {
                     if (CanJump == true)
                     {
@@ -288,7 +295,7 @@ public class PlayerMove : MonoBehaviour
                     CapsuleCollider.size = new Vector2(0.5f, 0.5f);
                     break;
 
-                case "Snooze":
+                case "Player Sleep":
                     CapsuleCollider.direction = CapsuleDirection2D.Horizontal;
                     CapsuleCollider.offset = new Vector2(0, -.4f);
                     CapsuleCollider.size = new Vector2(0.7f, 0.25f);
