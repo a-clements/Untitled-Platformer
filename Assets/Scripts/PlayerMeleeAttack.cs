@@ -39,7 +39,7 @@ public class PlayerMeleeAttack : MonoBehaviour
         {
             Player.StopEverything();
 
-            if (Player.ClipInfo[0].clip.name == "Snooze")
+            if (Player.ClipInfo[0].clip.name == "Player Sleep")
             {
                 StartCoroutine(Player.WakeUp());
             }
