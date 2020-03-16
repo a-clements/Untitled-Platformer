@@ -10,7 +10,7 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
-    public string Name;
+    public string[] Name;
 
     [TextArea(3,15)]
     public string[] Sentences;

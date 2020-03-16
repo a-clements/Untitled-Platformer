@@ -12,17 +12,24 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour
 {
     private Queue<string> Dialogue = new Queue<string>();
-    // Start is called before the first frame update
+    private int i = 0;
+    private int j;
+    [SerializeField]private string[] Names;
 
+    [SerializeField] private GameObject[] DialogueBox;
+    [SerializeField] private Text DialogueSpeaker;
     [SerializeField] private Text DialogueText;
     [SerializeField] private string SceneName;
     [SerializeField] private float WaitTimer = 0.5f;
 
     public void StartDialogue(Dialogue dialogue)
     {
+        j = 0;
         Dialogue.Clear();
+        Names = dialogue.Name;
+        DialogueSpeaker.text = Names[j];
 
-        foreach(string Sentence in dialogue.Sentences)
+        foreach (string Sentence in dialogue.Sentences)
         {
             Dialogue.Enqueue(Sentence);
         }
@@ -32,14 +39,30 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(Dialogue.Count == 0)
+        if (Dialogue.Count == 0)
         {
-            EndDialogue();
-            return;
+            if (i < DialogueBox.Length - 1)
+            {
+                DialogueBox[i].SetActive(false);
+                i++;
+                DialogueSpeaker = DialogueBox[i].transform.GetChild(0).GetChild(0).GetComponent<Text>();
+                DialogueText = DialogueBox[i].transform.GetChild(1).GetChild(0).GetComponent<Text>();
+                DialogueBox[i].SetActive(true);
+            }
+
+            else
+            {
+                EndDialogue();
+            }
         }
 
         else
         {
+            if (Names.Length > 1)
+            {
+                j++;
+            }
+
             StopAllCoroutines();
             StartCoroutine(Typing(Dialogue.Dequeue()));
         }
@@ -73,8 +96,18 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.anyKeyDown)
+        if (Input.anyKeyDown)
         {
+            if(Dialogue.Count > 0)
+            {
+                DialogueSpeaker.text = Names[j];
+            }
+
+            else
+            {
+                j = 0;
+            }
+
             DisplayNextSentence();
         }
     }
