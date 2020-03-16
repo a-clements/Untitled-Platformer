@@ -12,7 +12,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private DialogueManager Dialoguemanager;
 
-    private void Start()
+    private void OnEnable()
     {
         Dialoguemanager = FindObjectOfType<DialogueManager>();
 
