@@ -979,9 +979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946bb9a681b1a034092c948b9a1b1c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CutScene1: CutScene1
-  CutScene2: CutScene2
-  CutScene3: CutScene3
+  Map1: Map1
+  Map2: Map2
 --- !u!4 &1714202831
 Transform:
   m_ObjectHideFlags: 0
