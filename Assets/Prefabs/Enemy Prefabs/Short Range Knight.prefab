@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
+  AttackClip: {fileID: 8300000, guid: d2759ed896ffde843929c72982e05bdc, type: 3}
+  WalkClip: {fileID: 8300000, guid: b1e12b7feb811ca40b04df6faf929b7d, type: 3}
   NavPoints: []
 --- !u!114 &-592217422876691933
 MonoBehaviour:

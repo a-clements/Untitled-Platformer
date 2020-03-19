@@ -12,6 +12,9 @@ public class ShortKnightMove : MonoBehaviour
 {
     [Tooltip("How fast is the Knight.")]
     [SerializeField] private float Speed = 1;
+    [Tooltip("Place an audio clip here")]
+    [SerializeField] private AudioClip AttackClip;
+    [SerializeField] private AudioClip WalkClip;
     [Tooltip("An array of NavPoints at which the enemy will stop.")]
     [SerializeField] private Vector3[] NavPoints;
 
@@ -61,6 +64,17 @@ public class ShortKnightMove : MonoBehaviour
     public void ShortKnightAction()
     {
         AnimatorClipInfo[] ClipInfo = EnemyAnimator.GetCurrentAnimatorClipInfo(0);
+
+        switch (ClipInfo[0].clip.name)
+        {
+            case "Short Range Knight Attack":
+                GetComponent<AudioSource>().PlayOneShot(AttackClip);
+                break;
+
+            case "Short Range Knight Walk":
+                GetComponent<AudioSource>().PlayOneShot(WalkClip);
+                break;
+        }
     }
 
     IEnumerator Walk()

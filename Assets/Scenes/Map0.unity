@@ -12051,6 +12051,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -12140,21 +12155,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].y
       value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -12466,6 +12466,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -12555,21 +12570,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].y
       value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -13275,6 +13275,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -13364,21 +13379,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].x
       value: 5.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -14606,6 +14606,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -14695,21 +14710,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].x
       value: 5.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -16095,6 +16095,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -16184,21 +16199,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].x
       value: -2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -22269,6 +22269,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -22358,21 +22373,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].x
       value: -2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -38059,6 +38059,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -38148,21 +38163,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].y
       value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -49041,6 +49041,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -49130,21 +49145,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].y
       value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -50737,6 +50737,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -50826,21 +50841,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].x
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -51616,11 +51616,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1211305407845736606, guid: 99df59505c438f94884deceffb0362df,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -8378578692436288027, guid: 99df59505c438f94884deceffb0362df,
         type: 3}
       propertyPath: NavPoints.Array.size
@@ -51645,6 +51640,11 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].x
       value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1211305407845736606, guid: 99df59505c438f94884deceffb0362df,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6504341057774544636, guid: 99df59505c438f94884deceffb0362df,
         type: 3}
@@ -54877,6 +54877,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -54966,21 +54981,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].y
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -56243,6 +56243,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -56332,21 +56347,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].y
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -56525,11 +56525,6 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8301214325355971989, guid: a50942cd049dc43489a3c22d539fd40a,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8841029935724940485, guid: a50942cd049dc43489a3c22d539fd40a,
         type: 3}
       propertyPath: NavPoints.Array.size
@@ -56574,6 +56569,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301214325355971989, guid: a50942cd049dc43489a3c22d539fd40a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a50942cd049dc43489a3c22d539fd40a, type: 3}
@@ -60090,12 +60090,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8486693667840832948, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000,
-        type: 0}
     - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: FireRate
@@ -60106,6 +60100,12 @@ PrefabInstance:
       propertyPath: NextFire
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8486693667840832948, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: -2644718181937166858, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: Rock
@@ -61026,6 +61026,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -61115,21 +61130,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].x
       value: -6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -70445,6 +70445,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -70534,21 +70549,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].y
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -76885,6 +76885,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -76974,21 +76989,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].x
       value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -77345,6 +77345,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -77439,21 +77454,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].y
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -77982,6 +77982,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
+        type: 3}
+      propertyPath: NextFire
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3147331610985716607, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
       propertyPath: m_Controller
@@ -78071,21 +78086,6 @@ PrefabInstance:
         type: 3}
       propertyPath: NavPoints.Array.data[1].x
       value: -6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: FireRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504712129856604559, guid: 0627f015e9470aa429d3cc2331101eab,
-        type: 3}
-      propertyPath: NextFire
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678616112018233626, guid: 0627f015e9470aa429d3cc2331101eab,
         type: 3}
@@ -78494,6 +78494,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4710174662822674955, guid: 0c7cea9c9f0d9e74faa66111c5aa4810,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710174662822674955, guid: 0c7cea9c9f0d9e74faa66111c5aa4810,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 55129c87ce734644ea0ecf45e87676e9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c7cea9c9f0d9e74faa66111c5aa4810, type: 3}
 --- !u!1001 &9080383689603406959
