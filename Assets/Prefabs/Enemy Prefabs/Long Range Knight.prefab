@@ -145,6 +145,7 @@ MonoBehaviour:
   Speed: 1
   NavPoints: []
   AttackClip: {fileID: 8300000, guid: 31224c1677433434c8f2be6a5368331f, type: 3}
+  WalkClip: {fileID: 8300000, guid: b1e12b7feb811ca40b04df6faf929b7d, type: 3}
 --- !u!114 &6849315049505376691
 MonoBehaviour:
   m_ObjectHideFlags: 0

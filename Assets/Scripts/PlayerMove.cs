@@ -24,6 +24,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float SnoozeTimer = 1.0f;
     [SerializeField] private AudioClip JumpClip;
     [SerializeField] private AudioClip LandClip;
+    [SerializeField] private AudioClip WalkClip;
 
     private int FallSpeed;
     private Rigidbody2D RigidBody;
@@ -164,8 +165,13 @@ public class PlayerMove : MonoBehaviour
             case "Player Attack Up":
                 ThisTransform.GetComponent<AudioSource>().PlayOneShot(ThisTransform.GetChild(1).GetComponent<PlayerMeleeAttack>().AttackClip);
                 break;
+
             case "Player Jump":
                 ThisTransform.GetComponent<AudioSource>().PlayOneShot(JumpClip);
+                break;
+
+            case "Player Walk":
+                ThisTransform.GetComponent<AudioSource>().PlayOneShot(WalkClip);
                 break;
         }
     }

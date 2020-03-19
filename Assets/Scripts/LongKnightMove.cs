@@ -19,6 +19,7 @@ public class LongKnightMove : MonoBehaviour
     [SerializeField] private Vector3[] NavPoints;
     [Tooltip("Place an audio clip here.")]
     [SerializeField] private AudioClip AttackClip;
+    [SerializeField] private AudioClip WalkClip;
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
@@ -77,6 +78,10 @@ public class LongKnightMove : MonoBehaviour
         {
             case "Long Range Knight Attack":
                 GetComponent<AudioSource>().PlayOneShot(AttackClip);
+                break;
+
+            case "Long Range Knight Walk":
+                GetComponent<AudioSource>().PlayOneShot(WalkClip);
                 break;
         }
     }
