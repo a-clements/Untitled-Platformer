@@ -80,8 +80,9 @@ public class PlayerMove : MonoBehaviour
 
             ThisTransform.GetComponent<AudioSource>().PlayOneShot(LandClip);
 
-            if(PlayerAnimator.GetBool("IsWalking") == false)
+            if (PlayerAnimator.GetBool("IsWalking") == false)
             {
+                StartCoroutine(GoBackToSleep());
                 PlayerAnimator.SetBool("IsIdle", true);
             }
 
@@ -89,8 +90,6 @@ public class PlayerMove : MonoBehaviour
             RigidBody.angularVelocity = 0.0f;
 
             FallSpeed = 0;
-
-            StartCoroutine(GoBackToSleep());
         }
 
         if(CollisionInfo.gameObject.tag == "Enemy")
@@ -202,7 +201,6 @@ public class PlayerMove : MonoBehaviour
             #region Walk Right
             if (Input.GetKey(Manager.Keys[1]))
             {
-                StopEverything();
                 if (ClipInfo[0].clip.name != "Player Sleep" && ClipInfo[0].clip.name != "Player Wake Up")
                 {
                     this.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -213,9 +211,8 @@ public class PlayerMove : MonoBehaviour
             #endregion
 
             #region Start Walking
-            if (Input.GetKeyDown(Manager.Keys[0]) || Input.GetKeyDown(Manager.Keys[1]))
+            if (Input.GetKey(Manager.Keys[0]) == true || Input.GetKey(Manager.Keys[1]) == true)
             {
-                StopEverything();
                 PlayerAnimator.SetBool("IsIdle", false);
                 PlayerAnimator.SetBool("IsWalking", true);
 
@@ -225,7 +222,7 @@ public class PlayerMove : MonoBehaviour
             #endregion
 
             #region Stop Walking
-            if (Input.GetKeyUp(Manager.Keys[0]) || Input.GetKeyUp(Manager.Keys[1]))
+            if (Input.GetKey(Manager.Keys[0]) == false && Input.GetKey(Manager.Keys[1]) == false)
             {
                 PlayerAnimator.SetBool("IsWalking", false);
                 PlayerAnimator.SetBool("IsIdle", true);
