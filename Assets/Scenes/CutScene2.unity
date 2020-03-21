@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -131,6 +131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogueBox 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630292850188228773, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5223777853331709068, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
@@ -261,7 +266,7 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[0]
-      value: How avbout that sandwich you owe me...
+      value: How about that sandwich you owe me...
       objectReference: {fileID: 0}
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
@@ -376,6 +381,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &615979244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5630292850188228773, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+    type: 3}
+  m_PrefabInstance: {fileID: 251304184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &652548007
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,5 +905,10 @@ PrefabInstance:
       propertyPath: DialogueBox.Array.data[0]
       value: 
       objectReference: {fileID: 2055563240}
+    - target: {fileID: 4777382235278463253, guid: 1764de7c4a2ac7f499edd0335cdd938d,
+        type: 3}
+      propertyPath: DialogueBox.Array.data[1]
+      value: 
+      objectReference: {fileID: 615979244}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1764de7c4a2ac7f499edd0335cdd938d, type: 3}
