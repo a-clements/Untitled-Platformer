@@ -13,10 +13,12 @@ public class CameraShake : MonoBehaviour
 {
     [SerializeField] private Camera MainCamera;
     [SerializeField] private Image ShoutMetre;
-    [Range(0, 1.0f)]
-    [SerializeField] private float ShakeMagnitude = 0.5f;
-    [Range(0.1f, 0.9f)]
-    [SerializeField] private float VolumeThreshold = 0.4f;
+    [SerializeField] private Slider ShakeMagnitude;
+    [SerializeField] private Slider VolumeThreshold;
+    //[Range(0, 1.0f)]
+    //[SerializeField] private float ShakeMagnitude = 0.5f;
+    //[Range(0.1f, 0.9f)]
+    //[SerializeField] private float VolumeThreshold = 0.45f;
     [SerializeField] private CircleCollider2D ShockWave;
     [SerializeField] private Text ThresholdText;
 
@@ -40,9 +42,9 @@ public class CameraShake : MonoBehaviour
             Time.timeScale = 0;
         }
 
-        ThresholdText.text = Mathf.RoundToInt((VolumeThreshold * 100)).ToString();
+        ThresholdText.text = Mathf.RoundToInt((VolumeThreshold.value * 100)).ToString();
 
-        if (ShoutControl.Volume > VolumeThreshold && ShoutMetre.fillAmount == 1.0f)
+        if (ShoutControl.Volume > VolumeThreshold.value && ShoutMetre.fillAmount == 1.0f)
         {
             StartCoroutine(Shake());
         }
@@ -56,8 +58,8 @@ public class CameraShake : MonoBehaviour
 
         while (ShoutMetre.fillAmount > 0)
         {
-            XShake = Random.Range(-1.0f, 1.0f) * ShakeMagnitude;
-            YShake = Random.Range(-1.0f, 1.0f) * ShakeMagnitude;
+            XShake = Random.Range(-1.0f, 1.0f) * ShakeMagnitude.value;
+            YShake = Random.Range(-1.0f, 1.0f) * ShakeMagnitude.value;
 
             MainCamera.transform.localPosition = new Vector3(OriginalPosition.x - XShake, OriginalPosition.y - YShake, OriginalPosition.z);
 
