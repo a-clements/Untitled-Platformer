@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     private VoiceOver Voiceover;
     private ColourGrading Colourgrading;
     private AudioMixer Audiomixer;
+    private CameraShake Camerashake;
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
         Voiceover = FindObjectOfType<VoiceOver>();
         Colourgrading = FindObjectOfType<ColourGrading>();
         Audiomixer = FindObjectOfType<AudioMixer>();
+        Camerashake = FindObjectOfType<CameraShake>();
         //this function is executed first
     }
 
@@ -57,6 +59,8 @@ public class GameManager : MonoBehaviour
             Audiomixer.SFXVolumeSlider.value = Gamesettings.SFXVolume;
             Voiceover.VoiceOverVolumeSlider.value = Gamesettings.VoiceoverVolume;
             Voiceover.VoiceOverToggleSlider.value = Gamesettings.VoiceoverToggle;
+            Camerashake.ShakeMagnitude.value = Gamesettings.CameraShake;
+            Camerashake.VolumeThreshold.value = Gamesettings.MicrophoneThreshold;
         }
 
         else
@@ -85,6 +89,8 @@ public class GameManager : MonoBehaviour
         Gamesettings.SFXVolume = Audiomixer.SFXVolumeSlider.value;
         Gamesettings.VoiceoverVolume = Voiceover.VoiceOverVolumeSlider.value;
         Gamesettings.VoiceoverToggle = Voiceover.VoiceOverToggleSlider.value;
+        Gamesettings.CameraShake = Camerashake.ShakeMagnitude.value;
+        Gamesettings.MicrophoneThreshold = Camerashake.VolumeThreshold.value;
 
         string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
 

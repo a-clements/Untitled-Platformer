@@ -24,6 +24,34 @@ public class GameSettings
     public float SFX;
     public float Voiceover;
     public float Toggle;
+    public float Shake;
+    public float Threshold;
+
+    public float CameraShake
+    {
+        get
+        {
+            return Shake;
+        }
+
+        set
+        {
+            Shake = value;
+        }
+    }
+
+    public float MicrophoneThreshold
+    {
+        get
+        {
+            return Threshold;
+        }
+
+        set
+        {
+            Threshold = value;
+        }
+    }
 
     public float PostExposure
     {
