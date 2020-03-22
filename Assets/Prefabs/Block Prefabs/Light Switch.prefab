@@ -101,10 +101,11 @@ MonoBehaviour:
   FullExposure: 0
   LowContrast: 0
   FullContrast: 1
-  Tilemap: {fileID: 0}
+  Platforms: {fileID: 0}
   Lights: {fileID: 0}
   PostProcess: {fileID: 0}
   Value: 16.67
+  FlickedSwitch: {fileID: 21300024, guid: ae3918a914038694d852d0bb81f62473, type: 3}
 --- !u!61 &6979977874568028884
 BoxCollider2D:
   m_ObjectHideFlags: 0

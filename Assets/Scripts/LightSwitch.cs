@@ -41,6 +41,9 @@ public class LightSwitch : MonoBehaviour
     [SerializeField] private GameObject PostProcess;
     [SerializeField] private float Value;
 
+    [Header("Flicked Switch Sprite")]
+    [SerializeField] private Sprite FlickedSwitch;
+
     void Start()
     {
         PostProcess = GameObject.Find("Post Process");
@@ -121,6 +124,8 @@ public class LightSwitch : MonoBehaviour
                     }
                     break;
             }
+
+            GetComponent<SpriteRenderer>().sprite = FlickedSwitch;
         }
     }
 }
