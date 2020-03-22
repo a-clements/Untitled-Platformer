@@ -14,8 +14,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> Dialogue = new Queue<string>();
     private int i = 0;
     private int j;
-    [SerializeField]private string[] Names;
 
+    [SerializeField]private string[] Names;
     [SerializeField] private GameObject[] DialogueBox;
     [SerializeField] private Text DialogueSpeaker;
     [SerializeField] private Text DialogueText;
