@@ -584,7 +584,7 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
@@ -594,11 +594,16 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[0]
-      value: My King! You have purified our kingdom! HOORAH!
+      value: My King! You have purified our kingdom!
       objectReference: {fileID: 0}
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[1]
+      value: HOORAH!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: GetDialogue.Sentences.Array.data[2]
       value: You can now take your rightful seat on the throne.
       objectReference: {fileID: 0}
     m_RemovedComponents: []

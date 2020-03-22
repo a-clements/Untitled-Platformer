@@ -407,12 +407,12 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Name.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
@@ -422,17 +422,27 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[0]
-      value: I mean, I have my sword and a bunch of Imp guts in my pocket.
+      value: 'I mean, I have my sword '
       objectReference: {fileID: 0}
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Name.Array.data[1]
-      value: Elle
+      value: Barry
       objectReference: {fileID: 0}
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[1]
+      value: and a bunch of Imp guts in my pocket.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: GetDialogue.Sentences.Array.data[2]
       value: Imp guts...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: GetDialogue.Name.Array.data[2]
+      value: Elle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9, type: 3}
@@ -675,7 +685,7 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
@@ -685,8 +695,12 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[0]
-      value: Well... I bought my sleeping bag with me, and that's all I need to get
-        the job done.
+      value: Well... I bought my sleeping bag with me
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: GetDialogue.Sentences.Array.data[1]
+      value: and that's all I need to get the job done.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9, type: 3}
@@ -850,7 +864,7 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
@@ -860,8 +874,17 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[0]
-      value: Barry! Oh My Goodness! The brotherhood is drowning the land of Aureon.
-        Please help your people.
+      value: King Barry! Oh My Goodness!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: GetDialogue.Sentences.Array.data[1]
+      value: The Brotherhood is darkening the land of Aureon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: GetDialogue.Sentences.Array.data[2]
+      value: Please help your people.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9, type: 3}
