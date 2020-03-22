@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4197180209952694340
 Transform:
   m_ObjectHideFlags: 0
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.95, y: 1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &44888234581122012
 MonoBehaviour:
@@ -80,9 +80,9 @@ GameObject:
   m_Component:
   - component: {fileID: 396787136100240846}
   - component: {fileID: 7774133005229181521}
-  - component: {fileID: 9044442997873967103}
   - component: {fileID: 6791238800787999713}
   - component: {fileID: 7966092136800665790}
+  - component: {fileID: 7258715328770971161}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Ground
@@ -154,32 +154,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &9044442997873967103
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8321035203195999559}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.3}
-  m_EdgeRadius: 0
 --- !u!50 &6791238800787999713
 Rigidbody2D:
   serializedVersion: 4
@@ -213,11 +187,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde9be5dcbfa52e48a59c773b73f4f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction: 
+  IsMoving: 0
   Speed: 0
-  XAxis: 0
-  MaxXDistance: 0
-  MinXDistance: 0
-  YAxis: 0
-  MaxYDistance: 0
-  MinYDistance: 0
+  Points: []
+--- !u!70 &7258715328770971161
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321035203195999559}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.28}
+  m_Size: {x: 1, y: 0.28}
+  m_Direction: 1
