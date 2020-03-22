@@ -211,7 +211,7 @@ public class PlayerMove : MonoBehaviour
             #endregion
 
             #region Start Walking
-            if (Input.GetKey(Manager.Keys[0]) == true || Input.GetKey(Manager.Keys[1]) == true)
+            if (Input.GetKey(Manager.Keys[0]) || Input.GetKey(Manager.Keys[1]))
             {
                 PlayerAnimator.SetBool("IsIdle", false);
                 PlayerAnimator.SetBool("IsWalking", true);
@@ -222,7 +222,7 @@ public class PlayerMove : MonoBehaviour
             #endregion
 
             #region Stop Walking
-            if (Input.GetKey(Manager.Keys[0]) == false && Input.GetKey(Manager.Keys[1]) == false)
+            if (!Input.GetKey(Manager.Keys[0]) && !Input.GetKey(Manager.Keys[1]))
             {
                 PlayerAnimator.SetBool("IsWalking", false);
                 PlayerAnimator.SetBool("IsIdle", true);
