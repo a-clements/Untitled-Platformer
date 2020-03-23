@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// This script defines which microphone is used, what the sample length is, and the sample frequency.
@@ -66,7 +67,10 @@ public class ShoutControl : MonoBehaviour
 
         Volume = Mathf.Sqrt(Mathf.Sqrt(Level));
 
-        VolumeMetre.fillAmount = Volume;
-        VolumeText.text = (System.Math.Round(Volume,2) * 100).ToString();
+        if(SceneManager.GetActiveScene().name != "Menu")
+        {
+            VolumeMetre.fillAmount = Volume;
+            VolumeText.text = (System.Math.Round(Volume, 2) * 100).ToString();
+        }
     }
 }
