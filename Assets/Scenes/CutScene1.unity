@@ -268,6 +268,11 @@ PrefabInstance:
       propertyPath: GetDialogue.Sentences.Array.data[0]
       value: ???
       objectReference: {fileID: 0}
+    - target: {fileID: 7890704370891292663, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9, type: 3}
 --- !u!224 &32353806 stripped
@@ -443,6 +448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: GetDialogue.Name.Array.data[2]
       value: Elle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890704370891292663, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9, type: 3}
@@ -702,6 +712,11 @@ PrefabInstance:
       propertyPath: GetDialogue.Sentences.Array.data[1]
       value: and that's all I need to get the job done.
       objectReference: {fileID: 0}
+    - target: {fileID: 7890704370891292663, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9, type: 3}
 --- !u!1 &403815799 stripped
@@ -879,12 +894,17 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[1]
-      value: The Brotherhood is darkening the land of Aureon.
+      value: The Brotherhood is darkening Aureon.
       objectReference: {fileID: 0}
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[2]
       value: Please help your people.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890704370891292663, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9, type: 3}
@@ -1165,6 +1185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[1]
       value: I knew we'd win this battle, My King.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890704370891292663, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9, type: 3}

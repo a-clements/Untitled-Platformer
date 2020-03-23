@@ -367,7 +367,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 14
     m_MaxSize: 120
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1414,7 +1414,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 14
     m_MaxSize: 120
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1645,7 +1645,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 14
     m_MaxSize: 120
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1724,7 +1724,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 14
     m_MaxSize: 120
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1803,7 +1803,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 14
     m_MaxSize: 120
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2049,7 +2049,8 @@ MonoBehaviour:
     Name:
     - White Knight
     Sentences:
-    - '...You need to flick the switches throughout the kingdom.'
+    - '...Throughout the kingdom'
+    - there are switches that need activating.
 --- !u!114 &1701662368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2143,8 +2144,11 @@ MonoBehaviour:
   GetDialogue:
     Name:
     - Dark Knight
+    - Dark Knight
+    - Dark Knight
     Sentences:
-    - The keys to Aureon's seal are hidden amongst the lands that have been darkened.
+    - The keys to Aureon's seal are hidden
+    - amongst the lands.
     - You won't have time to save your precious kingdom.
 --- !u!114 &1726425490
 MonoBehaviour:
@@ -2319,11 +2323,13 @@ MonoBehaviour:
     - White Knight
     - King Barry
     - King Barry
+    - King Barry
     Sentences:
     - King Barry! We need you to defeat
     - the rest of the Universal Brotherhood
     - in the castle before their evil spreads!
-    - Okay, what exactly am I supposed to be doing again?
+    - Okay...
+    - What am I supposed to be doing again?
     - '...Going back to sleep right?'
 --- !u!114 &1893444444
 MonoBehaviour:
@@ -2427,7 +2433,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 14
     m_MaxSize: 120
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
