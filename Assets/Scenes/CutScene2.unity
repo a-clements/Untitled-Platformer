@@ -273,6 +273,11 @@ PrefabInstance:
       propertyPath: GetDialogue.Sentences.Array.data[1]
       value: You can now take your rightful seat on the throne.
       objectReference: {fileID: 0}
+    - target: {fileID: 7890704370891292663, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9, type: 3}
 --- !u!224 &251304185 stripped
@@ -604,7 +609,12 @@ PrefabInstance:
     - target: {fileID: 1090676898576895747, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
         type: 3}
       propertyPath: GetDialogue.Sentences.Array.data[2]
-      value: You can now take your rightful seat on the throne.
+      value: You can now take your seat on the throne.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890704370891292663, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c02fb7cfeab794e4fa0f6b174fbd2ce9, type: 3}
