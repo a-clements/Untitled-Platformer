@@ -2048,9 +2048,12 @@ MonoBehaviour:
   GetDialogue:
     Name:
     - White Knight
+    - White Knight
+    - White Knight
     Sentences:
     - '...Throughout the kingdom'
-    - there are switches that need activating.
+    - there are switches that need activating
+    - to chase away the darkness.
 --- !u!114 &1701662368
 MonoBehaviour:
   m_ObjectHideFlags: 0
