@@ -3501,6 +3501,11 @@ PrefabInstance:
       propertyPath: VolumeThreshold
       value: 
       objectReference: {fileID: 2065215315}
+    - target: {fileID: 5666257317738757428, guid: 25dc3e5b5fa152743affe7d6ba8beee6,
+        type: 3}
+      propertyPath: MainCamera
+      value: 
+      objectReference: {fileID: 1636834116}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25dc3e5b5fa152743affe7d6ba8beee6, type: 3}
 --- !u!1 &1975775008
