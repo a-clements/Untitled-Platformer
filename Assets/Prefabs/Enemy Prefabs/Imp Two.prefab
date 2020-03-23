@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849f908d385f8714f86d69edbdc183e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rock: {fileID: 1790570571939622, guid: da63f87228db9174dae87a9d754bffb1, type: 3}
+  Rock: {fileID: 1790570571939622, guid: 29ea003f11dad4a4d854d5f5bc889343, type: 3}
   PooledObjects: 10
   FireRate: 2
   Speed: 64
