@@ -30,6 +30,16 @@ public class ColourGrading : MonoBehaviour
         PostProcess.profile.TryGetSettings(out ColourGrade); //This gets the ColorGrading effect and places it in the ColourGrading variable.
     }
 
+    public void Setup()
+    {
+        OnHueChange();
+        OnContrastChange();
+        OnExposureChange();
+        OnRedChange();
+        OnGreenChange();
+        OnBlueChange();
+    }
+
     public void OnHueChange()
     {
         ColourGrade.hueShift.value = HueSlider.value;

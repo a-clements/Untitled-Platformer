@@ -32,6 +32,14 @@ public class AudioMixer : MonoBehaviour
 
     }
 
+    public void Setup()
+    {
+        OnMasterVolumeChange();
+        OnAmbientVolumeChange();
+        OnMusicVolumeChange();
+        OnSFXVolumeChange();
+    }
+
     public void OnMasterVolumeChange()
     {
         AudioManager.transform.GetChild(0).GetComponent<AudioSource>().outputAudioMixerGroup.audioMixer.SetFloat("Master", MasterVolumeSlider.value);

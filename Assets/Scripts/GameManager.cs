@@ -68,16 +68,8 @@ public class GameManager : MonoBehaviour
             SaveSettings();
         }
 
-        Audiomixer.OnMasterVolumeChange();
-        Audiomixer.OnAmbientVolumeChange();
-        Audiomixer.OnMusicVolumeChange();
-        Audiomixer.OnSFXVolumeChange();
-        Colourgrading.OnHueChange();
-        Colourgrading.OnContrastChange();
-        Colourgrading.OnExposureChange();
-        Colourgrading.OnRedChange();
-        Colourgrading.OnGreenChange();
-        Colourgrading.OnBlueChange();
+        Audiomixer.Setup();
+        Colourgrading.Setup();
     }
 
     public void SaveSettings()
