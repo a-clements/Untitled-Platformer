@@ -106,6 +106,12 @@ public class GameManager : MonoBehaviour
     {
         LoadSettings();
         //this function is executed third
+        Colourgrading.OnHueChange();
+        Colourgrading.OnContrastChange();
+        Colourgrading.OnExposureChange();
+        Colourgrading.OnRedChange();
+        Colourgrading.OnGreenChange();
+        Colourgrading.OnBlueChange();
         Audiomixer.OnMasterVolumeChange();
         Audiomixer.OnAmbientVolumeChange();
         Audiomixer.OnMusicVolumeChange();

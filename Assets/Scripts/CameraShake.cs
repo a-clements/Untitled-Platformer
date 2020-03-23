@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// This script controls camera shake magnitude and at what threshold the camera shake is initiated. This can only be triggered if the 
@@ -32,18 +33,21 @@ public class CameraShake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ShoutMetre.fillAmount == 1.0f && CanShow == true)
+        if (SceneManager.GetActiveScene().name != "Menu")
         {
-            GameObject.Find("Entry").GetComponent<Checkpoints>().PanelThree.SetActive(true);
-            CanShow = false;
-            Time.timeScale = 0;
-        }
+            if (ShoutMetre.fillAmount == 1.0f && CanShow == true)
+            {
+                GameObject.Find("Entry").GetComponent<Checkpoints>().PanelThree.SetActive(true);
+                CanShow = false;
+                Time.timeScale = 0;
+            }
 
-        ThresholdText.text = Mathf.RoundToInt((VolumeThreshold.value * 100)).ToString();
+            ThresholdText.text = Mathf.RoundToInt((VolumeThreshold.value * 100)).ToString();
 
-        if (ShoutControl.Volume > VolumeThreshold.value && ShoutMetre.fillAmount == 1.0f)
-        {
-            StartCoroutine(Shake());
+            if (ShoutControl.Volume > VolumeThreshold.value && ShoutMetre.fillAmount == 1.0f)
+            {
+                StartCoroutine(Shake());
+            }
         }
     }
 
