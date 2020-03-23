@@ -67,6 +67,17 @@ public class GameManager : MonoBehaviour
         {
             SaveSettings();
         }
+
+        Audiomixer.OnMasterVolumeChange();
+        Audiomixer.OnAmbientVolumeChange();
+        Audiomixer.OnMusicVolumeChange();
+        Audiomixer.OnSFXVolumeChange();
+        Colourgrading.OnHueChange();
+        Colourgrading.OnContrastChange();
+        Colourgrading.OnExposureChange();
+        Colourgrading.OnRedChange();
+        Colourgrading.OnGreenChange();
+        Colourgrading.OnBlueChange();
     }
 
     public void SaveSettings()
@@ -106,16 +117,6 @@ public class GameManager : MonoBehaviour
     {
         LoadSettings();
         //this function is executed third
-        Colourgrading.OnHueChange();
-        Colourgrading.OnContrastChange();
-        Colourgrading.OnExposureChange();
-        Colourgrading.OnRedChange();
-        Colourgrading.OnGreenChange();
-        Colourgrading.OnBlueChange();
-        Audiomixer.OnMasterVolumeChange();
-        Audiomixer.OnAmbientVolumeChange();
-        Audiomixer.OnMusicVolumeChange();
-        Audiomixer.OnSFXVolumeChange();
     }
 
     public void Speak(string text)

@@ -24,7 +24,7 @@ public class ColourGrading : MonoBehaviour
 
     public float Saturation; //This is the float variable that gives controls the saturation value of the post process stack. It has a range of -100 to 100. 
 
-    void Start ()
+    void Awake()
     {
         PostProcess = GetComponent<PostProcessVolume>();
         PostProcess.profile.TryGetSettings(out ColourGrade); //This gets the ColorGrading effect and places it in the ColourGrading variable.
