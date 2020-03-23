@@ -16,10 +16,10 @@ GameObject:
   - component: {fileID: 4564642974523090159}
   - component: {fileID: -993909018586909506}
   - component: {fileID: -5627869561949666988}
-  - component: {fileID: 6095336406094267245}
+  - component: {fileID: 3265103345385348906}
   m_Layer: 0
-  m_Name: Rock
-  m_TagString: Rock
+  m_Name: Rock 1
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 158068545
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cfb9534e88f2cca4f998d9620eccbdf9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fb9f67910e50d44ca9c91a218593b79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5038,7 +5038,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6095336406094267245
+--- !u!114 &3265103345385348906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5047,7 +5047,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1790570571939622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d6fdd5f3ad0a64ba2fd21a53573ba6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c3241e7d9ffd104c9e4274ccbb95711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Distance: 5
