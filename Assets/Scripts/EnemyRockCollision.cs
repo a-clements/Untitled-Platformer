@@ -12,6 +12,7 @@ using UnityEngine;
 public class EnemyRockCollision : MonoBehaviour
 {
     [SerializeField] private float Distance = 5.0f;
+    [SerializeField] private AudioClip RockSound;
 
     private Transform ThisTransform;
 
@@ -41,8 +42,17 @@ public class EnemyRockCollision : MonoBehaviour
 
         if (TriggerInfo.transform.tag == "Ground")
         {
-            this.gameObject.SetActive(false);
+            this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            GetComponent<AudioSource>().PlayOneShot(RockSound);
+            StartCoroutine(PlaySound());
         }
+    }
+
+    IEnumerator PlaySound()
+    {
+        yield return new WaitForSeconds(RockSound.length);
+        this.gameObject.SetActive(false);
+        yield return null;
     }
 
     private void Update()

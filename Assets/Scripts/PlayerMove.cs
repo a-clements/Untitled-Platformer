@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// THis script defines how the player moves. The designer can set the jump force, the run speed, the gravity multiplier, the fall modifier
+/// This script defines how the player moves. The designer can set the jump force, the run speed, the gravity multiplier, the fall modifier
 /// the knockback and the snooze timer. The JumpForce determines how much force the player jumps with. The RunSpeed determines how fast the 
 /// player can move on the X axis. The GravityMultiplier is used to determine the rate at which gravity increases when the player is falling.
 /// The JumpModifier determines how fast the jump slows down as the player reaches maximum jump height. The fallModifier is used to help

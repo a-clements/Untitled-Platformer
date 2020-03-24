@@ -15,16 +15,19 @@ public class SpikeTrap : MonoBehaviour
     {
         if(CollisionInfo.transform.tag == "Player")
         {
-            CollisionInfo.transform.GetComponent<PlayerHealth>().LoseHeart();
-
-            if (CollisionInfo.transform.GetComponent<SpriteRenderer>().flipX == true)
+            if(CollisionInfo.transform.GetComponent<PlayerMove>().PlayerAnimator.GetBool("IsDead") ==  false)
             {
-                CollisionInfo.transform.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right) * ForceMultiplier, ForceMode2D.Force);
-            }
+                CollisionInfo.transform.GetComponent<PlayerHealth>().LoseHeart();
 
-            else
-            {
-                CollisionInfo.transform.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.left) * ForceMultiplier, ForceMode2D.Force);
+                if (CollisionInfo.transform.GetComponent<SpriteRenderer>().flipX == true)
+                {
+                    CollisionInfo.transform.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right) * ForceMultiplier, ForceMode2D.Force);
+                }
+
+                else
+                {
+                    CollisionInfo.transform.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.left) * ForceMultiplier, ForceMode2D.Force);
+                }
             }
         }
     }

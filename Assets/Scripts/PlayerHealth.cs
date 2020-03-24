@@ -52,13 +52,17 @@ public class PlayerHealth : MonoBehaviour
 
         if (HeartsRemaining == -1)
         {
-            GetComponent<CapsuleCollider2D>().enabled = false;
+            //GetComponent<CapsuleCollider2D>().enabled = false;
             ScoreManager.SaveScores();
 
-            if(LivesManager.LivesRemaining > 0)
+            if(LivesManager.LivesRemaining > -1)
             {
                 LivesManager.LivesRemaining--;
-                Lives.text = "X " + LivesManager.LivesRemaining;
+
+                if(LivesManager.LivesRemaining > -1)
+                {
+                    Lives.text = "X " + LivesManager.LivesRemaining;
+                }
             }
 
             StartCoroutine(DeathAnimation());
@@ -67,25 +71,25 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator DeathAnimation()
     {
-        if (LivesManager.LivesRemaining > 0)
+        if (LivesManager.LivesRemaining > -1)
         {
-            GetComponent<PlayerMove>().enabled = false;
-
             GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsIdle", false);
 
             GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsSleeping", false);
 
             GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", true);
 
+            GetComponent<PlayerMove>().enabled = false;
+
             yield return new WaitForSeconds(GetComponent<PlayerMove>().PlayerAnimator.GetCurrentAnimatorStateInfo(0).length);
-
-            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsIdle", true);
-
-            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", false);
 
             this.transform.position = this.GetComponent<PlayerMove>().Checkpoint.position;
 
-            GetComponent<CapsuleCollider2D>().enabled = true;
+            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", false);
+
+            GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsIdle", true);
+
+            //GetComponent<CapsuleCollider2D>().enabled = true;
 
             this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             this.transform.rotation = Quaternion.identity;
@@ -113,7 +117,7 @@ public class PlayerHealth : MonoBehaviour
 
             yield return new WaitForSeconds(GetComponent<PlayerMove>().PlayerAnimator.GetCurrentAnimatorStateInfo(0).length);
 
-            GetComponent<CapsuleCollider2D>().enabled = true;
+            //GetComponent<CapsuleCollider2D>().enabled = true;
 
             this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             this.transform.rotation = Quaternion.identity;

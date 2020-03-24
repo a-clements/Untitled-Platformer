@@ -13,6 +13,7 @@ public class PlayerRockCollision : MonoBehaviour
 {
     [SerializeField] private float Distance = 5.0f;
     [SerializeField] private float Knockback = 3.0f;
+    [SerializeField] private AudioClip RockSound;
 
     private Transform ThisTransform;
 
@@ -36,7 +37,9 @@ public class PlayerRockCollision : MonoBehaviour
     {
         if (TriggerInfo.transform.tag == "Ground")
         {
-            this.gameObject.SetActive(false);
+            this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            GetComponent<AudioSource>().PlayOneShot(RockSound);
+            StartCoroutine(PlaySound());
         }
 
         if (TriggerInfo.transform.tag == "Player")
@@ -47,7 +50,7 @@ public class PlayerRockCollision : MonoBehaviour
 
             if (TriggerInfo.transform.position.x < ThisTransform.position.x)
             {
-                TriggerInfo.GetComponent<Rigidbody2D>().AddForce((Vector2.left + Vector2.up) * Knockback ,ForceMode2D.Impulse);
+                TriggerInfo.GetComponent<Rigidbody2D>().AddForce((Vector2.left + Vector2.up) * Knockback, ForceMode2D.Impulse);
             }
 
             else if(TriggerInfo.transform.position.x > ThisTransform.position.x)
@@ -55,6 +58,13 @@ public class PlayerRockCollision : MonoBehaviour
                 TriggerInfo.GetComponent<Rigidbody2D>().AddForce((Vector2.right + Vector2.up) * Knockback, ForceMode2D.Impulse);
             }
         }
+    }
+
+    IEnumerator PlaySound()
+    {
+        yield return new WaitForSeconds(RockSound.length);
+        this.gameObject.SetActive(false);
+        yield return null;
     }
 
     private void Update()
