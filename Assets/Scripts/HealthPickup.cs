@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
-
+    [SerializeField] private AudioClip HealthSound;
 	// Use this for initialization
 	void Start () {
 		
@@ -23,9 +23,18 @@ public class HealthPickup : MonoBehaviour
     {
         if (TriggerInfo.gameObject.tag == "Player")
         {
-            TriggerInfo.GetComponent<PlayerHealth>().GainHeart();
+            GetComponent<AudioSource>().PlayOneShot(HealthSound);
 
-            this.gameObject.SetActive(false);
+            StartCoroutine(PlaySound());
+
+            TriggerInfo.GetComponent<PlayerHealth>().GainHeart();
         }
+    }
+
+    IEnumerator PlaySound()
+    {
+        yield return new WaitForSeconds(HealthSound.length);
+        this.gameObject.SetActive(false);
+        yield return null;
     }
 }

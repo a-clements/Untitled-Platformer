@@ -9,6 +9,7 @@ using UnityEngine;
 public class Treasure : MonoBehaviour
 {
     [SerializeField] private int PointValue = 10;
+    [SerializeField] private AudioClip TreasureSound;
 
     void Start()
     {
@@ -20,7 +21,16 @@ public class Treasure : MonoBehaviour
         {
 
             ScoreManager.UpdateScores(PointValue);
-            this.gameObject.SetActive(false);
+            GetComponent<AudioSource>().PlayOneShot(TreasureSound);
+
+            StartCoroutine(PlaySound());
         }
+    }
+
+    IEnumerator PlaySound()
+    {
+        yield return new WaitForSeconds(TreasureSound.length);
+        this.gameObject.SetActive(false);
+        yield return null;
     }
 }

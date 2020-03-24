@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RefillAmount: 0.1
-  PointValue: 0
+  PointValue: 200
   FadeOutTime: 1
   DeathSprite: {fileID: 21300000, guid: 8534d889253cb0a47b2ed7078db04489, type: 3}
   Impact: {fileID: 8300000, guid: d2759ed896ffde843929c72982e05bdc, type: 3}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1d64c5e5e1e6e46850853a588c6b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Death: {fileID: 0}
+  Death: {fileID: 8300000, guid: b2ef26c5b198afb499796a6f01d4dda9, type: 3}
   WaitTimer: 0.1
 --- !u!70 &-132556072414996234
 CapsuleCollider2D:

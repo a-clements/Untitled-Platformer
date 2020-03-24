@@ -20,6 +20,7 @@ public class SkeletonMove : MonoBehaviour
     [SerializeField] private Vector3[] NavPoints;
     [Tooltip("The Skeleton throw audio clip goes here.")]
     [SerializeField] private AudioClip ThrowBone;
+    [SerializeField] private AudioClip WalkClip;
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
@@ -108,6 +109,7 @@ public class SkeletonMove : MonoBehaviour
                 break;
 
             case "Skeleton Walk":
+                GetComponent<AudioSource>().PlayOneShot(WalkClip);
                 break;
         }
     }

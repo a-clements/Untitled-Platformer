@@ -41,6 +41,9 @@ public class LightSwitch : MonoBehaviour
     [SerializeField] private GameObject PostProcess;
     [SerializeField] private float Value;
 
+    [Header("Lever sound")]
+    [SerializeField] private AudioClip LeverSound;
+
     void Start()
     {
         PostProcess = GameObject.Find("Post Process");
@@ -122,7 +125,12 @@ public class LightSwitch : MonoBehaviour
                     break;
             }
 
-            GetComponent<SpriteRenderer>().flipX = true;
+            if(!GetComponent<SpriteRenderer>().flipX)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+                GetComponent<AudioSource>().PlayOneShot(LeverSound);
+                GetComponent<ParticleSystem>().Play();
+            }
         }
     }
 }

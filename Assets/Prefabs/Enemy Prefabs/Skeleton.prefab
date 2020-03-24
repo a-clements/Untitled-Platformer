@@ -145,6 +145,7 @@ MonoBehaviour:
   Speed: 1
   NavPoints: []
   ThrowBone: {fileID: 8300000, guid: d8e2dee63d7c8934f957094caf8b6834, type: 3}
+  WalkClip: {fileID: 8300000, guid: 7bbd99069c4cc7842a66bdd7437adb16, type: 3}
 --- !u!114 &-1136938011739366979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RefillAmount: 0.1
-  PointValue: 0
+  PointValue: 100
   FadeOutTime: 1
   DeathSprite: {fileID: 21300000, guid: 73ffa597b9472a94aab4c3204ea9d288, type: 3}
   Impact: {fileID: 8300000, guid: d59e2130005f63a45bf7f9775ea2b2e3, type: 3}
