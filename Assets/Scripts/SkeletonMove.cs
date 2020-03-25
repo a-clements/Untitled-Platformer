@@ -136,14 +136,12 @@ public class SkeletonMove : MonoBehaviour
                         {
                             BoneList[i].transform.position = new Vector3((this.transform.position.x - BonePosition), this.transform.position.y);
                             BoneList[i].GetComponent<Rigidbody2D>().velocity = ((Vector2.up * BoneSpeed ) + (Vector2.left * BoneSpeed)) * Time.deltaTime;
-                            Debug.Log(BoneList[i].transform.position.x);
                         }
 
                         else
                         {
                             BoneList[i].transform.position = new Vector3((this.transform.position.x + BonePosition), this.transform.position.y);
                             BoneList[i].GetComponent<Rigidbody2D>().velocity = ((Vector2.up * BoneSpeed) + (Vector2.right * BoneSpeed)) * Time.deltaTime;
-                            Debug.Log(BoneList[i].transform.position.x);
                         }
                         break;
                     }
