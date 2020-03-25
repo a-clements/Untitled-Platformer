@@ -19,6 +19,7 @@ public class PlayerRockCollision : MonoBehaviour
 
     private void OnEnable()
     {
+        ThisTransform.GetComponent<CapsuleCollider2D>().isTrigger = true;
         //called second
     }
 
@@ -37,7 +38,8 @@ public class PlayerRockCollision : MonoBehaviour
     {
         if (TriggerInfo.transform.tag == "Ground")
         {
-            this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            ThisTransform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            ThisTransform.GetComponent<CapsuleCollider2D>().isTrigger = false;
             GetComponent<AudioSource>().PlayOneShot(RockSound);
             StartCoroutine(PlaySound());
         }
@@ -69,7 +71,7 @@ public class PlayerRockCollision : MonoBehaviour
 
     private void Update()
     {
-        if(this.transform.position.z > Distance)
+        if(ThisTransform.position.z > Distance)
         {
             this.gameObject.SetActive(false);
         }
