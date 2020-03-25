@@ -25,6 +25,8 @@ public class HealthPickup : MonoBehaviour
         {
             GetComponent<AudioSource>().PlayOneShot(HealthSound);
 
+            GetComponent<ParticleSystem>().Play();
+
             StartCoroutine(PlaySound());
 
             TriggerInfo.GetComponent<PlayerHealth>().GainHeart();

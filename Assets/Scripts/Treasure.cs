@@ -22,7 +22,7 @@ public class Treasure : MonoBehaviour
 
             ScoreManager.UpdateScores(PointValue);
             GetComponent<AudioSource>().PlayOneShot(TreasureSound);
-
+            GetComponent<ParticleSystem>().Play();
             StartCoroutine(PlaySound());
         }
     }
