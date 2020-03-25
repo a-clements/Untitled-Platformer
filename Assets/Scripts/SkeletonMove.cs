@@ -21,6 +21,12 @@ public class SkeletonMove : MonoBehaviour
     [Tooltip("The Skeleton throw audio clip goes here.")]
     [SerializeField] private AudioClip ThrowBone;
     [SerializeField] private AudioClip WalkClip;
+    [Header("Bone game object.")]
+    [SerializeField] private GameObject Bone;
+    [Header("Number of bones in the queue.")]
+    [SerializeField] private int PooledObjects = 10;
+    [Tooltip("A declaration of the speed of the projectile.")]
+    [SerializeField] float BoneSpeed = 64.0f;
 
     private Transform ThisTransform;
     private SpriteRenderer Sprite;
@@ -32,6 +38,10 @@ public class SkeletonMove : MonoBehaviour
     private int PreviousAction;
     private Rigidbody2D RigidBody;
     private CapsuleCollider2D CapsuleCollider;
+
+    [SerializeField] private float BonePosition;
+
+    List<GameObject> BoneList = new List<GameObject>();
 
     void Start()
     {
@@ -57,6 +67,17 @@ public class SkeletonMove : MonoBehaviour
             case 2:
                 StartCoroutine(Throw());
                 break;
+        }
+
+        int i;
+        GameObject obj;
+
+        for (i = 0; i < PooledObjects; i++)
+        {
+            obj = (GameObject)Instantiate(Bone);
+            obj.transform.rotation = Quaternion.identity;
+            BoneList.Add(obj);
+            BoneList[i].SetActive(false);
         }
 
         if (IsMoving == true)
@@ -105,7 +126,31 @@ public class SkeletonMove : MonoBehaviour
                 break;
 
             case "Skeleton Throw":
+                for (int i = 0; i < BoneList.Count; i++)
+                {
+                    if (!BoneList[i].activeInHierarchy)
+                    {
+                        BoneList[i].SetActive(true);
+
+                        if (!Sprite.flipX)
+                        {
+                            BoneList[i].transform.position = new Vector3((this.transform.position.x - BonePosition), this.transform.position.y);
+                            BoneList[i].GetComponent<Rigidbody2D>().velocity = ((Vector2.up * BoneSpeed ) + (Vector2.left * BoneSpeed)) * Time.deltaTime;
+                            Debug.Log(BoneList[i].transform.position.x);
+                        }
+
+                        else
+                        {
+                            BoneList[i].transform.position = new Vector3((this.transform.position.x + BonePosition), this.transform.position.y);
+                            BoneList[i].GetComponent<Rigidbody2D>().velocity = ((Vector2.up * BoneSpeed) + (Vector2.right * BoneSpeed)) * Time.deltaTime;
+                            Debug.Log(BoneList[i].transform.position.x);
+                        }
+                        break;
+                    }
+                }
+
                 GetComponent<AudioSource>().PlayOneShot(ThrowBone);
+
                 break;
 
             case "Skeleton Walk":

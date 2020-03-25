@@ -146,6 +146,8 @@ MonoBehaviour:
   NavPoints: []
   ThrowBone: {fileID: 8300000, guid: d8e2dee63d7c8934f957094caf8b6834, type: 3}
   WalkClip: {fileID: 8300000, guid: 7bbd99069c4cc7842a66bdd7437adb16, type: 3}
+  Bone: {fileID: 1790570571939622, guid: d53b77ca83e6a8d4eb111718882fec05, type: 3}
+  PooledObjects: 10
 --- !u!114 &-1136938011739366979
 MonoBehaviour:
   m_ObjectHideFlags: 0
