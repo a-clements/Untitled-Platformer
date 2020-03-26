@@ -83,7 +83,13 @@ public class PlayerMove : MonoBehaviour
             if (PlayerAnimator.GetBool("IsWalking") == false)
             {
                 StartCoroutine(GoBackToSleep());
+                PlayerAnimator.SetBool("IsJumping", false);
                 PlayerAnimator.SetBool("IsIdle", true);
+            }
+
+            else
+            {
+                PlayerAnimator.SetBool("IsJumping", false);
             }
 
             RigidBody.velocity = Vector2.zero;
@@ -213,8 +219,17 @@ public class PlayerMove : MonoBehaviour
             #region Start Walking
             if (Input.GetKey(Manager.Keys[0]) || Input.GetKey(Manager.Keys[1]))
             {
-                PlayerAnimator.SetBool("IsIdle", false);
-                PlayerAnimator.SetBool("IsWalking", true);
+                if(PlayerAnimator.GetBool("IsJumping") == false)
+                {
+                    PlayerAnimator.SetBool("IsIdle", false);
+                    PlayerAnimator.SetBool("IsWalking", true);
+                }
+
+                else
+                {
+                    //PlayerAnimator.SetBool("IsIdle", false);
+                    PlayerAnimator.SetBool("IsWalking", false);
+                }
 
                 StopEverything();
                 StartCoroutine(WakeUp());
@@ -270,7 +285,7 @@ public class PlayerMove : MonoBehaviour
             if (RigidBody.velocity.y < 0)
             {
                 RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.fixedDeltaTime;
-                PlayerAnimator.SetBool("IsJumping", false);
+
                 FallSpeed = (int)RigidBody.velocity.y;
             }
 
