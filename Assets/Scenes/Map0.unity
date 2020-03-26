@@ -15616,7 +15616,7 @@ PrefabInstance:
     - target: {fileID: 1211305407845736604, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
       propertyPath: SnoozeTimer
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5773494915484282218, guid: 78d7a96f4f592d640be4afb0ae9489de,
         type: 3}
