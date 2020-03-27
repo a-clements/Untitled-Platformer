@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
 /// This script plays a designer defined cut scene when a button is clicked. This script also keeps track of how many cut scenes have played.
@@ -9,22 +10,43 @@ using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
+    private static bool MapOneComplete = false;
+    private static bool MapTwoComplete = false;
+
+    [SerializeField] private Button MapOneButton;
+    [SerializeField] private Button MapTwoButton;
     [SerializeField] private string Map1;
     [SerializeField] private string Map2;
+    [SerializeField] private Sprite MapCompletedSprite;
     public static int Counter;
+
     // Start is called before the first frame update
     void Start()
     {
+        if(MapOneComplete == true)
+        {
+            MapOneButton.enabled = false;
+            MapOneButton.gameObject.GetComponent<ButtonSounds>().enabled = false;
+            MapOneButton.gameObject.GetComponent<Image>().sprite = MapCompletedSprite;
+        }
 
+        if (MapTwoComplete == true)
+        {
+            MapTwoButton.enabled = false;
+            MapTwoButton.gameObject.GetComponent<ButtonSounds>().enabled = false;
+            MapTwoButton.gameObject.GetComponent<Image>().sprite = MapCompletedSprite;
+        }
     }
 
     public void ZoneOne()
     {
+        MapOneComplete = true;
         SceneManager.LoadSceneAsync(Map1, LoadSceneMode.Single);
     }
 
     public void ZoneTwo()
     {
+        MapTwoComplete = true;
         SceneManager.LoadSceneAsync(Map2, LoadSceneMode.Single);
     }
 
