@@ -15,10 +15,13 @@ public class PlayerRockCollision : MonoBehaviour
     [SerializeField] private float Knockback = 3.0f;
     [SerializeField] private AudioClip RockSound;
 
+    private bool CanPlay;
+
     private Transform ThisTransform;
 
     private void OnEnable()
     {
+        CanPlay = true;
         ThisTransform.GetComponent<CapsuleCollider2D>().isTrigger = true;
         //called second
     }
@@ -64,6 +67,12 @@ public class PlayerRockCollision : MonoBehaviour
 
     IEnumerator PlaySound()
     {
+        if (CanPlay == true)
+        {
+            GetComponent<ParticleSystem>().Play();
+            CanPlay = false;
+        }
+
         yield return new WaitForSeconds(RockSound.length);
         this.gameObject.SetActive(false);
         yield return null;

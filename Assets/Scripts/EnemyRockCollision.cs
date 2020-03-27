@@ -15,9 +15,11 @@ public class EnemyRockCollision : MonoBehaviour
     [SerializeField] private AudioClip RockSound;
 
     private Transform ThisTransform;
+    private bool CanPlay;
 
     private void OnEnable()
     {
+        CanPlay = true;
         //called second
     }
 
@@ -45,6 +47,12 @@ public class EnemyRockCollision : MonoBehaviour
             this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             GetComponent<AudioSource>().PlayOneShot(RockSound);
             StartCoroutine(PlaySound());
+
+            if(CanPlay == true)
+            {
+                GetComponent<ParticleSystem>().Play();
+                CanPlay = false;
+            }
         }
     }
 
