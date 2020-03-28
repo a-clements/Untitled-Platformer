@@ -85,11 +85,13 @@ public class PlayerMove : MonoBehaviour
                 StartCoroutine(GoBackToSleep());
                 PlayerAnimator.SetBool("IsJumping", false);
                 PlayerAnimator.SetBool("IsIdle", true);
+                PlayerAnimator.SetBool("IsFalling", false);
             }
 
             else
             {
                 PlayerAnimator.SetBool("IsJumping", false);
+                PlayerAnimator.SetBool("IsFalling", false);
             }
 
             RigidBody.velocity = Vector2.zero;
@@ -287,6 +289,13 @@ public class PlayerMove : MonoBehaviour
                 RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.fixedDeltaTime;
 
                 FallSpeed = (int)RigidBody.velocity.y;
+
+                Debug.Log(FallSpeed);
+
+                if (FallSpeed <= -8)
+                {
+                    PlayerAnimator.SetBool("IsFalling", true);
+                }
             }
 
             else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
