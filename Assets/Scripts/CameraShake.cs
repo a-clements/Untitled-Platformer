@@ -33,7 +33,8 @@ public class CameraShake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name != "Menu")
+        if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0" 
+            && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2")
         {
             if (ShoutMetre.fillAmount == 1.0f && CanShow == true)
             {
