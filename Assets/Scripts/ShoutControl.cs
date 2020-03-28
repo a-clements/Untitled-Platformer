@@ -67,7 +67,8 @@ public class ShoutControl : MonoBehaviour
 
         Volume = Mathf.Sqrt(Mathf.Sqrt(Level));
 
-        if(SceneManager.GetActiveScene().name != "Menu")
+        if(SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
+            && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2")
         {
             VolumeMetre.fillAmount = Volume;
             VolumeText.text = (System.Math.Round(Volume, 2) * 100).ToString();
