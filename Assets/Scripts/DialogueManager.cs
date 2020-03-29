@@ -96,9 +96,13 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.anyKeyDown)
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(Dialogue.Count > 0)
+            EndDialogue();
+        }
+        else if (Input.anyKeyDown)
+        {
+            if (Dialogue.Count > 0)
             {
                 DialogueSpeaker.text = Names[j];
             }
