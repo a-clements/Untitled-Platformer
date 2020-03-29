@@ -11,9 +11,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public AnimatorClipInfo[] ClipInfo;
+
     [SerializeField] private Image[] Hearts;
     [SerializeField] private Text Lives;
     [SerializeField] private AudioClip DeathMusic;
+    [SerializeField] private GameObject OneUp;
     public static int HeartsRemaining;
 
 
@@ -39,7 +42,17 @@ public class PlayerHealth : MonoBehaviour
             Hearts[2].gameObject.SetActive(false);
             Hearts[1].gameObject.SetActive(false);
             HeartsRemaining = 0;
+            StartCoroutine(ExtraLife());
         }
+    }
+
+    private IEnumerator ExtraLife()
+    {
+        OneUp.SetActive(true);
+        ClipInfo = this.transform.GetChild(4).GetComponent<Animator>().GetCurrentAnimatorClipInfo(0);
+        yield return new WaitForSeconds(ClipInfo[0].clip.length);
+        OneUp.SetActive(false);
+        yield return null;
     }
 
     public void LoseHeart()
