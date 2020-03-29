@@ -82,10 +82,10 @@ public class PlayerMove : MonoBehaviour
 
             if (PlayerAnimator.GetBool("IsWalking") == false)
             {
-                StartCoroutine(GoBackToSleep());
                 PlayerAnimator.SetBool("IsJumping", false);
                 PlayerAnimator.SetBool("IsIdle", true);
                 PlayerAnimator.SetBool("IsFalling", false);
+                StartCoroutine(GoBackToSleep());
             }
 
             else
@@ -219,7 +219,7 @@ public class PlayerMove : MonoBehaviour
             #endregion
 
             #region Start Walking
-            if (Input.GetKey(Manager.Keys[0]) || Input.GetKey(Manager.Keys[1]))
+            if (Input.GetKey(Manager.Keys[0]) == true || Input.GetKey(Manager.Keys[1]) == true)
             {
                 if(PlayerAnimator.GetBool("IsJumping") == false)
                 {
@@ -239,7 +239,7 @@ public class PlayerMove : MonoBehaviour
             #endregion
 
             #region Stop Walking
-            if (!Input.GetKey(Manager.Keys[0]) && !Input.GetKey(Manager.Keys[1]))
+            if (Input.GetKey(Manager.Keys[0]) == false && Input.GetKey(Manager.Keys[1]) == false)
             {
                 PlayerAnimator.SetBool("IsWalking", false);
                 PlayerAnimator.SetBool("IsIdle", true);
@@ -290,15 +290,13 @@ public class PlayerMove : MonoBehaviour
 
                 FallSpeed = (int)RigidBody.velocity.y;
 
-                Debug.Log(FallSpeed);
-
                 if (FallSpeed <= -8)
                 {
                     PlayerAnimator.SetBool("IsFalling", true);
                 }
             }
 
-            else if (RigidBody.velocity.y > 0 && !Input.GetKey(Manager.Keys[5]))
+            else if (RigidBody.velocity.y > 0 && Input.GetKey(Manager.Keys[5]) == false)
             {
                 RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.fixedDeltaTime;
             }
