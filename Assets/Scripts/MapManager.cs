@@ -10,8 +10,8 @@ using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
-    private static bool MapOneComplete = false;
-    private static bool MapTwoComplete = false;
+    public static bool MapOneComplete = false;
+    public static bool MapTwoComplete = false;
 
     [SerializeField] private Button MapOneButton;
     [SerializeField] private Button MapTwoButton;
