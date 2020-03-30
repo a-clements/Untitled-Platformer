@@ -20,7 +20,7 @@ public class CameraShake : MonoBehaviour
     private Vector3 OriginalPosition;
     private float XShake;
     private float YShake;
-    private bool CanShow = true;
+    [SerializeField] private bool CanShow = true;
 
     public Slider ShakeMagnitude;
     public Slider VolumeThreshold;
