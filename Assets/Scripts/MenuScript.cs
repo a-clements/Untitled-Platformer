@@ -122,6 +122,8 @@ public class MenuScript : MonoBehaviour
         ScoreManager.LevelScore = 0;
         LivesManager.LivesRemaining = StartingLives;
         MapManager.Counter = 0;
+        MapManager.MapOneComplete = false;
+        MapManager.MapTwoComplete = false;
 
         if (Running == false)
         {
