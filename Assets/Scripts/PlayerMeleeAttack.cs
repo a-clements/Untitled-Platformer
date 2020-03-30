@@ -59,7 +59,7 @@ public class PlayerMeleeAttack : MonoBehaviour
 
     IEnumerator Attack()
     {
-        this.transform.root.GetComponent<PlayerMove>().PlayerAnimator.SetTrigger("IsAttacking");
+        this.transform.parent.GetComponent<PlayerMove>().PlayerAnimator.SetTrigger("IsAttacking");
 
         this.GetComponent<CircleCollider2D>().enabled = true;
 
@@ -73,9 +73,9 @@ public class PlayerMeleeAttack : MonoBehaviour
 
     IEnumerator AttackUp()
     {
-        this.transform.root.GetComponent<PlayerMove>().PlayerAnimator.SetTrigger("IsAttackUp");
+        this.transform.parent.GetComponent<PlayerMove>().PlayerAnimator.SetTrigger("IsAttackUp");
 
-        yield return new WaitForSeconds(this.transform.root.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(this.transform.parent.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
 
         this.GetComponent<CircleCollider2D>().enabled = true;
 
