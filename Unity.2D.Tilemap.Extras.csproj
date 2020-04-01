@@ -76,14 +76,14 @@
     <Compile Include="Assets\2d-extras-master\Runtime\Tiles\WeightedRandomTile\WeightedRandomTile.cs" />
     <None Include="Assets\2d-extras-master\Runtime\Brushes\TintedTilemap.shader" />
     <None Include="Assets\2d-extras-master\Runtime\Unity.2D.Tilemap.Extras.asmdef" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/woofa/Documents/GitHub/Untitled-Platformer/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

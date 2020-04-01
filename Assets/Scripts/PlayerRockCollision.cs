@@ -22,7 +22,8 @@ public class PlayerRockCollision : MonoBehaviour
     private void OnEnable()
     {
         CanPlay = true;
-        ThisTransform.GetComponent<CapsuleCollider2D>().isTrigger = true;
+        ThisTransform.GetComponent<CapsuleCollider2D>().enabled = true;
+        ThisTransform.GetComponent<SpriteRenderer>().enabled = true;
         //called second
     }
 
@@ -42,7 +43,8 @@ public class PlayerRockCollision : MonoBehaviour
         if (TriggerInfo.transform.tag == "Ground")
         {
             ThisTransform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            ThisTransform.GetComponent<CapsuleCollider2D>().isTrigger = false;
+            ThisTransform.GetComponent<CapsuleCollider2D>().enabled = false;
+            ThisTransform.GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<AudioSource>().PlayOneShot(RockSound);
             StartCoroutine(PlaySound());
         }
