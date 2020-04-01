@@ -27,7 +27,7 @@ public class CameraShake : MonoBehaviour
 
     private void Start()
     {
-
+        ShockWave = GameObject.FindGameObjectWithTag("Player").transform.GetChild(2).GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame

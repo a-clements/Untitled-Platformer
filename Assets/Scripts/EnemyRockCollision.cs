@@ -20,6 +20,7 @@ public class EnemyRockCollision : MonoBehaviour
     private void OnEnable()
     {
         CanPlay = true;
+        ThisTransform.GetComponent<SpriteRenderer>().enabled = true;
         //called second
     }
 
@@ -45,6 +46,7 @@ public class EnemyRockCollision : MonoBehaviour
         if (TriggerInfo.transform.tag == "Ground")
         {
             this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            ThisTransform.GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<AudioSource>().PlayOneShot(RockSound);
             StartCoroutine(PlaySound());
 
