@@ -40,7 +40,7 @@ public class Checkpoints : MonoBehaviour
             {
                 PanelOne.SetActive(true);
                 GetEventSystem.firstSelectedGameObject = PanelOne;
-                PanelOne.transform.GetChild(1).GetChild(0).GetComponent<Button>().Select();
+                PanelOne.transform.GetChild(2).GetChild(0).GetComponent<Button>().Select();
                 Time.timeScale = 0;
                 CanShow = false;
             }
