@@ -38,11 +38,11 @@ public class MenuScript : MonoBehaviour
     {
         Manager = FindObjectOfType<GameManager>();
 
-        Panels.transform.GetChild(0).GetComponent<ButtonPositioner>().Positioner();
+        Panels.transform.GetChild(0).GetChild(0).GetComponent<ButtonPositioner>().Positioner();
 
-        Panels.transform.GetChild(1).GetComponent<ButtonPositioner>().Positioner();
+        Panels.transform.GetChild(1).GetChild(0).GetComponent<ButtonPositioner>().Positioner();
 
-        Panels.transform.GetChild(2).GetComponent<ButtonPositioner>().Positioner();
+        Panels.transform.GetChild(2).GetChild(0).GetComponent<ButtonPositioner>().Positioner();
     }
 
     void Start()

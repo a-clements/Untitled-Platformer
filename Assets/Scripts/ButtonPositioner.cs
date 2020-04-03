@@ -16,7 +16,7 @@ public class ButtonPositioner : MonoBehaviour
     private float ButtonWidth;
     private float Position;
     private float Space;
-    [SerializeField]private float ButtonPositionMultiplier;
+    private float ButtonPositionMultiplier;
 
     public void Positioner()
     {
