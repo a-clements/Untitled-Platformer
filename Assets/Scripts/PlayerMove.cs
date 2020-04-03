@@ -94,6 +94,8 @@ public class PlayerMove : MonoBehaviour
                 PlayerAnimator.SetBool("IsFalling", false);
             }
 
+            PlayerAnimator.SetBool("IsGrounded", true);
+
             RigidBody.velocity = Vector2.zero;
             RigidBody.angularVelocity = 0.0f;
 
@@ -221,7 +223,7 @@ public class PlayerMove : MonoBehaviour
             #region Start Walking
             if (Input.GetKey(Manager.Keys[0]) == true || Input.GetKey(Manager.Keys[1]) == true)
             {
-                if(PlayerAnimator.GetBool("IsJumping") == false)
+                if(PlayerAnimator.GetBool("IsJumping") == false && PlayerAnimator.GetBool("IsGrounded") == true)
                 {
                     PlayerAnimator.SetBool("IsIdle", false);
                     PlayerAnimator.SetBool("IsWalking", true);
@@ -229,7 +231,6 @@ public class PlayerMove : MonoBehaviour
 
                 else
                 {
-                    //PlayerAnimator.SetBool("IsIdle", false);
                     PlayerAnimator.SetBool("IsWalking", false);
                 }
 
@@ -242,7 +243,11 @@ public class PlayerMove : MonoBehaviour
             if (Input.GetKey(Manager.Keys[0]) == false && Input.GetKey(Manager.Keys[1]) == false)
             {
                 PlayerAnimator.SetBool("IsWalking", false);
-                PlayerAnimator.SetBool("IsIdle", true);
+
+                if (PlayerAnimator.GetBool("IsGrounded") == true)
+                {
+                    PlayerAnimator.SetBool("IsIdle", true);
+                }
 
                 StopEverything();
                 StartCoroutine(GoBackToSleep());
@@ -256,6 +261,8 @@ public class PlayerMove : MonoBehaviour
                 {
                     if (CanJump == true)
                     {
+                        PlayerAnimator.SetBool("IsGrounded", false);
+
                         RigidBody.velocity = Vector2.up * JumpForce * Time.fixedDeltaTime;
                         JumpCount--;
 
@@ -290,7 +297,7 @@ public class PlayerMove : MonoBehaviour
 
                 FallSpeed = (int)RigidBody.velocity.y;
 
-                if (FallSpeed <= -8)
+                if (FallSpeed <= -12)
                 {
                     PlayerAnimator.SetBool("IsFalling", true);
                 }
