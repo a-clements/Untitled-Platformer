@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 3976273841889162144}
   - component: {fileID: 1408136388762717900}
   - component: {fileID: 7891537253793239813}
-  - component: {fileID: 1907748951867303676}
+  - component: {fileID: 8574960091241507220}
   m_Layer: 0
   m_Name: Module Six
   m_TagString: Ground
@@ -189,7 +189,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!66 &1907748951867303676
+--- !u!66 &8574960091241507220
 CompositeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,8 +207,6 @@ CompositeCollider2D:
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
-  - m_Collider: {fileID: 1915249370762357990}
-    m_ColliderPaths: []
   - m_Collider: {fileID: 2497947699264899441}
     m_ColliderPaths: []
   m_CompositePaths:
@@ -341,7 +339,6 @@ GameObject:
   - component: {fileID: 4947748341954515874}
   - component: {fileID: 901631574292573588}
   - component: {fileID: 9207558821559767870}
-  - component: {fileID: 1915249370762357990}
   m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
@@ -446,22 +443,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!19719996 &1915249370762357990
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4916921010157095175}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
 --- !u!1 &5727456168491431655
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,11 +862,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3976273841889162144}
     m_Modifications:
-    - target: {fileID: 6516343559656064461, guid: 3e129649661a31b45a54197afc3885f9,
-        type: 3}
-      propertyPath: m_Name
-      value: Checkpoint
-      objectReference: {fileID: 0}
     - target: {fileID: 6516343559656064310, guid: 3e129649661a31b45a54197afc3885f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -940,6 +916,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516343559656064461, guid: 3e129649661a31b45a54197afc3885f9,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e129649661a31b45a54197afc3885f9, type: 3}
