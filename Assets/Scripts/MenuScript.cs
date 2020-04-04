@@ -31,6 +31,7 @@ public class MenuScript : MonoBehaviour
 
     private bool Running = true;
     private bool Options = false;
+    private bool Credits = false;
 
     private GameManager Manager;
 
@@ -48,6 +49,24 @@ public class MenuScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(MainScrollIn());
+    }
+
+    public void OnCreditsButtonClick()
+    {
+        Credits = !Credits;
+
+        if (Credits == true)
+        {
+            StartCoroutine(MainScrollOut());
+            StartCoroutine(CreditsScrollIn());
+        }
+
+        else
+        {
+            Manager.SaveSettings();
+            StartCoroutine(CreditsScrollOut());
+            StartCoroutine(MainScrollIn());
+        }
     }
 
     public void OnOptionsButtonClick()
@@ -85,6 +104,21 @@ public class MenuScript : MonoBehaviour
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #endif
+    }
+
+    IEnumerator CreditsScrollIn()
+    {
+        yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[0]);
+        PanelAnimator.SetBool("Credits", true);
+    }
+
+    IEnumerator CreditsScrollOut()
+    {
+        yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[1]);
+        PanelAnimator.SetBool("Credits", false);
+        Running = true;
+        yield return new WaitForSeconds(WaitTimer);
+        StartCoroutine(MainScrollIn());
     }
 
     IEnumerator OptionsScrollIn()
