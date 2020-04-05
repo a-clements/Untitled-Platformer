@@ -40,13 +40,11 @@ public class MapManager : MonoBehaviour
 
     public void ZoneOne()
     {
-        MapOneComplete = true;
         SceneManager.LoadSceneAsync(Map1, LoadSceneMode.Single);
     }
 
     public void ZoneTwo()
     {
-        MapTwoComplete = true;
         SceneManager.LoadSceneAsync(Map2, LoadSceneMode.Single);
     }
 

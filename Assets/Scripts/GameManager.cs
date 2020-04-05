@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using SpeechLib;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// This script determines how the game is played. The designer can define how many keys are to be used and what those keys are.
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
     private AudioMixer Audiomixer;
     private CameraShake Camerashake;
 
+    [SerializeField] private GameObject QuitMenu;
+
     private void Awake()
     {
         Flags = SpeechVoiceSpeakFlags.SVSFlagsAsync;
@@ -33,6 +36,28 @@ public class GameManager : MonoBehaviour
         Audiomixer = FindObjectOfType<AudioMixer>();
         Camerashake = FindObjectOfType<CameraShake>();
         //this function is executed first
+    }
+
+    public void QuitToMenu()
+    {
+        SceneManager.LoadSceneAsync("Menu", LoadSceneMode.Single);
+    }
+
+    public void QuitToMap()
+    {
+        SceneManager.LoadSceneAsync("MapSelection", LoadSceneMode.Single);
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        ScoreManager.LevelScore = 0;
+    }
+
+    public void CloseQuitMenu()
+    {
+        QuitMenu.SetActive(false);
+    }
+
+    public void ShowQuitMenu()
+    {
+        QuitMenu.SetActive(true);
     }
 
     public void LoadSettings()
@@ -98,11 +123,6 @@ public class GameManager : MonoBehaviour
         string jsondata = JsonUtility.ToJson(Gamesettings, true); //this line serializes the Gamemanager variables and creates a string
 
         File.WriteAllText(Application.persistentDataPath + "/GameSettings.json", jsondata); //This line writes the jsondata string to a file at the application path.
-    }
-
-    private void OnDisable()
-    {
-        
     }
 
     void Start()

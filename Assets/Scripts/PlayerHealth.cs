@@ -65,7 +65,6 @@ public class PlayerHealth : MonoBehaviour
 
         if (HeartsRemaining == -1)
         {
-            //GetComponent<CapsuleCollider2D>().enabled = false;
             ScoreManager.SaveScores();
 
             if(LivesManager.LivesRemaining > -1)
@@ -130,8 +129,6 @@ public class PlayerHealth : MonoBehaviour
 
             yield return new WaitForSeconds(GetComponent<PlayerMove>().PlayerAnimator.GetCurrentAnimatorStateInfo(0).length);
 
-            //GetComponent<CapsuleCollider2D>().enabled = true;
-
             this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             this.transform.rotation = Quaternion.identity;
 
@@ -139,7 +136,7 @@ public class PlayerHealth : MonoBehaviour
 
             yield return new WaitForSeconds(DeathMusic.length);
 
-            SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync("Menu", LoadSceneMode.Single);
         }
 
         yield return null;
