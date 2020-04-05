@@ -26,10 +26,7 @@ public class EnemyDeath : MonoBehaviour
     private FadeOut Fade;
     private CapsuleCollider2D Collider;
 
-    //public bool Dead = false;
-    //public bool Shocked = false;
     public bool CanShowPanel = true;
-    //public bool IsDead = false;
 
     private void Start()
     {

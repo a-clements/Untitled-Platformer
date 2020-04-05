@@ -14,7 +14,8 @@ public class Checkpoints : MonoBehaviour
     [SerializeField] private GameObject PanelOne;
     public GameObject PanelTwo;
     public GameObject PanelThree;
-    private bool CanShow = true;
+
+    [SerializeField] private bool CanShow = true;
     [SerializeField] private EventSystem GetEventSystem;
     [SerializeField] private GameManager Manager;
     public static bool CanClose = true;
@@ -23,6 +24,7 @@ public class Checkpoints : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         Manager = FindObjectOfType<GameManager>();
         GetEventSystem = FindObjectOfType<EventSystem>();
     }
