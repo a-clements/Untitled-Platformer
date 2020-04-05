@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
     public void QuitToMap()
     {
         SceneManager.LoadSceneAsync("MapSelection", LoadSceneMode.Single);
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
         ScoreManager.LevelScore = 0;
     }
 

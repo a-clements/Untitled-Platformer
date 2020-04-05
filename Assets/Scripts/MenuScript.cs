@@ -140,7 +140,7 @@ public class MenuScript : MonoBehaviour
     {
         yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[0]);
         PanelAnimator.SetBool("Main", true);
-        //yield return null;
+        yield return null;
     }
 
     private IEnumerator MainScrollOut()
