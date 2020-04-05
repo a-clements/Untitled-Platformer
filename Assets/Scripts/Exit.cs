@@ -33,6 +33,15 @@ public class Exit : MonoBehaviour
 
             else
             {
+                if(SceneManager.GetActiveScene().name == "Map1")
+                {
+                    MapManager.MapOneComplete = true;
+                }
+                else if(SceneManager.GetActiveScene().name == "Map2")
+                {
+                    MapManager.MapTwoComplete = true;
+                }
+
                 SceneManager.LoadSceneAsync(SceneName, LoadSceneMode.Single);
             }
         }
