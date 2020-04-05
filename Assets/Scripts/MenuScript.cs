@@ -44,6 +44,8 @@ public class MenuScript : MonoBehaviour
         Panels.transform.GetChild(1).GetChild(0).GetComponent<ButtonPositioner>().Positioner();
 
         Panels.transform.GetChild(2).GetChild(0).GetComponent<ButtonPositioner>().Positioner();
+
+        Time.timeScale = 1;
     }
 
     void Start()
