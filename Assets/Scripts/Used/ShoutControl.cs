@@ -15,6 +15,7 @@ public class ShoutControl : MonoBehaviour
     [SerializeField]private string Device;
     public static float Volume;
     [SerializeField] private bool IsMicrophone = false;
+    [SerializeField] private bool Started = true;
 
     [SerializeField] private Image VolumeMetre;
     [SerializeField] private Text VolumeText;
@@ -44,43 +45,48 @@ public class ShoutControl : MonoBehaviour
 
     void StartMicrophone()
     {
-
-        if(Microphone.IsRecording(Device) == false)
+        if (Started == true)
         {
+            Debug.Log("Started");
             Source.clip = Microphone.Start(Device, true, SampleLength, AudioSettings.outputSampleRate);
             IsMicrophone = true;
             Source.Play();
+            Started = false;
         }
     }
 
     void EndMicrophone()
     {
+        IsMicrophone = false;
         Source.Stop();
         Microphone.End(Device);
-        IsMicrophone = false;
+        Started = true;
     }
 
     void MicrophoneStatus()
     {
         if (Microphone.devices.Length != 0)
         {
-            Debug.Log("starting");
             Device = Microphone.devices[DeviceNumber];
 
-            //StartMicrophone();
-
             this.transform.GetChild(0).gameObject.SetActive(false);
+
+            StartMicrophone();
         }
 
         else
         {
-            Debug.Log("ended");
-
-            //EndMicrophone();
-
             Device = "";
+
             this.transform.GetChild(0).gameObject.SetActive(true);
+
+            EndMicrophone();
         }
+    }
+
+    private void LateUpdate()
+    {
+        MicrophoneStatus();
     }
 
     void Update()
@@ -111,11 +117,6 @@ public class ShoutControl : MonoBehaviour
                 VolumeMetre.fillAmount = Volume;
                 VolumeText.text = (System.Math.Round(Volume, 2) * 100).ToString();
             }
-        }
-
-        else
-        {
-            MicrophoneStatus();
         }
     }
 }
