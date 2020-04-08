@@ -12,8 +12,9 @@ using UnityEngine.SceneManagement;
 public class ShoutControl : MonoBehaviour
 {
     private AudioSource Source;
-    private string Device;
+    [SerializeField]private string Device;
     public static float Volume;
+    [SerializeField] private bool IsMicrophone = false;
 
     [SerializeField] private Image VolumeMetre;
     [SerializeField] private Text VolumeText;
@@ -25,11 +26,6 @@ public class ShoutControl : MonoBehaviour
 
     private void OnEnable()
     {
-        if (Device == null)
-        {
-            Device = Microphone.devices[DeviceNumber];
-        }
-
         Source = GetComponent<AudioSource>();
         Source.outputAudioMixerGroup = MicrophoneMixer;
     }
@@ -43,35 +39,83 @@ public class ShoutControl : MonoBehaviour
 
     void Start()
     {
-        Source.clip = Microphone.Start(Device, true, SampleLength, AudioSettings.outputSampleRate);
-        Source.Play();
+
+    }
+
+    void StartMicrophone()
+    {
+
+        if(Microphone.IsRecording(Device) == false)
+        {
+            Source.clip = Microphone.Start(Device, true, SampleLength, AudioSettings.outputSampleRate);
+            IsMicrophone = true;
+            Source.Play();
+        }
+    }
+
+    void EndMicrophone()
+    {
+        Source.Stop();
+        Microphone.End(Device);
+        IsMicrophone = false;
+    }
+
+    void MicrophoneStatus()
+    {
+        if (Microphone.devices.Length != 0)
+        {
+            Debug.Log("starting");
+            Device = Microphone.devices[DeviceNumber];
+
+            //StartMicrophone();
+
+            this.transform.GetChild(0).gameObject.SetActive(false);
+        }
+
+        else
+        {
+            Debug.Log("ended");
+
+            //EndMicrophone();
+
+            Device = "";
+            this.transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
     void Update()
     {
-        float Level = 0;
-        float[] SampleData = new float[SampleFrequency];
-        int Position = Microphone.GetPosition(Device) - (SampleFrequency + 1);
-
-        Source.clip.GetData(SampleData, Position);
-
-        for (int i = 0; i < SampleFrequency; i++)
+        if(IsMicrophone == true)
         {
-            float SamplePeak = SampleData[i] * SampleData[i];
+            float Level = 0;
+            float[] SampleData = new float[SampleFrequency];
+            int Position = Microphone.GetPosition(Device) - (SampleFrequency + 1);
 
-            if (Level < SamplePeak)
+            Source.clip.GetData(SampleData, Position);
+
+            for (int i = 0; i < SampleFrequency; i++)
             {
-                Level = SamplePeak;
+                float SamplePeak = SampleData[i] * SampleData[i];
+
+                if (Level < SamplePeak)
+                {
+                    Level = SamplePeak;
+                }
+            }
+
+            Volume = Mathf.Sqrt(Mathf.Sqrt(Level));
+
+            if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
+                && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2")
+            {
+                VolumeMetre.fillAmount = Volume;
+                VolumeText.text = (System.Math.Round(Volume, 2) * 100).ToString();
             }
         }
 
-        Volume = Mathf.Sqrt(Mathf.Sqrt(Level));
-
-        if(SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
-            && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2")
+        else
         {
-            VolumeMetre.fillAmount = Volume;
-            VolumeText.text = (System.Math.Round(Volume, 2) * 100).ToString();
+            MicrophoneStatus();
         }
     }
 }
