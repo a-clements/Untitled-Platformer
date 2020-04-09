@@ -56,9 +56,6 @@ public class PlayerMove : MonoBehaviour
     {
         if (CollisionInfo.gameObject.tag == "Ground")
         {
-            JumpCount = 1;
-            CanJump = true;
-
             if(FallSpeed < -20)
             {
                 GetComponent<PlayerHealth>().LoseHeart();
@@ -78,23 +75,32 @@ public class PlayerMove : MonoBehaviour
                 GetComponent<PlayerHealth>().LoseHeart();
             }
 
-            ThisTransform.GetComponent<AudioSource>().PlayOneShot(LandClip);
-
-            if (PlayerAnimator.GetBool("IsWalking") == false)
+            foreach (ContactPoint2D HitPos in CollisionInfo.contacts)
             {
-                PlayerAnimator.SetBool("IsJumping", false);
-                PlayerAnimator.SetBool("IsIdle", true);
-                PlayerAnimator.SetBool("IsFalling", false);
-                StartCoroutine(GoBackToSleep());
-            }
+                if (HitPos.normal.y > 0.0f)
+                {
+                    JumpCount = 1;
+                    CanJump = true;
 
-            else
-            {
-                PlayerAnimator.SetBool("IsJumping", false);
-                PlayerAnimator.SetBool("IsFalling", false);
-            }
+                    ThisTransform.GetComponent<AudioSource>().PlayOneShot(LandClip);
 
-            PlayerAnimator.SetBool("IsGrounded", true);
+                    if (PlayerAnimator.GetBool("IsWalking") == false)
+                    {
+                        PlayerAnimator.SetBool("IsJumping", false);
+                        PlayerAnimator.SetBool("IsIdle", true);
+                        PlayerAnimator.SetBool("IsFalling", false);
+                        StartCoroutine(GoBackToSleep());
+                    }
+
+                    else
+                    {
+                        PlayerAnimator.SetBool("IsJumping", false);
+                        PlayerAnimator.SetBool("IsFalling", false);
+                    }
+
+                    PlayerAnimator.SetBool("IsGrounded", true);
+                }
+            }
 
             RigidBody.velocity = Vector2.zero;
             RigidBody.angularVelocity = 0.0f;

@@ -46786,7 +46786,7 @@ GameObject:
   - component: {fileID: 1095808597}
   m_Layer: 0
   m_Name: Border
-  m_TagString: Ground
+  m_TagString: Border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69727,7 +69727,7 @@ GameObject:
   - component: {fileID: 1667647265}
   m_Layer: 0
   m_Name: Border
-  m_TagString: Ground
+  m_TagString: Border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
