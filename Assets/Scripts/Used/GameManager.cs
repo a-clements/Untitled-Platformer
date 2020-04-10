@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject QuitMenu;
 
+    public static bool IsMicrophone = false;
+
     private void Awake()
     {
         Flags = SpeechVoiceSpeakFlags.SVSFlagsAsync;
@@ -70,7 +72,8 @@ public class GameManager : MonoBehaviour
             Keys[2] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireLeftKey, true);
             Keys[3] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.FireUpKey, true);
             Keys[4] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.ThrowKey, true);
-            Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
+            Keys[5] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.PowerKey, true);
+            Keys[6] = (KeyCode)System.Enum.Parse(typeof(KeyCode), Gamesettings.JumpKey, true);
             Colourgrading.ExposureSlider.value = Gamesettings.PostExposure;
             Colourgrading.HueSlider.value = Gamesettings.HueShift;
             Colourgrading.ContrastSlider.value = Gamesettings.ContrastValue;
@@ -103,7 +106,8 @@ public class GameManager : MonoBehaviour
         Gamesettings.FireLeftKey = Keys[2].ToString();
         Gamesettings.FireUpKey = Keys[3].ToString();
         Gamesettings.ThrowKey = Keys[4].ToString();
-        Gamesettings.JumpKey = Keys[5].ToString();
+        Gamesettings.PowerKey = Keys[5].ToString();
+        Gamesettings.JumpKey = Keys[6].ToString();
         Gamesettings.PostExposure = Colourgrading.ExposureSlider.value;
         Gamesettings.HueShift = Colourgrading.HueSlider.value;
         Gamesettings.ContrastValue = Colourgrading.ContrastSlider.value;

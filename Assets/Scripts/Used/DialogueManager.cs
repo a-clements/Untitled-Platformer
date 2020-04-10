@@ -45,8 +45,8 @@ public class DialogueManager : MonoBehaviour
             {
                 DialogueBox[i].SetActive(false);
                 i++;
-                DialogueSpeaker = DialogueBox[i].transform.GetChild(0).GetChild(0).GetComponent<Text>();
-                DialogueText = DialogueBox[i].transform.GetChild(1).GetChild(0).GetComponent<Text>();
+                DialogueSpeaker = DialogueBox[i].transform.GetChild(0).GetChild(1).GetComponent<Text>();
+                DialogueText = DialogueBox[i].transform.GetChild(1).GetChild(1).GetComponent<Text>();
                 DialogueBox[i].SetActive(true);
             }
 

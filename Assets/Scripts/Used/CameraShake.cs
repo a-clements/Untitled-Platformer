@@ -15,7 +15,7 @@ public class CameraShake : MonoBehaviour
     [SerializeField] private Camera MainCamera;
     [SerializeField] private Image ShoutMetre;
     [SerializeField] private CircleCollider2D ShockWave;
-    [SerializeField] private Text ThresholdText;
+    public Text ThresholdText;
 
     private Vector3 OriginalPosition;
     private float XShake;
@@ -24,6 +24,7 @@ public class CameraShake : MonoBehaviour
 
     public Slider ShakeMagnitude;
     public Slider VolumeThreshold;
+    public Button AbilityActivation;
 
     private void Start()
     {

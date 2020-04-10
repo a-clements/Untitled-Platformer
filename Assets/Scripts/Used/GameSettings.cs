@@ -11,6 +11,7 @@ public class GameSettings
     public string Fireleftkey;
     public string Fireupkey;
     public string Throwkey;
+    public string Powerkey;
     public string Jumpkey;
     public float Exposure;
     public float Hue;
@@ -271,6 +272,19 @@ public class GameSettings
         set
         {
             Throwkey = value;
+        }
+    }
+
+    public string PowerKey
+    {
+        get
+        {
+            return Powerkey;
+        }
+
+        set
+        {
+            Powerkey = value;
         }
     }
 
