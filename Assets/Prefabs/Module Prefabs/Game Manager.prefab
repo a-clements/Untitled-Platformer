@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8db347ae3e81de4a8abd61e32742d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Keys: 140100001301000061000000730000006400000020000000
+  Keys: 14010000130100006100000073000000640000006700000020000000
   Movement:
   - 
   - 
@@ -52,3 +52,4 @@ MonoBehaviour:
   - 
   - 
   - 
+  QuitMenu: {fileID: 0}
