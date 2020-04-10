@@ -14,6 +14,8 @@ public class ShoutControl : MonoBehaviour
     private AudioSource Source;
     private string Device;
     private bool IsPaused = false;
+    private float[] CurrentSampleData;
+    [SerializeField] private int CurrentPosition;
 
     public static float Volume;
 
@@ -26,6 +28,8 @@ public class ShoutControl : MonoBehaviour
 
     private void OnEnable()
     {
+        CurrentSampleData = new float[SampleFrequency];
+
         Source = GetComponent<AudioSource>();
         Source.outputAudioMixerGroup = MicrophoneMixer;
 
@@ -89,11 +93,6 @@ public class ShoutControl : MonoBehaviour
         Source = null;
     }
 
-    void Start()
-    {
-
-    }
-
     void StartMicrophone()
     {
         Source.clip = Microphone.Start(Device, true, SampleLength, AudioSettings.outputSampleRate);
@@ -122,14 +121,14 @@ public class ShoutControl : MonoBehaviour
         if(IsPaused == false)
         {
             float Level = 0;
-            float[] SampleData = new float[SampleFrequency];
-            int Position = Microphone.GetPosition(Device) - (SampleFrequency + 1);
 
-            Source.clip.GetData(SampleData, Position);
+            CurrentPosition = Microphone.GetPosition(Device) - (SampleFrequency + 1);
+
+            Source.clip.GetData(CurrentSampleData, CurrentPosition);
 
             for (int i = 0; i < SampleFrequency; i++)
             {
-                float SamplePeak = SampleData[i] * SampleData[i];
+                float SamplePeak = CurrentSampleData[i] * CurrentSampleData[i];
 
                 if (Level < SamplePeak)
                 {
