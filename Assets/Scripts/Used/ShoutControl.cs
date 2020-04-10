@@ -52,6 +52,23 @@ public class ShoutControl : MonoBehaviour
             }
         }
 
+        LevelSetup();
+
+        this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+    }
+
+    void LevelSetup()
+    {
+        if (Microphone.devices.Length != 0)
+        {
+            GameManager.IsMicrophone = true;
+        }
+
+        else
+        {
+            GameManager.IsMicrophone = false;
+        }
+
         if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
         && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == true)
         {
@@ -60,7 +77,7 @@ public class ShoutControl : MonoBehaviour
             StartMicrophone();
         }
 
-        if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
+        else if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
         && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == false)
         {
             VolumeMetre.enabled = false;
@@ -69,9 +86,8 @@ public class ShoutControl : MonoBehaviour
             GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(false);
             GetComponent<CameraShake>().AbilityActivation.gameObject.SetActive(true);
         }
-
-        this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
     }
+
 
     public void UseMicrophoneButton()
     {
