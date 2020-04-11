@@ -6156,6 +6156,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UseMicrophoneButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1869051087909886187, guid: 25dc3e5b5fa152743affe7d6ba8beee6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25dc3e5b5fa152743affe7d6ba8beee6, type: 3}
 --- !u!114 &1925927744 stripped
