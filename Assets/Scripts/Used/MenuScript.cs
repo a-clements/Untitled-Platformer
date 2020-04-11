@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -16,6 +15,7 @@ public class MenuScript : MonoBehaviour
 
     [Header("Game Objects")]
     public GameObject Panels;
+    public Text VersionNumber;
 
     [Header("Coroutine Timers")]
     [SerializeField] private float WaitTimer = 0.01f;
@@ -46,6 +46,8 @@ public class MenuScript : MonoBehaviour
         Panels.transform.GetChild(2).GetChild(0).GetComponent<ButtonPositioner>().Positioner();
 
         Time.timeScale = 1;
+
+        VersionNumber.text = "Version: " + Application.version;
     }
 
     void Start()
