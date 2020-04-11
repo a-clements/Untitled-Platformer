@@ -13,9 +13,9 @@ public class ShoutControl : MonoBehaviour
 {
     private AudioSource Source;
     private string Device;
-    private bool IsPaused = false;
+    private bool ShowPanel = true;
     private float[] CurrentSampleData;
-    [SerializeField] private int CurrentPosition;
+    private int CurrentPosition;
 
     public static float Volume;
 
@@ -39,6 +39,7 @@ public class ShoutControl : MonoBehaviour
             {
                 this.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
                 this.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+                this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
                 GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(true);
                 GetComponent<CameraShake>().AbilityActivation.gameObject.SetActive(false);
             }
@@ -47,6 +48,7 @@ public class ShoutControl : MonoBehaviour
             {
                 this.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
                 this.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+                this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
                 GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(false);
                 GetComponent<CameraShake>().AbilityActivation.gameObject.SetActive(true);
             }
@@ -99,6 +101,29 @@ public class ShoutControl : MonoBehaviour
     {
         this.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
         this.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+        this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+
+        if(Microphone.devices.Length != 0)
+        {
+            GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(true);
+            GetComponent<CameraShake>().ThresholdText.gameObject.SetActive(true);
+            GetComponent<CameraShake>().ShoutMetre.gameObject.SetActive(true);
+            VolumeMetre.gameObject.SetActive(true);
+            VolumeText.gameObject.SetActive(true);
+            GetComponent<CameraShake>().AbilityActivation.gameObject.SetActive(false);
+        }
+
+        else
+        {
+            GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(false);
+            GetComponent<CameraShake>().ThresholdText.gameObject.SetActive(false);
+            GetComponent<CameraShake>().ShoutMetre.gameObject.SetActive(false);
+            VolumeMetre.gameObject.SetActive(false);
+            VolumeText.gameObject.SetActive(false);
+            GetComponent<CameraShake>().AbilityActivation.gameObject.SetActive(true);
+        }
+
+        ShowPanel = false;
     }
 
     private void OnDisable()
@@ -111,6 +136,7 @@ public class ShoutControl : MonoBehaviour
 
     void StartMicrophone()
     {
+        Device = Microphone.devices[DeviceNumber];
         Source.clip = Microphone.Start(Device, true, SampleLength, AudioSettings.outputSampleRate);
         Source.Play();
     }
@@ -121,20 +147,27 @@ public class ShoutControl : MonoBehaviour
         {
             this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
 
-            IsPaused = false;
+            GameManager.IsMicrophone = true;
         }
 
         else
         {
-            this.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+            if (ShowPanel == true)
+            {
+                this.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+            }
+            else
+            {
+                this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+            }
 
-            IsPaused = true;
+            GameManager.IsMicrophone = false;
         }
     }
 
     void GetMicrophoneInput()
     {
-        if(IsPaused == false)
+        if(GameManager.IsMicrophone == true)
         {
             float Level = 0;
 
@@ -157,6 +190,11 @@ public class ShoutControl : MonoBehaviour
             VolumeMetre.fillAmount = Volume;
             VolumeText.text = (System.Math.Round(Volume, 2) * 100).ToString();
         }
+
+        else
+        {
+            ShowPanel = true;
+        }
     }
 
     private void Update()
@@ -165,7 +203,6 @@ public class ShoutControl : MonoBehaviour
         && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == true)
         {
             MicrophoneStatus();
-
         }
     }
 
@@ -174,10 +211,7 @@ public class ShoutControl : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
         && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == true)
         {
-            if(IsPaused == false)
-            {
-                GetMicrophoneInput();
-            }
+            GetMicrophoneInput();
         }
     }
 }

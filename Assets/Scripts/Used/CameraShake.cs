@@ -13,8 +13,8 @@ using UnityEngine.SceneManagement;
 public class CameraShake : MonoBehaviour
 {
     [SerializeField] private Camera MainCamera;
-    [SerializeField] private Image ShoutMetre;
     [SerializeField] private CircleCollider2D ShockWave;
+    public Image ShoutMetre;
     public Text ThresholdText;
 
     private Vector3 OriginalPosition;
