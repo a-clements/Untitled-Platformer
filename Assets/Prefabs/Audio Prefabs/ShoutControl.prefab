@@ -258,7 +258,6 @@ GameObject:
   - component: {fileID: 2432756549359322941}
   - component: {fileID: 1526639188387236467}
   - component: {fileID: 4603491783485494213}
-  - component: {fileID: 4373614838228126736}
   m_Layer: 5
   m_Name: No Button
   m_TagString: Untagged
@@ -352,9 +351,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d,
+      type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -490,22 +490,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MouseEnter: {fileID: 8300000, guid: 5e5d208af2609244c93e8916046b8e0c, type: 3}
   MouseClick: {fileID: 8300000, guid: 5e5d208af2609244c93e8916046b8e0c, type: 3}
-  EffectDistance: {x: 12.5, y: -12.5}
---- !u!114 &4373614838228126736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262724491908627981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!1 &1556978831248385032
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +504,6 @@ GameObject:
   - component: {fileID: 905864065775959327}
   - component: {fileID: 6448528068097661074}
   - component: {fileID: 650281489893533999}
-  - component: {fileID: 2192180921320387351}
   m_Layer: 5
   m_Name: Yes Button
   m_TagString: Untagged
@@ -614,9 +597,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d,
+      type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -752,22 +736,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MouseEnter: {fileID: 8300000, guid: 5e5d208af2609244c93e8916046b8e0c, type: 3}
   MouseClick: {fileID: 8300000, guid: 5e5d208af2609244c93e8916046b8e0c, type: 3}
-  EffectDistance: {x: 12.5, y: -12.5}
---- !u!114 &2192180921320387351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556978831248385032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!1 &1635438567068374473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,7 +1536,6 @@ GameObject:
   - component: {fileID: 5936451613122790836}
   - component: {fileID: 6517642591891423979}
   - component: {fileID: 7795154358551348}
-  - component: {fileID: 1061244134366814860}
   m_Layer: 5
   m_Name: OK Button
   m_TagString: Untagged
@@ -1662,9 +1629,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d,
+      type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1800,22 +1768,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MouseEnter: {fileID: 8300000, guid: 5e5d208af2609244c93e8916046b8e0c, type: 3}
   MouseClick: {fileID: 8300000, guid: 5e5d208af2609244c93e8916046b8e0c, type: 3}
-  EffectDistance: {x: 12.5, y: -12.5}
---- !u!114 &1061244134366814860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6017564375886631380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!1 &6911611056911938811
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,7 +2038,6 @@ GameObject:
   - component: {fileID: 9013379002451660105}
   - component: {fileID: 6360639518156926398}
   - component: {fileID: 4821945253982323320}
-  - component: {fileID: 5868528112306984820}
   m_Layer: 5
   m_Name: OK Button
   m_TagString: Untagged
@@ -2180,9 +2131,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d,
+      type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 1798fac1313b34f52ae15f4c43f9734d, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2318,19 +2270,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MouseEnter: {fileID: 8300000, guid: 5e5d208af2609244c93e8916046b8e0c, type: 3}
   MouseClick: {fileID: 8300000, guid: 5e5d208af2609244c93e8916046b8e0c, type: 3}
-  EffectDistance: {x: 12.5, y: -12.5}
---- !u!114 &5868528112306984820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9202220659590641839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1

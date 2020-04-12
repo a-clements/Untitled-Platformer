@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script defines the speed of the parallax on the X axis.
+/// </summary>
+
 public class ParallaxSpeed : MonoBehaviour
 {
     [SerializeField] private float Parallaxspeed;

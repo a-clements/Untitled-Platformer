@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script allows the contents of a text component to be used as a URL and will open a web page.
+/// </summary>
+
 public class LinkClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     // Start is called before the first frame update
