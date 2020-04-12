@@ -261,7 +261,7 @@ public class PlayerMove : MonoBehaviour
             #endregion
 
             #region Jump
-            if (Input.GetKeyDown(Manager.Keys[5]))
+            if (Input.GetKeyDown(Manager.Keys[6]))
             {
                 if (ClipInfo[0].clip.name != "Player Sleep" && ClipInfo[0].clip.name != "Player Wake Up")
                 {
@@ -289,7 +289,7 @@ public class PlayerMove : MonoBehaviour
                 }
             }
 
-            if(Input.GetKeyUp(Manager.Keys[5]))
+            if(Input.GetKeyUp(Manager.Keys[6]))
             {
                 StopEverything();
                 StartCoroutine(GoBackToSleep());
