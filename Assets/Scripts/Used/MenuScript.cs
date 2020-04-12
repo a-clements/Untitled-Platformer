@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// This script controls how the panels on the main menu slide in and out. The designer can determine the length of the wait timer, how many
@@ -14,8 +15,9 @@ public class MenuScript : MonoBehaviour
     [SerializeField] private Animator PanelAnimator;
 
     [Header("Game Objects")]
-    public GameObject Panels;
-    public Text VersionNumber;
+    [SerializeField] private GameObject Panels;
+    [SerializeField] private GameObject ShoutControl;
+    [SerializeField] private Text VersionNumber;
 
     [Header("Coroutine Timers")]
     [SerializeField] private float WaitTimer = 0.01f;
@@ -29,6 +31,8 @@ public class MenuScript : MonoBehaviour
     [Header("Starting Lives")]
     [SerializeField] int StartingLives = 3;
 
+    [SerializeField] private EventSystem GetEventSystem;
+
     private bool Running = true;
     private bool Options = false;
     private bool Credits = false;
@@ -38,12 +42,16 @@ public class MenuScript : MonoBehaviour
     private void OnEnable()
     {
         Manager = FindObjectOfType<GameManager>();
+        GetEventSystem = FindObjectOfType<EventSystem>();
 
         Panels.transform.GetChild(0).GetChild(0).GetComponent<ButtonPositioner>().Positioner();
 
         Panels.transform.GetChild(1).GetChild(0).GetComponent<ButtonPositioner>().Positioner();
 
         Panels.transform.GetChild(2).GetChild(0).GetComponent<ButtonPositioner>().Positioner();
+
+        GetEventSystem.firstSelectedGameObject = ShoutControl;
+        ShoutControl.transform.GetChild(0).GetChild(0).GetChild(2).GetComponent<Button>().Select();
 
         Time.timeScale = 1;
 
@@ -63,6 +71,8 @@ public class MenuScript : MonoBehaviour
         {
             StartCoroutine(MainScrollOut());
             StartCoroutine(CreditsScrollIn());
+
+            Panels.transform.GetChild(4).GetChild(0).GetChild(6).GetComponent<Button>().Select();
         }
 
         else
@@ -70,6 +80,8 @@ public class MenuScript : MonoBehaviour
             Manager.SaveSettings();
             StartCoroutine(CreditsScrollOut());
             StartCoroutine(MainScrollIn());
+
+            Panels.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Button>().Select();
         }
     }
 
@@ -81,6 +93,8 @@ public class MenuScript : MonoBehaviour
         {
             StartCoroutine(MainScrollOut());
             StartCoroutine(OptionsScrollIn());
+
+            Panels.transform.GetChild(3).GetChild(0).GetChild(0).GetChild(0).GetComponent<Button>().Select();
         }
 
         else
@@ -88,6 +102,8 @@ public class MenuScript : MonoBehaviour
             Manager.SaveSettings();
             StartCoroutine(OptionsScrollOut());
             StartCoroutine(MainScrollIn());
+
+            Panels.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Button>().Select();
         }
     }
 

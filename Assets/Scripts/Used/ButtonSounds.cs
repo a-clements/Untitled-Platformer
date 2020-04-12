@@ -16,31 +16,23 @@ public class ButtonSounds : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     // Start is called before the first frame update
     [SerializeField] private AudioClip MouseEnter;
     [SerializeField] private AudioClip MouseClick;
-    [SerializeField] private Vector2 EffectDistance;
 
-    private Outline ButtonOutline;
     private AudioSource ButtonAudio;
 
     void Start()
     {
         ButtonAudio = GetComponent<AudioSource>();
-        ButtonOutline = GetComponent<Outline>();
-
-        ButtonOutline.effectColor = Color.yellow;
-        ButtonOutline.effectDistance = EffectDistance;
-        ButtonOutline.enabled = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        ButtonOutline.enabled = true;
         ButtonAudio.Stop();
         ButtonAudio.PlayOneShot(MouseEnter);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        ButtonOutline.enabled = false;
+
     }
 
     public void OnPointerClick(PointerEventData eventData)
