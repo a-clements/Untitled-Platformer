@@ -20,11 +20,17 @@ public class CameraShake : MonoBehaviour
     private Vector3 OriginalPosition;
     private float XShake;
     private float YShake;
+    private GameManager Manager;
     [SerializeField] private bool CanShow = true;
 
     public Slider ShakeMagnitude;
     public Slider VolumeThreshold;
     public Button AbilityActivation;
+
+    private void Awake()
+    {
+        Manager = FindObjectOfType<GameManager>();
+    }
 
     private void Start()
     {
@@ -35,7 +41,7 @@ public class CameraShake : MonoBehaviour
     void Update()
     {
         if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0" 
-            && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2")
+            && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == true)
         {
             if (ShoutMetre.fillAmount == 1.0f && CanShow == true)
             {
@@ -47,6 +53,22 @@ public class CameraShake : MonoBehaviour
             ThresholdText.text = Mathf.RoundToInt((VolumeThreshold.value * 100)).ToString();
 
             if (ShoutControl.Volume > VolumeThreshold.value && ShoutMetre.fillAmount == 1.0f)
+            {
+                StartCoroutine(Shake());
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
+            && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == false)
+        {
+            if (ShoutMetre.fillAmount == 1.0f && CanShow == true)
+            {
+                GameObject.Find("Entry").GetComponent<Checkpoints>().PanelThree.SetActive(true);
+                CanShow = false;
+                Time.timeScale = 0;
+            }
+
+            if (Input.GetKeyDown(Manager.Keys[5]) && ShoutMetre.fillAmount == 1.0f)
             {
                 StartCoroutine(Shake());
             }
