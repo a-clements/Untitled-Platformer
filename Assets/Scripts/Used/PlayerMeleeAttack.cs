@@ -10,11 +10,11 @@ using UnityEngine;
 public class PlayerMeleeAttack : MonoBehaviour
 {
     private GameManager Manager;
+    private PlayerMove Player;
+
     [SerializeField] private float AttackTimer = 0.5f;
     [SerializeField] private float MeleeDistance = 0.5f;
     public AudioClip AttackClip;
-
-    private PlayerMove Player;
 
     void Start()
     {

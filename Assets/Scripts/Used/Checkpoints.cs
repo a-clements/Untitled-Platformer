@@ -27,6 +27,18 @@ public class Checkpoints : MonoBehaviour
         Time.timeScale = 1;
         Manager = FindObjectOfType<GameManager>();
         GetEventSystem = FindObjectOfType<EventSystem>();
+
+        if(GameManager.IsMicrophone == true)
+        {
+            PanelThree.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "On the bottom right of the UI there are two numbers. " +
+                "The furthest to the right is the current volume of your microphone input. " +
+                "To the left of that is a threshold. To activate your special ability the input volume must be greater than the threshold.";
+        }
+
+        else
+        {
+            PanelThree.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Press the " + Manager.Keys[5] + " key to activate your ability.";
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D TriggerInfo)

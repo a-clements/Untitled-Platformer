@@ -19,7 +19,7 @@ public class ShoutControl : MonoBehaviour
     private bool ShowPanel = true;
     private float[] CurrentSampleData;
     private int CurrentPosition;
-    [SerializeField] private EventSystem GetEventSystem;
+    private EventSystem GetEventSystem;
 
     public static float Volume;
 

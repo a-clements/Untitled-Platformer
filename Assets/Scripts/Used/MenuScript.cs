@@ -31,13 +31,12 @@ public class MenuScript : MonoBehaviour
     [Header("Starting Lives")]
     [SerializeField] int StartingLives = 3;
 
-    [SerializeField] private EventSystem GetEventSystem;
-
     private bool Running = true;
     private bool Options = false;
     private bool Credits = false;
 
     private GameManager Manager;
+    private EventSystem GetEventSystem;
 
     private void OnEnable()
     {

@@ -20,6 +20,7 @@ public class SkeletonMove : MonoBehaviour
     [SerializeField] private Vector3[] NavPoints;
     [Tooltip("The Skeleton throw audio clip goes here.")]
     [SerializeField] private AudioClip ThrowBone;
+    [Tooltip("The Skeleton walk audio clip goes here.")]
     [SerializeField] private AudioClip WalkClip;
     [Header("Bone game object.")]
     [SerializeField] private GameObject Bone;
