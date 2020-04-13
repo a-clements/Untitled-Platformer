@@ -28,14 +28,14 @@ public class Checkpoints : MonoBehaviour
         Manager = FindObjectOfType<GameManager>();
         GetEventSystem = FindObjectOfType<EventSystem>();
 
-        if(GameManager.IsMicrophone == true)
+        if(GameManager.IsMicrophone == true && this.transform.name == "Entry")
         {
             PanelThree.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "On the bottom right of the UI there are two numbers. " +
                 "The furthest to the right is the current volume of your microphone input. " +
                 "To the left of that is a threshold. To activate your special ability the input volume must be greater than the threshold.";
         }
 
-        else
+        else if (GameManager.IsMicrophone == false && this.transform.name == "Entry")
         {
             PanelThree.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Press the " + Manager.Keys[5] + " key to activate your ability.";
         }

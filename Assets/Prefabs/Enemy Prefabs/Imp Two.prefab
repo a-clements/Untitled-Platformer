@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1d64c5e5e1e6e46850853a588c6b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Death: {fileID: 8300000, guid: 7e02fdbf5ab36d44c8f1532ef85822f7, type: 3}
+  Death: {fileID: 8300000, guid: 20de0f3e8abc8814ca3ac57693e2a1ad, type: 3}
   WaitTimer: 0.1
 --- !u!114 &-4698583463114607096
 MonoBehaviour:
@@ -272,7 +272,7 @@ MonoBehaviour:
   PointValue: 150
   FadeOutTime: 1
   DeathSprite: {fileID: 21300000, guid: f1de1d6eeac115d44a38dc009d5e4726, type: 3}
-  Impact: {fileID: 8300000, guid: 6e52f2cce2d0af048971c5e9d040a4ad, type: 3}
+  Impact: {fileID: 8300000, guid: ade4bf13912a2af49af4c14524fd9e60, type: 3}
   CanShowPanel: 1
 --- !u!70 &-610215431575786540
 CapsuleCollider2D:
