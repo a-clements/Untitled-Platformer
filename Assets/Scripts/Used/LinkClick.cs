@@ -8,7 +8,7 @@ using UnityEngine.UI;
 /// This script allows the contents of a text component to be used as a URL and will open a web page.
 /// </summary>
 
-public class LinkClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class LinkClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, ISelectHandler, IDeselectHandler
 {
     // Start is called before the first frame update
     void Start()
@@ -31,9 +31,22 @@ public class LinkClick : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         this.GetComponent<Text>().color = Color.yellow;
     }
 
+    public void OnSelect(BaseEventData eventData)
+    {
+        this.GetComponent<Text>().color = Color.blue;
+    }
+
+    public void OnDeselect(BaseEventData data)
+    {
+        this.GetComponent<Text>().color = Color.yellow;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Return) && this.GetComponent<Text>().color == Color.blue)
+        {
+            Application.OpenURL(this.GetComponent<Text>().text);
+        }
     }
 }
