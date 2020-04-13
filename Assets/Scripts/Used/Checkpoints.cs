@@ -88,8 +88,11 @@ public class Checkpoints : MonoBehaviour
                     }
                     else
                     {
-                        PanelOne.SetActive(true);
-                        Time.timeScale = 0;
+                        if(LivesManager.LivesRemaining > -1)
+                        {
+                            PanelOne.SetActive(true);
+                            Time.timeScale = 0;
+                        }
                     }
                 }
             }

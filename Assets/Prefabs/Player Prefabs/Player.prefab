@@ -539,8 +539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e41633ec3a3a96499a518f4bfa38fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackTimer: 0.5
-  MeleeDistance: 0.5
+  AttackTimer: 0.25
+  MeleeDistance: 0.25
   AttackClip: {fileID: 8300000, guid: 667f420390406d045b9c66e837aa755d, type: 3}
 --- !u!58 &9077561394843252138
 CircleCollider2D:
