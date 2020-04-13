@@ -12,8 +12,8 @@ public class PlayerMeleeAttack : MonoBehaviour
     private GameManager Manager;
     private PlayerMove Player;
 
-    [SerializeField] private float AttackTimer = 0.5f;
-    [SerializeField] private float MeleeDistance = 0.5f;
+    [SerializeField] private float AttackTimer = 0.25f;
+    [SerializeField] private float MeleeDistance = 0.25f;
     public AudioClip AttackClip;
 
     void Start()
