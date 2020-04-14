@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public void QuitToMenu()
     {
         SceneManager.LoadSceneAsync("Menu", LoadSceneMode.Single);
+        GameManager.IsMicrophone = false;
     }
 
     public void QuitToMap()
