@@ -85,22 +85,22 @@ public class ShoutControl : MonoBehaviour
             GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(false);
             GetComponent<CameraShake>().AbilityActivation.gameObject.SetActive(true);
 
-            Navigation Nav1 = Panels.transform.GetChild(0).GetChild(3).GetComponent<Button>().navigation;
-            Navigation Nav2 = Panels.transform.GetChild(0).GetChild(1).GetChild(12).GetComponent<Slider>().navigation;
+            Navigation Nav1 = Panels.transform.GetChild(3).GetChild(0).GetChild(3).GetComponent<Button>().navigation;
+            Navigation Nav2 = Panels.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(12).GetComponent<Slider>().navigation;
 
-            Button Butt1 = Panels.transform.GetChild(0).GetChild(2).GetChild(5).GetComponent<Button>();
-            Button Butt2 = Panels.transform.GetChild(0).GetChild(2).GetChild(6).GetComponent<Button>();
+            Button Butt1 = Panels.transform.GetChild(3).GetChild(0).GetChild(0).GetChild(5).GetComponent<Button>();
+            Button Butt2 = Panels.transform.GetChild(3).GetChild(0).GetChild(2).GetComponent<Button>();
+            
+            Slider Slid1 = Panels.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(11).GetComponent<Slider>();
 
-            Slider Slid1 = Panels.transform.GetChild(0).GetChild(1).GetChild(11).GetComponent<Slider>();
-
-            Nav1.selectOnLeft = Butt1;
+            Nav1.selectOnUp = Butt1;
             Nav1.selectOnRight = Butt2;
 
             Nav2.selectOnUp = Slid1;
             Nav2.selectOnDown = Butt1;
 
-            Panels.transform.GetChild(0).GetChild(3).GetComponent<Button>().navigation = Nav1;
-            Panels.transform.GetChild(0).GetChild(1).GetChild(12).GetComponent<Slider>().navigation = Nav2;
+            Panels.transform.GetChild(3).GetChild(0).GetChild(3).GetComponent<Button>().navigation = Nav1;
+            Panels.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(12).GetComponent<Slider>().navigation = Nav2;
         }
     }
 
@@ -121,20 +121,21 @@ public class ShoutControl : MonoBehaviour
         this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
         Panels.transform.GetChild(3).GetChild(0).GetChild(0).GetChild(5).gameObject.SetActive(true);
 
-        Navigation Nav1 = Panels.transform.GetChild(3).GetChild(0).GetChild(2).GetComponent<Button>().navigation;
+        Navigation Nav1 = Panels.transform.GetChild(3).GetChild(0).GetChild(3).GetComponent<Button>().navigation;
         Navigation Nav2 = Panels.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(12).GetComponent<Slider>().navigation;
 
         Button Butt1  = Panels.transform.GetChild(3).GetChild(0).GetChild(0).GetChild(5).GetComponent<Button>(); 
-        Button Butt2 = Panels.transform.GetChild(3).GetChild(0).GetChild(0).GetChild(6).GetComponent<Button>();
+        Button Butt2 = Panels.transform.GetChild(3).GetChild(0).GetChild(2).GetComponent<Button>();
+
         Slider Slid1 = Panels.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(11).GetComponent<Slider>();
 
-        Nav1.selectOnLeft = Butt1;
+        Nav1.selectOnUp = Butt1;
         Nav1.selectOnRight = Butt2;
 
         Nav2.selectOnUp = Slid1;
         Nav2.selectOnDown = Butt1;
 
-        Panels.transform.GetChild(3).GetChild(0).GetChild(2).GetComponent<Button>().navigation = Nav1;
+        Panels.transform.GetChild(3).GetChild(0).GetChild(3).GetComponent<Button>().navigation = Nav1;
         Panels.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(12).GetComponent<Slider>().navigation = Nav2;
 
         Panels.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(13).gameObject.SetActive(false);

@@ -34,7 +34,7 @@ public class ButtonRemapping : MonoBehaviour
         Button.onClick.AddListener(delegate { OnButtonClick(); });
     }
 
-    private void Start()
+    public void Start()
     {
         Gamemanager = FindObjectOfType<GameManager>();
         Keycode = Gamemanager.Keys[Index];

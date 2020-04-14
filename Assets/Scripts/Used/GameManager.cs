@@ -134,6 +134,47 @@ public class GameManager : MonoBehaviour
         //this function is executed third
     }
 
+    public void Default()
+    {
+        if (File.Exists(Application.persistentDataPath + "/GameSettings.json"))
+        {
+            File.Delete((Application.persistentDataPath + "/GameSettings.json"));
+        }
+
+        Keys[0] = KeyCode.LeftArrow;
+        Keys[1] = KeyCode.RightArrow;
+        Keys[2] = KeyCode.A;
+        Keys[3] = KeyCode.S;
+        Keys[4] = KeyCode.D;
+        Keys[5] = KeyCode.G;
+        Keys[6] = KeyCode.Space;
+        Colourgrading.ExposureSlider.value = 0.0f;
+        Colourgrading.HueSlider.value = 0.0f;
+        Colourgrading.ContrastSlider.value = 0.0f;
+        Colourgrading.RedChannelSlider.value = 100.0f;
+        Colourgrading.GreenChannelSlider.value = 100.0f;
+        Colourgrading.BlueChannelSlider.value = 100.0f;
+        Audiomixer.MasterVolumeSlider.value = 0.0f;
+        Audiomixer.AmbientVolumeSlider.value = -16.0f;
+        Audiomixer.MusicVolumeSlider.value = -16.0f;
+        Audiomixer.SFXVolumeSlider.value = -16.0f;
+        Voiceover.VoiceOverVolumeSlider.value = 0.5f;
+        Voiceover.VoiceOverToggleSlider.value = 0.0f;
+        Camerashake.ShakeMagnitude.value = 0.5f;
+        Camerashake.VolumeThreshold.value = 0.5f;
+
+        SaveSettings();
+
+        ButtonRemapping[] Remapped;
+
+        Remapped = FindObjectsOfType<ButtonRemapping>();
+
+        foreach(ButtonRemapping mapped in Remapped)
+        {
+            mapped.Start();
+        }
+    }
+
     public void Speak(string text)
     {
         if(Voiceover.VoiceOverToggleSlider.value == 1)
