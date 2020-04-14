@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8494,6 +8494,18 @@ PrefabInstance:
       objectReference: {fileID: 444412752}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d794e29b3f185d84e961f2c241207a19, type: 3}
+--- !u!114 &145386564 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4427170419530725858, guid: d794e29b3f185d84e961f2c241207a19,
+    type: 3}
+  m_PrefabInstance: {fileID: 145386563}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db347ae3e81de4a8abd61e32742d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &148703579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78672,7 +78684,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 145386564}
     - target: {fileID: 4525323686628545820, guid: f475c40a4f73ca84c9b55bcb1dbb6e99,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -78713,7 +78725,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 145386564}
     - target: {fileID: 1555899099952234110, guid: f475c40a4f73ca84c9b55bcb1dbb6e99,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -78728,7 +78740,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 145386564}
     - target: {fileID: 1555899099744551494, guid: f475c40a4f73ca84c9b55bcb1dbb6e99,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
