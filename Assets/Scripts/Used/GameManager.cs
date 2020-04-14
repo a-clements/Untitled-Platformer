@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using SpeechLib;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
 /// This script determines how the game is played. The designer can define how many keys are to be used and what those keys are.
@@ -54,11 +55,13 @@ public class GameManager : MonoBehaviour
     public void CloseQuitMenu()
     {
         QuitMenu.SetActive(false);
+        GameObject.Find("In Game UI").transform.GetChild(0).GetChild(3).GetComponent<Button>().Select();
     }
 
     public void ShowQuitMenu()
     {
         QuitMenu.SetActive(true);
+        QuitMenu.transform.GetChild(0).GetChild(1).GetComponent<Button>().Select();
     }
 
     public void LoadSettings()

@@ -45,6 +45,7 @@ public class ShoutControl : MonoBehaviour
         {
             if (Microphone.devices.Length != 0 && GameManager.IsMicrophone == false)
             {
+                //this.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
                 this.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
                 this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
                 GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(true);
@@ -53,17 +54,40 @@ public class ShoutControl : MonoBehaviour
 
             else
             {
-                this.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
                 this.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+                //this.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
                 this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
                 GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(false);
                 GetComponent<CameraShake>().AbilityActivation.gameObject.SetActive(true);
             }
         }
 
+        if (this.transform.GetChild(0).GetChild(0).gameObject.activeSelf == true)
+        {
+            this.transform.GetChild(0).GetChild(0).GetChild(2).GetComponent<Button>().Select();
+        }
+
+        else if (this.transform.GetChild(0).GetChild(1).gameObject.activeSelf == true)
+        {
+            this.transform.GetChild(0).GetChild(1).GetChild(2).GetComponent<Button>().Select();
+        }
+
         LevelSetup();
 
         this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        Source.Stop();
+        Microphone.End(Device);
+        Device = "";
+        Source = null;
+    }
+
+    private void Start()
+    {
+
     }
 
     void LevelSetup()
@@ -85,22 +109,20 @@ public class ShoutControl : MonoBehaviour
             GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(false);
             GetComponent<CameraShake>().AbilityActivation.gameObject.SetActive(true);
 
-            Navigation Nav1 = Panels.transform.GetChild(3).GetChild(0).GetChild(3).GetComponent<Button>().navigation;
-            Navigation Nav2 = Panels.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(12).GetComponent<Slider>().navigation;
+            Navigation Nav1 = Panels.transform.GetChild(0).GetChild(3).GetComponent<Button>().navigation;
+            Navigation Nav2 = Panels.transform.GetChild(0).GetChild(1).GetChild(12).GetComponent<Slider>().navigation;
 
-            Button Butt1 = Panels.transform.GetChild(3).GetChild(0).GetChild(0).GetChild(5).GetComponent<Button>();
-            Button Butt2 = Panels.transform.GetChild(3).GetChild(0).GetChild(2).GetComponent<Button>();
+            Button Butt1 = Panels.transform.GetChild(0).GetChild(2).GetChild(5).GetComponent<Button>();
             
-            Slider Slid1 = Panels.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(11).GetComponent<Slider>();
+            Slider Slid1 = Panels.transform.GetChild(0).GetChild(1).GetChild(11).GetComponent<Slider>();
 
-            Nav1.selectOnUp = Butt1;
-            Nav1.selectOnRight = Butt2;
+            Nav1.selectOnLeft = Butt1;
 
             Nav2.selectOnUp = Slid1;
             Nav2.selectOnDown = Butt1;
 
-            Panels.transform.GetChild(3).GetChild(0).GetChild(3).GetComponent<Button>().navigation = Nav1;
-            Panels.transform.GetChild(3).GetChild(0).GetChild(1).GetChild(12).GetComponent<Slider>().navigation = Nav2;
+            Panels.transform.GetChild(0).GetChild(3).GetComponent<Button>().navigation = Nav1;
+            Panels.transform.GetChild(0).GetChild(1).GetChild(12).GetComponent<Slider>().navigation = Nav2;
         }
     }
 
@@ -144,15 +166,7 @@ public class ShoutControl : MonoBehaviour
         ShowPanel = false;
     }
 
-    private void OnDisable()
-    {
-        Source.Stop();
-        Microphone.End(Device);
-        Device = "";
-        Source = null;
-    }
-
-    void StartMicrophone()
+void StartMicrophone()
     {
         Device = Microphone.devices[DeviceNumber];
         Source.clip = Microphone.Start(Device, true, SampleLength, AudioSettings.outputSampleRate);
@@ -170,7 +184,8 @@ public class ShoutControl : MonoBehaviour
 
         else
         {
-            if (ShowPanel == true)
+            if (ShowPanel == true && SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
+            && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == true)
             {
                 this.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
             }
@@ -217,11 +232,11 @@ public class ShoutControl : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
-        && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == true)
-        {
+        //if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
+        //&& SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == true)
+        //{
             MicrophoneStatus();
-        }
+        //}
     }
 
     void FixedUpdate()

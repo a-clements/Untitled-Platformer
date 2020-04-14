@@ -691,6 +691,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1994185409}
     m_Modifications:
+    - target: {fileID: 9125340190392724488, guid: 389509b855e23864bb8b083fc30a4100,
+        type: 3}
+      propertyPath: m_Name
+      value: Remapping Panel
+      objectReference: {fileID: 0}
     - target: {fileID: 9125340190392724489, guid: 389509b855e23864bb8b083fc30a4100,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -795,11 +800,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9125340190392724488, guid: 389509b855e23864bb8b083fc30a4100,
-        type: 3}
-      propertyPath: m_Name
-      value: Remapping Panel
       objectReference: {fileID: 0}
     - target: {fileID: 9125340191326220881, guid: 389509b855e23864bb8b083fc30a4100,
         type: 3}
@@ -6990,7 +6990,7 @@ PrefabInstance:
     - target: {fileID: 1869051087909886187, guid: 25dc3e5b5fa152743affe7d6ba8beee6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5936451613122790836, guid: 25dc3e5b5fa152743affe7d6ba8beee6,
         type: 3}
@@ -7034,6 +7034,11 @@ PrefabInstance:
     - target: {fileID: 9013379002451660105, guid: 25dc3e5b5fa152743affe7d6ba8beee6,
         type: 3}
       propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288938514195157715, guid: 25dc3e5b5fa152743affe7d6ba8beee6,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
