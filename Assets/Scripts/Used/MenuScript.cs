@@ -128,6 +128,7 @@ public class MenuScript : MonoBehaviour
     IEnumerator CreditsScrollIn()
     {
         yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[0]);
+        this.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
         PanelAnimator.SetBool("Credits", true);
     }
 
@@ -137,12 +138,14 @@ public class MenuScript : MonoBehaviour
         PanelAnimator.SetBool("Credits", false);
         Running = true;
         yield return new WaitForSeconds(WaitTimer);
+        this.transform.GetChild(0).GetChild(4).gameObject.SetActive(true);
         StartCoroutine(MainScrollIn());
     }
 
     IEnumerator OptionsScrollIn()
     {
         yield return new WaitForSeconds(WaitTimer * WaitTimeMultiplier[0]);
+        this.transform.GetChild(0).GetChild(4).gameObject.SetActive(false);
         PanelAnimator.SetBool("Options", true);
     }
 
@@ -152,6 +155,7 @@ public class MenuScript : MonoBehaviour
         PanelAnimator.SetBool("Options", false);
         Running = true;
         yield return new WaitForSeconds(WaitTimer);
+        this.transform.GetChild(0).GetChild(4).gameObject.SetActive(true);
         StartCoroutine(MainScrollIn());
     }
 

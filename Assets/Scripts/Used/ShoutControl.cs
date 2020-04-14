@@ -45,7 +45,6 @@ public class ShoutControl : MonoBehaviour
         {
             if (Microphone.devices.Length != 0 && GameManager.IsMicrophone == false)
             {
-                //this.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
                 this.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
                 this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
                 GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(true);
@@ -55,7 +54,6 @@ public class ShoutControl : MonoBehaviour
             else
             {
                 this.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
-                //this.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
                 this.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);
                 GetComponent<CameraShake>().VolumeThreshold.gameObject.SetActive(false);
                 GetComponent<CameraShake>().AbilityActivation.gameObject.SetActive(true);
@@ -232,11 +230,11 @@ void StartMicrophone()
 
     private void Update()
     {
-        //if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
-        //&& SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == true)
-        //{
+        if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "MapSelection" && SceneManager.GetActiveScene().name != "CutScene0"
+        && SceneManager.GetActiveScene().name != "CutScene1" && SceneManager.GetActiveScene().name != "CutScene2" && GameManager.IsMicrophone == true)
+        {
             MicrophoneStatus();
-        //}
+        }
     }
 
     void FixedUpdate()
