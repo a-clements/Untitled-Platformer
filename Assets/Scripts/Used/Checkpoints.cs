@@ -30,13 +30,20 @@ public class Checkpoints : MonoBehaviour
 
         if(GameManager.IsMicrophone == true && this.transform.name == "Entry")
         {
+            PanelTwo.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = " At the top left of the UI, above your hearts, is the charge metre of your special ability. " +
+            "Killing enemies increases the charge on your special ability. You can only use your special ability when it is fully charged. You will need a microphone to use your special ability.";
+
             PanelThree.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "On the bottom right of the UI there are two numbers. " +
-                "The furthest to the right is the current volume of your microphone input. " +
-                "To the left of that is a threshold. To activate your special ability the input volume must be greater than the threshold.";
+            "The furthest to the right is the current volume of your microphone input. " +
+            "To the left of that is a threshold. To activate your special ability the input volume must be greater than the threshold.";
         }
 
         else if (GameManager.IsMicrophone == false && this.transform.name == "Entry")
         {
+            PanelTwo.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = " At the top left of the UI, above your hearts, is the charge metre of your special ability. " +
+            "Killing enemies increases the charge on your special ability. You can only use your special ability when it is fully charged by pressing the " + Manager.Keys[5] + 
+            " key to activate your ability.";
+
             PanelThree.transform.GetChild(0).GetChild(0).GetComponent<Text>().text = "Press the " + Manager.Keys[5] + " key to activate your ability.";
         }
     }
