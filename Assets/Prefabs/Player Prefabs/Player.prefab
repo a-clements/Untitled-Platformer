@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77898c64766738f4abde28849d36f120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 265
+  JumpForce: 350
   RunSpeed: 2
   GravityMultiplier: 2
   JumpModifier: 1
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackTimer: 0.25
-  MeleeDistance: 0.25
+  MeleeDistance: 0.75
   AttackClip: {fileID: 8300000, guid: 667f420390406d045b9c66e837aa755d, type: 3}
 --- !u!58 &9077561394843252138
 CircleCollider2D:

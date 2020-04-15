@@ -13,7 +13,7 @@ public class PlayerMeleeAttack : MonoBehaviour
     private PlayerMove Player;
 
     [SerializeField] private float AttackTimer = 0.25f;
-    [SerializeField] private float MeleeDistance = 0.25f;
+    public float MeleeDistance = 0.25f;
     public AudioClip AttackClip;
 
     void Start()
@@ -61,13 +61,6 @@ public class PlayerMeleeAttack : MonoBehaviour
     {
         this.transform.parent.GetComponent<PlayerMove>().PlayerAnimator.SetTrigger("IsAttacking");
 
-        this.GetComponent<CircleCollider2D>().enabled = true;
-
-        this.transform.localPosition = new Vector2(this.transform.localPosition.x + MeleeDistance, 0);
-
-        yield return new WaitForSeconds(AttackTimer);
-        this.transform.localPosition = new Vector2(0,0);
-        this.GetComponent<CircleCollider2D>().enabled = false;
         yield return null;
     }
 
@@ -75,15 +68,6 @@ public class PlayerMeleeAttack : MonoBehaviour
     {
         this.transform.parent.GetComponent<PlayerMove>().PlayerAnimator.SetTrigger("IsAttackUp");
 
-        yield return new WaitForSeconds(this.transform.parent.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
-
-        this.GetComponent<CircleCollider2D>().enabled = true;
-
-        this.transform.localPosition = new Vector2(0, this.transform.localPosition.y + MeleeDistance);
-
-        yield return new WaitForSeconds(AttackTimer);
-        this.transform.localPosition = new Vector2(0, 0);
-        this.GetComponent<CircleCollider2D>().enabled = false;
         yield return null;
     }
 

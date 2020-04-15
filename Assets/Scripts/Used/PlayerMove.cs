@@ -174,9 +174,6 @@ public class PlayerMove : MonoBehaviour
         switch(ClipInfo[0].clip.name)
         {
             case "Player Attack":
-                ThisTransform.GetComponent<AudioSource>().PlayOneShot(ThisTransform.GetChild(1).GetComponent<PlayerMeleeAttack>().AttackClip);
-                break;
-
             case "Player Attack Up":
                 ThisTransform.GetComponent<AudioSource>().PlayOneShot(ThisTransform.GetChild(1).GetComponent<PlayerMeleeAttack>().AttackClip);
                 break;
@@ -189,6 +186,27 @@ public class PlayerMove : MonoBehaviour
                 ThisTransform.GetComponent<AudioSource>().PlayOneShot(WalkClip);
                 break;
         }
+    }
+
+    public void MeleeAttackForward()
+    {
+        ThisTransform.GetChild(1).GetComponent<CircleCollider2D>().enabled = true;
+
+        ThisTransform.GetChild(1).localPosition = new Vector2(ThisTransform.GetChild(1).localPosition.x + ThisTransform.GetChild(1).GetComponent<PlayerMeleeAttack>().MeleeDistance, 0);
+    }
+
+    public void MeleeAttackReset()
+    {
+        ThisTransform.GetChild(1).localPosition = new Vector2(0, 0);
+
+        ThisTransform.GetChild(1).GetComponent<CircleCollider2D>().enabled = false;
+    }
+
+    public void MeleeAttackUp()
+    {
+        ThisTransform.GetChild(1).GetComponent<CircleCollider2D>().enabled = true;
+
+        ThisTransform.GetChild(1).localPosition = new Vector2(0, ThisTransform.GetChild(1).localPosition.y + ThisTransform.GetChild(1).GetComponent<PlayerMeleeAttack>().MeleeDistance);
     }
 
     void Start()
