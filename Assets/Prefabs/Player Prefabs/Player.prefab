@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77898c64766738f4abde28849d36f120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 400
+  JumpForce: 425
   RunSpeed: 2
   GravityMultiplier: 2
   JumpModifier: 1
@@ -310,7 +310,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
