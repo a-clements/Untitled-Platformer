@@ -101,8 +101,6 @@ public class PlayerHealth : MonoBehaviour
 
             GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsIdle", true);
 
-            //GetComponent<CapsuleCollider2D>().enabled = true;
-
             this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             this.transform.rotation = Quaternion.identity;
 
@@ -126,6 +124,8 @@ public class PlayerHealth : MonoBehaviour
             GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsSleeping", false);
 
             GetComponent<PlayerMove>().PlayerAnimator.SetBool("IsDead", true);
+
+            GetComponent<PlayerMove>().enabled = false;
 
             yield return new WaitForSeconds(GetComponent<PlayerMove>().PlayerAnimator.GetCurrentAnimatorStateInfo(0).length);
 
