@@ -31,6 +31,7 @@ public class PlayerMove : MonoBehaviour
     private CapsuleCollider2D CapsuleCollider;
     private Transform ThisTransform;
     private GameObject Snoring;
+    private bool IsJumping = false;
 
     public Animator PlayerAnimator;
     public int JumpCount = 1;
@@ -287,7 +288,8 @@ public class PlayerMove : MonoBehaviour
                     {
                         PlayerAnimator.SetBool("IsGrounded", false);
 
-                        RigidBody.velocity = Vector2.up * JumpForce * Time.deltaTime;
+                        IsJumping = true;
+
                         JumpCount--;
 
                         if (JumpCount < 0)
@@ -344,6 +346,12 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(IsJumping == true)
+        {
+            RigidBody.velocity = Vector2.up * JumpForce * Time.fixedDeltaTime;
+            IsJumping = false;
+        }
+
         #region Jump Realism
         if (RigidBody.velocity.y < 0)
         {
