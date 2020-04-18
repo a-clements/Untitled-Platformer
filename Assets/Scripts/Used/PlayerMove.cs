@@ -348,7 +348,8 @@ public class PlayerMove : MonoBehaviour
     {
         if(IsJumping == true)
         {
-            RigidBody.velocity = Vector2.up * JumpForce * Time.fixedDeltaTime;
+            //RigidBody.velocity = Vector2.up * JumpForce * Time.fixedDeltaTime;
+            RigidBody.AddForce(Vector2.up * JumpForce);
             IsJumping = false;
         }
 
