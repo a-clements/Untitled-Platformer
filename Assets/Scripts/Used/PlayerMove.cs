@@ -214,7 +214,7 @@ public class PlayerMove : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if(Time.timeScale > 0)
         {
