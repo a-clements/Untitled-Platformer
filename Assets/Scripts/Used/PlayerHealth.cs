@@ -109,9 +109,9 @@ public class PlayerHealth : MonoBehaviour
                 GainHeart();
             }
 
+            GetComponent<PlayerMove>().enabled = true;
             GetComponent<PlayerMove>().CanJump = true;
             GetComponent<PlayerMove>().JumpCount = 1;
-            GetComponent<PlayerMove>().enabled = true;
         }
 
         else
