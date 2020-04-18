@@ -287,7 +287,7 @@ public class PlayerMove : MonoBehaviour
                     {
                         PlayerAnimator.SetBool("IsGrounded", false);
 
-                        RigidBody.velocity = Vector2.up * JumpForce * Time.fixedDeltaTime;
+                        RigidBody.velocity = Vector2.up * JumpForce * Time.deltaTime;
                         JumpCount--;
 
                         if (JumpCount < 0)
@@ -311,25 +311,6 @@ public class PlayerMove : MonoBehaviour
             {
                 StopEverything();
                 StartCoroutine(GoBackToSleep());
-            }
-            #endregion
-
-            #region Jump Realism
-            if (RigidBody.velocity.y < 0)
-            {
-                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.fixedDeltaTime;
-
-                FallSpeed = (int)RigidBody.velocity.y;
-
-                if (FallSpeed <= -12)
-                {
-                    PlayerAnimator.SetBool("IsFalling", true);
-                }
-            }
-
-            else if (RigidBody.velocity.y > 0 && Input.GetKey(Manager.Keys[5]) == false)
-            {
-                RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.fixedDeltaTime;
             }
             #endregion
 
@@ -359,5 +340,27 @@ public class PlayerMove : MonoBehaviour
             }
             #endregion
         }
+    }
+
+    private void FixedUpdate()
+    {
+        #region Jump Realism
+        if (RigidBody.velocity.y < 0)
+        {
+            RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - FallModifier) * Time.fixedDeltaTime;
+
+            FallSpeed = (int)RigidBody.velocity.y;
+
+            if (FallSpeed <= -12)
+            {
+                PlayerAnimator.SetBool("IsFalling", true);
+            }
+        }
+
+        else if (RigidBody.velocity.y > 0 && Input.GetKey(Manager.Keys[5]) == false)
+        {
+            RigidBody.velocity += Vector2.up * Physics2D.gravity.y * (GravityMultiplier - JumpModifier) * Time.fixedDeltaTime;
+        }
+        #endregion
     }
 }
