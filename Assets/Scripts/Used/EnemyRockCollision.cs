@@ -43,7 +43,7 @@ public class EnemyRockCollision : MonoBehaviour
             TriggerInfo.transform.GetComponent<EnemyDeath>().Dead();
         }
 
-        if (TriggerInfo.transform.tag == "Ground")
+        if (TriggerInfo.transform.tag == "Ground" || TriggerInfo.transform.tag == "Border")
         {
             this.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             ThisTransform.GetComponent<SpriteRenderer>().enabled = false;
