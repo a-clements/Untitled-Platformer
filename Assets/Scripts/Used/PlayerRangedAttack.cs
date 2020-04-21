@@ -23,6 +23,7 @@ public class PlayerRangedAttack : MonoBehaviour
 
     private GameManager Manager;
     private PlayerMove Player;
+    private bool CanThrow = false;
 
     List<GameObject> RockList = new List<GameObject>();
 
@@ -48,27 +49,27 @@ public class PlayerRangedAttack : MonoBehaviour
         if (Time.time > NextFire)
         {
             NextFire = Time.time + FireRate;
+            CanThrow = true;
+            //for (int i = 0; i < RockList.Count; i++)
+            //{
+            //    if (!RockList[i].activeInHierarchy)
+            //    {
+            //        RockList[i].SetActive(true);
 
-            for (int i = 0; i < RockList.Count; i++)
-            {
-                if (!RockList[i].activeInHierarchy)
-                {
-                    RockList[i].SetActive(true);
+            //        RockList[i].transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
 
-                    RockList[i].transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
+            //        if(transform.parent.rotation.y == 0)
+            //        {
+            //            RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.right) * Speed * Time.deltaTime;
+            //        }
 
-                    if(transform.parent.rotation.y == 0)
-                    {
-                        RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.right) * Speed * Time.deltaTime;
-                    }
-
-                    else
-                    {
-                        RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.left) * Speed * Time.deltaTime;
-                    }
-                    break;
-                }
-            }
+            //        else
+            //        {
+            //            RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.left) * Speed * Time.deltaTime;
+            //        }
+            //        break;
+            //    }
+            //}
         }
     }
 
@@ -97,6 +98,37 @@ public class PlayerRangedAttack : MonoBehaviour
             Player.StopEverything();
 
             StartCoroutine(Player.GoBackToSleep());
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if(CanThrow == true)
+        {
+            CanThrow = false;
+
+            for (int i = 0; i < RockList.Count; i++)
+            {
+                if (!RockList[i].activeInHierarchy)
+                {
+                    RockList[i].SetActive(true);
+
+                    RockList[i].transform.position = new Vector3(this.transform.position.x, this.transform.position.y);
+
+                    if (transform.parent.rotation.y == 0)
+                    {
+                        //RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.right) * Speed * Time.deltaTime;
+                        RockList[i].GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right) * Speed);
+                    }
+
+                    else
+                    {
+                        //RockList[i].GetComponent<Rigidbody2D>().velocity = (Vector2.up + Vector2.left) * Speed * Time.deltaTime;
+                        RockList[i].GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.left) * Speed);
+                    }
+                    break;
+                }
+            }
         }
     }
 }
