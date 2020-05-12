@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// This script will assign new keycodes on on either a button click or controller button 0 being pressed. There are a no known bugs.
@@ -11,7 +12,7 @@ using System.Collections;
 /// The gamepad subsystem is entirely segregated from the keyboard and mouse subsystems. The keyboard and mouse subsystem have an overlap.
 /// </summary>
 
-public class ButtonRemapping : MonoBehaviour
+public class ButtonRemapping : MonoBehaviour, IPointerClickHandler
 {
     public Button Button;
     private KeyCode Keycode;
@@ -29,10 +30,10 @@ public class ButtonRemapping : MonoBehaviour
         Index = this.transform.GetSiblingIndex();
     }
 
-    private void OnEnable()
-    {
-        Button.onClick.AddListener(delegate { OnButtonClick(); });
-    }
+    //private void OnEnable()
+    //{
+    //    Button.onClick.AddListener(delegate { OnButtonClick(); });
+    //}
 
     public void Start()
     {
@@ -68,7 +69,7 @@ public class ButtonRemapping : MonoBehaviour
         }
     }
 
-    public void OnButtonClick()
+    public void OnPointerClick(PointerEventData eventData)
     {
         Checkpoints.CanClose = false;
 

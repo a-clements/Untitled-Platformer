@@ -124,5 +124,5 @@ MonoBehaviour:
   WaitTimer: 0
   StartPosition: 0
   EndPosition: 0
-  FallSpeed: 0
-  RiseSpeed: 0
+  FallSpeed: 0.1
+  RiseSpeed: 0.05
