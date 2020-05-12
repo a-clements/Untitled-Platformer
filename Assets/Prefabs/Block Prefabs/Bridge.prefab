@@ -125,4 +125,4 @@ MonoBehaviour:
   StartPosition: 0
   EndPosition: 0
   FallSpeed: 0.1
-  RiseSpeed: 0.05
+  RiseSpeed: 0.005
