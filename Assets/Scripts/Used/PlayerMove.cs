@@ -78,7 +78,7 @@ public class PlayerMove : MonoBehaviour
 
             foreach (ContactPoint2D HitPos in CollisionInfo.contacts)
             {
-                if (HitPos.normal.y > 0.0f)
+                if (HitPos.normal.y > -0.1f)
                 {
                     JumpCount = 1;
                     CanJump = true;
@@ -286,6 +286,9 @@ public class PlayerMove : MonoBehaviour
                 {
                     if (CanJump == true)
                     {
+                        RigidBody.velocity = Vector2.zero;
+                        RigidBody.angularVelocity = 0.0f;
+
                         PlayerAnimator.SetBool("IsGrounded", false);
 
                         IsJumping = true;
@@ -348,8 +351,8 @@ public class PlayerMove : MonoBehaviour
     {
         if(IsJumping == true)
         {
-            //RigidBody.velocity = Vector2.up * JumpForce * Time.fixedDeltaTime;
-            RigidBody.AddForce(Vector2.up * JumpForce);
+            RigidBody.velocity = Vector2.up * JumpForce * Time.fixedDeltaTime;
+            //RigidBody.AddForce(Vector2.up * JumpForce);
             IsJumping = false;
         }
 

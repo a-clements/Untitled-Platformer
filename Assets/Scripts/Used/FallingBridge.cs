@@ -24,16 +24,22 @@ public class FallingBridge : MonoBehaviour
     [SerializeField] private float RiseSpeed = 0.0f;
 
     private string Direction = "";
+    private Vector3 PlatformPosition;
+
+    private void Start()
+    {
+        PlatformPosition = this.transform.localPosition;
+    }
 
     void Update()
     {
-        if (this.transform.localPosition.y > StartPosition)
-        {
-            Direction = "";
-            this.transform.localPosition = new Vector2(this.transform.localPosition.x, StartPosition);
-        }
+        //if (this.transform.localPosition.y == StartPosition)
+        //{
+        //    Direction = "";
+        //    this.transform.localPosition = new Vector2(this.transform.localPosition.x, StartPosition);
+        //}
 
-        if(this.transform.localPosition.y < EndPosition)
+        if(this.transform.localPosition.y == EndPosition)
         {
             StartCoroutine(Rise());
         }
@@ -42,9 +48,14 @@ public class FallingBridge : MonoBehaviour
         {
             case "Rise":
                 this.transform.Translate(new Vector3(0, RiseSpeed, 0) * Time.deltaTime);
+                PlatformPosition.y = Mathf.Clamp(PlatformPosition.y + RiseSpeed, EndPosition, StartPosition);
+                this.transform.localPosition = PlatformPosition;
                 break;
+
             case "Fall":
                 this.transform.Translate(new Vector3(0, -FallSpeed, 0) * Time.deltaTime);
+                PlatformPosition.y = Mathf.Clamp(PlatformPosition.y - FallSpeed, EndPosition, StartPosition);
+                this.transform.localPosition = PlatformPosition;
                 break;
         }
     }
