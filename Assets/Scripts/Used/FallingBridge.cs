@@ -47,13 +47,13 @@ public class FallingBridge : MonoBehaviour
         switch (Direction)
         {
             case "Rise":
-                this.transform.Translate(new Vector3(0, RiseSpeed, 0) * Time.deltaTime);
+                //this.transform.Translate(new Vector3(0, RiseSpeed, 0) * Time.deltaTime);
                 PlatformPosition.y = Mathf.Clamp(PlatformPosition.y + RiseSpeed, EndPosition, StartPosition);
                 this.transform.localPosition = PlatformPosition;
                 break;
 
             case "Fall":
-                this.transform.Translate(new Vector3(0, -FallSpeed, 0) * Time.deltaTime);
+                //this.transform.Translate(new Vector3(0, -FallSpeed, 0) * Time.deltaTime);
                 PlatformPosition.y = Mathf.Clamp(PlatformPosition.y - FallSpeed, EndPosition, StartPosition);
                 this.transform.localPosition = PlatformPosition;
                 break;
