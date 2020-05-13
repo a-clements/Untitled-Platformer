@@ -80,7 +80,7 @@ public class FlyingEnemyMove : MonoBehaviour
                 Sprite.flipX = !Sprite.flipX;
             }
 
-            ThisTransform.localPosition = Vector3.MoveTowards(ThisTransform.localPosition, NextPosition, Speed * Time.deltaTime);
+            ThisTransform.localPosition = Vector2.MoveTowards(ThisTransform.localPosition, NextPosition, Speed * Time.deltaTime);
         }
     }
 }
